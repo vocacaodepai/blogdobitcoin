@@ -264,9 +264,11 @@ export default function PoliticaPrivacidadePage() {
       <h2 id="transferencia-internacional">6. Transferência internacional</h2>
       <p>
         Vercel, Google, Resend, Amazon, Wikimedia e boa parte das APIs de cotação operam servidores
-        fora do Brasil, principalmente nos Estados Unidos e na Europa. Por isso os dados descritos
-        acima podem ser processados fora do país, com base nas cláusulas contratuais e nos
-        compromissos de proteção de dados desses fornecedores, conforme o art. 33 da LGPD.
+        fora do Brasil. Por isso os dados descritos acima podem ser processados fora do país. Com
+        os fornecedores que prestam serviço ao site (hospedagem, envio de e-mail e Google), a
+        transferência segue os termos e compromissos de proteção de dados que eles oferecem,
+        conforme o art. 33 da LGPD. Nas APIs públicas e nos servidores de imagem, quem faz a
+        requisição é o seu próprio navegador, ao abrir a página.
       </p>
 
       <h2 id="retencao">7. Por quanto tempo os dados ficam guardados</h2>
@@ -307,8 +309,8 @@ export default function PoliticaPrivacidadePage() {
 
       <h2 id="menores">9. Crianças e adolescentes</h2>
       <p>
-        O conteúdo do site é voltado a adultos e não é direcionado a menores de 13 anos. Nenhum dado
-        de menor é coletado de forma intencional. Se um responsável identificar dados de uma criança
+        O conteúdo do site é voltado a adultos e não é direcionado a crianças nem a adolescentes.
+        Nenhum dado de menor é coletado de forma intencional. Se um responsável identificar dados de uma criança
         aqui, basta avisar pelo e-mail para que sejam removidos.
       </p>
 
@@ -337,8 +339,8 @@ export default function PoliticaPrivacidadePage() {
       <h2 id="alteracoes">12. Alterações nesta política</h2>
       <p>
         Esta política pode mudar quando o site ganhar novos recursos ou quando a legislação mudar.
-        A data da versão em vigor aparece no topo da página. Mudanças relevantes, como a ativação
-        dos anúncios, também aparecem no aviso de cookies.
+        A data da versão em vigor aparece no topo da página, em &quot;Atualizado em&quot;, e muda a
+        cada revisão do texto.
       </p>
       <p>
         Versão desta política: 22 de outubro de 2026. Dúvidas:{" "}

@@ -43,8 +43,8 @@ export default function AvisoDeRiscoPage() {
       <p>
         O bitcoin oscila bem mais que ações, imóveis ou renda fixa. Variações de mais de 10% em um
         único dia já aconteceram várias vezes. E o histórico mostra quedas longas e profundas: do topo
-        ao fundo, o bitcoin perdeu mais de 70% do valor em três ciclos, entre o fim de 2013 e o começo
-        de 2015, ao longo de 2018 e em 2022. Em cada um deles, quem comprou perto do topo esperou mais
+        ao fundo, o bitcoin perdeu mais de 70% do valor em pelo menos três ciclos, entre o fim de 2013
+        e o começo de 2015, ao longo de 2018 e entre o fim de 2021 e o fim de 2022. Em cada um deles, quem comprou perto do topo esperou mais
         de dois anos para ver o preço voltar ao que tinha pago.
       </p>
       <p>
@@ -70,14 +70,14 @@ export default function AvisoDeRiscoPage() {
       </p>
       <ul>
         <li>queda de preço, que em moedas menores pode chegar perto de zero;</li>
-        <li>golpe, que é o caminho mais comum;</li>
+        <li>golpe, um dos caminhos mais comuns;</li>
         <li>quebra, invasão ou bloqueio da corretora onde as moedas estão;</li>
         <li>perda da frase de recuperação (seed) ou do aparelho da carteira;</li>
         <li>envio para o endereço errado ou pela rede errada;</li>
         <li>operações alavancadas, com margem ou derivativos, que podem zerar a posição em minutos.</li>
       </ul>
 
-      <h2 id="golpes">4. Golpes são o risco mais comum</h2>
+      <h2 id="golpes">4. Golpes estão entre os riscos mais comuns</h2>
       <p>
         O golpe quase sempre chega com uma promessa boa demais ou com pressa. Os mais frequentes no
         Brasil seguem alguns padrões:
@@ -119,8 +119,8 @@ export default function AvisoDeRiscoPage() {
       <h2 id="autocustodia">6. Risco de autocustódia</h2>
       <p>
         Guardar as moedas na sua própria carteira tira o risco da corretora, mas passa toda a
-        responsabilidade para você. A carteira gera uma frase de recuperação de 12 ou 24 palavras, a
-        seed. Ela é a chave de tudo, e não existe central de atendimento para recuperá-la.
+        responsabilidade para você. Em geral, a carteira gera uma frase de recuperação de 12 ou 24
+        palavras, a seed. Ela é a chave de tudo, e não existe central de atendimento para recuperá-la.
       </p>
       <ul>
         <li>perdeu a seed e o aparelho ao mesmo tempo: as moedas ficam inacessíveis para sempre;</li>
@@ -139,14 +139,15 @@ export default function AvisoDeRiscoPage() {
 
       <h2 id="regulacao-e-impostos">7. Regulação e impostos</h2>
       <p>
-        No Brasil, o marco legal das criptomoedas (Lei 14.478/2022) deu ao Banco Central a tarefa de
-        regular as empresas que prestam serviços com ativos virtuais, e as regras seguem em evolução.
+        No Brasil, o marco legal das criptomoedas (Lei 14.478/2022) criou regras para as empresas que
+        prestam serviços com ativos virtuais, e o Banco Central ficou responsável por regulá-las. Essas
+        regras seguem em evolução.
         Em outros países, governos já restringiram ou proibiram corretoras e operações. Uma mudança de
         regra pode afetar o preço, o acesso a uma corretora ou a forma de sacar o seu dinheiro.
       </p>
       <p>
-        A Receita Federal exige que criptomoedas sejam informadas na declaração do Imposto de Renda, e
-        o lucro na venda pode pagar imposto. Dependendo do valor e de onde você opera, também pode haver
+        A Receita Federal exige que criptomoedas sejam informadas na declaração do Imposto de Renda a
+        partir de certo valor, e o lucro na venda pode pagar imposto. Dependendo do valor e de onde você opera, também pode haver
         obrigação de informar as operações à Receita ao longo do ano. Esquecer disso pode gerar multa.
         Guarde os comprovantes de cada compra e venda e leia{" "}
         <Link href="/artigos/imposto-sobre-criptomoedas-no-brasil-quanto-se-paga">
@@ -182,10 +183,11 @@ export default function AvisoDeRiscoPage() {
         <li>decidi onde vou guardar e, se for carteira própria, anotei a seed no papel, em local seguro;</li>
         <li>vou fazer um primeiro envio pequeno, de teste, antes de mandar um valor maior;</li>
         <li>desconfio de qualquer promessa de rendimento garantido e de qualquer pedido de seed;</li>
-        <li>sei que preciso declarar no Imposto de Renda e vou guardar os comprovantes;</li>
+        <li>sei como funciona a declaração no Imposto de Renda e vou guardar os comprovantes;</li>
         <li>
-          olhei o <Link href="/ferramentas/medo-e-ganancia">índice de medo e ganância</Link> e não
-          estou comprando no impulso, nem por medo de ficar de fora.
+          não estou comprando no impulso, nem por medo de ficar de fora. O{" "}
+          <Link href="/ferramentas/medo-e-ganancia">índice de medo e ganância</Link> mostra o humor do
+          mercado, não o preço futuro.
         </li>
       </ul>
 
@@ -193,13 +195,14 @@ export default function AvisoDeRiscoPage() {
       <p>
         A regra mais útil é também a mais simples: só coloque em cripto o dinheiro que você pode perder
         inteiro. Nunca use reserva de emergência, dinheiro de contas do mês ou dinheiro emprestado.
-        Comece pequeno e aumente só depois de entender como comprar, guardar e vender.
+        Se decidir comprar, comece pequeno e só aumente depois de entender como comprar, guardar e
+        vender.
       </p>
       <p>
         Para decisões de valor alto, procure um profissional certificado: um consultor de valores
         mobiliários autorizado pela CVM ou um planejador financeiro com certificação reconhecida, e um
-        contador para a parte de impostos. Desconfie de quem ganha comissão com a sua compra ou promete
-        resultado. As decisões que você tomar, e as consequências delas, são suas.
+        contador para a parte de impostos. Desconfie de quem promete resultado ou ganha comissão sobre
+        o investimento que indica. As decisões que você tomar, e as consequências delas, são suas.
       </p>
 
       <h2 id="contato">11. Dúvidas</h2>

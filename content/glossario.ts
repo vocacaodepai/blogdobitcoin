@@ -153,7 +153,7 @@ export const glossary: GlossaryTerm[] = [
     slug: "cbdc",
     term: "CBDC (moeda digital de banco central)",
     definition:
-      "Versão digital do dinheiro oficial de um país, emitida e controlada pelo banco central, sem a descentralização do bitcoin. O e-CNY, da China, é o exemplo mais conhecido; no Brasil, o projeto do Banco Central nessa linha é o Drex, que mudou de rumo em 2025 e não tem versão para o público.",
+      "Versão digital do dinheiro oficial de um país, emitida e controlada pelo banco central, sem a descentralização do bitcoin. O e-CNY, da China, é um dos exemplos mais conhecidos; no Brasil, o projeto do Banco Central nessa linha é o Drex, que mudou de rumo em 2025 e não tem versão para o público.",
     related: [
       { label: "Regulação no Brasil", href: "/artigos/regulacao-das-criptomoedas-no-brasil-banco-central" },
       { label: "O que é Bitcoin", href: "/artigos/o-que-e-bitcoin-e-como-funciona" },

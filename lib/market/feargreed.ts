@@ -1,0 +1,45 @@
+/** Índice de medo e ganância do mercado cripto (alternative.me, público, sem chave). */
+export type FearGreedPoint = { value: number; label: string; timestamp: number };
+
+const LABELS: Record<string, string> = {
+  "Extreme Fear": "Medo extremo",
+  Fear: "Medo",
+  Neutral: "Neutro",
+  Greed: "Ganância",
+  "Extreme Greed": "Ganância extrema",
+};
+
+export function fearGreedLabel(value: number): string {
+  if (value <= 24) return "Medo extremo";
+  if (value <= 44) return "Medo";
+  if (value <= 55) return "Neutro";
+  if (value <= 75) return "Ganância";
+  return "Ganância extrema";
+}
+
+export function fearGreedColor(value: number): string {
+  if (value <= 24) return "#d92d20";
+  if (value <= 44) return "#f97316";
+  if (value <= 55) return "#eab308";
+  if (value <= 75) return "#84cc16";
+  return "#16a34a";
+}
+
+export async function fetchFearGreed(limit = 31, init?: RequestInit): Promise<FearGreedPoint[]> {
+  const res = await fetch(`https://api.alternative.me/fng/?limit=${limit}`, init);
+  if (!res.ok) throw new Error(`fng ${res.status}`);
+  const data = (await res.json()).data as { value: string; value_classification: string; timestamp: string }[];
+  return data.map((d) => ({
+    value: Number(d.value),
+    label: LABELS[d.value_classification] ?? fearGreedLabel(Number(d.value)),
+    timestamp: Number(d.timestamp) * 1000,
+  }));
+}
+
+export async function getFearGreedServer(limit = 31): Promise<FearGreedPoint[]> {
+  try {
+    return await fetchFearGreed(limit, { next: { revalidate: 1800 } } as RequestInit);
+  } catch {
+    return [];
+  }
+}

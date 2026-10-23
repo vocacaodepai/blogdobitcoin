@@ -40,7 +40,7 @@ export const article: Article = {
 
 <h2>Como funciona a isenção de R$ 35 mil por mês</h2>
 <p>O limite olha o valor total vendido no mês, não o lucro. E soma todos os criptoativos: bitcoin, altcoins, stablecoins e NFTs entram na mesma conta. Trocar uma moeda por outra também conta como venda, pelo valor de mercado em reais no dia da troca, inclusive a conversão de bitcoin em uma <a href="/glossario#stablecoin">stablecoin</a>.</p>
-<p>O limite funciona como um degrau, e não como uma franquia. Se o total do mês passar de R$ 35 mil, mesmo que por R$ 1, o lucro de todas as vendas daquele mês passa a ser tributado, e não só o que excedeu. Quem precisa vender um valor alto costuma dividir as vendas em meses diferentes, o que é permitido, desde que cada operação seja real e declarada.</p>
+<p>O limite funciona como um degrau, e não como uma franquia. Se o total do mês passar de R$ 35 mil, mesmo que por R$ 1, o lucro de todas as vendas daquele mês passa a ser tributado, e não só o que excedeu. Quem precisa vender um valor alto costuma dividir as vendas em meses diferentes, o que a regra não proíbe, desde que cada operação seja real e declarada.</p>
 <div class="callout-box callout-tip"><span class="callout-label">Dica</span><p>Antes de vender no fim do mês, some tudo o que já vendeu e trocou nas últimas semanas, em todas as corretoras. É esse total que a Receita compara com os R$ 35 mil.</p></div>
 
 <h2>Alíquotas do ganho de capital: de 15% a 22,5%</h2>

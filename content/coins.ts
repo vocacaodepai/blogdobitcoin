@@ -350,7 +350,7 @@ export const coins: CoinProfile[] = [
       "O Litecoin (LTC) é uma das criptomoedas mais antigas em funcionamento. Foi lançado em 7 de outubro de 2011 por Charlie Lee, então engenheiro do Google, a partir do código do Bitcoin, com mudanças para deixar os pagamentos mais rápidos. Por isso ganhou o apelido de prata digital, em contraste com o Bitcoin, chamado de ouro digital.",
       "As diferenças principais estão nos números: um bloco a cada 2,5 minutos, contra 10 minutos no Bitcoin, e oferta máxima de 84 milhões de moedas, quatro vezes mais. A mineração usa o algoritmo scrypt e, desde 2014, o Litecoin é minerado junto com o Dogecoin. Como no Bitcoin, a recompensa por bloco cai pela metade a cada 840 mil blocos, cerca de quatro anos.",
       "O Litecoin costuma servir de campo de testes para novidades depois levadas ao Bitcoin. Em 2017, ativou o SegWit antes da rede do Bitcoin e, em maio de 2022, ganhou o MWEB, extensão opcional que esconde os valores das transações.",
-      "Em dezembro de 2017, Charlie Lee anunciou que tinha vendido praticamente todos os seus LTC para evitar conflito de interesse. Ele segue à frente da Fundação Litecoin, entidade sem fins lucrativos que apoia o desenvolvimento.",
+      "Em dezembro de 2017, Charlie Lee anunciou que tinha vendido praticamente todos os seus LTC para evitar conflito de interesse. Ele continuou ligado ao projeto pela Fundação Litecoin, entidade sem fins lucrativos que apoia o desenvolvimento.",
     ],
     useCases: [
       "Pagamentos e transferências com confirmação mais rápida que a do Bitcoin",
@@ -430,11 +430,11 @@ export const coins: CoinProfile[] = [
     name: "Avalanche",
     symbol: "AVAX",
     launched: 2020,
-    creator: "Ava Labs, empresa de Emin Gün Sirer",
+    creator: "Ava Labs, cofundada por Emin Gün Sirer",
     consensus: "Prova de participação com amostragem aleatória de validadores",
     maxSupply: "720 milhões",
     description: [
-      "A Avalanche é uma plataforma de blockchains com contratos inteligentes, e o AVAX é a moeda usada para pagar taxas e para o staking. A rede principal entrou no ar em setembro de 2020, desenvolvida pela Ava Labs, empresa ligada a Emin Gün Sirer, pesquisador da Universidade Cornell.",
+      "A Avalanche é uma plataforma de blockchains com contratos inteligentes, e o AVAX é a moeda usada para pagar taxas e para o staking. A rede principal entrou no ar em setembro de 2020, desenvolvida pela Ava Labs, empresa cofundada por Emin Gün Sirer, pesquisador da Universidade Cornell.",
       "O consenso foi descrito em 2018 por um grupo anônimo chamado Team Rocket. Em vez de um líder que propõe cada bloco, os validadores consultam repetidamente pequenas amostras aleatórias de outros validadores até a maioria convergir para a mesma decisão, o que leva cerca de um segundo. Para validar a rede principal, é preciso travar pelo menos 2 mil AVAX.",
       "A rede principal tem três cadeias: a X-Chain, para transferências; a C-Chain, compatível com o Ethereum e onde roda a maior parte dos aplicativos; e a P-Chain, que coordena os validadores. Empresas e projetos também podem criar blockchains próprias conectadas, chamadas Avalanche L1. A atualização Etna, de dezembro de 2024, barateou a criação dessas redes, e a Helicon, ativada em setembro de 2026, mudou regras de staking.",
       "A oferta máxima é de 720 milhões de AVAX, e as taxas pagas na rede são queimadas. Em 2026, a moeda passou a ter ETFs à vista negociados nos Estados Unidos.",
@@ -524,7 +524,7 @@ export const coins: CoinProfile[] = [
     maxSupply: "1 bilhão",
     description: [
       "A Hyperliquid é uma blockchain própria criada para negociar derivativos, principalmente contratos futuros perpétuos, que permitem apostar na alta ou na queda de um ativo com alavancagem e sem data de vencimento. Toda a negociação, com livro de ofertas, acontece dentro da própria rede, sem uma empresa guardando o dinheiro dos clientes.",
-      "O projeto é liderado por Jeff Yan, que fundou a Hyperliquid Labs com colegas de Harvard; a empresa diz se financiar sozinha, sem capital de fundos de investimento. A plataforma já operava em 2023, e o token HYPE foi distribuído em novembro de 2024, com uma grande parte entregue de graça a usuários.",
+      "A Hyperliquid Labs, empresa que desenvolve o projeto, é liderada por Jeff Yan e um colega de faculdade em Harvard e diz se financiar sozinha, sem capital de fundos de investimento. A plataforma já operava em 2023, e o token HYPE foi distribuído em novembro de 2024, com uma grande parte entregue de graça a usuários.",
       "A rede tem duas partes: o HyperCore, onde ficam os livros de ofertas de futuros e do mercado à vista, e o HyperEVM, compatível com o Ethereum, para outros aplicativos. O consenso, chamado HyperBFT, é uma prova de participação em que os 27 validadores com mais HYPE em staking formam o grupo ativo. A oferta máxima é de 1 bilhão de HYPE, e parte das taxas da plataforma é usada para recomprar o token.",
       "Em pouco tempo, a Hyperliquid virou uma das maiores plataformas de derivativos cripto e passou a listar também mercados ligados a ações, índices e commodities. O crescimento teve episódios tensos, como em março de 2025, quando os validadores retiraram o token JELLY de negociação durante uma tentativa de manipulação, decisão criticada como sinal de controle centralizado.",
     ],

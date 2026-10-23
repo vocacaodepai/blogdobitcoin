@@ -70,7 +70,7 @@ export const timeline: TimelineEvent[] = [
   {
     date: "2011-04",
     title: "Satoshi Nakamoto sai de cena",
-    text: "Satoshi participou do desenvolvimento até dezembro de 2010 e, antes de sumir, deixou o projeto nas mãos de Gavin Andresen e de outros programadores. Em abril de 2011, num e-mail ao desenvolvedor Mike Hearn, escreveu que tinha passado para outras coisas. Nunca mais se ouviu falar dele, e sua identidade segue desconhecida.",
+    text: "Satoshi participou do desenvolvimento até dezembro de 2010 e, antes de sumir, passou o comando do projeto ao programador Gavin Andresen. Em abril de 2011, num e-mail ao desenvolvedor Mike Hearn, escreveu que tinha passado para outras coisas. Nunca mais se ouviu falar dele, e sua identidade segue desconhecida.",
     article: "quem-e-satoshi-nakamoto",
     source: { label: "Wikipédia: Satoshi Nakamoto", url: "https://en.wikipedia.org/wiki/Satoshi_Nakamoto" },
   },
@@ -135,13 +135,13 @@ export const timeline: TimelineEvent[] = [
   {
     date: "2017-12",
     title: "Futuros de bitcoin chegam a Chicago",
-    text: "Em 1º de dezembro de 2017, a CFTC, reguladora de derivativos dos Estados Unidos, informou que a CME e a CFE (bolsa de futuros da Cboe) tinham registrado contratos futuros de bitcoin, negociados a partir daquele mês. Era a entrada do bitcoin nas grandes bolsas de derivativos americanas.",
+    text: "Em 1º de dezembro de 2017, a CFTC, reguladora de derivativos dos Estados Unidos, informou que a CME e a CFE (bolsa de futuros da Cboe) tinham autocertificado contratos futuros de bitcoin, negociados a partir daquele mês. Era a entrada do bitcoin nas grandes bolsas de derivativos americanas.",
     source: { label: "CFTC, comunicado de 1º/12/2017", url: "https://www.cftc.gov/PressRoom/PressReleases/7654-17" },
   },
   {
     date: "2017-12-17",
     title: "O topo de 2017",
-    text: "No auge da primeira grande onda de popularidade, o bitcoin bateu a máxima de US$ 19.783,06. Um ano depois, em dezembro de 2018, a média diária do preço estava perto de US$ 3.200, mais de 80% abaixo do topo.",
+    text: "No auge da euforia de 2017, o bitcoin bateu a máxima de US$ 19.783,06. Um ano depois, em dezembro de 2018, a média diária do preço estava perto de US$ 3.200, mais de 80% abaixo do topo.",
     priceNote: "cerca de US$ 19,8 mil",
     article: "ciclos-do-bitcoin-o-que-os-halvings-mostram",
     source: { label: "Wikipédia: Cryptocurrency bubble", url: "https://en.wikipedia.org/wiki/Cryptocurrency_bubble" },
@@ -182,8 +182,8 @@ export const timeline: TimelineEvent[] = [
   {
     date: "2021-11",
     title: "O topo de 2021",
-    text: "O bitcoin renovou a máxima histórica no começo de novembro de 2021, perto de US$ 67,5 mil no preço de fechamento do dia. Em 2022, com a venda generalizada de ações de tecnologia e as quebras do próprio mercado cripto, o preço caiu abaixo de US$ 20 mil em junho.",
-    priceNote: "cerca de US$ 67 mil (fechamento)",
+    text: "O bitcoin renovou a máxima histórica no começo de novembro de 2021, perto de US$ 67,5 mil pelas cotações diárias. Em 2022, com a venda generalizada de ações de tecnologia e as quebras do próprio mercado cripto, o preço caiu abaixo de US$ 20 mil em junho.",
+    priceNote: "cerca de US$ 67,5 mil (cotação diária)",
     article: "ciclos-do-bitcoin-o-que-os-halvings-mostram",
     source: { label: "Wikipédia: Cryptocurrency bubble", url: "https://en.wikipedia.org/wiki/Cryptocurrency_bubble" },
   },
@@ -196,7 +196,7 @@ export const timeline: TimelineEvent[] = [
   {
     date: "2022-05-09",
     title: "O colapso da Terra (UST e Luna)",
-    text: "A stablecoin algorítmica UST, que deveria valer sempre US$ 1, perdeu a paridade e chegou a 10 centavos em uma semana, arrastando a moeda Luna para perto de zero. Quase US$ 45 bilhões em valor de mercado sumiram em poucos dias. O fundador Do Kwon se declarou culpado de fraude nos Estados Unidos em 2025 e foi condenado a 15 anos de prisão.",
+    text: "A stablecoin algorítmica UST, que deveria valer sempre US$ 1, perdeu a paridade e chegou a 10 centavos em uma semana, arrastando a moeda Luna para perto de zero. Quase US$ 45 bilhões em valor de mercado sumiram naquela semana. O fundador Do Kwon se declarou culpado de fraude nos Estados Unidos em 2025 e foi condenado a 15 anos de prisão.",
     article: "stablecoins-o-que-sao-usdt-usdc",
     source: { label: "Wikipédia: Terra (blockchain)", url: "https://en.wikipedia.org/wiki/Terra_(blockchain)" },
   },
@@ -232,7 +232,7 @@ export const timeline: TimelineEvent[] = [
   {
     date: "2024-04-20",
     title: "Quarto halving",
-    text: "No bloco 840.000, a recompensa caiu de 6,25 para 3,125 BTC por bloco, o valor que vale hoje. O próximo corte, para 1,5625 BTC, acontece no bloco 1.050.000, previsto para 2028 pelo ritmo atual de blocos.",
+    text: "No bloco 840.000, a recompensa caiu de 6,25 para 3,125 BTC por bloco, o valor em vigor hoje. O próximo corte, para 1,5625 BTC, acontece no bloco 1.050.000, que pelo ritmo atual de blocos deve chegar em 2028.",
     priceNote: "cerca de US$ 64 mil",
     article: "halving-do-bitcoin-o-que-e-e-quando-e-o-proximo",
     source: { label: "Bitcoin Wiki: Controlled supply", url: "https://en.bitcoin.it/wiki/Controlled_supply" },
@@ -258,7 +258,7 @@ export const timeline: TimelineEvent[] = [
   {
     date: "2025-10-06",
     title: "Máxima histórica acima de US$ 126 mil",
-    text: "O bitcoin bateu a máxima histórica de pouco mais de US$ 126 mil, quase o dobro do topo de 2021. Nos meses seguintes, o preço recuou com força e, em fevereiro de 2026, já estava abaixo dos níveis de 2024.",
+    text: "O bitcoin bateu a máxima histórica de pouco mais de US$ 126 mil, quase o dobro do topo de 2021. Nos meses seguintes, o preço recuou com força: em fevereiro de 2026, a média diária chegou a cerca de US$ 63 mil, metade da máxima.",
     priceNote: "pouco mais de US$ 126 mil",
     article: "ciclos-do-bitcoin-o-que-os-halvings-mostram",
     source: { label: "CoinGecko: Bitcoin", url: "https://www.coingecko.com/en/coins/bitcoin" },
@@ -266,7 +266,7 @@ export const timeline: TimelineEvent[] = [
   {
     date: "2025-11-10",
     title: "Banco Central publica as regras das corretoras",
-    text: "O Banco Central aprovou as Resoluções BCB 519, 520 e 521, que tratam da autorização, do funcionamento e das operações de câmbio das prestadoras de serviços de ativos virtuais, as corretoras de cripto. As regras foram publicadas no Diário Oficial no dia seguinte e entraram em vigor em 2 de fevereiro de 2026.",
+    text: "O Banco Central editou as Resoluções BCB 519, 520 e 521, que tratam da autorização, do funcionamento e das operações de câmbio das prestadoras de serviços de ativos virtuais, as corretoras de cripto. As normas saíram no Diário Oficial no dia seguinte, e a maior parte das regras entrou em vigor em 2 de fevereiro de 2026.",
     article: "regulacao-das-criptomoedas-no-brasil-banco-central",
     source: {
       label: "Banco Central: Resolução BCB nº 520",
@@ -293,7 +293,7 @@ export const timeline: TimelineEvent[] = [
   {
     date: "2026-10-16",
     title: "Mt. Gox adia de novo o prazo de reembolso",
-    text: "O administrador judicial da Mt. Gox, Nobuaki Kobayashi, informou que a maior parte dos reembolsos aos credores já foi feita, mas que muitos ainda não receberam por não terem concluído os procedimentos. Com autorização da Justiça japonesa, o prazo final passou de 31 de outubro de 2026 para 31 de outubro de 2027. Foi o quarto adiamento seguido, depois dos de 2023, 2024 e 2025.",
+    text: "O administrador judicial da Mt. Gox, Nobuaki Kobayashi, informou que a maior parte dos reembolsos aos credores já foi feita, mas que muitos ainda não receberam por não terem concluído os procedimentos. Com autorização da Justiça japonesa, o prazo final passou de 31 de outubro de 2026 para 31 de outubro de 2027. O prazo já tinha sido adiado em 2023, 2024 e 2025.",
     article: "mt-gox-o-colapso-da-maior-exchange-de-bitcoin",
     source: {
       label: "Mt. Gox, aviso de 16/10/2026",
@@ -303,7 +303,7 @@ export const timeline: TimelineEvent[] = [
   {
     date: "2026-10-30",
     title: "Prazo para as corretoras pedirem autorização",
-    text: "Termina o prazo de 270 dias, contados da entrada em vigor da Resolução BCB 520, para as empresas que já prestavam serviços de ativos virtuais no Brasil pedirem autorização ao Banco Central. A partir de 6 de novembro de 2026, data fixada pela Resolução BCB 589, bancos e instituições de pagamento ficam proibidos de operar com prestadoras sem autorização, salvo as exceções previstas na norma.",
+    text: "Vence o prazo de 270 dias, contados da entrada em vigor da Resolução BCB 520, para as empresas que já prestavam serviços de ativos virtuais no Brasil pedirem autorização ao Banco Central. A partir de 6 de novembro de 2026, data fixada pela Resolução BCB 589, bancos e instituições de pagamento ficam proibidos de operar com prestadoras sem autorização, salvo as exceções previstas na norma.",
     article: "regulacao-das-criptomoedas-no-brasil-banco-central",
     source: {
       label: "Banco Central: Resolução BCB nº 520",
@@ -316,19 +316,19 @@ export const timeline: TimelineEvent[] = [
 export const curiosities: Curiosity[] = [
   {
     title: "O satoshi ganhou nome num fórum",
-    text: "A menor fração do bitcoin, o satoshi, vale 0,00000001 BTC: um bitcoin tem 100 milhões deles. O nome, uma homenagem ao criador da moeda, foi sugerido em 2010 por um usuário do fórum BitcoinTalk chamado ribuck e acabou adotado por todo mundo.",
+    text: "A menor fração do bitcoin, o satoshi, vale 0,00000001 BTC: um bitcoin tem 100 milhões deles. O nome, uma homenagem ao criador da moeda, foi proposto no fórum BitcoinTalk por um usuário chamado ribuck, primeiro em 2010 para 0,01 BTC e meses depois para a menor fração, e acabou adotado por todo mundo.",
     article: "satoshis-o-que-sao-sats-e-como-converter",
     source: { label: "Bitcoin Wiki: Satoshi (unit)", url: "https://en.bitcoin.it/wiki/Satoshi_(unit)" },
   },
   {
     title: "Os 21 milhões não são exatos",
-    text: "Pela forma como o código arredonda a recompensa a cada halving, o total máximo teórico é de 20.999.999,9769 bitcoins, um pouco menos que 21 milhões. E o último satoshi só deve ser minerado por volta de 2140.",
+    text: "Como a recompensa é contada em satoshis inteiros e cada halving descarta as frações, o total máximo teórico é de 20.999.999,9769 bitcoins, um pouco menos que 21 milhões. E o último satoshi só deve ser minerado por volta de 2140.",
     article: "halving-do-bitcoin-o-que-e-e-quando-e-o-proximo",
     source: { label: "Bitcoin Wiki: Controlled supply", url: "https://en.bitcoin.it/wiki/Controlled_supply" },
   },
   {
     title: "Uma manchete de jornal no primeiro bloco",
-    text: "Satoshi gravou no bloco gênese a frase “The Times 03/Jan/2009 Chancellor on brink of second bailout for banks”, manchete do jornal britânico sobre um novo socorro do governo aos bancos. A citação mostra que o bloco não foi criado antes daquela data, e muita gente a lê também como uma crítica ao sistema financeiro.",
+    text: "Satoshi gravou no bloco gênese a frase “The Times 03/Jan/2009 Chancellor on brink of second bailout for banks”, manchete do jornal britânico sobre um possível segundo socorro do governo aos bancos. A citação mostra que o bloco não foi criado antes daquela data, e muita gente a lê também como uma crítica ao sistema financeiro.",
     article: "bloco-genese-a-mensagem-escondida-no-primeiro-bloco",
     source: { label: "Bitcoin Wiki: Genesis block", url: "https://en.bitcoin.it/wiki/Genesis_block" },
   },
@@ -390,12 +390,12 @@ export const curiosities: Curiosity[] = [
   },
   {
     title: "Quando a rede se partiu em duas",
-    text: "Em março de 2013, um bloco que exigia mais recursos de banco de dados do que as versões antigas do software suportavam dividiu a rede: a versão 0.8 aceitava o bloco e as anteriores o rejeitavam. Para reunificar a cadeia, os pools Slush e BTCGuild voltaram para a versão antiga, abrindo mão de muito dinheiro em recompensas.",
+    text: "Em março de 2013, um bloco que exigia mais recursos de banco de dados do que as versões antigas do software suportavam dividiu a rede: a versão 0.8 aceitava o bloco e parte das anteriores o rejeitava. Para reunificar a cadeia, os pools Slush e BTCGuild voltaram para a versão antiga, abrindo mão de muito dinheiro em recompensas.",
     source: { label: "BIP 50: March 2013 Chain Fork Post-Mortem", url: "https://github.com/bitcoin/bips/blob/master/bip-0050.mediawiki" },
   },
   {
     title: "A fortuna parada de Satoshi",
-    text: "Estima-se que Satoshi Nakamoto tenha cerca de 1,1 milhão de bitcoins, minerados nos primeiros anos da rede e nunca movimentados desde 2010. A conta é uma estimativa de pesquisadores feita a partir dos primeiros blocos, e nunca foi confirmada.",
+    text: "Estima-se que Satoshi Nakamoto tenha cerca de 1,1 milhão de bitcoins, minerados no começo da rede e nunca movimentados desde 2010. A conta é uma estimativa de pesquisadores feita a partir dos primeiros blocos, e nunca foi confirmada.",
     article: "quem-e-satoshi-nakamoto",
     source: { label: "Wikipédia: Satoshi Nakamoto", url: "https://en.wikipedia.org/wiki/Satoshi_Nakamoto" },
   },
@@ -407,13 +407,13 @@ export const curiosities: Curiosity[] = [
   },
   {
     title: "Bitcoin com B maiúsculo ou minúsculo",
-    text: "Uma convenção comum usa Bitcoin, com maiúscula, para a rede e a tecnologia, e bitcoin, com minúscula, para a moeda. Nem todo mundo segue a regra: os dicionários de Cambridge e Oxford usam as duas formas sem distinção.",
+    text: "Uma convenção comum usa Bitcoin, com maiúscula, para a rede e a tecnologia, e bitcoin, com minúscula, para a moeda. Nem todo mundo segue a regra: dicionários de inglês para estudantes, como os de Cambridge e Oxford, usam as duas formas sem distinção.",
     article: "fatos-curiosos-sobre-o-bitcoin",
     source: { label: "Wikipédia: Bitcoin", url: "https://en.wikipedia.org/wiki/Bitcoin" },
   },
   {
     title: "O primeiro ETF de cripto da B3 é de 2021",
-    text: "O HASH11, lançado em abril de 2021, foi o primeiro ETF de criptoativos negociado na bolsa brasileira, quase três anos antes de os Estados Unidos aprovarem ETFs de bitcoin à vista. Numa atualização de outubro de 2025, a B3 contava 19 ativos ligados a cripto, entre ETFs e BDRs de ETFs.",
+    text: "O HASH11, lançado em abril de 2021, foi o primeiro ETF de criptoativos negociado na bolsa brasileira, quase três anos antes de os Estados Unidos aprovarem ETFs de bitcoin à vista. Num guia atualizado em outubro de 2025, a B3 contava 19 ativos ligados a cripto, entre ETFs e BDRs de ETFs.",
     article: "etf-de-bitcoin-o-que-e-e-como-funciona-no-brasil",
     source: {
       label: "B3 Bora Investir: criptoativos na B3",
@@ -422,7 +422,7 @@ export const curiosities: Curiosity[] = [
   },
   {
     title: "Na lei brasileira, bitcoin é ativo virtual",
-    text: "A Lei 14.478/2022 trata o bitcoin e as demais criptomoedas como ativo virtual: a representação digital de valor que pode ser negociada ou transferida por meios eletrônicos e usada para pagamentos ou investimento. A mesma lei tipificou como crime a fraude com ativos virtuais.",
+    text: "Para a Lei 14.478/2022, criptomoedas como o bitcoin são ativos virtuais: a representação digital de valor que pode ser negociada ou transferida por meios eletrônicos e usada para pagamentos ou investimento. A mesma lei tipificou como crime a fraude com ativos virtuais.",
     article: "regulacao-das-criptomoedas-no-brasil-banco-central",
     source: {
       label: "Lei 14.478/2022 (Câmara dos Deputados)",

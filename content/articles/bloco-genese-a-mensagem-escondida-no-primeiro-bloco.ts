@@ -7,11 +7,11 @@ export const article: Article = {
   excerpt:
     "Bloco gênese: veja o que diz a manchete do The Times gravada no primeiro bloco do Bitcoin, por que os 50 BTC nunca podem ser gastos e o que veio depois.",
   metaDescription:
-    "A história do bloco gênese do Bitcoin, de 3 de janeiro de 2009: a frase do jornal The Times, os 50 BTC impossíveis de gastar e os seis dias até o bloco 1.",
+    "A história do bloco gênese do Bitcoin, de 3 de janeiro de 2009: a frase do jornal The Times, os 50 BTC impossíveis de gastar e a longa pausa até o bloco 1.",
   category: "historia",
   historyYear: 2009,
   date: "2026-10-22",
-  readTime: 7,
+  readTime: 8,
   imageQuery: "bitcoin genesis block code",
   seed: 43,
   kind: "guia",
@@ -19,7 +19,7 @@ export const article: Article = {
   keyPoints: [
     "O bloco gênese foi registrado em 3 de janeiro de 2009 e traz gravada a manchete do The Times sobre um segundo socorro do governo britânico aos bancos.",
     "Os 50 BTC de recompensa desse bloco nunca poderão ser gastos, por uma particularidade do código que segue até hoje no software do Bitcoin.",
-    "O bloco 1 só apareceu quase seis dias depois, e o motivo dessa pausa nunca foi explicado por Satoshi Nakamoto.",
+    "O bloco 1 só apareceu mais de cinco dias depois, e o motivo dessa pausa nunca foi explicado por Satoshi Nakamoto.",
   ],
   content: `<p>O bloco gênese é o primeiro bloco da blockchain do Bitcoin, registrado em 3 de janeiro de 2009. Dentro dele, Satoshi Nakamoto gravou uma frase tirada da capa do jornal britânico The Times daquele dia: "Chancellor on brink of second bailout for banks", algo como "ministro das Finanças à beira de um segundo socorro aos bancos".</p>
 <p>Este texto conta o que se sabe sobre aquele sábado, o que a manchete dizia, por que os 50 bitcoins do bloco nunca poderão ser gastos e o que aconteceu nos dias seguintes. O bloco continua lá para quem quiser conferir: basta abrir o <a href="https://mempool.space/block/0" rel="noopener noreferrer">bloco 0 no explorador mempool.space</a> para ver a data, o hash e a única transação que ele carrega. Se o termo for novo, o verbete <a href="/glossario#bloco-genese">bloco gênese</a> do glossário resume a ideia em duas linhas.</p>
@@ -41,8 +41,8 @@ export const article: Article = {
 <p>Se foi de propósito, ninguém sabe. Satoshi nunca explicou, e mudar isso agora exigiria alterar uma regra de consenso, algo que a comunidade não tem motivo para fazer por 50 moedas simbólicas.</p>
 <div class="callout-box callout-fact"><span class="callout-label">Fato curioso</span><p>As únicas moedas do endereço do bloco gênese que jamais poderão sair dali são justamente as primeiras. Já as doações que desconhecidos mandam para esse endereço poderiam, em tese, ser gastas por quem tiver a chave privada dele. Até outubro de 2026, nenhum satoshi tinha saído.</p></div>
 
-<h2>Seis dias de silêncio até o bloco 1</h2>
-<p>Numa rede que produz um bloco a cada 10 minutos em média, o segundo bloco demorou quase seis dias. O bloco 1 tem horário de 2h54min25s (UTC) de 9 de janeiro de 2009, segundo o mempool.space. Na véspera, à tarde no horário da costa leste dos Estados Unidos, Satoshi tinha anunciado a versão 0.1 do programa na mesma lista de e-mails de criptografia em que publicara o whitepaper.</p>
+<h2>Cinco dias de silêncio até o bloco 1</h2>
+<p>Numa rede que produz um bloco a cada 10 minutos em média, o segundo bloco demorou mais de cinco dias. O bloco 1 tem horário de 2h54min25s (UTC) de 9 de janeiro de 2009, segundo o mempool.space. Na véspera, à tarde no horário da costa leste dos Estados Unidos, Satoshi tinha anunciado a versão 0.1 do programa na mesma lista de e-mails de criptografia em que publicara o whitepaper.</p>
 <p>O que aconteceu nesse intervalo é especulação. O wiki do Bitcoin reúne as hipóteses mais citadas: Satoshi pode ter montado o gênese com a data da manchete e esperado alguns dias para lançar o software; o bloco pode ter levado dias para ser minerado; ou ele pode ter testado a rede numa versão preliminar até o dia 9, apagado os blocos de teste e reaproveitado o gênese. Nenhuma delas foi confirmada.</p>
 <p>Três dias depois do bloco 1, a rede registrou o primeiro envio de bitcoin entre duas pessoas, no bloco 170: 10 BTC de Satoshi para o programador Hal Finney, história contada em <a href="/artigos/hal-finney-o-primeiro-a-receber-bitcoin">Hal Finney, o primeiro a receber bitcoin</a>.</p>
 <table>
@@ -51,7 +51,7 @@ export const article: Article = {
 <tr><td>31/10/2008</td><td>Nenhum</td><td>Satoshi divulga o whitepaper numa lista de e-mails de criptografia</td></tr>
 <tr><td>03/01/2009</td><td>0 (gênese)</td><td>Bloco com a manchete do The Times e 50 BTC que não podem ser gastos</td></tr>
 <tr><td>08/01/2009</td><td>Nenhum</td><td>Anúncio da versão 0.1 do programa na mesma lista</td></tr>
-<tr><td>09/01/2009</td><td>1</td><td>Primeiro bloco depois do gênese, quase seis dias mais tarde</td></tr>
+<tr><td>09/01/2009</td><td>1</td><td>Primeiro bloco depois do gênese, mais de cinco dias mais tarde</td></tr>
 <tr><td>12/01/2009</td><td>170</td><td>Primeira transação entre pessoas: 10 BTC para Hal Finney</td></tr>
 <tr><td>05/01/2024</td><td>824.513</td><td>Um remetente desconhecido manda 26,9 BTC ao endereço do gênese</td></tr>
 </tbody>
@@ -96,7 +96,7 @@ export const article: Article = {
     {
       question: "Quem minerou o bloco gênese?",
       answer:
-        "A hipótese mais aceita é que o próprio Satoshi Nakamoto minerou o bloco gênese, já que ele lançou o software e era o único participante conhecido naquele momento. Não há prova direta disso, nem informação sobre onde estava o computador. Também não se sabe quanto tempo a mineração levou, porque o bloco seguinte só apareceu quase seis dias depois.",
+        "A hipótese mais aceita é que o próprio Satoshi Nakamoto minerou o bloco gênese, já que ele lançou o software e era o único participante conhecido naquele momento. Não há prova direta disso, nem informação sobre onde estava o computador. Também não se sabe quanto tempo a mineração levou, porque o bloco seguinte só apareceu mais de cinco dias depois.",
     },
     {
       question: "Dá para ver o bloco gênese hoje?",

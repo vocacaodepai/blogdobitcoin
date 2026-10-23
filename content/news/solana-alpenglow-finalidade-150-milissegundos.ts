@@ -4,7 +4,7 @@ export const item: NewsItem = {
   slug: "solana-alpenglow-finalidade-150-milissegundos",
   title: "Solana ativa o Alpenglow e mira finalidade de 150 milissegundos",
   summary:
-    "Maior mudança da Solana desde 2020, o Alpenglow aposentou o TowerBFT na quarta (21) e mira confirmar transações em definitivo em cerca de 150 milissegundos.",
+    "O Alpenglow aposentou na quarta (21) o TowerBFT, consenso usado pela Solana desde 2020, e mira tornar transações definitivas em cerca de 150 milissegundos.",
   author: "Bruno Danello",
   sourceName: "The Block",
   sourceUrl:
@@ -24,6 +24,7 @@ export const item: NewsItem = {
 <h2>O custo para os validadores e o caminho até aqui</h2>
 <p>A mudança também mexe no bolso de quem valida. Segundo o <a href="https://decrypt.co/380974/solana-alpenglow-upgrade-date" rel="noopener noreferrer nofollow">Decrypt</a>, cada conta de voto passa a pagar um bilhete de admissão de 0,8 SOL por época, que é queimado, no lugar de cerca de 1 SOL por época gasto antes em taxas de transação de voto. O validador que não tiver saldo para o bilhete fica de fora da votação e da produção de blocos na época seguinte. A proposta, chamada SIMD-0326, foi aprovada pelos validadores em setembro de 2025, com 98,27% dos votos a favor.</p>
 <p>O desenho do Alpenglow foi publicado pela Anza em maio de 2025. Antes de chegar à rede principal, passou por testes públicos, ataques simulados por equipes de segurança, testes de invasão, ensaios repetidos da migração e uma competição de segurança, segundo o The Block. A Anza resumiu o esforço numa frase citada pelo Decrypt: "18 meses de trabalho para uma migração que acontece em um slot".</p>
+<p>A ativação foi marcada para o início da época 1064, e o TowerBFT ainda ficou no comando por 5.000 slots, cerca de 18 minutos, antes de o Alpenglow assumir no slot 459.653.000, segundo o cronograma divulgado pela Solana Foundation e publicado pelo Decrypt uma semana antes. A data ficou dentro do que a equipe vinha indicando: em maio, Max Resnick, economista-chefe da Anza, falava em ativar a mudança no fim do terceiro trimestre ou no começo do quarto.</p>
 
 <h2>O que isso muda para quem tem cripto no Brasil</h2>
 <p>Para quem tem SOL numa corretora ou numa carteira própria, nada muda na prática. Segundo a CoinDesk, as carteiras continuam as mesmas, os envios seguem funcionando, e as taxas de transação e o funcionamento dos aplicativos não mudaram. Não existe nenhuma "migração" de moedas para fazer, e qualquer mensagem que peça suas palavras de recuperação para "atualizar" a carteira por causa do Alpenglow é golpe.</p>

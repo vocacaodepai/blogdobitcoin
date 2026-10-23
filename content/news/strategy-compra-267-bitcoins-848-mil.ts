@@ -2,7 +2,7 @@ import type { NewsItem } from "@/lib/types";
 
 export const item: NewsItem = {
   slug: "strategy-compra-267-bitcoins-848-mil",
-  title: "Strategy, de Michael Saylor, compra mais 267 bitcoins e chega a 848.517 BTC",
+  title: "Strategy, de Saylor, compra mais 267 bitcoins e chega a 848.517 BTC",
   summary:
     "A Strategy comprou 267 BTC por US$ 22,1 milhões entre 12 e 18 de outubro e soma 848.517 bitcoins, cerca de 4% de toda a oferta que um dia vai existir.",
   author: "Bruno Danello",
@@ -18,6 +18,7 @@ export const item: NewsItem = {
 
 <h2>De onde veio o dinheiro</h2>
 <p>A compra foi paga quase toda com venda de ações. Segundo o 8-K, a Strategy vendeu 140.872 ações ordinárias MSTR no programa at-the-market, em que a empresa emite e vende papéis novos aos poucos, direto no mercado, e levantou US$ 22,0 milhões líquidos. Os US$ 0,1 milhão restantes saíram do caixa em dólares. Ainda restam US$ 18,79 bilhões disponíveis para venda de ações MSTR nesse programa.</p>
+<p>Desta vez, a empresa não vendeu nenhuma das suas quatro classes de ações preferenciais (STRF, STRC, STRK e STRD) no programa at-the-market, segundo o 8-K: toda a compra saiu das ações ordinárias. Vender ação nova traz dinheiro sem criar dívida, mas dilui a fatia de quem já é acionista, por isso o ritmo de emissão é um dos números que o mercado mais acompanha na Strategy.</p>
 <p>Na mesma semana, a empresa usou US$ 193,1 milhões do caixa para recomprar 1.938.780 ações preferenciais STRC, uma das classes de papel que paga dividendos e que a Strategy usa para financiar as compras de bitcoin. O conselho também elevou o limite do programa de recompra desses títulos de US$ 2 bilhões para US$ 3 bilhões, e ainda sobram US$ 1,16 bilhão para usar.</p>
 <p>A Strategy mantém duas reservas em dólar. A USD Reserve, que serve para pagar dividendos das preferenciais e juros das dívidas, estava em US$ 4,83 bilhões em 18 de outubro, depois de bancar US$ 45,5 milhões em dividendos na semana. Já o USD Cash, de uso mais livre, somava US$ 447,3 milhões.</p>
 
@@ -32,6 +33,7 @@ export const item: NewsItem = {
 
 <h2>A conta da Strategy hoje</h2>
 <p>Pela cotação da Binance por volta das 18h30 de Brasília desta quinta-feira (22), perto de US$ 81,5 mil, os 848.517 bitcoins da empresa valiam cerca de US$ 69 bilhões, acima dos US$ 64,02 bilhões que custaram. A folga existe porque o custo médio, de US$ 75.446, ficou abaixo do preço atual, mas ela diminui em cada queda do mercado. O valor do bitcoin atualizado minuto a minuto fica em <a href="/bitcoin">preço do Bitcoin hoje</a>.</p>
+<p>Saylor também tem falado em novos produtos. Segundo o The Block, num evento para investidores da ParaFi ele apresentou o que chamou de dinheiro digital "aperfeiçoado", descrito pela publicação como uma stablecoin atrelada ao dólar, lastreada em bitcoin e com rendimento de 6% a 8%. Não há data nem detalhe oficial sobre esse produto no 8-K desta semana.</p>
 <p>O 8-K lembra ainda que a Strategy mantém um painel público no próprio site, com compras, posição em bitcoin e indicadores da empresa. Os próximos formulários vão mostrar se o ritmo de compras continua e se a venda de ações segue como principal fonte de dinheiro.</p>`,
   faq: [
     {

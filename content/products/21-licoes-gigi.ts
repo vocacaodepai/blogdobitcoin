@@ -63,7 +63,7 @@ export const product: Product = {
         title: "De onde vem o livro",
         paragraphs: [
           "21 Lições nasceu como uma série de artigos em inglês chamada What I've Learned From Bitcoin, escrita por Gigi, ex-engenheiro de software e escritor conhecido na comunidade. O texto virou o livro 21 Lessons: What I've Learned from Falling Down the Bitcoin Rabbit Hole, que pode ser lido de graça no site oficial do projeto, em inglês, sob licença Creative Commons BY-SA 4.0.",
-          "A edição brasileira é da Editora Axia, saiu em fevereiro de 2025 e tem 228 páginas em formato de bolso. O site do autor lista a tradução para o português do Brasil entre as edições oficiais em outras línguas.",
+          "A edição brasileira é da Editora Axia, saiu em fevereiro de 2025 e tem 228 páginas em formato de bolso. O site oficial do projeto lista traduções para vários idiomas, entre eles o português do Brasil.",
         ],
       },
       {

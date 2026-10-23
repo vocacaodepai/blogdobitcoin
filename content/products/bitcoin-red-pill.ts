@@ -19,7 +19,7 @@ export const product: Product = {
   priceCheckedAt: "2026-10-22",
   pros: [
     "Escrito por brasileiros, com exemplos e preocupações que conversam com a realidade do país",
-    "A 3ª edição, de outubro de 2024, é a mais recente da lista entre os livros de autores nacionais",
+    "A 3ª edição é de outubro de 2024, dez anos mais nova que o livro de Fernando Ulrich, o outro título nacional da lista",
     "Vai além da teoria e passa por temas como autocustódia e sidechains, segundo resenhas de leitores",
     "Nota 4,8 de 5 com 261 avaliações na Amazon Brasil",
     "Discute privacidade, poupança e preferência temporal, ligando o Bitcoin a escolhas de vida e de família",
@@ -28,7 +28,7 @@ export const product: Product = {
     "Tom fortemente ideológico, que parte dos leitores descreve como messiânico",
     "Usa analogias históricas amplas, como um novo Renascimento após a Peste Negra, difíceis de comprovar",
     "As referências ficam no fim do livro, e não em notas de rodapé, o que dificulta checar as fontes",
-    "É o mais caro da seleção junto com O Padrão Bitcoin, e com 404 páginas pede fôlego",
+    "Está entre os mais caros da seleção e, com 404 páginas, pede fôlego",
   ],
   sortOrder: 4,
   date: "2026-10-22",
@@ -62,21 +62,21 @@ export const product: Product = {
         title: "Quem escreveu e qual edição é esta",
         paragraphs: [
           "Bitcoin Red Pill é assinado por Alan Schramm e Renato Amoedo. A primeira edição saiu em 2020, com o subtítulo O Renascimento Moral, Material e Tecnológico, e a obra ganhou novas edições desde então. Esta página trata da 3ª edição publicada pela Editora Axia em outubro de 2024, com 404 páginas e ISBN 978-6598439729.",
-          "Na Amazon também aparece uma versão impressa sob demanda da mesma 3ª edição, com outro ISBN (979-8336707137) e 392 páginas. Para receber a edição da Axia, confira a editora e o número de páginas antes de finalizar o pedido.",
+          "Na Amazon também aparece outra versão da 3ª edição, com outro ISBN (979-8336707137), 392 páginas e o subtítulo O Renascimento Moral, Material e Tecnológico. Para receber a edição da Axia, confira a editora e o número de páginas antes de finalizar o pedido.",
         ],
       },
       {
         title: "A tese do livro",
         paragraphs: [
           "A sinopse da editora começa com uma pergunta sobre o futuro da família: deixá-lo nas mãos de políticos ou assumir o controle. A partir daí, os autores descrevem um cenário de controle financeiro, cultural e político e apresentam o Bitcoin como saída individual, por ser escasso, portátil, descentralizado e resistente à censura e ao confisco.",
-          "O texto propõe uma troca de valores: privacidade no lugar da fama, poupança no lugar do consumo, laços sólidos no lugar de relações superficiais. Essa ideia de inverter a preferência temporal, pensar mais no longo prazo, aparece também em O Padrão Bitcoin, de Saifedean Ammous, que os autores claramente tomam como referência.",
+          "O texto propõe uma troca de valores: privacidade no lugar da fama, poupança no lugar do consumo, laços sólidos no lugar de relações superficiais. Essa ideia de inverter a preferência temporal, pensar mais no longo prazo, aparece também em O Padrão Bitcoin, de Saifedean Ammous, outro livro desta seleção.",
         ],
         cta: true,
       },
       {
         title: "Pontos fortes para o leitor brasileiro",
         paragraphs: [
-          "Por ser escrito por brasileiros, o livro usa exemplos e preocupações próximas: inflação, desconfiança do sistema bancário e do Estado, interesse por proteger o patrimônio da família. Resenhas de leitores destacam a leitura acessível e o fato de passar por temas práticos, como autocustódia e sidechains, que livros mais teóricos deixam de lado.",
+          "Por ser escrito por brasileiros, o livro discute a política do país, como apontam resenhas de leitores, e parte de uma preocupação que muita família brasileira tem: o que fazer com o próprio dinheiro diante de governo e inflação. Resenhas de leitores destacam a leitura acessível e o fato de passar por temas práticos, como autocustódia e sidechains, que livros mais teóricos deixam de lado.",
           "A edição de 2024 também é mais recente do que a maioria dos títulos nacionais sobre o tema, o que ajuda no retrato do ecossistema. Mesmo assim, regras de impostos e de regulação mudam rápido, então informações desse tipo devem ser conferidas em fontes oficiais.",
         ],
       },
@@ -90,7 +90,7 @@ export const product: Product = {
       },
     ],
     priceText:
-      "A edição da Axia costuma ter preço de capa nas livrarias e desconto na Amazon. A versão impressa sob demanda, com outro ISBN, aparece com preço diferente, o que confunde quem compara lojas.",
+      "A edição da Axia costuma ter preço de capa nas livrarias e desconto na Amazon. A outra versão da 3ª edição, com ISBN 979-8, aparece com preço diferente, o que confunde quem compara lojas.",
     specs: [
       "Autores: Alan Schramm e Renato Amoedo",
       "Título: Bitcoin Red Pill: O Renascimento Moral e Tecnológico (3ª edição)",
@@ -121,7 +121,7 @@ export const product: Product = {
       {
         question: "Qual a diferença entre as duas versões da 3ª edição na Amazon?",
         answer:
-          "Uma é a edição da Editora Axia, com ISBN 978-6598439729 e 404 páginas. A outra é uma impressão sob demanda, com ISBN 979-8336707137 e 392 páginas. Confira editora e número de páginas no anúncio antes de comprar.",
+          "Uma é a edição da Editora Axia, com ISBN 978-6598439729 e 404 páginas. A outra versão tem ISBN 979-8336707137 e 392 páginas, sem a Axia como editora na ficha. Confira editora e número de páginas no anúncio antes de comprar.",
       },
       {
         question: "Bitcoin Red Pill é bom para iniciantes?",

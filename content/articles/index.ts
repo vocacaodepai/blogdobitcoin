@@ -13,23 +13,24 @@ import { article as i7 } from "./el-salvador-bitcoin-moeda-oficial";
 import { article as i8 } from "./regulacao-das-criptomoedas-no-brasil-banco-central";
 import { article as i9 } from "./imposto-sobre-criptomoedas-no-brasil-quanto-se-paga";
 import { article as i10 } from "./como-declarar-bitcoin-no-imposto-de-renda";
-import { article as i11 } from "./o-que-e-ethereum-e-como-funciona";
-import { article as i12 } from "./etf-de-bitcoin-o-que-e-e-como-funciona-no-brasil";
-import { article as i13 } from "./dca-em-bitcoin-como-investir-todo-mes";
-import { article as i14 } from "./ciclos-do-bitcoin-o-que-os-halvings-mostram";
-import { article as i15 } from "./autocustodia-not-your-keys-not-your-coins";
-import { article as i16 } from "./seed-phrase-como-guardar-as-palavras-de-recuperacao";
-import { article as i17 } from "./golpes-com-criptomoedas-como-se-proteger";
-import { article as i18 } from "./bitcoin-vale-a-pena-riscos-antes-de-investir";
-import { article as i19 } from "./exchange-de-criptomoedas-como-escolher-uma-corretora";
-import { article as i20 } from "./carteira-de-bitcoin-qual-escolher";
-import { article as i21 } from "./como-comprar-bitcoin-no-brasil-passo-a-passo";
-import { article as i22 } from "./bitcoin-ou-ethereum-diferencas";
-import { article as i23 } from "./satoshis-o-que-sao-sats-e-como-converter";
-import { article as i24 } from "./lightning-network-o-que-e-e-como-usar";
-import { article as i25 } from "./mineracao-de-bitcoin-como-funciona";
-import { article as i26 } from "./halving-do-bitcoin-o-que-e-e-quando-e-o-proximo";
-import { article as i27 } from "./o-que-e-bitcoin-e-como-funciona";
+import { article as i11 } from "./stablecoins-o-que-sao-usdt-usdc";
+import { article as i12 } from "./o-que-e-ethereum-e-como-funciona";
+import { article as i13 } from "./etf-de-bitcoin-o-que-e-e-como-funciona-no-brasil";
+import { article as i14 } from "./dca-em-bitcoin-como-investir-todo-mes";
+import { article as i15 } from "./ciclos-do-bitcoin-o-que-os-halvings-mostram";
+import { article as i16 } from "./autocustodia-not-your-keys-not-your-coins";
+import { article as i17 } from "./seed-phrase-como-guardar-as-palavras-de-recuperacao";
+import { article as i18 } from "./golpes-com-criptomoedas-como-se-proteger";
+import { article as i19 } from "./bitcoin-vale-a-pena-riscos-antes-de-investir";
+import { article as i20 } from "./exchange-de-criptomoedas-como-escolher-uma-corretora";
+import { article as i21 } from "./carteira-de-bitcoin-qual-escolher";
+import { article as i22 } from "./como-comprar-bitcoin-no-brasil-passo-a-passo";
+import { article as i23 } from "./bitcoin-ou-ethereum-diferencas";
+import { article as i24 } from "./satoshis-o-que-sao-sats-e-como-converter";
+import { article as i25 } from "./lightning-network-o-que-e-e-como-usar";
+import { article as i26 } from "./mineracao-de-bitcoin-como-funciona";
+import { article as i27 } from "./halving-do-bitcoin-o-que-e-e-quando-e-o-proximo";
+import { article as i28 } from "./o-que-e-bitcoin-e-como-funciona";
 
 export const articles: Article[] = [
   i0,
@@ -60,4 +61,5 @@ export const articles: Article[] = [
   i25,
   i26,
   i27,
+  i28,
 ];

@@ -17,9 +17,9 @@ function arc(cx: number, cy: number, r: number, from: number, to: number) {
 
 const BANDS = [
   { from: 0, to: 25, color: "#d92d20" },
-  { from: 25, to: 45, color: "#f97316" },
-  { from: 45, to: 55, color: "#eab308" },
-  { from: 55, to: 75, color: "#84cc16" },
+  { from: 25, to: 46, color: "#f97316" },
+  { from: 46, to: 54, color: "#eab308" },
+  { from: 54, to: 75, color: "#84cc16" },
   { from: 75, to: 100, color: "#16a34a" },
 ];
 
@@ -65,7 +65,7 @@ export function FearGreedGauge({
             </text>
           </svg>
           <p className="-mt-1 text-center font-display text-lg font-bold" style={{ color: current ? fearGreedColor(value) : undefined }}>
-            {current ? fearGreedLabel(value) : "Carregando"}
+            {current ? current.label || fearGreedLabel(value) : "Carregando"}
           </p>
         </div>
         {!compact && (
@@ -79,7 +79,7 @@ export function FearGreedGauge({
                 <div key={l} className="rounded-lg border border-border bg-background/60 px-3 py-2">
                   <dt className="label-mono text-muted">{l}</dt>
                   <dd className="mt-1 font-mono text-sm font-semibold" style={{ color: p ? fearGreedColor(p.value) : undefined }}>
-                    {p ? `${p.value} · ${fearGreedLabel(p.value)}` : "--"}
+                    {p ? `${p.value} · ${p.label || fearGreedLabel(p.value)}` : "--"}
                   </dd>
                 </div>
               ))}

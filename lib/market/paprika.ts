@@ -48,9 +48,11 @@ export type CoinRow = {
   ch7d: number;
   ch30d: number;
   ch1y: number;
-  athBrl: number | null;
+  /** Máxima histórica em dólar (a "em real" da CoinPaprika é o topo em dólar vezes o câmbio de hoje). */
+  athUsd: number | null;
   athDate: string | null;
   fromAth: number | null;
+  /** Oferta total (a CoinPaprika gratuita não informa a circulante). */
   supply: number;
   maxSupply: number;
   /** Stablecoin (atrelada a moeda fiduciária) ou token embrulhado/em staking de outra moeda. */
@@ -102,8 +104,8 @@ export function toRow(t: PaprikaTicker): CoinRow {
     // esses dois períodos chegam da CoinGecko no navegador (lib/market/coingecko.ts).
     ch30d: Number.NaN,
     ch1y: Number.NaN,
-    athBrl: b.ath_price,
-    athDate: b.ath_date,
+    athUsd: t.quotes.USD.ath_price,
+    athDate: t.quotes.USD.ath_date,
     fromAth: b.percent_from_price_ath,
     supply: t.total_supply,
     maxSupply: t.max_supply,

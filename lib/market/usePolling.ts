@@ -114,6 +114,12 @@ function getEntry<T>(key: string, fetcher: () => Promise<T>, interval: number, i
       },
     };
     stores.set(key, entry as Entry<unknown>);
+  } else if (entry.snapshot.data == null && initial != null) {
+    // A chave pode ter nascido num componente sem dado do servidor (o selo de preço do topo
+    // renderiza antes da página): o primeiro que trouxer o dado inicial semeia a entrada,
+    // para o preço do HTML não sumir até a primeira busca do navegador. Sem emit: estamos
+    // no render; a primeira busca (nextAt continua 0) avisa todo mundo logo em seguida.
+    entry.snapshot = { ...entry.snapshot, data: initial, updatedAt: entry.snapshot.updatedAt || Date.now() };
   }
   return entry;
 }

@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import { formatNumber } from "@/lib/market/format";
 import { halvingInfo, MAX_SUPPLY, PAST_HALVINGS, TARGET_BLOCK_SECONDS } from "@/lib/market/halving";
 import { useDifficulty, useNow, useTipHeight } from "@/lib/market/live";
@@ -23,6 +24,12 @@ export function HalvingCountdown({
   const { data: height } = useTipHeight(initialHeight);
   const { data: diff } = useDifficulty();
   const now = useNow(1000);
+  const avgSec = diff?.timeAvg ? diff.timeAvg / 1000 : TARGET_BLOCK_SECONDS;
+  // A estimativa fica presa ao instante em que a altura (ou o tempo médio) mudou: assim a
+  // contagem anda a cada segundo e só é recalculada quando chega bloco novo.
+  const [anchor, setAnchor] = useState<{ height: number; avgSec: number; at: number } | null>(null);
+  const anchored = anchor !== null && anchor.height === height && anchor.avgSec === avgSec;
+  if (height && !anchored) setAnchor({ height, avgSec, at: now });
 
   if (!height) {
     return (
@@ -32,8 +39,7 @@ export function HalvingCountdown({
     );
   }
 
-  const avgSec = diff?.timeAvg ? diff.timeAvg / 1000 : TARGET_BLOCK_SECONDS;
-  const info = halvingInfo(height, avgSec, now);
+  const info = halvingInfo(height, avgSec, anchored ? anchor.at : now);
   const msLeft = Math.max(0, info.estimatedAt - now);
   const days = Math.floor(msLeft / 86400_000);
   const hours = Math.floor((msLeft % 86400_000) / 3600_000);

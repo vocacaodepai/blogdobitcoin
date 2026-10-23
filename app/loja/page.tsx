@@ -8,7 +8,7 @@ import { ReviewCriteria } from "@/components/listing/ReviewCriteria";
 import { ProductCard } from "@/components/store/ProductCard";
 import { getArticlesByCategory, site } from "@/lib/articles";
 import { getProductsByCategory, productCategories, sortedProducts } from "@/lib/products";
-import { absoluteUrl, alternatesFor, breadcrumbJsonLd } from "@/lib/seo";
+import { absoluteUrl, alternatesFor, breadcrumbJsonLd, OG_IMAGE } from "@/lib/seo";
 
 const TITLE = "Loja do Bitcoin: carteiras, livros e camisetas";
 const DESCRIPTION =
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   title: { absolute: `${TITLE} | ${site.name}` },
   description: DESCRIPTION,
   alternates: alternatesFor("/loja"),
-  openGraph: { type: "website", url: absoluteUrl("/loja"), title: TITLE, description: DESCRIPTION, siteName: site.name, locale: site.locale },
+  openGraph: { images: [OG_IMAGE], type: "website", url: absoluteUrl("/loja"), title: TITLE, description: DESCRIPTION, siteName: site.name, locale: site.locale },
 };
 
 export default function LojaPage() {

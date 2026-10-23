@@ -290,8 +290,15 @@ export function BubbleChart({ initial, profiles }: { initial: CoinRow[]; profile
           onPointerUp={onUp}
           onPointerLeave={onUp}
         >
-          {items.map((it) => {
+          {items.map((it, i) => {
             const r = radii.get(it.row.id) ?? 10;
+            // Posição inicial na mesma espiral do efeito de sincronização: o HTML do servidor já sai
+            // com as bolhas espalhadas (antes ficavam todas no canto até o JS carregar). Depois a
+            // física move o grupo direto no DOM, e o React só mexe aqui se a ordem mudar.
+            const angle = i * 2.399963;
+            const dist = Math.min(size.w, size.h) * 0.42 * Math.sqrt((i + 1) / (items.length + 1));
+            const x0 = Math.round(size.w / 2 + Math.cos(angle) * dist);
+            const y0 = Math.round(size.h / 2 + Math.sin(angle) * dist);
             const c = bubbleColors(it.change);
             const showText = r >= 13;
             const showLogo = r >= 30;
@@ -303,6 +310,7 @@ export function BubbleChart({ initial, profiles }: { initial: CoinRow[]; profile
                   else groups.current.delete(it.row.id);
                 }}
                 className="bubble-node"
+                transform={`translate(${x0} ${y0})`}
                 onPointerDown={(e) => onDown(e, it.row.id)}
               >
                 <circle r={r} fill={c.fill} stroke={selected === it.row.id ? "#ffffff" : c.stroke} strokeWidth={selected === it.row.id ? 3 : 1.5} />

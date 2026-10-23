@@ -26,6 +26,13 @@ export function alternatesFor(path: string) {
 }
 
 /** URL absoluta do site a partir de um caminho. */
+/**
+ * Imagem de compartilhamento padrão (app/opengraph-image.tsx). O Next substitui o openGraph
+ * do layout inteiro pelo da página, então toda página que define openGraph sem imagem
+ * própria precisa repetir esta, senão o card do WhatsApp, Facebook e X sai sem foto.
+ */
+export const OG_IMAGE = { url: "/opengraph-image", width: 1200, height: 630, alt: site.name };
+
 export function absoluteUrl(path: string): string {
   if (/^https?:\/\//.test(path)) return path;
   return `${site.url}${path.startsWith("/") ? path : `/${path}`}`;

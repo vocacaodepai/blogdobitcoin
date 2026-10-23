@@ -4,7 +4,7 @@ import { Container } from "@/components/Container";
 import { INSTITUTIONAL_NAV } from "@/components/Header";
 import { site } from "@/lib/articles";
 import { author } from "@/lib/author";
-import { absoluteUrl, breadcrumbJsonLd, formatDate, metaDescription, safeJsonLd, alternatesFor } from "@/lib/seo";
+import { absoluteUrl, alternatesFor, breadcrumbJsonLd, formatDate, metaDescription, OG_IMAGE, safeJsonLd } from "@/lib/seo";
 
 /**
  * Data da última revisão dos textos institucionais (sobre, contato, políticas,
@@ -44,7 +44,7 @@ export function institutionalMetadata({
     title,
     description: desc,
     alternates: alternatesFor(path),
-    openGraph: {
+    openGraph: { images: [OG_IMAGE],
       type: "website",
       url: absoluteUrl(path),
       title: `${title} | ${site.name}`,

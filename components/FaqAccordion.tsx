@@ -1,11 +1,12 @@
 "use client";
 
-import { useState } from "react";
+import { useId, useState } from "react";
 
 export type FaqItem = { question: string; answer: string };
 
 export function FaqAccordion({ items }: { items: FaqItem[] }) {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
+  const baseId = useId();
 
   if (!items || items.length === 0) return null;
 
@@ -21,6 +22,7 @@ export function FaqAccordion({ items }: { items: FaqItem[] }) {
                 type="button"
                 onClick={() => setOpenIndex(open ? null : i)}
                 aria-expanded={open}
+                aria-controls={`${baseId}-${i}`}
                 className="flex w-full items-center justify-between gap-4 px-5 py-4 text-left transition hover:text-accent"
               >
                 <span className="font-medium text-foreground">{item.question}</span>
@@ -31,9 +33,10 @@ export function FaqAccordion({ items }: { items: FaqItem[] }) {
                   +
                 </span>
               </button>
-              {open && (
-                <div className="px-5 pb-4 text-sm leading-relaxed text-muted">{item.answer}</div>
-              )}
+              {/* Todas as respostas vão no HTML (o FAQPage do JSON-LD declara todas); as fechadas só ficam escondidas. */}
+              <div id={`${baseId}-${i}`} hidden={!open} className="px-5 pb-4 text-sm leading-relaxed text-muted">
+                {item.answer}
+              </div>
             </div>
           );
         })}

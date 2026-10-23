@@ -9,18 +9,19 @@ const LABELS: Record<string, string> = {
   "Extreme Greed": "Ganância extrema",
 };
 
+/** Faixas da própria alternative.me: 0-25, 26-46, 47-54, 55-75 e 76-100 (conferidas no histórico da API). */
 export function fearGreedLabel(value: number): string {
-  if (value <= 24) return "Medo extremo";
-  if (value <= 44) return "Medo";
-  if (value <= 55) return "Neutro";
+  if (value <= 25) return "Medo extremo";
+  if (value <= 46) return "Medo";
+  if (value <= 54) return "Neutro";
   if (value <= 75) return "Ganância";
   return "Ganância extrema";
 }
 
 export function fearGreedColor(value: number): string {
-  if (value <= 24) return "#d92d20";
-  if (value <= 44) return "#f97316";
-  if (value <= 55) return "#eab308";
+  if (value <= 25) return "#d92d20";
+  if (value <= 46) return "#f97316";
+  if (value <= 54) return "#eab308";
   if (value <= 75) return "#84cc16";
   return "#16a34a";
 }

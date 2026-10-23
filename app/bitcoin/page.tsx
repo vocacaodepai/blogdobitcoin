@@ -19,8 +19,9 @@ import { getBtcQuoteServer } from "@/lib/market/bitcoin";
 import { getFearGreedServer } from "@/lib/market/feargreed";
 import { formatBRL } from "@/lib/market/format";
 import { getTipHeightServer } from "@/lib/market/mempool";
+import { getPeriodBasesServer } from "@/lib/market/periods";
 import { sortedNews } from "@/lib/news";
-import { absoluteUrl, alternatesFor, breadcrumbJsonLd } from "@/lib/seo";
+import { absoluteUrl, alternatesFor, breadcrumbJsonLd, OG_IMAGE } from "@/lib/seo";
 
 /** HTML refeito a cada 60 s: o Google já lê o preço no servidor; o navegador atualiza a cada 10 s. */
 export const revalidate = 60;
@@ -33,7 +34,7 @@ export const metadata: Metadata = {
   title: { absolute: `${TITLE} | ${site.name}` },
   description: DESCRIPTION,
   alternates: alternatesFor("/bitcoin"),
-  openGraph: {
+  openGraph: { images: [OG_IMAGE],
     type: "website",
     url: absoluteUrl("/bitcoin"),
     title: TITLE,
@@ -72,7 +73,12 @@ const FAQ = [
 ];
 
 export default async function BitcoinPage() {
-  const [quote, height, fng] = await Promise.all([getBtcQuoteServer(), getTipHeightServer(), getFearGreedServer(31)]);
+  const [quote, height, fng, periodBases] = await Promise.all([
+    getBtcQuoteServer(),
+    getTipHeightServer(),
+    getFearGreedServer(31),
+    getPeriodBasesServer(),
+  ]);
   const articles = getArticlesByCategory("bitcoin").slice(0, 6);
   const memories = getHistoryArticles().slice(0, 3);
   const news = sortedNews()
@@ -125,7 +131,7 @@ export default async function BitcoinPage() {
 
       <Container className="mt-8 space-y-6">
         <BtcLivePanel initial={quote} />
-        <PeriodChanges initial={quote} />
+        <PeriodChanges initial={quote} initialBases={periodBases} />
         <BtcChart />
         <div className="grid gap-6 lg:grid-cols-2 [&>*]:min-w-0">
           <HalvingCountdown initialHeight={height} />

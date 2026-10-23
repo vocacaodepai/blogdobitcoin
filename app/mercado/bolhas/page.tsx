@@ -7,7 +7,7 @@ import { BubbleChart } from "@/components/live/BubbleChart";
 import { site } from "@/lib/articles";
 import { coinProfilesMap } from "@/lib/coins";
 import { getMarketServer } from "@/lib/market/paprika";
-import { absoluteUrl, alternatesFor, breadcrumbJsonLd } from "@/lib/seo";
+import { absoluteUrl, alternatesFor, breadcrumbJsonLd, OG_IMAGE } from "@/lib/seo";
 
 export const revalidate = 300;
 
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   title: { absolute: `${TITLE} | ${site.name}` },
   description: DESCRIPTION,
   alternates: alternatesFor("/mercado/bolhas"),
-  openGraph: { type: "website", url: absoluteUrl("/mercado/bolhas"), title: TITLE, description: DESCRIPTION, siteName: site.name, locale: site.locale },
+  openGraph: { images: [OG_IMAGE], type: "website", url: absoluteUrl("/mercado/bolhas"), title: TITLE, description: DESCRIPTION, siteName: site.name, locale: site.locale },
 };
 
 export default async function BolhasPage() {

@@ -5,12 +5,13 @@
  * topo, a barra de cotações e o painel de /bitcoin usam a mesma busca.
  */
 import { useEffect, useMemo, useState } from "react";
-import { fetchKlines, fetchTickers24h, TICKER_BAR_PAIRS, type Candle, type Ticker24h } from "./binance";
+import { fetchTickers24h, TICKER_BAR_PAIRS, type Ticker24h } from "./binance";
 import { fetchBtcQuote, type BtcQuote } from "./bitcoin";
 import { fetchLongChanges, withLongChanges, type LongChange } from "./coingecko";
 import { fetchFearGreed, type FearGreedPoint } from "./feargreed";
 import { fetchDifficulty, fetchFees, fetchTipHeight, type DifficultyAdjustment, type Fees } from "./mempool";
 import { fetchGlobal, fetchMarket, type CoinRow, type GlobalStats } from "./paprika";
+import { fetchPeriodData, type PeriodData } from "./periods";
 import { usePolling } from "./usePolling";
 
 /** Intervalo de atualização do preço do Bitcoin (10 segundos). */
@@ -69,18 +70,9 @@ export function useFearGreed(initial: FearGreedPoint[] | null = null, limit = 31
 }
 
 /** Velas diárias e horárias do BTC/BRL, para as variações por período (atualiza a cada 5 min). */
-export function useBtcCandles() {
-  return usePolling<{ daily: Candle[]; hourly: Candle[] }>(
-    "btc-candles",
-    async () => {
-      const [daily, hourly] = await Promise.all([
-        fetchKlines("BTCBRL", "1d", 400),
-        fetchKlines("BTCBRL", "1h", 30),
-      ]);
-      return { daily, hourly };
-    },
-    5 * 60_000
-  );
+/** Velas diárias e janelas móveis de 1h e 7d do BTC/BRL, para a variação por período. */
+export function usePeriodData() {
+  return usePolling<PeriodData>("btc-periods", () => fetchPeriodData(), 5 * 60_000);
 }
 
 /** Relógio que força nova renderização a cada `ms` (contagem regressiva, "há 5 s"). */

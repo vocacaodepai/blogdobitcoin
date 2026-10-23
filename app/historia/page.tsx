@@ -6,7 +6,7 @@ import { PageHeader } from "@/components/PageHeader";
 import { JsonLd } from "@/components/article/JsonLd";
 import { getArticleBySlug, getHistoryArticles, site } from "@/lib/articles";
 import { curiosities, timeline, timelineDate } from "@/lib/history-content";
-import { absoluteUrl, alternatesFor, breadcrumbJsonLd } from "@/lib/seo";
+import { absoluteUrl, alternatesFor, breadcrumbJsonLd, OG_IMAGE } from "@/lib/seo";
 
 const TITLE = "História do Bitcoin: linha do tempo e fatos curiosos";
 const DESCRIPTION =
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   title: { absolute: `${TITLE} | ${site.name}` },
   description: DESCRIPTION,
   alternates: alternatesFor("/historia"),
-  openGraph: { type: "website", url: absoluteUrl("/historia"), title: TITLE, description: DESCRIPTION, siteName: site.name, locale: site.locale },
+  openGraph: { images: [OG_IMAGE], type: "website", url: absoluteUrl("/historia"), title: TITLE, description: DESCRIPTION, siteName: site.name, locale: site.locale },
 };
 
 export default function HistoriaPage() {

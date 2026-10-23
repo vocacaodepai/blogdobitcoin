@@ -59,7 +59,16 @@ export function DcaCalculator({ history, initialQuote }: { history: HistoryRow[]
         </label>
         <label className="block">
           <span className="label-mono text-muted">Primeiro aporte</span>
-          <select value={start} onChange={(e) => setStart(e.target.value)} className="mt-1 h-11 w-full rounded-lg border border-border bg-background px-3 text-sm">
+          <select
+            value={start}
+            onChange={(e) => {
+              const s = e.target.value;
+              setStart(s);
+              // O último aporte nunca fica antes do primeiro (senão o período some e a conta zera).
+              if (end < s) setEnd(s);
+            }}
+            className="mt-1 h-11 w-full rounded-lg border border-border bg-background px-3 text-sm"
+          >
             {months.map((m) => (
               <option key={m} value={m}>
                 {monthLabel(m)}
@@ -114,7 +123,9 @@ export function DcaCalculator({ history, initialQuote }: { history: HistoryRow[]
           </div>
         </>
       ) : (
-        <p className="mt-5 text-sm text-muted">Digite um valor mensal maior que zero.</p>
+        <p className="mt-5 text-sm text-muted">
+          {(parseAmount(monthly) ?? 0) > 0 ? "Escolha um último aporte igual ou depois do primeiro." : "Digite um valor mensal maior que zero."}
+        </p>
       )}
       <p className="mt-3 text-xs leading-relaxed text-muted">
         Simulação com o preço de fechamento de cada mês (blockchain.com x dólar PTAX do Banco Central), sem taxas, spread nem

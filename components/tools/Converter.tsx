@@ -29,7 +29,7 @@ export function Converter({ initialQuote, initialMarket }: { initialQuote: BtcQu
   const [amount, setAmount] = useState("1");
   const [unit, setUnit] = useState<Unit>("BTC");
 
-  const value = parseAmount(amount);
+  const value = parseAmount(amount, { dotDecimal: unit === "BTC" || unit.startsWith("coin:") });
   const brlPerBtc = q?.brl ?? null;
   const usdBrl = q?.usdBrl ?? null;
 

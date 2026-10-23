@@ -6,7 +6,7 @@ import { PageHeader } from "@/components/PageHeader";
 import { JsonLd } from "@/components/article/JsonLd";
 import { faqJsonLd } from "@/components/article/schema";
 import { site } from "@/lib/articles";
-import { absoluteUrl, alternatesFor, breadcrumbJsonLd } from "@/lib/seo";
+import { absoluteUrl, alternatesFor, breadcrumbJsonLd, OG_IMAGE } from "@/lib/seo";
 
 export type ToolMeta = {
   path: string;
@@ -22,7 +22,7 @@ export function toolMetadata(t: ToolMeta): Metadata {
     title: { absolute: `${t.seoTitle} | ${site.name}` },
     description: t.description,
     alternates: alternatesFor(t.path),
-    openGraph: { type: "website", url: absoluteUrl(t.path), title: t.seoTitle, description: t.description, siteName: site.name, locale: site.locale },
+    openGraph: { images: [OG_IMAGE], type: "website", url: absoluteUrl(t.path), title: t.seoTitle, description: t.description, siteName: site.name, locale: site.locale },
   };
 }
 
@@ -51,16 +51,15 @@ export function ToolPage({
   article?: React.ReactNode;
   faq: { question: string; answer: string }[];
 }) {
+  // WebPage, não WebApplication: o Google exige nota (aggregateRating/review) em app e não há
+  // avaliação real das ferramentas para declarar.
   const appLd = {
     "@context": "https://schema.org",
-    "@type": "WebApplication",
+    "@type": "WebPage",
     name: tool.name,
     url: absoluteUrl(tool.path),
     description: tool.description,
-    applicationCategory: "FinanceApplication",
-    operatingSystem: "Web",
     inLanguage: "pt-BR",
-    offers: { "@type": "Offer", price: 0, priceCurrency: "BRL" },
     isPartOf: { "@id": `${site.url}/#website` },
   };
   return (

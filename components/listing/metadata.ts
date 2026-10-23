@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { site } from "@/lib/articles";
-import { absoluteUrl, metaDescription, alternatesFor } from "@/lib/seo";
+import { absoluteUrl, alternatesFor, metaDescription, OG_IMAGE } from "@/lib/seo";
 
 /**
  * Metadata completo de uma página de listagem: título (o layout aplica o
@@ -23,7 +23,7 @@ export function listingMetadata({
     title,
     description: desc,
     alternates: alternatesFor(path),
-    openGraph: {
+    openGraph: { images: [OG_IMAGE],
       type,
       url: absoluteUrl(path),
       title: `${title} | ${site.name}`,

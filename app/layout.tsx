@@ -71,10 +71,9 @@ export const metadata: Metadata = {
     description: site.description,
     url: site.url,
   },
+  // Sem title/description aqui: o Next completa o card do X com o openGraph de cada página.
   twitter: {
     card: "summary_large_image",
-    title: `${site.name}: ${site.tagline}`,
-    description: site.description,
   },
   robots: {
     index: true,

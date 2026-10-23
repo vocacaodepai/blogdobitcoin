@@ -12,7 +12,7 @@ import { getArticleBySlug, site, type Article } from "@/lib/articles";
 import { coins, getCoin } from "@/lib/coins";
 import { formatBRL } from "@/lib/market/format";
 import { getMarketServer } from "@/lib/market/paprika";
-import { absoluteUrl, alternatesFor, breadcrumbJsonLd, metaDescription } from "@/lib/seo";
+import { absoluteUrl, alternatesFor, breadcrumbJsonLd, metaDescription, OG_IMAGE } from "@/lib/seo";
 
 export const revalidate = 300;
 
@@ -34,7 +34,7 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
     title: { absolute: `${title} | ${site.name}` },
     description,
     alternates: alternatesFor(`/moedas/${coin.slug}`),
-    openGraph: { type: "website", url: absoluteUrl(`/moedas/${coin.slug}`), title, description, siteName: site.name, locale: site.locale },
+    openGraph: { images: [OG_IMAGE], type: "website", url: absoluteUrl(`/moedas/${coin.slug}`), title, description, siteName: site.name, locale: site.locale },
   };
 }
 

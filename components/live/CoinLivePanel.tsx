@@ -28,11 +28,13 @@ export function CoinLivePanel({
         { l: "Posição no ranking", v: `#${c.rank}` },
         { l: "Valor de mercado", v: formatCompactBRL(c.marketCapBrl) },
         { l: "Volume em 24h", v: formatCompactBRL(c.volumeBrl) },
-        { l: "Em circulação", v: `${formatNumber(c.supply, 0)} ${symbol}` },
+        { l: "Oferta total", v: `${formatNumber(c.supply, 0)} ${symbol}` },
         { l: "Oferta máxima", v: c.maxSupply > 0 ? `${formatNumber(c.maxSupply, 0)} ${symbol}` : "sem limite fixo" },
         {
-          l: "Máxima histórica",
-          v: c.athBrl ? `${formatBRL(c.athBrl)}${c.athDate ? ` (${new Date(c.athDate).toLocaleDateString("pt-BR", { month: "short", year: "numeric" })})` : ""}` : "--",
+          l: "Máxima histórica (em dólar)",
+          v: c.athUsd
+            ? `${formatUSD(c.athUsd)}${c.athDate ? ` (${new Date(c.athDate).toLocaleDateString("pt-BR", { month: "short", year: "numeric", timeZone: "UTC" })})` : ""}`
+            : "--",
         },
       ]
     : [];

@@ -119,7 +119,7 @@ export function DcaCalculator({ history, initialQuote }: { history: HistoryRow[]
           </dl>
           <div className="mt-5">
             <p className="label-mono mb-2 text-muted">Valor da carteira no fim de cada mês (simulação)</p>
-            <PriceChart points={result.series.map((s) => ({ t: s.t, v: s.value }))} format={(v) => formatBRL(v, { decimals: 0 })} label="Carteira" />
+            <PriceChart points={result.series.map((s) => ({ t: s.t, v: s.value }))} format={(v) => formatBRL(v, { decimals: 0 })} label="Carteira" showChange={false} />
           </div>
         </>
       ) : (

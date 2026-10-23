@@ -40,11 +40,14 @@ export function PriceChart({
   log = false,
   format = (v: number) => formatBRL(v),
   label = "Preço",
+  showChange = true,
 }: {
   points: ChartPoint[];
   log?: boolean;
   format?: (v: number) => string;
   label?: string;
+  /** Variação do primeiro ao último ponto. Desligue em série com aportes (DCA), onde ela não é rendimento. */
+  showChange?: boolean;
 }) {
   const [hover, setHover] = useState<number | null>(null);
 
@@ -111,11 +114,13 @@ export function PriceChart({
             <span className="text-muted">{fmtFull(h.t, geo.span)}: </span>
             <span className="tabular font-semibold">{format(h.v)}</span>
           </span>
-        ) : (
+        ) : showChange ? (
           <span className="text-muted">
             {label} no período:{" "}
             <span className={`tabular font-semibold ${up ? "text-up" : "text-down"}`}>{formatPct(change)}</span>
           </span>
+        ) : (
+          <span className="text-muted">Toque ou passe o mouse no gráfico para ver cada mês.</span>
         )}
         <span className="text-muted">
           Máx. <span className="tabular text-foreground">{format(points[geo.iMax].v)}</span> · Mín.{" "}
@@ -126,7 +131,7 @@ export function PriceChart({
         viewBox={`0 0 ${W} ${H}`}
         className="h-auto w-full touch-pan-y select-none"
         role="img"
-        aria-label={`Gráfico de ${label.toLowerCase()}: de ${format(first.v)} a ${format(last.v)} (${formatPct(change)})`}
+        aria-label={`Gráfico de ${label.toLowerCase()}: de ${format(first.v)} a ${format(last.v)}${showChange ? ` (${formatPct(change)})` : ""}`}
         onPointerMove={onMove}
         onPointerDown={onMove}
         onPointerLeave={() => setHover(null)}

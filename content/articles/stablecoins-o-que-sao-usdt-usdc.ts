@@ -7,10 +7,10 @@ export const article: Article = {
   excerpt:
     "Entenda o que são stablecoins, como USDT, USDC e DAI tentam valer sempre US$ 1, os casos em que a paridade quebrou e o que o Banco Central mudou no Brasil.",
   metaDescription:
-    "Guia de stablecoins: como USDT, USDC e DAI mantêm o dólar, o colapso do UST em 2022, riscos, as regras do Banco Central de 2026, Imposto de Renda e a lei dos EUA.",
+    "Guia de stablecoins: como USDT, USDC e DAI seguram o dólar, o colapso do UST em 2022, riscos, regras do Banco Central, Imposto de Renda e a lei dos EUA.",
   category: "altcoins",
   date: "2026-10-22",
-  readTime: 8,
+  readTime: 7,
   imageQuery: "us dollar banknotes close up",
   seed: 25,
   kind: "guia",
@@ -43,8 +43,8 @@ export const article: Article = {
 </table>
 
 <h2>Quando a paridade quebra: UST, Tether e USDC</h2>
-<p>O caso mais grave foi o do UST, da Terraform Labs. Ele era uma stablecoin algorítmica: em vez de reservas, mantinha o dólar pela troca com outro token da empresa, o LUNA. Segundo a <a href="https://www.sec.gov/newsroom/press-releases/2023-32" rel="noopener noreferrer">acusação da SEC contra a Terraform e o fundador Do Kwon</a>, em maio de 2022 o UST perdeu a paridade e o preço dele e dos tokens ligados a ele despencou para perto de zero.</p>
-<p>Reservas também podem falhar. Em 2021, a <a href="https://www.cftc.gov/PressRoom/PressReleases/8450-21" rel="noopener noreferrer">CFTC multou a Tether em US$ 41 milhões</a> por dizer que o USDT era totalmente lastreado quando, numa amostra de 26 meses entre 2016 e 2018, as reservas em moeda bastavam em só 27,6% dos dias. E em março de 2023, segundo a revista Fortune, a Circle informou que US$ 3,3 bilhões, cerca de 8% das reservas do USDC, estavam no Silicon Valley Bank, que tinha acabado de quebrar. O USDC chegou a ser negociado a US$ 0,92 e só voltou a US$ 1 dias depois.</p>
+<p>O caso mais grave foi o do UST, da Terraform Labs. Ele era uma stablecoin algorítmica: em vez de reservas, mantinha o dólar pela troca com outro token da empresa, o LUNA. Segundo a <a href="https://www.sec.gov/newsroom/press-releases/2023-32" rel="noopener noreferrer">acusação da SEC contra a Terraform e seu CEO, Do Kwon</a>, em maio de 2022 o UST perdeu a paridade e o preço dele e dos tokens ligados a ele despencou para perto de zero.</p>
+<p>Reservas também podem falhar. Em 2021, a <a href="https://www.cftc.gov/PressRoom/PressReleases/8450-21" rel="noopener noreferrer">CFTC multou a Tether em US$ 41 milhões</a> por dizer que o USDT era totalmente lastreado quando, numa amostra de 26 meses entre 2016 e 2018, as reservas em moeda bastavam em só 27,6% dos dias. E em março de 2023, segundo a revista Fortune, a Circle informou que US$ 3,3 bilhões, cerca de 8% das reservas do USDC, estavam no Silicon Valley Bank, que tinha acabado de quebrar. O USDC chegou a ser negociado a cerca de US$ 0,92 e só voltou a US$ 1 dias depois.</p>
 <div class="callout-box callout-warn"><span class="callout-label">Atenção</span><p>"Estável" descreve o objetivo, não uma garantia. Stablecoin não tem cobertura do FGC, e o valor depende da saúde do emissor ou das garantias que a sustentam.</p></div>
 
 <h2>Riscos de guardar dinheiro em stablecoin</h2>
@@ -58,16 +58,16 @@ export const article: Article = {
 <p>Nada disso torna a stablecoin inútil. Ela só deve ser vista pelo que é: um dólar digital emitido por uma empresa ou por um protocolo, com riscos próprios, e não uma conta bancária em dólar.</p>
 
 <h2>Stablecoins no Brasil: o que o Banco Central mudou</h2>
-<p>Em 10 de novembro de 2025, o Banco Central publicou as resoluções 519, 520 e 521, que regulam as prestadoras de serviços de ativos virtuais. A Resolução 520 define stablecoin como o ativo virtual lastreado em reservas para manter o valor ligado a uma moeda oficial, aceita como reserva só a própria moeda e títulos públicos do mesmo governo e proíbe as corretoras de oferecer stablecoins cujas reservas sejam controladas por algoritmos, o modelo que quebrou com o UST. Ela entrou em vigor em 2 de fevereiro de 2026.</p>
+<p>Em 10 de novembro de 2025, o Banco Central publicou as resoluções 519, 520 e 521, que regulam as prestadoras de serviços de ativos virtuais. A Resolução 520 define stablecoin como o ativo virtual lastreado em reservas para manter o valor ligado a uma moeda oficial, aceita como reserva só a própria moeda e títulos públicos do mesmo governo e proíbe as corretoras de oferecer stablecoins cujas reservas sejam controladas por algoritmos, regra que mira modelos como o do UST. Ela entrou em vigor em 2 de fevereiro de 2026.</p>
 <p>A <a href="https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Resolu%C3%A7%C3%A3o%20BCB&amp;numero=521" rel="noopener noreferrer">Resolução 521</a> colocou no mercado de câmbio a compra, a venda e a troca de stablecoins, além das transferências de e para carteiras autocustodiadas, com a maior parte das regras valendo desde a mesma data. Para quem compra USDT com reais numa corretora autorizada, isso significa operação registrada e informada ao Banco Central como câmbio. O quadro completo da regulação está em <a href="/artigos/regulacao-das-criptomoedas-no-brasil-banco-central">regulação das criptomoedas no Brasil</a>.</p>
 
 <h2>Imposto: para a Receita, stablecoin também é criptoativo</h2>
-<p>No manual do Meu Imposto de Renda, a Receita Federal lista as stablecoins como um tipo próprio dentro de criptoativos, ao lado de bitcoin, altcoins e NFTs. Valem as mesmas regras: declaração pelo custo de aquisição quando ele passar de R$ 5.000 por tipo e imposto sobre o ganho em reais na venda, com isenção para vendas de até R$ 35 mil por mês em corretora no Brasil. O passo a passo está em <a href="/artigos/como-declarar-bitcoin-no-imposto-de-renda">como declarar bitcoin no Imposto de Renda</a>.</p>
+<p>No manual do Meu Imposto de Renda, a Receita Federal lista as stablecoins como um tipo próprio dentro de criptoativos, ao lado de bitcoin, altcoins e NFTs. Valem as mesmas regras: declaração pelo custo de aquisição quando ele for igual ou superior a R$ 5.000 por tipo e imposto sobre o ganho em reais na venda, com isenção para vendas de até R$ 35 mil por mês em corretora no Brasil. O passo a passo está em <a href="/artigos/como-declarar-bitcoin-no-imposto-de-renda">como declarar bitcoin no Imposto de Renda</a>.</p>
 <p>Como o ganho é medido em reais, até uma stablecoin pode dar lucro tributável se o dólar subir entre a compra e a venda. E desde 1º de julho de 2026 vale a DeCripto, criada pela Instrução Normativa RFB 2.291/2025, que substituiu a antiga IN 1.888 no reporte mensal de operações. As alíquotas e os casos de corretora estrangeira estão em <a href="/artigos/imposto-sobre-criptomoedas-no-brasil-quanto-se-paga">imposto sobre criptomoedas no Brasil</a>.</p>
 
 <h2>Nos Estados Unidos: a lei das stablecoins</h2>
 <p>Nos EUA, o presidente Donald Trump sancionou a GENIUS Act em 18 de julho de 2025, segundo a Casa Branca. A lei exige reservas de 100% em ativos líquidos, como dólares ou títulos de curto prazo do Tesouro, e divulgação mensal da composição dessas reservas. Pelo texto, o emissor também não pode pagar rendimento só porque a pessoa guarda a stablecoin.</p>
-<p>Em 21 de outubro de 2026, o OCC, regulador bancário americano, publicou a <a href="https://www.occ.gov/news-issuances/news-releases/2026/nr-occ-2026-92.html" rel="noopener noreferrer">primeira regra final para aplicar a lei</a>, e tanto a regra quanto a GENIUS Act passam a valer em 18 de janeiro de 2027. Como USDT e USDC são usados no mundo inteiro, essas exigências pesam também sobre o que o brasileiro compra aqui.</p>
+<p>Em 21 de outubro de 2026, o OCC, regulador bancário americano, foi o primeiro órgão federal a publicar uma <a href="https://www.occ.gov/news-issuances/news-releases/2026/nr-occ-2026-92.html" rel="noopener noreferrer">regra final para aplicar a lei</a>, e tanto a regra quanto a GENIUS Act passam a valer em 18 de janeiro de 2027. Como USDT e USDC são usados no mundo inteiro, essas exigências podem pesar também sobre o que o brasileiro compra aqui.</p>
 
 <h2>Stablecoin ou bitcoin: entenda antes de escolher</h2>
 <p>Stablecoin e bitcoin têm propósitos opostos. A primeira tenta não variar em relação ao dólar e depende de um emissor ou de garantias; o segundo não tem emissor, tem oferta limitada e oscila bastante. Para comparar com outras moedas do ecossistema, o guia <a href="/artigos/bitcoin-ou-ethereum-diferencas">Bitcoin ou Ethereum</a> mostra para que serve cada uma.</p>
@@ -91,7 +91,7 @@ export const article: Article = {
     {
       question: "Stablecoin paga imposto no Brasil?",
       answer:
-        "Sim. Para a Receita, stablecoin é criptoativo e tem tipo próprio na ficha de Bens e Direitos. Ela é declarada pelo custo de aquisição quando passar de R$ 5.000 por tipo, e o ganho em reais na venda segue as regras de cripto, com isenção para vendas de até R$ 35 mil por mês em corretora no Brasil.",
+        "Sim. Para a Receita, stablecoin é criptoativo e tem tipo próprio na ficha de Bens e Direitos. Ela é declarada pelo custo de aquisição quando ele for igual ou superior a R$ 5.000 por tipo, e o ganho em reais na venda segue as regras de cripto, com isenção para vendas de até R$ 35 mil por mês em corretora no Brasil.",
     },
     {
       question: "O que mudou para as stablecoins com o Banco Central?",

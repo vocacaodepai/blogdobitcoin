@@ -18,9 +18,9 @@ export const article: Article = {
   keyPoints: [
     "A Lei 14.478/2022 criou o marco legal dos ativos virtuais, e o Decreto 11.563/2023 deu ao Banco Central a tarefa de regular e autorizar as prestadoras de serviços.",
     "As Resoluções BCB 519, 520 e 521, em vigor desde 2 de fevereiro de 2026, exigem autorização, separação do dinheiro dos clientes, provas de reservas e regras de câmbio.",
-    "Quem já operava tinha até 30 de outubro de 2026 para pedir autorização; quem não pediu precisa encerrar os serviços em até 30 dias.",
+    "Quem já operava tem até 30 de outubro de 2026 para pedir autorização; quem não pedir precisa encerrar os serviços em até 30 dias depois do prazo.",
   ],
-  content: `<p>A regulação das criptomoedas no Brasil tem duas camadas: a Lei 14.478/2022, o marco legal, e as regras do Banco Central, que desde 2 de fevereiro de 2026 exigem autorização para corretoras e custodiantes de cripto. Quem já funcionava tinha até 30 de outubro de 2026 para pedir essa licença ao BC.</p>
+  content: `<p>A regulação das criptomoedas no Brasil tem duas camadas: a Lei 14.478/2022, o marco legal, e as regras do Banco Central, que desde 2 de fevereiro de 2026 exigem autorização para corretoras e custodiantes de cripto. Quem já funcionava tem até 30 de outubro de 2026 para pedir essa licença ao BC.</p>
 <p>Na prática, isso muda a forma de escolher onde comprar, as informações que a corretora pede quando você saca para a sua carteira e o tipo de proteção que você pode exigir dela. Este guia mostra o que diz cada norma, os prazos que ainda estão correndo e o papel da CVM e da Receita Federal. Para o passo a passo da compra, veja <a href="/artigos/como-comprar-bitcoin-no-brasil-passo-a-passo">como comprar Bitcoin no Brasil</a>.</p>
 
 <h2>O marco legal: a Lei 14.478/2022</h2>
@@ -31,7 +31,7 @@ export const article: Article = {
 <h2>Banco Central, CVM e Receita: quem cuida de quê</h2>
 <p>O Decreto 11.563, de 13 de junho de 2023, deu ao Banco Central a competência para regular a prestação de serviços com ativos virtuais e para autorizar e supervisionar as prestadoras. O mesmo decreto preservou as atribuições da Comissão de Valores Mobiliários e do sistema de defesa do consumidor.</p>
 <p>A CVM continua responsável quando o token é, na essência, um valor mobiliário, como um título que promete participação em lucros de um negócio. O entendimento dela está no Parecer de Orientação CVM 40, de 11 de outubro de 2022, que trata dos criptoativos e do mercado de valores mobiliários. É também a CVM que regula os fundos e os <a href="/artigos/etf-de-bitcoin-o-que-e-e-como-funciona-no-brasil">ETFs de Bitcoin negociados na B3</a>.</p>
-<p>A Receita Federal cuida de outra ponta: impostos e informação. Desde julho de 2026, as corretoras que atendem brasileiros, inclusive as estrangeiras, entregam a DeCripto, a declaração mensal de operações. O efeito disso para o investidor está no guia de <a href="/artigos/como-declarar-bitcoin-no-imposto-de-renda">como declarar Bitcoin no Imposto de Renda</a>.</p>
+<p>A Receita Federal cuida de outra ponta: impostos e informação. Para operações feitas desde julho de 2026, as corretoras que atendem brasileiros, inclusive as estrangeiras, informam tudo à Receita pela DeCripto, a declaração mensal de operações. O efeito disso para o investidor está no guia de <a href="/artigos/como-declarar-bitcoin-no-imposto-de-renda">como declarar Bitcoin no Imposto de Renda</a>.</p>
 
 <h2>As regras de novembro de 2025: Resoluções 519, 520 e 521</h2>
 <p>Em 10 de novembro de 2025, o Banco Central editou três resoluções, publicadas no Diário Oficial no dia seguinte e, na maior parte, em vigor desde 2 de fevereiro de 2026. Elas criam um novo tipo de instituição, a sociedade prestadora de serviços de ativos virtuais (SPSAV), em três modalidades: intermediária, custodiante e corretora, que faz as duas coisas.</p>
@@ -46,7 +46,7 @@ export const article: Article = {
 <p>Pela <a href="https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Resolu%C3%A7%C3%A3o%20BCB&amp;numero=520" rel="noopener noreferrer">Resolução BCB 520</a>, a prestadora precisa manter os reais dos clientes em contas individualizadas, separadas do caixa da empresa, e guardar as criptomoedas dos clientes em carteiras distintas das usadas nas operações próprias. Também precisa documentar o método das provas de reservas e passar por auditoria independente a cada dois anos. Quando o cliente escolhe a <a href="/artigos/autocustodia-not-your-keys-not-your-coins">autocustódia</a>, a corretora tem de explicar os riscos e as medidas de segurança.</p>
 
 <h2>Prazos: 30 de outubro de 2026 e o que vem depois</h2>
-<p>As empresas que já operavam em 2 de fevereiro de 2026 ganharam 270 dias para protocolar o pedido de autorização, prazo que terminou em 30 de outubro de 2026. Quem pediu a tempo pode continuar atendendo até a decisão do BC. Quem não pediu precisa parar de prestar os serviços em até 30 dias, e a empresa estrangeira que quiser continuar no país tinha o mesmo prazo para transferir clientes e operações a uma instituição brasileira.</p>
+<p>As empresas que já operavam em 2 de fevereiro de 2026 ganharam 270 dias para protocolar o pedido de autorização, prazo que termina em 30 de outubro de 2026. Quem pedir a tempo pode continuar atendendo até a decisão do BC. Quem não pedir precisa parar de prestar os serviços em até 30 dias depois do fim do prazo, e a empresa estrangeira que quiser continuar no país tem o mesmo prazo para transferir clientes e operações a uma instituição brasileira.</p>
 <table>
 <thead><tr><th>Data</th><th>O que acontece</th></tr></thead>
 <tbody>
@@ -61,7 +61,7 @@ export const article: Article = {
 
 <h2>Stablecoins e câmbio: o que mudou</h2>
 <p>A Resolução BCB 521 colocou no mercado de câmbio algumas operações feitas por prestadoras: pagamentos e transferências internacionais com cripto, a compra, venda e troca de ativos virtuais referenciados em moeda fiduciária, as stablecoins, e transferências de ou para carteiras autocustodiadas. Nesses casos, a prestadora precisa identificar o dono da carteira e verificar a origem e o destino das moedas.</p>
-<p>A norma também proíbe comprar ou vender cripto com pagamento em moeda estrangeira por meio dessas empresas e limita a US$ 100 mil o pagamento ou transferência internacional feito por uma SPSAV quando o outro lado não é instituição autorizada a operar câmbio. O motivo é o tamanho do segmento: segundo <a href="https://www.gov.br/receitafederal/pt-br/assuntos/noticias/2026/julho/stablecoins-ja-respondem-por-cerca-de-80-do-volume-declarado-de-criptoativos-no-brasil" rel="noopener noreferrer">dados divulgados pela Receita Federal</a> em julho de 2026, stablecoins como o USDT e o <a href="/moedas/usd-coin">USDC</a> responderam por cerca de 80% do volume de cripto declarado em 2025. O funcionamento dessas moedas está no guia de <a href="/artigos/stablecoins-o-que-sao-usdt-usdc">stablecoins</a>.</p>
+<p>A norma também proíbe comprar ou vender cripto com pagamento em moeda estrangeira por meio dessas empresas e limita a US$ 100 mil o pagamento ou transferência internacional feito por uma SPSAV quando o outro lado não é instituição autorizada a operar câmbio. A mudança atinge a maior fatia do mercado: segundo <a href="https://www.gov.br/receitafederal/pt-br/assuntos/noticias/2026/julho/stablecoins-ja-respondem-por-cerca-de-80-do-volume-declarado-de-criptoativos-no-brasil" rel="noopener noreferrer">dados divulgados pela Receita Federal</a> em julho de 2026, stablecoins como o USDT e o <a href="/moedas/usd-coin">USDC</a> responderam por cerca de 80% do volume de cripto declarado em 2025. O funcionamento dessas moedas está no guia de <a href="/artigos/stablecoins-o-que-sao-usdt-usdc">stablecoins</a>.</p>
 
 <h2>O que muda para quem compra cripto</h2>
 <p>Para o investidor comum, a regulação traz mais exigência de identificação e mais proteção. A corretora autorizada passa a seguir regras parecidas com as de um banco em <a href="/glossario#kyc">verificação de identidade</a>, prevenção à lavagem de dinheiro, segurança cibernética e informação ao cliente.</p>
@@ -76,7 +76,7 @@ export const article: Article = {
 
 <h2>Riscos e pontos em aberto</h2>
 <p>Autorização do Banco Central não torna o bitcoin um investimento seguro. A regra cuida da empresa, não do preço, que continua podendo cair muito em pouco tempo, como lembra o nosso <a href="/aviso-de-risco">aviso de risco</a>. E o pedido protocolado não é licença concedida: o BC ainda vai analisar cada caso em duas fases, e algumas empresas podem ser recusadas.</p>
-<p>Também há regras sendo ajustadas no caminho, como mostrou a Resolução 589, que mudou a data e a redação da proibição para bancos poucas semanas antes do prazo. Golpistas costumam explorar esse tipo de mudança com falsas "taxas de regularização", e o guia de <a href="/artigos/golpes-com-criptomoedas-como-se-proteger">golpes com criptomoedas</a> mostra como reconhecer a abordagem.</p>
+<p>Também há regras sendo ajustadas no caminho, como mostrou a Resolução 589, que mudou a data e a redação da proibição para bancos poucas semanas antes do prazo. A redação nova fala só em prestadoras "não autorizadas", ressalvados os casos previstos na própria norma, e ainda cabe ao BC e às corretoras esclarecer como isso se aplica a quem estiver em análise. Desconfie de mensagens que usem a mudança como pretexto para cobrar uma "taxa de regularização": o guia de <a href="/artigos/golpes-com-criptomoedas-como-se-proteger">golpes com criptomoedas</a> mostra como reconhecer a abordagem.</p>
 <div class="callout-box callout-warn"><span class="callout-label">Atenção</span><p>Nenhuma regra do Banco Central obriga você a pagar taxa, entregar a seed phrase ou transferir moedas para "regularizar" a conta. Quem pede isso é golpista.</p></div>
 
 <h2>Para continuar</h2>
@@ -91,7 +91,7 @@ export const article: Article = {
     {
       question: "Qual é o prazo do Banco Central para as exchanges pedirem autorização?",
       answer:
-        "As empresas que já operavam quando as regras entraram em vigor tiveram 270 dias, contados de 2 de fevereiro de 2026, para protocolar o pedido. O prazo terminou em 30 de outubro de 2026. Quem pediu a tempo pode continuar funcionando até a decisão do BC. Quem não pediu precisa encerrar os serviços de ativos virtuais em até 30 dias.",
+        "As empresas que já operavam quando as regras entraram em vigor têm 270 dias, contados de 2 de fevereiro de 2026, para protocolar o pedido. O prazo termina em 30 de outubro de 2026. Quem pedir a tempo pode continuar funcionando até a decisão do BC. Quem não pedir precisa encerrar os serviços de ativos virtuais em até 30 dias depois do fim do prazo.",
     },
     {
       question: "Posso continuar guardando bitcoin na minha própria carteira?",
@@ -117,10 +117,10 @@ export const article: Article = {
       explanation: "O Decreto 11.563/2023 deu ao Banco Central a competência para regular, autorizar e supervisionar as prestadoras de serviços de ativos virtuais.",
     },
     {
-      question: "O que acontece com a corretora que não pediu autorização até 30 de outubro de 2026?",
+      question: "O que acontece com a corretora que não pedir autorização até 30 de outubro de 2026?",
       options: ["Ganha mais um ano de prazo", "Precisa encerrar os serviços em até 30 dias", "Passa a ser fiscalizada pela CVM"],
       answer: 1,
-      explanation: "Pela Resolução BCB 520, a prestadora que não protocolar o pedido no prazo deve cessar os serviços de ativos virtuais em até 30 dias.",
+      explanation: "Pela Resolução BCB 520, a prestadora que não protocolar o pedido no prazo deve cessar os serviços de ativos virtuais em até 30 dias depois do fim do prazo.",
     },
   ],
 };

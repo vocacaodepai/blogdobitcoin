@@ -10,7 +10,7 @@ export const article: Article = {
     "Como guardar a seed phrase com segurança: padrão BIP39, 12 ou 24 palavras, backup em metal, passphrase (a 25ª palavra), plano de herança e checklist.",
   category: "seguranca",
   date: "2026-10-22",
-  readTime: 8,
+  readTime: 7,
   imageQuery: "metal seed phrase plate",
   seed: 16,
   kind: "guia",

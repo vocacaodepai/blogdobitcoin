@@ -10,7 +10,7 @@ export const article: Article = {
     "Not your keys, not your coins: entenda a autocustódia, o risco de deixar bitcoin na corretora, como fazer a transição com segurança e quando usar multisig.",
   category: "seguranca",
   date: "2026-10-22",
-  readTime: 8,
+  readTime: 7,
   imageQuery: "hardware wallet usb device",
   seed: 17,
   kind: "guia",
@@ -25,7 +25,7 @@ export const article: Article = {
 
 <h2>De onde vem a frase not your keys, not your coins</h2>
 <p>No Bitcoin, quem controla a <a href="/glossario#chave-privada">chave privada</a> controla as moedas. Quando você compra numa corretora, o saldo que aparece no aplicativo é uma promessa da empresa: as chaves são dela, e o seu bitcoin é, na prática, um crédito contra ela. A frase em inglês, algo como "se a chave não é sua, as moedas não são suas", resume esse ponto.</p>
-<p>Não há registro definitivo de quem a disse primeiro. Ela virou lema da comunidade ao longo da década de 2010, repetida a cada corretora que quebrava, e costuma ser associada a educadores como Andreas Antonopoulos, autor do livro Mastering Bitcoin. A ideia ganhou até uma data: o <a href="https://www.ledger.com/academy/crypto/proof-of-keys-the-perfect-time-to-securely-own-your-keys" rel="noopener noreferrer">Proof of Keys</a>, lançado por Trace Mayer, convida todo 3 de janeiro, aniversário do <a href="/artigos/bloco-genese-a-mensagem-escondida-no-primeiro-bloco">bloco gênese</a>, a sacar tudo das corretoras no mesmo dia.</p>
+<p>Não há registro definitivo de quem a disse primeiro. Ela virou lema da comunidade ao longo da década de 2010, repetida a cada corretora que quebrava levando o saldo dos clientes. A ideia ganhou até uma data: o <a href="https://www.ledger.com/academy/crypto/proof-of-keys-the-perfect-time-to-securely-own-your-keys" rel="noopener noreferrer">Proof of Keys</a>, lançado por Trace Mayer, convida todo 3 de janeiro, aniversário do <a href="/artigos/bloco-genese-a-mensagem-escondida-no-primeiro-bloco">bloco gênese</a>, a sacar tudo das corretoras no mesmo dia.</p>
 
 <h2>Corretora ou autocustódia: o que muda quando a chave é sua</h2>
 <p>Na <a href="/glossario#custodia">custódia</a>, a corretora guarda as chaves, cuida da segurança e ajuda se você esquecer a senha. Na autocustódia, você guarda as chaves numa carteira própria, de celular ou de hardware, e nenhuma empresa pode congelar as moedas que estão nela. Nenhum dos dois modelos elimina o risco: ele só muda de lugar.</p>
@@ -42,8 +42,8 @@ export const article: Article = {
 <p>Para quem compra e vende com frequência, a corretora é mais prática. Para quem guarda por anos, a autocustódia tira do caminho um risco que já custou caro a muita gente na história do Bitcoin: o da empresa que some com o dinheiro dos clientes.</p>
 
 <h2>Quando a corretora falha: as lições de Mt. Gox e FTX</h2>
-<p>Em fevereiro de 2014, a japonesa Mt. Gox, que já tinha sido a maior corretora de bitcoin do mundo, pediu recuperação judicial em Tóquio. No <a href="https://www.mtgox.com/img/pdf/20140228-announcement_eng.pdf" rel="noopener noreferrer">comunicado de 28 de fevereiro de 2014</a>, a empresa informou o sumiço de cerca de 750 mil bitcoins de clientes e de cerca de 100 mil próprios; semanas depois, encontrou cerca de 200 mil numa carteira antiga. A história completa está em <a href="/artigos/mt-gox-o-colapso-da-maior-exchange-de-bitcoin">o colapso da Mt. Gox</a>.</p>
-<p>Os credores esperaram uma década: os reembolsos em bitcoin só começaram em 2024. Em 16 de outubro de 2026, o <a href="https://www.mtgox.com/" rel="noopener noreferrer">administrador do processo</a> adiou mais uma vez o prazo final dos pagamentos, agora para 31 de outubro de 2027.</p>
+<p>Em fevereiro de 2014, a japonesa Mt. Gox, então uma das maiores corretoras de bitcoin do mundo, pediu recuperação judicial em Tóquio. No <a href="https://www.mtgox.com/img/pdf/20140228-announcement_eng.pdf" rel="noopener noreferrer">comunicado de 28 de fevereiro de 2014</a>, a empresa informou o sumiço de cerca de 750 mil bitcoins de clientes e de cerca de 100 mil próprios; semanas depois, encontrou cerca de 200 mil numa carteira antiga. A história completa está em <a href="/artigos/mt-gox-o-colapso-da-maior-exchange-de-bitcoin">o colapso da Mt. Gox</a>.</p>
+<p>Os credores esperaram uma década: os reembolsos em bitcoin só começaram em 2024. Em 16 de outubro de 2026, o <a href="https://www.mtgox.com/img/pdf/20261016_b3a13e0f-55f6-4653-913b-be80762390e8_announcement_en.pdf" rel="noopener noreferrer">administrador do processo adiou mais uma vez o prazo final</a> dos pagamentos, agora para 31 de outubro de 2027, porque muitos credores ainda não tinham concluído os procedimentos para receber.</p>
 <p>Em novembro de 2022 foi a vez da FTX. A <a href="https://www.sec.gov/news/press-release/2022-219" rel="noopener noreferrer">SEC acusou o fundador, Sam Bankman-Fried</a>, de desviar às escondidas dinheiro dos clientes para a Alameda Research, um fundo dele. Quem tinha os bitcoins em carteira própria assistiu de longe, e quem deixou na corretora entrou na fila. Os critérios para avaliar uma empresa antes de depositar estão em <a href="/artigos/exchange-de-criptomoedas-como-escolher-uma-corretora">como escolher uma exchange</a>.</p>
 
 <h2>Os riscos da autocustódia que pouca gente conta</h2>

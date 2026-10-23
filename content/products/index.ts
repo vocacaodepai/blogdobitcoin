@@ -8,8 +8,9 @@ import { product as i2 } from "./bitcoin-red-pill";
 import { product as i3 } from "./keystone-tablet";
 import { product as i4 } from "./ledger-nano-s-plus";
 import { product as i5 } from "./o-padrao-bitcoin";
-import { product as i6 } from "./trezor-safe-3";
-import { product as i7 } from "./trezor-safe-7";
+import { product as i6 } from "./o-padrao-fiduciario";
+import { product as i7 } from "./trezor-safe-3";
+import { product as i8 } from "./trezor-safe-7";
 
 export const products: Product[] = [
   i0,
@@ -20,4 +21,5 @@ export const products: Product[] = [
   i5,
   i6,
   i7,
+  i8,
 ];

@@ -2,7 +2,7 @@ import type { NewsItem } from "@/lib/types";
 
 export const item: NewsItem = {
   slug: "occ-regra-final-genius-act-stablecoins",
-  title: "EUA publicam a primeira regra final da lei das stablecoins, a GENIUS Act",
+  title: "EUA publicam a 1ª regra final da GENIUS Act, a lei das stablecoins",
   summary:
     "O OCC, regulador bancário dos EUA, publicou a primeira regra final da GENIUS Act. Regra e lei valem em 18 de janeiro de 2027; antilavagem ficou para depois.",
   author: "Bruno Danello",
@@ -18,8 +18,8 @@ export const item: NewsItem = {
 
 <h2>Rendimento: o que fica proibido e o que pode passar</h2>
 <p>A GENIUS Act proíbe o emissor de pagar ao cliente qualquer remuneração dada "solely", ou seja, exclusivamente, por ele guardar, usar ou manter a stablecoin. Na regra final, o OCC deu peso a essa palavra: uma recompensa oferecida "ao menos em parte" por outros motivos fica fora da proibição, segundo a CoinDesk. O órgão não deu exemplos do que é proibido e disse que vai analisar caso a caso. A versão final também abandonou as "presunções refutáveis" da proposta, que partiam do princípio de que certas práticas violavam a regra até prova em contrário.</p>
-<p>Isso não funciona como sinal verde para os programas que já existem. O OCC se recusou a presumir que recompensas criadas antes da lei estejam de acordo com ela, e as plataformas terão de obter o aval do órgão para esses programas, segundo a CoinDesk. A reportagem cita exemplos atuais: retorno de 4% no PYUSD, do PayPal, 3,75% no USDC para assinantes do Coinbase One e até 4,5% no USDG para clientes do Kraken+. Os bancos fizeram pressão por mudanças no texto, com o argumento de que essas recompensas ameaçam os depósitos, mas os depósitos bancários continuaram a crescer, ainda segundo a CoinDesk.</p>
-<p>Houve também quem pedisse ao OCC para esperar a CLARITY Act, projeto que poderia alterar a GENIUS Act justamente no ponto do rendimento. O órgão respondeu que precisa aplicar a proibição como ela foi aprovada, até que uma lei nova diga outra coisa. A CLARITY Act não conseguiu avançar numa votação importante no Senado no mês passado, sem apoio unânime dos republicanos, e a CoinDesk vê chances pequenas de novidade no curto prazo.</p>
+<p>Isso não funciona como sinal verde para os programas que já existem. O OCC se recusou a presumir que recompensas criadas antes da lei estejam de acordo com ela, e as plataformas terão de obter o aval do órgão para esses programas, segundo a CoinDesk. A reportagem cita exemplos atuais: retorno de 4% no PYUSD, do PayPal, 3,75% no USDC para assinantes do Coinbase One e até 4,5% no USDG para assinantes do Kraken+. Os bancos fizeram pressão por mudanças no texto, com o argumento de que essas recompensas ameaçam os depósitos, mas os depósitos bancários continuaram a crescer, ainda segundo a CoinDesk.</p>
+<p>Houve também quem pedisse ao OCC para esperar a CLARITY Act, projeto que poderia alterar a GENIUS Act justamente no ponto do rendimento. O órgão respondeu que precisa aplicar a proibição como ela foi aprovada, até que uma lei nova diga outra coisa. A CLARITY Act não conseguiu avançar numa votação importante no Senado no mês passado, sem apoio unânime dos republicanos, e a CoinDesk vê poucas chances de o projeto avançar.</p>
 
 <h2>Lastro, resgate e o que ainda falta em Washington</h2>
 <p>Entre a proposta e a versão final, o OCC também mexeu nas regras das reservas que sustentam as moedas. A diversificação dos ativos de reserva passou a seguir uma abordagem por princípios, com exigência de liquidez mínima diária e limite para concentração excessiva em uma única contraparte. O Comptroller (chefe do OCC), Jonathan Gould, disse que a regra traz "padrões fortes de lastro, resgate e gestão de risco". O secretário do Tesouro, Scott Bessent, chamou a GENIUS Act de "momento divisor de águas" para as finanças americanas.</p>
@@ -37,7 +37,7 @@ export const item: NewsItem = {
     {
       question: "O que é a GENIUS Act?",
       answer:
-        "É a lei dos Estados Unidos que cria um marco federal para as stablecoins de pagamento, moedas digitais atreladas ao dólar. Ela foi sancionada em julho de 2025 e entra em vigor em 18 de janeiro de 2027, junto com a primeira regra final, publicada pelo OCC em 21 de outubro de 2026. A lei proíbe o emissor de pagar rendimento só por o cliente guardar a moeda.",
+        "É a lei dos Estados Unidos que cria um marco federal para as stablecoins de pagamento, moedas digitais atreladas ao dólar. Ela foi sancionada em julho de 2025 e entra em vigor em 18 de janeiro de 2027, junto com a primeira regra final, publicada pelo OCC em 21 de outubro de 2026. A lei proíbe o emissor de pagar rendimento apenas porque o cliente guarda a moeda.",
     },
     {
       question: "A regra do OCC proíbe o rendimento de stablecoin em corretoras?",

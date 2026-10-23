@@ -7,7 +7,7 @@ export const article: Article = {
   excerpt:
     "Descubra quanto se paga de imposto sobre criptomoedas no Brasil em 2026: isenção de R$ 35 mil, alíquotas de 15% a 22,5%, exterior a 15% e o fim da MP 1.303.",
   metaDescription:
-    "Regra vigente em outubro de 2026 para cripto de pessoa física: vendas até R$ 35 mil isentas, 15% a 22,5% no lucro, 15% no exterior e o que a MP 1.303 propunha.",
+    "Regra vigente em outubro de 2026 para cripto de pessoa física: vendas até R$ 35 mil isentas, 15% a 22,5% no lucro, 15% no exterior e o fim da MP 1.303.",
   category: "brasil",
   date: "2026-10-22",
   readTime: 7,
@@ -24,7 +24,7 @@ export const article: Article = {
 <p>Muita gente ainda lê que a isenção acabou e que tudo passou a pagar 17,5%. Essa era a proposta da Medida Provisória 1.303, de junho de 2025, que perdeu a validade antes de valer. Abaixo estão a regra em vigor, uma tabela resumo, exemplos com números e os pontos em que nem a Receita deu resposta clara. Conteúdo informativo: para o seu caso, consulte um contador.</p>
 
 <h2>O que vale hoje: a MP 1.303 caiu e a regra antiga ficou</h2>
-<p>A MP 1.303 previa alíquota única de 17,5% sobre ganhos com ativos virtuais, apuração trimestral e o fim da isenção de R$ 35 mil, tudo a partir de 1º de janeiro de 2026. Na comissão mista do Congresso, o texto chegou a subir a alíquota para 18%. Mas a Câmara não votou a tempo, e o <a href="https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/Congresso/adc-67-mpv1.303.htm" rel="noopener noreferrer">Ato Declaratório nº 67 do Congresso Nacional</a> registrou que a vigência da MP terminou em 8 de outubro de 2025.</p>
+<p>A MP 1.303 previa alíquota única de 17,5% sobre ganhos com ativos virtuais, apuração trimestral e o fim da isenção de R$ 35 mil, tudo a partir de 1º de janeiro de 2026. Na comissão mista do Congresso, o texto chegou a <a href="https://www.moneytimes.com.br/fim-da-isencao-e-taxa-fixa-de-18-como-ficam-seus-investimentos-em-bitcoin-e-criptomoedas-a-partir-de-2026-com-nova-regra-rens/" rel="noopener noreferrer">subir a alíquota para 18%</a>, segundo o Money Times. Mas a Câmara não votou a tempo, e o <a href="https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/Congresso/adc-67-mpv1.303.htm" rel="noopener noreferrer">Ato Declaratório nº 67 do Congresso Nacional</a> registrou que a vigência da MP terminou em 8 de outubro de 2025.</p>
 <p>Como a parte de cripto só começaria a valer em 2026, ela nunca foi aplicada. Seguem valendo as regras anteriores, confirmadas no Perguntas e Respostas do IRPF 2026, publicado pela Receita em abril de 2026. Qualquer nova tentativa de mudar a tributação precisa de outra MP ou de um projeto de lei aprovado. Se isso acontecer, este guia será atualizado.</p>
 
 <h2>Tabela resumo do imposto sobre cripto para pessoa física</h2>
@@ -54,7 +54,7 @@ export const article: Article = {
 <tr><td>Acima de R$ 30 milhões</td><td>22,5%</td></tr>
 </tbody>
 </table>
-<p>Para quase todo investidor pessoa física, vale a primeira faixa, de 15%. O imposto é calculado no programa GCAP e pago por DARF com o código 4600 até o último dia útil do mês seguinte ao da venda. O passo a passo do preenchimento está no guia de <a href="/artigos/como-declarar-bitcoin-no-imposto-de-renda">como declarar Bitcoin no Imposto de Renda</a>.</p>
+<p>Para quase todo investidor pessoa física, vale a primeira faixa, de 15%. O imposto é calculado no programa GCAP e pago por DARF com o código 4600 até o último dia útil do mês seguinte ao da venda. Para estimar em reais quanto vale a quantidade que pretende vender, use o <a href="/ferramentas/conversor">conversor de Bitcoin para real</a>.</p>
 <p>Dois detalhes pesam no bolso. Prejuízo numa venda não abate lucro de outra, porque a Receita não permite somar resultados de alienações diferentes. E DARF atrasado tem multa de 0,33% ao dia, limitada a 20%, mais juros Selic.</p>
 
 <h2>Corretora no exterior: 15% no ajuste anual</h2>
@@ -72,8 +72,8 @@ export const article: Article = {
 <p>Quem compra todo mês um valor fixo, no estilo do <a href="/artigos/dca-em-bitcoin-como-investir-todo-mes">DCA em Bitcoin</a>, não paga nada ao comprar. O imposto só aparece na venda ou na troca, e é por isso que o custo médio de cada compra precisa estar registrado.</p>
 
 <h2>Staking, mineração, ETF e outros casos em aberto</h2>
-<p>O Perguntas e Respostas do IRPF não traz orientação específica sobre staking, mineração, airdrop ou rendimentos em plataformas DeFi. Os especialistas divergem sobre quando há renda e como tributá-la, e esse é um ponto em que vale ouvir um contador antes de declarar. O que se sabe sobre <a href="/glossario#staking">staking</a> é que, na venda posterior, a regra de ganho de capital continua valendo.</p>
-<p>ETF de cripto negociado na B3 é outra história: segue a tributação da bolsa, não a regra dos R$ 35 mil, como explica o guia de <a href="/artigos/etf-de-bitcoin-o-que-e-e-como-funciona-no-brasil">ETF de Bitcoin no Brasil</a>. E quem tem renda total acima de R$ 600 mil por ano entra, a partir do ano-calendário 2026, na tributação mínima criada pela <a href="https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/L15270.htm" rel="noopener noreferrer">Lei 15.270/2025</a>, que exclui da base os ganhos de capital fora da bolsa.</p>
+<p>O Perguntas e Respostas do IRPF não traz orientação específica sobre staking, mineração, airdrop ou rendimentos em plataformas DeFi. Os especialistas divergem sobre quando há renda e como tributá-la, e esse é um ponto em que vale ouvir um contador antes de declarar. Uma coisa é certa: quando a moeda recebida em <a href="/glossario#staking">staking</a> é vendida, a venda segue a regra de ganho de capital; o que se discute é qual custo usar para ela.</p>
+<p>ETF de cripto negociado na B3 é outra história: segue a tributação da bolsa, não a regra dos R$ 35 mil, como explica o guia de <a href="/artigos/etf-de-bitcoin-o-que-e-e-como-funciona-no-brasil">ETF de Bitcoin no Brasil</a>. E quem tem renda total acima de R$ 600 mil por ano entra, a partir do ano-calendário 2026, na tributação mínima criada pela <a href="https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/L15270.htm" rel="noopener noreferrer">Lei 15.270/2025</a>, que exclui da base os ganhos de capital fora da bolsa, como o lucro de cripto apurado no GCAP. Quem está nessa faixa precisa de planejamento com contador.</p>
 
 <h2>Riscos e erros comuns na hora de pagar</h2>
 <p>O erro mais caro é confiar em notícia velha. Textos de 2025 que davam a MP 1.303 como certa ainda circulam, e quem seguiu essa regra pode ter deixado de pagar DARF ou de usar a isenção. O segundo é esquecer que a Receita recebe dados das corretoras e, desde julho de 2026, as declarações da DeCripto.</p>

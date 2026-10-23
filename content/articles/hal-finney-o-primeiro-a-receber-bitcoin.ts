@@ -26,7 +26,7 @@ export const article: Article = {
 
 <h2>Quem era Hal Finney antes do Bitcoin</h2>
 <p>Quando o Bitcoin apareceu, Hal já era um veterano da criptografia. No começo dos anos 1990, ele trabalhou com Phil Zimmermann numa das primeiras versões do PGP, programa que popularizou a criptografia de e-mails, e foi um dos primeiros contratados da PGP Corporation, onde ficou até se aposentar. Também participava da lista dos cypherpunks, ativistas da privacidade digital, e criou o primeiro remailer anônimo baseado em criptografia.</p>
-<p>Anos antes de Satoshi, ele tentou criar o próprio dinheiro digital. O RPOW, sigla em inglês para provas de trabalho reutilizáveis, foi anunciado em agosto de 2004, segundo o arquivo do Satoshi Nakamoto Institute. A ideia era transformar a <a href="/glossario#prova-de-trabalho">prova de trabalho</a>, um cálculo caro de produzir e fácil de conferir, em fichas que podiam passar de mão em mão. O ponto fraco era depender de um servidor para registrar quem tinha cada ficha, justamente o tipo de intermediário que o Bitcoin dispensaria.</p>
+<p>Anos antes de Satoshi, ele tentou criar o próprio dinheiro digital. O RPOW, sigla em inglês para provas de trabalho reutilizáveis, foi anunciado em agosto de 2004, segundo o arquivo do Satoshi Nakamoto Institute. A ideia era transformar a <a href="/glossario#prova-de-trabalho">prova de trabalho</a>, um cálculo caro de produzir e fácil de conferir, em fichas que podiam passar de mão em mão. O sistema ainda dependia de um servidor para registrar quem tinha cada ficha, justamente o tipo de intermediário que o Bitcoin dispensaria.</p>
 <p>Por isso, quando o <a href="/artigos/whitepaper-do-bitcoin-o-documento-que-criou-a-moeda">whitepaper do Bitcoin</a> chegou à lista de criptografia, em 2008, Hal foi uma das poucas vozes animadas. "Bitcoin parece ser uma ideia muito promissora", escreveu em 7 de novembro de 2008, numa resposta em que também pedia mais detalhes sobre as regras do sistema. Os criptógrafos veteranos, lembraria depois, tendiam ao cinismo; ele se via como mais idealista.</p>
 
 <h2>Running bitcoin: o tweet de 10 de janeiro de 2009</h2>
@@ -76,7 +76,7 @@ export const article: Article = {
 
 <h2>O legado de Hal Finney hoje</h2>
 <p>O nome de Hal continua correndo, literalmente. O desafio Running Bitcoin, organizado pela ALS Network, convida participantes do mundo todo a completar o equivalente a uma meia maratona, correndo, caminhando, rodando ou fazendo trilha, e destina pelo menos 80% das doações a um fundo de pesquisa sobre ELA que leva o nome dele. A edição de 2026 junta as duas coisas que marcaram a vida dele: a corrida e o bitcoin.</p>
-<p>Para quem chega agora, a história de Hal deixa três lições práticas. A primeira: qualquer pessoa pode rodar um nó e conferir a rede por conta própria, como ele fez no primeiro dia. A segunda: moeda guardada sem plano de herança pode se perder junto com o dono. A terceira: entusiasmo e senso crítico podem andar juntos, e foi essa combinação que o fez achar os primeiros bugs do programa.</p>
+<p>Para quem chega agora, a história de Hal deixa três lições práticas. A primeira: qualquer pessoa pode rodar um nó e conferir a rede por conta própria, como ele fez no primeiro dia. A segunda: moeda guardada sem plano de herança pode se perder junto com o dono. A terceira: entusiasmo e senso crítico podem andar juntos, e foi essa combinação que o levou a caçar bugs com Satoshi logo nos primeiros dias.</p>
 <p>A linha do tempo completa daqueles primeiros anos está nas <a href="/historia">Memórias do Bitcoin</a>, e o capítulo anterior, o bloco de 3 de janeiro de 2009, está em <a href="/artigos/bloco-genese-a-mensagem-escondida-no-primeiro-bloco">a mensagem escondida no primeiro bloco</a>. Se quiser ver quanto valeriam hoje aqueles 10 BTC, use o <a href="/ferramentas/conversor">conversor de Bitcoin para real</a>.</p>`,
   faq: [
     {
@@ -97,7 +97,7 @@ export const article: Article = {
     {
       question: "Hal Finney era Satoshi Nakamoto?",
       answer:
-        "Não há prova disso. A teoria circula porque Hal estava no projeto desde o primeiro dia e tinha criado o RPOW, mas ele sempre tratou Satoshi como outra pessoa, com quem trocou e-mails e que descrevia como um jovem muito inteligente. Os registros públicos mostram os dois conversando como pessoas diferentes desde 2008.",
+        "Não há prova disso. A teoria circula porque Hal estava no projeto desde o primeiro dia e tinha criado o RPOW, mas, nos textos que deixou, ele trata Satoshi como outra pessoa, com quem trocou e-mails e que descrevia como um jovem muito inteligente e sincero. Na lista de criptografia, os dois aparecem conversando desde 2008.",
     },
     {
       question: "Por que Hal Finney foi criopreservado?",

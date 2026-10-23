@@ -2,9 +2,9 @@ import type { NewsItem } from "@/lib/types";
 
 export const item: NewsItem = {
   slug: "ripio-trade-encerra-negociacoes-no-brasil",
-  title: "Ripio avisa clientes que vai encerrar o Pix e as ordens da Ripio Trade em 29/10",
+  title: "Ripio Trade vai encerrar Pix e ordens em 29/10, diz e-mail a clientes",
   summary:
-    "Em e-mail a clientes, a Ripio diz que o Pix para comprar e vender cripto vai até 29 de outubro, quando as ordens abertas fecham. CEO afirma que a empresa fica no país.",
+    "Em e-mail a clientes, a Ripio diz que o Pix para comprar e vender cripto acaba em 29/10, quando as ordens abertas fecham. O CEO diz que ela fica no país.",
   author: "Bruno Danello",
   sourceName: "Livecoins",
   sourceUrl:
@@ -27,6 +27,7 @@ export const item: NewsItem = {
 
 <h2>O que isso muda para quem tem cripto no Brasil</h2>
 <p>Para o cliente da Ripio Trade, o calendário é curto. Até 26 de outubro, quem tem algum dos 37 tokens retirados precisa vender ou transferir, ou eles viram USDC. Até 29 de outubro, as ordens abertas ainda valem e o Pix ainda funciona para comprar e vender; depois disso, as ordens são encerradas. Até 30 de novembro, os saldos devem ir para a Ripio Wallet, ou vão para lá de forma automática.</p>
+<p>Quem mantiver reais na plataforma depois de 30 de outubro vai, na prática, segurar wBRL, e não reais. Uma stablecoin depende do lastro e da capacidade de resgate da empresa que a emite: a promessa de paridade é da Ripio, e o saldo não é depósito bancário nem tem a garantia do FGC. Antes de decidir, vale ler com atenção os termos que a empresa enviar.</p>
 <p>Quem preferir manter as criptomoedas fora da empresa pode transferi-las para outra corretora que tenha pedido autorização ao BC ou para uma carteira própria. Nos dois casos, vale conferir a rede e o endereço de destino e fazer antes um envio de teste com valor pequeno, porque transação enviada para a rede errada raramente tem volta. As diferenças entre carteira de aplicativo, de corretora e de hardware estão no guia <a href="/artigos/carteira-de-bitcoin-qual-escolher">carteira de bitcoin: qual escolher</a>.</p>
 <p>Também é hora de guardar o histórico de operações e os informes da plataforma, que podem ser necessários na declaração do Imposto de Renda e ficam mais difíceis de obter depois que um serviço é encerrado. E, ao escolher onde deixar o dinheiro, a situação regulatória entra na conta: os critérios estão em <a href="/artigos/exchange-de-criptomoedas-como-escolher-uma-corretora">como escolher uma corretora de criptomoedas</a>.</p>
 

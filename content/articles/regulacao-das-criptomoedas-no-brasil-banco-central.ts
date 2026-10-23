@@ -10,7 +10,7 @@ export const article: Article = {
     "Marco legal, Resoluções BCB 519, 520 e 521, prazo de autorização das exchanges, stablecoins no câmbio, papel da CVM e o que muda para quem compra cripto.",
   category: "brasil",
   date: "2026-10-22",
-  readTime: 8,
+  readTime: 7,
   imageQuery: "Banco Central do Brasil building",
   seed: 33,
   kind: "guia",

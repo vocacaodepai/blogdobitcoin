@@ -68,8 +68,8 @@ export const product: Product = {
       {
         title: "O que você aprende",
         paragraphs: [
-          "Ulrich começa pelo básico: o que é o Bitcoin, como uma transferência acontece sem um intermediário e por que ninguém consegue emitir moedas além do previsto. Depois, compara a moeda digital com o real, o dólar e o ouro, mostrando o que cada um tem de bom e de ruim como reserva de valor.",
-          "A parte mais interessante é a econômica. O autor usa conceitos da Escola Austríaca para discutir se o Bitcoin pode cumprir o papel de dinheiro e o que a inflação de moedas oficiais faz com quem poupa. A sinopse da editora resume o espírito do livro ao comparar o efeito do e-mail sobre a comunicação com o que o Bitcoin poderia fazer com o dinheiro.",
+          "Ulrich começa pelo básico: o que é o Bitcoin, como uma transferência acontece sem um intermediário e por que ele não é emitido por nenhum governo. Depois, compara a moeda digital com o real, o dólar e o ouro, mostrando o que cada um tem de bom e de ruim como reserva de valor.",
+          "A parte mais interessante é a econômica. O autor usa conceitos da Escola Austríaca para discutir se o Bitcoin pode cumprir o papel de dinheiro, tema central para essa linha de economistas. A sinopse do livro resume o espírito da obra ao comparar o efeito do e-mail sobre a comunicação com o que o Bitcoin poderia fazer com o dinheiro.",
         ],
         cta: true,
       },

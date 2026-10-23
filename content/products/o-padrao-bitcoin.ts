@@ -27,7 +27,7 @@ export const product: Product = {
   ],
   cons: [
     "Tom militante: o autor ataca Keynes e os bancos centrais com pouca nuance, e essa é a crítica mais repetida por leitores",
-    "Os trechos que ligam a política monetária à arte, à música e à arquitetura são vistos por muitos como exagero",
+    "Os trechos que ligam a política monetária à arte e à música são vistos por muitos leitores como exagero",
     "A parte técnica sobre o funcionamento da rede é curta, e a discussão sobre escalabilidade é considerada parcial",
     "Não ensina a comprar nem a guardar bitcoin: é teoria econômica, sem passo a passo prático",
   ],
@@ -78,7 +78,7 @@ export const product: Product = {
       {
         title: "Onde o livro escorrega",
         paragraphs: [
-          "O tom é de manifesto. Ammous trata a Escola Austríaca como a única leitura correta da economia e descarta Keynes e os bancos centrais com frases duras. No capítulo sobre preferência temporal, ele liga o dinheiro forte a uma arte e uma arquitetura melhores, tese que muitos leitores consideram forçada.",
+          "O tom é de manifesto. Ammous trata a Escola Austríaca como a única leitura correta da economia e descarta Keynes e os bancos centrais com frases duras. No capítulo sobre preferência temporal, ele liga o dinheiro forte a uma arte e uma música melhores, tese que muitos leitores consideram forçada.",
           "Mesmo dentro da Escola Austríaca há ressalvas. O economista Kristoffer Mousten Hansen, em resenha no Quarterly Journal of Austrian Economics, chamou de pista falsa a ênfase do autor na relação estoque-fluxo. A parte técnica também é enxuta: quem quer entender blocos, chaves e transações em detalhe vai precisar de outro material.",
         ],
       },
@@ -113,7 +113,7 @@ export const product: Product = {
     ],
     othersSay: [
       "No Goodreads, a parte mais elogiada é a história do dinheiro dos primeiros capítulos, descrita por leitores como uma das explicações mais claras sobre o que torna um dinheiro bom.",
-      "Muitos leitores dizem que o livro deu nome a ideias como dinheiro forte e preferência temporal e foi a porta de entrada para entender o Bitcoin.",
+      "Parte dos leitores elogia a explicação de conceitos como dinheiro forte e preferência temporal, e vários dizem que o livro é um bom primeiro passo para entender o Bitcoin.",
       "A crítica mais frequente é o tom polêmico e unilateral, com ataques a Keynes e a outros economistas considerados injustos.",
       "Também se repetem queixas sobre as digressões sobre arte, música e meio ambiente e sobre a visão parcial do debate de escalabilidade.",
     ],

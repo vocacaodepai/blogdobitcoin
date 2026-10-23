@@ -54,7 +54,7 @@ export const product: Product = {
       "Quem já leu uma introdução ao Bitcoin, quer uma obra de autores brasileiros e não se incomoda com um texto de convicção política explícita.",
     keyPoints: [
       "O livro trata o Bitcoin como ferramenta de liberdade individual diante de governos, inflação e censura financeira.",
-      "Além da tese, passa por temas práticos como autocustódia, o que o diferencia de livros só teóricos.",
+      "Segundo resenhas de leitores, passa também por temas práticos, como autocustódia, o que o diferencia de livros só teóricos.",
       "O tom militante é o ponto que mais divide leitores, e convém ler com espírito crítico.",
     ],
     sections: [

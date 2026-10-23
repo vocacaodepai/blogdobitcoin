@@ -20,7 +20,7 @@ export const product: Product = {
   pros: [
     "São 21 lições curtas, divididas em três partes de 7 (filosofia, economia e tecnologia), que podem ser lidas fora de ordem",
     "Formato de bolso (11,5 x 17,5 cm) e 228 páginas, fácil de levar e de ler aos poucos",
-    "Explica mineração com a imagem de um relógio descentralizado, uma das metáforas mais lembradas pelos leitores",
+    "Explica a mineração com a imagem de um relógio descentralizado, metáfora destacada por leitores em resenhas",
     "Traz temas que outros livros ignoram, como privacidade, a frase não confie, verifique e o papel dos cypherpunks",
     "O texto original em inglês é aberto, sob licença Creative Commons BY-SA 4.0, então dá para conhecer antes de comprar",
   ],
@@ -69,7 +69,7 @@ export const product: Product = {
       {
         title: "As três partes, em poucas palavras",
         paragraphs: [
-          "A parte de filosofia trata de imutabilidade, da escassez como algo raro no mundo digital, do problema de identidade de Satoshi Nakamoto e dos limites do conhecimento. A de economia passa por ignorância financeira, inflação, valor, a história do dinheiro, a reserva fracionária dos bancos e a ideia de dinheiro forte.",
+          "A parte de filosofia trata de imutabilidade e mudança, da escassez da escassez, do problema da identidade, da liberdade de expressão e dos limites do conhecimento. A de economia passa por ignorância financeira, inflação, valor, a história do dinheiro, a reserva fracionária dos bancos e a ideia de dinheiro forte.",
           "A de tecnologia é a mais original. Gigi explica por que medir o tempo dá trabalho, apresentando a mineração como um relógio que ninguém controla, discute o lema não confie, verifique, a privacidade e a frase dos cypherpunks de que é preciso escrever código. A última lição junta metáforas para imaginar o futuro do Bitcoin.",
         ],
         cta: true,
@@ -78,7 +78,7 @@ export const product: Product = {
         title: "Para quem é e para quem não é",
         paragraphs: [
           "O leitor ideal já sabe o que é uma carteira e por que existe o limite de 21 milhões, e quer entender o que muda na cabeça de quem estuda o tema por anos. Para esse leitor, o livro é uma sucessão de pequenas descobertas, e a leitura flui.",
-          "Quem está começando do zero pode se perder em algumas lições que pressupõem noções de economia ou de computação. E quem já leu bastante tende a achar o conteúdo leve demais. Resenhas de leitores costumam resumir assim: bom para todos, excelente para poucos.",
+          "Quem está começando do zero pode se perder em algumas lições que pressupõem noções de economia ou de computação. E quem já leu bastante tende a achar o conteúdo leve demais. Um leitor resumiu assim no Goodreads: bom para todos, ótimo para nenhum.",
         ],
       },
       {
@@ -106,7 +106,7 @@ export const product: Product = {
     ],
     othersSay: [
       "No Goodreads, o elogio mais comum é a leitura rápida e concisa, sem o jargão de outros livros do tema.",
-      "Vários leitores indicam o livro para iniciantes e citam a ideia do relógio descentralizado como uma boa forma de entender a mineração.",
+      "Vários leitores indicam o livro para iniciantes, e há quem destaque a ideia do relógio descentralizado como boa forma de entender a mineração.",
       "A crítica que mais se repete é que o livro é fino e raso, mais uma sequência de ideias soltas do que uma obra aprofundada.",
       "Alguns acham o tom exagerado e as citações de Alice no País das Maravilhas fora de lugar, e outros dizem que o iniciante total precisa de base antes.",
     ],

@@ -10,29 +10,30 @@ import { article as i4 } from "./mt-gox-o-colapso-da-maior-exchange-de-bitcoin";
 import { article as i5 } from "./bitcoin-pizza-day-a-pizza-de-10-mil-bitcoins";
 import { article as i6 } from "./hal-finney-o-primeiro-a-receber-bitcoin";
 import { article as i7 } from "./bloco-genese-a-mensagem-escondida-no-primeiro-bloco";
-import { article as i8 } from "./whitepaper-do-bitcoin-o-documento-que-criou-a-moeda";
-import { article as i9 } from "./el-salvador-bitcoin-moeda-oficial";
-import { article as i10 } from "./regulacao-das-criptomoedas-no-brasil-banco-central";
-import { article as i11 } from "./imposto-sobre-criptomoedas-no-brasil-quanto-se-paga";
-import { article as i12 } from "./como-declarar-bitcoin-no-imposto-de-renda";
-import { article as i13 } from "./stablecoins-o-que-sao-usdt-usdc";
-import { article as i14 } from "./o-que-e-ethereum-e-como-funciona";
-import { article as i15 } from "./etf-de-bitcoin-o-que-e-e-como-funciona-no-brasil";
-import { article as i16 } from "./dca-em-bitcoin-como-investir-todo-mes";
-import { article as i17 } from "./ciclos-do-bitcoin-o-que-os-halvings-mostram";
-import { article as i18 } from "./autocustodia-not-your-keys-not-your-coins";
-import { article as i19 } from "./seed-phrase-como-guardar-as-palavras-de-recuperacao";
-import { article as i20 } from "./golpes-com-criptomoedas-como-se-proteger";
-import { article as i21 } from "./bitcoin-vale-a-pena-riscos-antes-de-investir";
-import { article as i22 } from "./exchange-de-criptomoedas-como-escolher-uma-corretora";
-import { article as i23 } from "./carteira-de-bitcoin-qual-escolher";
-import { article as i24 } from "./como-comprar-bitcoin-no-brasil-passo-a-passo";
-import { article as i25 } from "./bitcoin-ou-ethereum-diferencas";
-import { article as i26 } from "./satoshis-o-que-sao-sats-e-como-converter";
-import { article as i27 } from "./lightning-network-o-que-e-e-como-usar";
-import { article as i28 } from "./mineracao-de-bitcoin-como-funciona";
-import { article as i29 } from "./halving-do-bitcoin-o-que-e-e-quando-e-o-proximo";
-import { article as i30 } from "./o-que-e-bitcoin-e-como-funciona";
+import { article as i8 } from "./quem-e-satoshi-nakamoto";
+import { article as i9 } from "./whitepaper-do-bitcoin-o-documento-que-criou-a-moeda";
+import { article as i10 } from "./el-salvador-bitcoin-moeda-oficial";
+import { article as i11 } from "./regulacao-das-criptomoedas-no-brasil-banco-central";
+import { article as i12 } from "./imposto-sobre-criptomoedas-no-brasil-quanto-se-paga";
+import { article as i13 } from "./como-declarar-bitcoin-no-imposto-de-renda";
+import { article as i14 } from "./stablecoins-o-que-sao-usdt-usdc";
+import { article as i15 } from "./o-que-e-ethereum-e-como-funciona";
+import { article as i16 } from "./etf-de-bitcoin-o-que-e-e-como-funciona-no-brasil";
+import { article as i17 } from "./dca-em-bitcoin-como-investir-todo-mes";
+import { article as i18 } from "./ciclos-do-bitcoin-o-que-os-halvings-mostram";
+import { article as i19 } from "./autocustodia-not-your-keys-not-your-coins";
+import { article as i20 } from "./seed-phrase-como-guardar-as-palavras-de-recuperacao";
+import { article as i21 } from "./golpes-com-criptomoedas-como-se-proteger";
+import { article as i22 } from "./bitcoin-vale-a-pena-riscos-antes-de-investir";
+import { article as i23 } from "./exchange-de-criptomoedas-como-escolher-uma-corretora";
+import { article as i24 } from "./carteira-de-bitcoin-qual-escolher";
+import { article as i25 } from "./como-comprar-bitcoin-no-brasil-passo-a-passo";
+import { article as i26 } from "./bitcoin-ou-ethereum-diferencas";
+import { article as i27 } from "./satoshis-o-que-sao-sats-e-como-converter";
+import { article as i28 } from "./lightning-network-o-que-e-e-como-usar";
+import { article as i29 } from "./mineracao-de-bitcoin-como-funciona";
+import { article as i30 } from "./halving-do-bitcoin-o-que-e-e-quando-e-o-proximo";
+import { article as i31 } from "./o-que-e-bitcoin-e-como-funciona";
 
 export const articles: Article[] = [
   i0,
@@ -66,4 +67,5 @@ export const articles: Article[] = [
   i28,
   i29,
   i30,
+  i31,
 ];

@@ -18,6 +18,10 @@ def fetch(asin, tries=6):
         time.sleep(25 + 10 * i)
     return None
 
+# Imagens genéricas da Amazon que aparecem na galeria de vários anúncios (ex.: o banner de
+# 640x90 nas páginas de livro). Nunca são a foto do produto.
+GENERIC_IDS = {"41-HpcwIsqL"}
+
 def clean(t):
     t = re.sub(r"<[^>]+>", " ", t)
     return re.sub(r"\s+", " ", html.unescape(t)).strip()
@@ -29,7 +33,7 @@ def parse(s):
     ids, imgs = set(), []
     for u in re.findall(r'data-a-hires="(https://m\.media-amazon\.com/images/I/[^"]+)"', s):
         m = re.search(r"/images/I/([A-Za-z0-9+%-]+)\.", u)
-        if not m or m.group(1) in ids:
+        if not m or m.group(1) in ids or m.group(1) in GENERIC_IDS:
             continue
         ids.add(m.group(1))
         imgs.append(f"https://m.media-amazon.com/images/I/{m.group(1)}._AC_SL1500_.jpg")

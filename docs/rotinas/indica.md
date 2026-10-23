@@ -31,9 +31,11 @@ do Bitcoin e Cripto Indica) e `docs/padrao-editorial.md` (seções 8 e 9).
 
 ## 3. Foto, preço e texto
 
-- Foto oficial: primeira imagem da galeria (`_AC_SL1500_`) ou site do fabricante, salva em
+- Foto oficial: imagem da galeria (`_AC_SL1500_`) ou site do fabricante, salva em
   `public/images/products/<slug>.jpg` (HTTP 200, mais de 15 KB, abra a imagem para conferir
-  que é o produto certo). Nunca imagem gerada por IA.
+  que é o produto certo). Nunca imagem gerada por IA. Em livro, a galeria pode trazer um
+  banner genérico da Amazon (640x90) antes da capa: o `amz.py` já ignora o conhecido, mas
+  sempre abra a imagem antes de usar.
 - Faixa de preço: mesmo produto (marca, modelo, edição) em pelo menos 2 lojas; `priceMin` e
   `priceMax` arredondados; descarte se max > 3 x min; sem 2 lojas, sem faixa.
 - Texto puro nas reviews da loja (sem HTML), sem valor em R$ escrito (a página monta a

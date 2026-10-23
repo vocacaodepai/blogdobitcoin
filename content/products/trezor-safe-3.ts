@@ -64,7 +64,7 @@ export const product: Product = {
         title: "Por que a Safe 3 virou a porta de entrada da Trezor",
         paragraphs: [
           "Durante anos a Trezor apostou só em código aberto, sem chip seguro, e isso abria uma brecha: com o aparelho em mãos e equipamento de laboratório, era possível tentar extrair a seed. A Safe 3 fecha essa porta com um chip seguro certificado EAL6+, que guarda o segredo protegido pelo PIN, e mantém o firmware público, que qualquer programador pode ler e conferir.",
-          "Na prática, isso quer dizer duas camadas de confiança. Você não depende só da palavra da fabricante, porque o código está aberto, e um ladrão que roube o aparelho tem muito mais dificuldade para tirar alguma coisa dele. A própria Trezor apresenta a Safe 3 como sucessora da antiga Model One, que deixou de ser vendida.",
+          "Na prática, isso quer dizer duas camadas de confiança. Você não depende só da palavra da fabricante, porque o código está aberto, e um ladrão que roube o aparelho tem muito mais dificuldade para tirar alguma coisa dele. A própria Trezor apresenta a Safe 3 como sucessora da antiga Model One, que a fabricante deixou de vender.",
         ],
         cta: true,
       },

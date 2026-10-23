@@ -75,7 +75,7 @@ export const product: Product = {
         title: "Uso no dia a dia",
         paragraphs: [
           "Com o celular pareado, a rotina fica parecida com a de um app de banco: você monta a transação no Trezor Suite e confirma tocando na tela da carteira, depois de conferir o endereço em letras grandes. A tela maior também ajuda na hora de anotar a seed e de digitar uma passphrase, que na Trezor é sempre feita no próprio aparelho.",
-          "A Safe 7 também conversa com carteiras de terceiros e, pela página oficial, com mais de 30 apps parceiros. Para quem guarda só bitcoin, programas como o Sparrow continuam sendo uma boa opção no computador. Quem preferir pode desligar o Bluetooth e usar só o cabo USB-C que vem na caixa.",
+          "A Safe 7 também conversa com carteiras de terceiros e, pela página oficial, com mais de 30 apps parceiros. Para quem guarda só bitcoin, programas como o Sparrow continuam sendo uma boa opção no computador. Quem preferir pode usar a carteira pelo cabo USB-C que vem na caixa.",
         ],
       },
       {
@@ -135,7 +135,7 @@ export const product: Product = {
       {
         question: "A bateria da Safe 7 pode estragar se eu deixar a carteira guardada?",
         answer:
-          "A bateria é do tipo LiFePO4, que a Trezor diz aguentar mais ciclos de carga que as de lítio comuns, e a carteira também funciona pelo cabo. Mesmo que a bateria falhe com os anos, as moedas não se perdem: basta restaurar a seed em outro aparelho.",
+          "A bateria é do tipo LiFePO4, que a Trezor diz aguentar mais ciclos de carga que as de lítio comuns, e pode ser recarregada pelo cabo ou sem fio. Mesmo que a bateria falhe com os anos, as moedas não se perdem: basta restaurar a seed em outro aparelho.",
       },
     ],
   },

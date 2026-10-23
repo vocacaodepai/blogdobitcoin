@@ -39,7 +39,7 @@ export const product: Product = {
   review: {
     title: "Ledger Nano S Plus: a porta de entrada mais popular para a autocustódia",
     summary:
-      "A Nano S Plus é o modelo mais barato da Ledger e resolve bem o básico: guarda as chaves fora da internet num chip seguro certificado, aceita muitas moedas e se conecta por USB-C. Perde pontos para quem quer código aberto completo ou usa iPhone.",
+      "A Nano S Plus é o modelo de entrada da Ledger e resolve bem o básico: guarda as chaves fora da internet num chip seguro certificado, aceita muitas moedas e se conecta por USB-C. Perde pontos para quem quer código aberto completo ou usa iPhone.",
     score: 8.3,
     criteria: [
       { label: "Segurança do hardware", score: 8.5 },

@@ -11,7 +11,7 @@ export const article: Article = {
   category: "historia",
   historyYear: 2010,
   date: "2026-10-22",
-  readTime: 8,
+  readTime: 7,
   imageQuery: "Bitcoin Pizza Day plaque",
   seed: 51,
   kind: "guia",
@@ -21,7 +21,7 @@ export const article: Article = {
     "Quem fez o pedido foi Jeremy Sturdivant, o jercos do fórum BitcoinTalk, que recebeu moedas cotadas em cerca de US$ 41 e as gastou viajando.",
     "Pela cotação média da blockchain.com, as mesmas 10 mil moedas passavam de US$ 1 bilhão no Pizza Day de 2025, e o 22 de maio virou data comemorativa.",
   ],
-  content: `<p>O Bitcoin Pizza Day, comemorado todo 22 de maio, lembra a primeira compra documentada de um produto físico com bitcoin. Em 22 de maio de 2010, o programador Laszlo Hanyecz, de Jacksonville, na Flórida, pagou 10 mil BTC por duas pizzas grandes da Papa John's, pedidas e entregues a ele por outro usuário de um fórum.</p>
+  content: `<p>O Bitcoin Pizza Day, comemorado todo 22 de maio, lembra a primeira compra documentada de um produto físico com bitcoin. Em 22 de maio de 2010, o programador Laszlo Hanyecz, de Jacksonville, na Flórida, pagou 10 mil BTC por duas pizzas grandes da Papa John's, pedidas por outro usuário de um fórum e entregues na casa dele.</p>
 <p>Este texto conta como foi o pedido, quem aceitou o negócio, quanto aquelas moedas passaram a valer em cada aniversário e como uma brincadeira de fórum virou data comemorativa. Tudo começa num tópico que continua no ar, com as mensagens originais de 2010.</p>
 
 <h2>O pedido no fórum: 18 de maio de 2010</h2>
@@ -31,12 +31,12 @@ export const article: Article = {
 
 <h2>Quatro dias de espera e o negócio fechado</h2>
 <p>A oferta ficou parada. Em 21 de maio, Laszlo voltou ao tópico: "Então ninguém quer me comprar pizza? A quantia em bitcoin que estou oferecendo é baixa demais?". Usuários de fora dos Estados Unidos até toparam ajudar, mas não sabiam como pagar uma pizzaria americana do exterior, e um deles temia ser confundido com trote.</p>
-<p>No dia seguinte, 22 de maio de 2010, veio a mensagem que entrou para a história: "Só quero contar que troquei com sucesso 10.000 bitcoins por pizza. Obrigado, jercos!". Junto, Laszlo deixou um link com fotos das pizzas, e os colegas de fórum responderam com parabéns por "um grande marco".</p>
+<p>No dia seguinte, 22 de maio de 2010, veio a mensagem que entrou para a história: "Só quero contar que troquei com sucesso 10.000 bitcoins por pizza. Obrigado, jercos!". Junto, Laszlo deixou um link com fotos das pizzas, e um colega de fórum respondeu com parabéns por "um grande marco".</p>
 <p>A <a href="https://mempool.space/tx/a1075db55d416d3ca199f55b6084e2115b9345e16c5cf302fc80e9d5fbf5d48d" rel="noopener noreferrer">transação do pagamento</a> está no bloco 57.043, confirmada às 18h16 (UTC) daquele dia. Para juntar os 10 mil BTC, a carteira de Laszlo somou 131 pedaços de saldo de um mesmo endereço (os <a href="/glossario#utxo">UTXOs</a>) e ainda pagou 0,99 BTC de taxa, um valor que hoje soa enorme.</p>
 
 <h2>Quem fez o pedido: Jeremy Sturdivant, o jercos</h2>
-<p>Do outro lado estava Jeremy Sturdivant, que assinava jercos no fórum e era estudante na Califórnia, segundo o <a href="https://www.independent.co.uk/tech/bitcoin-pizza-sell-crypto-jeremy-sturdivant-b1854212.html" rel="noopener noreferrer">jornal britânico The Independent</a>. Ele fez o pedido na Papa John's, a pizzaria entregou na casa de Laszlo, e Sturdivant ficou com os 10 mil BTC. A Papa John's não recebeu bitcoin nenhum: para ela, foi um pedido comum, pago por quem ligou.</p>
-<p>Ele não guardou as moedas. Segundo o Independent, gastou tudo viajando. "Se eu tivesse tratado aquilo como investimento, talvez tivesse segurado um pouco mais", admitiu em 2018, numa entrevista citada pelo jornal. Disse também que nunca imaginou que a mesma quantidade de bitcoin chegaria a ter poder de compra de imóvel, e que tinha orgulho de ter participado da história.</p>
+<p>Do outro lado estava Jeremy Sturdivant, que assinava jercos no fórum e era estudante na Califórnia, segundo o <a href="https://www.independent.co.uk/tech/bitcoin-pizza-sell-crypto-jeremy-sturdivant-b1854212.html" rel="noopener noreferrer">jornal britânico The Independent</a>. Ele fez o pedido na Papa John's, a pizzaria entregou na casa de Laszlo, e Sturdivant ficou com os 10 mil BTC. A Papa John's não recebeu bitcoin nenhum: para ela, foi um pedido comum, pago por quem o fez.</p>
+<p>Ele não guardou as moedas. Segundo o Independent, gastou as moedas em viagens. "Se eu tivesse tratado aquilo como investimento, talvez tivesse segurado um pouco mais", admitiu em 2018, numa entrevista citada pelo jornal. Disse também que nunca imaginou que a mesma quantidade de bitcoin chegaria a ter poder de compra de imóvel, e que tinha orgulho de ter participado da história.</p>
 <div class="callout-box callout-fact"><span class="callout-label">Fato curioso</span><p>As duas pizzas famosas não foram as únicas. Laszlo estima ter gastado cerca de 100 mil bitcoins em pizzas ao longo de 2010, segundo o The Independent. Em junho daquele ano, chegou a deixar a oferta aberta no fórum: 10 mil BTC por duas pizzas, a qualquer momento, enquanto tivesse saldo.</p></div>
 
 <h2>Quanto valiam as pizzas em cada Pizza Day</h2>
@@ -54,14 +54,14 @@ export const article: Article = {
 </tbody>
 </table>
 <p>A tabela também mostra o outro lado: entre o Pizza Day de 2025 e o de 2026, o valor caiu cerca de 30%. O bitcoin sobe e desce com força, e nada garante que o padrão do passado se repita. Antes de pensar nessas moedas como investimento, leia o <a href="/aviso-de-risco">aviso de risco</a> e o guia sobre <a href="/artigos/ciclos-do-bitcoin-o-que-os-halvings-mostram">os ciclos do Bitcoin</a>.</p>
-<p>Para simular outras datas e valores, a ferramenta <a href="/ferramentas/se-eu-tivesse-investido">se eu tivesse investido</a> faz a conta com o histórico mensal de preços, em reais e em dólar.</p>
+<p>Para simular outras datas e valores, a ferramenta <a href="/ferramentas/se-eu-tivesse-investido">se eu tivesse investido</a> mostra quanto valeria hoje um valor em reais aplicado em bitcoin em qualquer mês desde 2010.</p>
 
 <h2>Como o 22 de maio virou data comemorativa</h2>
-<p>O próprio tópico virou ritual. Em novembro de 2010, um usuário perguntou como era "comer pizza de US$ 2.600", e outro quis saber se aquela seria a primeira pizza de um milhão de dólares do mundo. Em abril de 2011 já se falava em "pizza de US$ 18 mil", e em maio novas "atualizações de preço" apareciam a cada poucos dias, sempre com um valor maior.</p>
+<p>O próprio tópico virou ritual. Em novembro de 2010, um usuário perguntou como era "comer pizza de US$ 2.600", e outro quis saber se aquela seria a primeira pizza de um milhão de dólares do mundo. Em abril de 2011 já se falava em "pizza de US$ 18 mil", e em maio novas "atualizações de preço" apareciam a cada poucos dias.</p>
 <p>Com o tempo, a comunidade passou a chamar a data de Bitcoin Pizza Day. O wiki do Bitcoin registra que, todo 22 de maio, pizzarias pelo mundo oferecem descontos a quem paga em bitcoin, e o aniversário virou ocasião para relembrar como a rede era pequena em 2010. A brincadeira tem um fundo sério: foi uma das primeiras vezes em que alguém usou bitcoin para pagar uma coisa concreta do dia a dia.</p>
 
 <h2>Laszlo se arrepende? O que ele disse depois</h2>
-<p>A pergunta persegue Laszlo há mais de 15 anos, e a resposta dele costuma ser a mesma. "Para mim era pizza de graça", disse à Bitcoin Magazine em 2019, numa fala reproduzida pelo Independent. "Ganhei pizza por contribuir com um projeto de código aberto. Normalmente hobbies consomem tempo e dinheiro, e nesse caso meu hobby me pagou o jantar."</p>
+<p>A pergunta persegue Laszlo há mais de 15 anos, e ele já respondeu mais de uma vez. "Para mim era pizza de graça", disse à Bitcoin Magazine em 2019, numa fala reproduzida pelo Independent. "Ganhei pizza por contribuir com um projeto de código aberto. Normalmente hobbies consomem tempo e dinheiro, e nesse caso meu hobby me pagou o jantar."</p>
 <p>Ao Cointelegraph, ele disse achar ótimo ter feito parte do começo da história do Bitcoin desse jeito, e gostar de pensar que ajudou. "Mas acho que, se não fosse eu, outra pessoa teria aparecido." É uma leitura honesta: em 2010, ninguém sabia se o Bitcoin passaria daquele ano, e a pizza ajudou a mostrar que as moedas podiam comprar alguma coisa fora da tela.</p>
 
 <h2>Erros comuns ao contar essa história</h2>
@@ -98,7 +98,7 @@ export const article: Article = {
     {
       question: "Laszlo Hanyecz se arrepende da pizza?",
       answer:
-        "Nas entrevistas que deu, Laszlo diz que não. Em 2019, contou à Bitcoin Magazine que, para ele, era pizza de graça, ganha por contribuir com um projeto de código aberto. Também disse que gosta de ter feito parte do começo da história do Bitcoin e que, se não fosse ele, outra pessoa teria feito algo parecido.",
+        "Pelo que disse em entrevistas, Laszlo não trata a compra como prejuízo. Em 2019, contou à Bitcoin Magazine que, para ele, era pizza de graça, ganha por contribuir com um projeto de código aberto. Também disse que gosta de ter feito parte do começo da história do Bitcoin e que, se não fosse ele, outra pessoa teria feito algo parecido.",
     },
   ],
   quiz: [

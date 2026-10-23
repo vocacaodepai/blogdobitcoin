@@ -61,7 +61,7 @@ export const product: Product = {
       {
         title: "Um livro brasileiro de 2014 que ainda circula",
         paragraphs: [
-          "Fernando Ulrich é um economista brasileiro ligado à divulgação da Escola Austríaca no país. Bitcoin: A Moeda na Era Digital saiu em 2014, quando quase ninguém falava do assunto em português, e ganhou edições pela LVM Editora, com prefácio do escritor americano Jeffrey Tucker.",
+          "Fernando Ulrich é um economista brasileiro ligado à divulgação da Escola Austríaca no país. Bitcoin: A Moeda na Era Digital saiu em 2014, quando quase ninguém falava do assunto em português, e hoje é vendido pela LVM Editora, com prefácio do escritor americano Jeffrey Tucker.",
           "O livro tem 124 páginas em formato 15,6 x 23 cm e se lê em poucas horas. Na Amazon Brasil, acumula nota 4,6 de 5 com mais de 2 mil avaliações, um volume grande para um título tão específico, sinal de que segue sendo indicado como primeira leitura.",
         ],
       },
@@ -76,7 +76,7 @@ export const product: Product = {
       {
         title: "O que o tempo deixou para trás",
         paragraphs: [
-          "Muita coisa mudou desde 2014: o primeiro halving visto pelo mercado maduro, a Lightning Network, os ETFs à vista nos Estados Unidos, as regras do Banco Central e da Receita Federal para criptoativos. Nada disso está no livro, e alguns exemplos de uso e de preço ficaram datados.",
+          "Muita coisa mudou desde 2014: três halvings (2016, 2020 e 2024), a Lightning Network, os ETFs à vista nos Estados Unidos, as regras do Banco Central e da Receita Federal para criptoativos. Nada disso está no livro, e alguns exemplos de uso e de preço ficaram datados.",
           "A explicação de blockchain e mineração também é rasa para quem quer entender a parte técnica. E o livro não ensina a guardar as próprias moedas, tema que hoje é obrigatório para qualquer iniciante. Ele funciona melhor como ponto de partida, a ser complementado por material atual sobre compra, carteira e impostos.",
         ],
       },
@@ -111,7 +111,7 @@ export const product: Product = {
     howWeEvaluated:
       "A análise se baseia na ficha do livro na Amazon Brasil, na LVM Editora e na livraria Martins Fontes Paulista, na sinopse oficial e nas resenhas de leitores publicadas no Goodreads. Não houve contato com a editora. A nota compara o título com outros livros sobre Bitcoin à venda em português.",
     opinion:
-      "É o livro que entregamos para alguém curioso que ainda não sabe se o Bitcoin merece atenção: rápido, barato e honesto na proposta. Só não pare nele. Use como introdução às ideias e complete com conteúdo atual sobre compra, carteira, segurança e impostos.",
+      "É o livro mais fácil de indicar para alguém curioso que ainda não sabe se o Bitcoin merece atenção: rápido, barato e honesto na proposta. Só não pare nele. Use como introdução às ideias e complete com conteúdo atual sobre compra, carteira, segurança e impostos.",
     faq: [
       {
         question: "O livro de Fernando Ulrich ainda vale a pena?",

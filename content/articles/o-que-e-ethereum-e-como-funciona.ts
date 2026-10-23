@@ -7,7 +7,7 @@ export const article: Article = {
   excerpt:
     "Entenda o que é Ethereum e como funciona: Vitalik Buterin, contratos inteligentes, gas, o Merge de 2022, staking, as últimas atualizações e os riscos reais.",
   metaDescription:
-    "Guia do Ethereum para iniciantes: quem criou, o que são contratos inteligentes, como calcular a taxa de gas, como funciona o staking e quais riscos considerar.",
+    "Guia do Ethereum para iniciantes: quem criou, o que são contratos inteligentes, como calcular a taxa de gas, como funciona o staking e os riscos a considerar.",
   category: "altcoins",
   date: "2026-10-22",
   readTime: 8,
@@ -31,7 +31,7 @@ export const article: Article = {
 <h2>Quem criou o Ethereum: de Vitalik Buterin ao lançamento em 2015</h2>
 <p>A ideia é do programador russo-canadense Vitalik Buterin, que escrevia sobre Bitcoin e foi um dos fundadores da revista Bitcoin Magazine. Ele achava a linguagem do Bitcoin limitada demais para aplicativos e propôs uma blockchain com uma linguagem de programação completa. Pela <a href="https://ethereum.org/en/ethereum-forks/" rel="noopener noreferrer">linha do tempo oficial do ethereum.org</a>, o whitepaper saiu em 27 de novembro de 2013.</p>
 <p>O projeto ganhou cofundadores, como o britânico Gavin Wood, autor da especificação técnica conhecida como Yellow Paper. Em 22 de julho de 2014 começou a venda do ether, que durou 42 dias e era paga em bitcoin. A rede principal entrou no ar em 30 de julho de 2015, numa versão inicial chamada Frontier, voltada para desenvolvedores.</p>
-<p>O primeiro grande teste veio em 2016. Um contrato coletivo chamado The DAO foi esvaziado num ataque que levou mais de 3,6 milhões de ETH, e a comunidade decidiu mudar as regras para devolver o dinheiro, num hard fork em 20 de julho de 2016. Parte dos mineradores recusou a mudança e manteve a cadeia antiga, que virou o Ethereum Classic.</p>
+<p>O primeiro grande teste veio em 2016. Um fundo de investimento coletivo montado como contrato, chamado The DAO, foi esvaziado num ataque que levou mais de 3,6 milhões de ETH, e a comunidade decidiu mudar as regras para devolver o dinheiro, num hard fork em 20 de julho de 2016. Parte dos mineradores recusou a mudança e manteve a cadeia antiga, que virou o Ethereum Classic.</p>
 
 <h2>Contratos inteligentes: programas que rodam sozinhos</h2>
 <p>Um <a href="/glossario#contrato-inteligente">contrato inteligente</a> é um programa guardado na blockchain que executa sozinho quando alguém chama uma das suas funções. Exemplo simples: um contrato que recebe ether e devolve um token na mesma hora, sem funcionário, sem horário comercial e sem possibilidade de o dono mudar o resultado no meio do caminho.</p>

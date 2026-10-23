@@ -25,7 +25,7 @@ export const article: Article = {
 
 <h2>O que é a Lightning Network</h2>
 <p>A rede principal do Bitcoin fecha um bloco a cada 10 minutos, em média, e cada bloco tem espaço limitado. Isso é ótimo para guardar valor com segurança, mas ruim para pagar um café: a confirmação demora e, quando a rede fica congestionada, a taxa dispara. A <a href="/glossario#lightning-network">Lightning Network</a> nasceu para resolver isso como uma segunda camada, que roda em cima do Bitcoin sem mudar as regras dele.</p>
-<p>A ideia foi descrita por Joseph Poon e Thaddeus Dryja no artigo técnico <a href="https://lightning.network/lightning-network-paper.pdf" rel="noopener noreferrer">"The Bitcoin Lightning Network: Scalable Off-Chain Instant Payments"</a>, cuja versão de janeiro de 2016 ainda é a referência. O texto propõe uma rede de canais de micropagamento em que o valor circula fora da blockchain, mas sempre com a garantia de que qualquer participante pode recorrer à rede principal se o outro lado trapacear. O projeto dependia de uma correção técnica que chegou com o <a href="/glossario#segwit">SegWit</a>, ativado em 2017.</p>
+<p>A ideia foi descrita por Joseph Poon e Thaddeus Dryja no artigo técnico <a href="https://lightning.network/lightning-network-paper.pdf" rel="noopener noreferrer">"The Bitcoin Lightning Network: Scalable Off-Chain Instant Payments"</a>, na versão de janeiro de 2016. O texto propõe uma rede de canais de micropagamento em que o valor circula fora da blockchain, mas sempre com a garantia de que qualquer participante pode recorrer à rede principal se o outro lado trapacear. O projeto dependia de uma correção técnica que chegou com o <a href="/glossario#segwit">SegWit</a>, ativado em 2017.</p>
 
 <h2>Como funcionam os canais de pagamento</h2>
 <p>Pense numa comanda de bar. Você deixa um valor reservado na entrada, vai consumindo, e só no fim a conta é acertada. Um canal Lightning funciona assim, em três etapas:</p>
@@ -49,14 +49,14 @@ export const article: Article = {
 <tr><td>Endereço para receber</td><td>Endereço bitcoin (bc1...)</td><td>Fatura (lnbc...) ou endereço Lightning (nome@dominio)</td></tr>
 </tbody>
 </table>
-<p>Vale uma ressalva honesta: na mesma data, a <a href="/glossario#taxa-de-rede">taxa de rede</a> recomendada na blockchain estava no mínimo, 1 satoshi por byte virtual. Em dias calmos, mandar on-chain também sai barato. A diferença aparece quando a rede congestiona: no bloco do halving de 2024, a taxa mediana chegou a 200 sat/vB.</p>
+<p>Vale uma ressalva honesta: na mesma data, a <a href="/glossario#taxa-de-rede">taxa de rede</a> recomendada na blockchain estava no mínimo, 1 satoshi por byte virtual. Em dias calmos, mandar on-chain também sai barato. A diferença aparece quando a rede congestiona: no bloco do halving de 2024, a taxa mediana chegou a 200 sat/vB, também segundo a mempool.space.</p>
 
 <h2>Carteiras que suportam Lightning</h2>
 <p>A escolha mais importante é quem guarda a chave. Numa carteira de <a href="/glossario#autocustodia">autocustódia</a>, você recebe uma frase de recuperação e só você controla os fundos. Num app de corretora, a empresa guarda o saldo por você. Alguns exemplos reais e atuais, conforme os sites e a documentação oficial de cada um:</p>
 <table>
 <thead><tr><th>Carteira</th><th>Quem guarda a chave</th><th>O que vale saber</th></tr></thead>
 <tbody>
-<tr><td>Phoenix (ACINQ)</td><td>Você</td><td>Android e iOS, frase de 12 palavras, abre canais sozinha quando precisa</td></tr>
+<tr><td>Phoenix (ACINQ)</td><td>Você</td><td>Android e iOS, frase de recuperação de 12 palavras, feita para pagar e receber pela Lightning</td></tr>
 <tr><td>Zeus</td><td>Você</td><td>Código aberto, envia para endereço Lightning e também gerencia um nó próprio</td></tr>
 <tr><td>Wallet of Satoshi</td><td>Você, segundo o site atual</td><td>Frase de 12 palavras e pagamento por QR code ou endereço Lightning</td></tr>
 <tr><td>Blink</td><td>Você ou a empresa, conforme o modo</td><td>Nasceu em El Zonte, El Salvador; autocustódia por carteira Spark embutida ou conta gerenciada em alguns países</td></tr>
@@ -73,11 +73,11 @@ export const article: Article = {
 <li>Para pagar, escaneie o QR code da fatura, confira o valor e confirme. O dinheiro chega em segundos.</li>
 <li>Comece com pouco, por exemplo o equivalente a R$ 10, e só aumente depois de entender o fluxo.</li>
 </ol>
-<p>Dois detalhes evitam dor de cabeça. Fatura Lightning expira, em geral em minutos, e não deve ser reutilizada; se passar do prazo, peça outra. E na primeira vez que você recebe numa carteira de autocustódia, ela pode cobrar a abertura do canal, uma transação na rede principal mais a comissão do provedor. Para converter valores entre reais e satoshis antes de pagar, use o <a href="/ferramentas/conversor">conversor de Bitcoin</a>.</p>
+<p>Dois detalhes evitam dor de cabeça. Fatura Lightning tem prazo de validade, que em alguns apps é de poucos minutos, e não deve ser reutilizada; se passar do prazo, peça outra. E na primeira vez que você recebe numa carteira de autocustódia, ela pode cobrar a abertura do canal, uma transação na rede principal mais a comissão do provedor. Para saber quanto vale cada satoshi agora, veja a <a href="/bitcoin">cotação do Bitcoin hoje</a>.</p>
 
 <h2>Limites da Lightning: o que ela ainda não faz bem</h2>
 <p>A Lightning não é mágica. O valor de cada pagamento depende do saldo disponível nos canais da rota, então pagamentos grandes falham com mais frequência. A Bipa, por exemplo, indica na sua <a href="https://suporte.bipa.app/hc/pt-br/articles/4415356329371-Como-enviar-Bitcoin-pela-rede-Lightning-na-Bipa" rel="noopener noreferrer">central de ajuda</a> mínimo de 1 satoshi, máximo típico perto de R$ 5.000 e a rede principal para valores acima de R$ 10.000.</p>
-<p>Receber também exige espaço no canal, a chamada liquidez de entrada. Os apps modernos resolvem isso abrindo canais automaticamente, mas cobram por isso. Fechar um canal é uma transação na rede principal, com taxa e, se o fechamento for forçado, com espera de alguns dias para liberar o saldo. Valores muito pequenos podem não compensar a taxa de fechamento num dia de rede congestionada.</p>
+<p>Receber também exige espaço no canal, a chamada liquidez de entrada. Os apps modernos resolvem isso abrindo canais automaticamente, mas cobram por isso. Fechar um canal é uma transação na rede principal, com taxa e, se o fechamento for forçado, com uma espera que pode levar dias para liberar o saldo. Valores muito pequenos podem não compensar a taxa de fechamento num dia de rede congestionada.</p>
 <p>Por fim, a Lightning foi pensada para gastar, não para guardar. Para uma reserva grande, a rede principal, de preferência com uma carteira fria, continua sendo o lugar mais seguro.</p>
 
 <h2>Riscos e cuidados ao usar a Lightning</h2>
@@ -88,12 +88,12 @@ export const article: Article = {
 <li>Desconfie de links e mensagens pedindo para "ativar" ou "validar" a sua carteira: é <a href="/glossario#phishing">phishing</a>.</li>
 <li>Lightning é só um meio de pagamento. Quem promete rendimento por "investir em Lightning" está vendendo golpe, como mostra o guia de <a href="/artigos/golpes-com-criptomoedas-como-se-proteger">golpes com criptomoedas</a>.</li>
 </ul>
-<div class="callout-box callout-warn"><span class="callout-label">Atenção</span><p>Gastar bitcoin, mesmo num café, pode ter efeito no Imposto de Renda, porque a Receita trata a operação com cripto como alienação. Guarde o histórico do app e entenda as regras em <a href="/artigos/imposto-sobre-criptomoedas-no-brasil-quanto-se-paga">quanto se paga de imposto sobre criptomoedas</a>.</p></div>
+<div class="callout-box callout-warn"><span class="callout-label">Atenção</span><p>Gastar bitcoin, mesmo num café, pode ter efeito no Imposto de Renda, porque ao pagar você se desfaz de um ativo que pode ter valorizado desde a compra. Guarde o histórico do app e entenda as regras em <a href="/artigos/imposto-sobre-criptomoedas-no-brasil-quanto-se-paga">quanto se paga de imposto sobre criptomoedas</a>.</p></div>
 
 <h2>Lightning Network no Brasil</h2>
-<p>No Brasil, a Lightning compete com o Pix, que já é instantâneo e, para pessoa física, normalmente sem custo. Por isso ela faz mais sentido em usos que o Pix não cobre: receber de alguém em outro país, mandar gorjeta para criadores de conteúdo, pagar serviços que só aceitam bitcoin ou movimentar pequenas quantias entre carteiras próprias. A aceitação no comércio físico ainda é pequena e concentrada em eventos e lojas de entusiastas. El Salvador, que usou a Lightning na experiência da carteira Chivo, é contado em <a href="/artigos/el-salvador-bitcoin-moeda-oficial">a história do bitcoin como moeda oficial</a>.</p>
-<p>A regulação também chegou aqui. Com a Resolução BCB nº 521/2025, as corretoras autorizadas passaram a pedir informações sobre o destino de saques de cripto, e na Bipa isso inclui pagamentos via Lightning desde maio de 2026, segundo a <a href="https://suporte.bipa.app/hc/pt-br/articles/49808987586203-Por-que-a-Bipa-pede-informa%C3%A7%C3%B5es-sobre-o-destino-do-meu-saque-de-criptoativos" rel="noopener noreferrer">explicação da própria empresa</a>. Mandar para uma carteira sua basta indicar que é autocustódia; para terceiros, é preciso informar nome e CPF. O quadro completo das regras está no guia sobre <a href="/artigos/regulacao-das-criptomoedas-no-brasil-banco-central">regulação das criptomoedas no Brasil</a>.</p>
-<p>Para começar com o pé direito, instale uma carteira, receba o equivalente a poucos reais e faça um pagamento de teste. Antes, confira quanto o seu valor vale em satoshis com a <a href="/bitcoin">cotação do Bitcoin hoje</a>.</p>`,
+<p>No Brasil, a Lightning compete com o Pix, que já é instantâneo e, para pessoa física, normalmente sem custo. Por isso ela faz mais sentido em usos que o Pix não cobre: receber de alguém em outro país, mandar gorjeta para criadores de conteúdo, pagar serviços que só aceitam bitcoin ou movimentar pequenas quantias entre carteiras próprias. No comércio físico, a aceitação ainda é rara. A tentativa de El Salvador de levar o bitcoin ao dia a dia, com a carteira Chivo, é contada em <a href="/artigos/el-salvador-bitcoin-moeda-oficial">a história do bitcoin como moeda oficial</a>.</p>
+<p>A regulação também chegou aqui. Com a Resolução BCB nº 521/2025, as corretoras autorizadas passaram a pedir informações sobre o destino de saques de cripto, e na Bipa isso inclui pagamentos via Lightning desde maio de 2026, segundo a <a href="https://suporte.bipa.app/hc/pt-br/articles/49808987586203-Por-que-a-Bipa-pede-informa%C3%A7%C3%B5es-sobre-o-destino-do-meu-saque-de-criptoativos" rel="noopener noreferrer">explicação da própria empresa</a>. Para mandar a uma carteira sua, basta indicar que é autocustódia; para terceiros no Brasil, é preciso informar nome e CPF ou CNPJ. O quadro completo das regras está no guia sobre <a href="/artigos/regulacao-das-criptomoedas-no-brasil-banco-central">regulação das criptomoedas no Brasil</a>.</p>
+<p>Para começar com o pé direito, instale uma carteira, receba o equivalente a poucos reais e faça um pagamento de teste. Antes, confira quantos satoshis o seu valor em reais compra com o <a href="/ferramentas/conversor">conversor de Bitcoin para real</a>.</p>`,
   faq: [
     {
       question: "O que é a Lightning Network do Bitcoin?",

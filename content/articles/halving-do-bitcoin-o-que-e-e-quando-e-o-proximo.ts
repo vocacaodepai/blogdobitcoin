@@ -45,7 +45,7 @@ export const article: Article = {
 </table>
 <p>Repare que nenhum intervalo chegou a quatro anos cheios. Entre 2012 e 2016 foram três anos e sete meses; entre 2020 e 2024, três anos e onze meses. Isso acontece porque o poder de mineração cresceu quase sempre, e os blocos saíram, na média, um pouco mais rápido que os 10 minutos previstos.</p>
 <h3>O halving de 2024 e o bloco das taxas</h3>
-<p>O bloco 840.000, minerado pelo pool ViaBTC, carregou cerca de 37,6 BTC em taxas, mais de dez vezes o novo subsídio, como mostra o <a href="https://mempool.space/block/840000" rel="noopener noreferrer">registro do bloco na mempool.space</a>. O motivo foi a estreia do Runes, um padrão de tokens criado sobre o Bitcoin e lançado exatamente no bloco do halving. Na primeira semana, ele gerou mais de US$ 135 milhões em taxas para os mineradores, segundo <a href="https://www.theblock.co/post/292157/bitcoin-average-daily-fees-ethereum-runes" rel="noopener noreferrer">levantamento do The Block</a>. A euforia passou em poucas semanas, mas mostrou na prática como as taxas podem compensar parte do subsídio perdido.</p>
+<p>O bloco 840.000, minerado pelo pool ViaBTC, carregou cerca de 37,6 BTC em taxas, mais de dez vezes o novo subsídio, como mostra o <a href="https://mempool.space/block/840000" rel="noopener noreferrer">registro do bloco na mempool.space</a>. O motivo foi a estreia do Runes, um padrão de tokens criado sobre o Bitcoin e lançado exatamente no bloco do halving. Na primeira semana, ele gerou mais de US$ 135 milhões em taxas para os mineradores, segundo <a href="https://www.theblock.co/post/292157/bitcoin-average-daily-fees-ethereum-runes" rel="noopener noreferrer">levantamento do The Block</a>. A euforia passou em cerca de duas semanas, mas mostrou na prática como as taxas podem compensar parte do subsídio perdido.</p>
 
 <h2>Quando é o próximo halving do Bitcoin</h2>
 <p>O quinto halving acontece no bloco 1.050.000, quando a recompensa cai de 3,125 para 1,5625 BTC. Em 22 de outubro de 2026, a rede estava perto do bloco 972.660, segundo a mempool.space. Faltavam, portanto, cerca de 77.340 blocos.</p>
@@ -61,12 +61,12 @@ export const article: Article = {
 <p>Do lado da oferta, o efeito é direto: chegam menos moedas novas ao mercado a cada dia. Mineradores costumam vender parte do que recebem para pagar energia e equipamento, então o halving reduz esse fluxo de venda. O que acontece com o preço depende do outro lado, a demanda, e essa ninguém programa.</p>
 <p>Até aqui, o preço esteve bem mais alto um ano depois de cada halving, como mostra a tabela feita com o <a href="https://www.blockchain.com/explorer/charts/market-price" rel="noopener noreferrer">preço médio de mercado em dólar da Blockchain.com</a>:</p>
 <table>
-<thead><tr><th>Halving</th><th>Preço no dia (aprox.)</th><th>Um ano depois (aprox.)</th></tr></thead>
+<thead><tr><th>Halving de</th><th>Preço no dia (aprox.)</th><th>Um ano depois (aprox.)</th></tr></thead>
 <tbody>
-<tr><td>28/11/2012</td><td>US$ 12</td><td>US$ 965</td></tr>
-<tr><td>09/07/2016</td><td>US$ 660</td><td>US$ 2.550</td></tr>
-<tr><td>11/05/2020</td><td>US$ 8.750</td><td>US$ 55.900</td></tr>
-<tr><td>20/04/2024</td><td>US$ 63.800</td><td>US$ 85.100</td></tr>
+<tr><td>2012</td><td>US$ 12</td><td>US$ 965</td></tr>
+<tr><td>2016</td><td>US$ 660</td><td>US$ 2.550</td></tr>
+<tr><td>2020</td><td>US$ 8.750</td><td>US$ 55.900</td></tr>
+<tr><td>2024</td><td>US$ 63.800</td><td>US$ 85.100</td></tr>
 </tbody>
 </table>
 <p>Repare que a alta ficou menor a cada ciclo: de quase 80 vezes no primeiro para cerca de um terço no último. E quatro episódios são uma amostra pequena demais para virar regra. O preço também reage a juros, a fluxo de fundos, a regulação e a crises que não têm nada a ver com o halving.</p>

@@ -2,7 +2,7 @@ import type { Article } from "@/lib/types";
 
 export const article: Article = {
   slug: "como-declarar-bitcoin-no-imposto-de-renda",
-  title: "Como declarar Bitcoin no Imposto de Renda: passo a passo para 2027",
+  title: "Como declarar Bitcoin no Imposto de Renda: guia passo a passo",
   seoTitle: "Como declarar Bitcoin no Imposto de Renda: passo a passo",
   excerpt:
     "Veja como declarar Bitcoin no Imposto de Renda: ficha Bens e Direitos, códigos do grupo 08, custo de aquisição, isenção de R$ 35 mil, GCAP e a nova DeCripto.",
@@ -42,7 +42,7 @@ export const article: Article = {
 <p>No campo Discriminação, a Receita pede a quantidade e onde a moeda está guardada: nome e CNPJ da corretora ou "custódia própria". Um exemplo: "0,04 BTC custodiados na corretora X, CNPJ 00.000.000/0001-00". Para entender a diferença entre deixar na corretora e guardar você mesmo, veja o guia de <a href="/artigos/autocustodia-not-your-keys-not-your-coins">autocustódia</a>. Stablecoins como o <a href="/moedas/tether">Tether (USDT)</a> vão no código 03, e não no 02.</p>
 
 <h2>Custo de aquisição: o valor que vai em "Situação em 31/12"</h2>
-<p>O campo de valor recebe o custo, isto é, quanto você pagou em reais, incluindo as taxas da compra. Valorização não entra: se você comprou por R$ 10 mil e a moeda passou a valer R$ 18 mil, continua declarando R$ 10 mil. Para acompanhar quanto o saldo vale hoje, use a <a href="/bitcoin">cotação do Bitcoin ao vivo</a>, mas lembre que esse número não vai para a declaração.</p>
+<p>O campo de valor recebe o custo, isto é, quanto você pagou em reais pelas moedas. Valorização não entra: se você comprou por R$ 10 mil e a moeda passou a valer R$ 18 mil, continua declarando R$ 10 mil. Para acompanhar quanto o saldo vale hoje, use a <a href="/bitcoin">cotação do Bitcoin ao vivo</a>, mas lembre que esse número não vai para a declaração.</p>
 <p>Quem compra aos poucos, como no <a href="/artigos/dca-em-bitcoin-como-investir-todo-mes">DCA em Bitcoin</a>, soma o que pagou em todas as compras. Na venda de uma parte, o método mais usado é o custo médio ponderado: total pago dividido pela quantidade, multiplicado pelo que saiu. É o mesmo critério que a Receita manda usar para moeda estrangeira e ações.</p>
 <p>Compra feita em dólar numa corretora de fora é convertida pela cotação de venda do dólar divulgada pelo Banco Central (PTAX) na data da operação. Guarde extratos e comprovantes de tudo: a Receita pede documentação que comprove cada aquisição e cada venda.</p>
 
@@ -65,7 +65,7 @@ export const article: Article = {
 <div class="callout-box callout-warn"><span class="callout-label">Atenção</span><p>A DeCripto não substitui a declaração anual nem o DARF. São três obrigações diferentes: o item na ficha de bens, o imposto sobre o lucro e o relatório mensal das operações.</p></div>
 
 <h2>Exemplo prático: a declaração da Ana, passo a passo</h2>
-<p>Valores hipotéticos, só para mostrar a conta. Em 2025, Ana comprou 0,03 BTC por R$ 15.000 em março e mais 0,01 BTC por R$ 6.000 em setembro, numa corretora brasileira, taxas incluídas. Total: 0,04 BTC por R$ 21.000, o que dá um custo médio de R$ 525.000 por bitcoin.</p>
+<p>Valores hipotéticos, só para mostrar a conta. Em 2025, Ana comprou 0,03 BTC por R$ 15.000 em março e mais 0,01 BTC por R$ 6.000 em setembro, numa corretora brasileira. Total: 0,04 BTC por R$ 21.000, o que dá um custo médio de R$ 525.000 por bitcoin.</p>
 <ol>
 <li>Declaração de 2026: grupo 08, código 01, discriminação "0,04 BTC na corretora X, CNPJ ...", situação em 31/12/2025 de R$ 21.000.</li>
 <li>Em maio de 2026, ela vende 0,02 BTC por R$ 14.000. O custo dessa parte é 0,02 x R$ 525.000 = R$ 10.500, então o lucro é R$ 3.500.</li>
@@ -85,10 +85,8 @@ export const article: Article = {
 <li>Não guardar extratos, notas de corretagem e comprovantes de transferência.</li>
 </ul>
 <p>Staking, mineração, airdrops e operações em DeFi não têm orientação específica no Perguntas e Respostas, e os especialistas divergem sobre o tratamento. Se você tem esse tipo de renda, ou muitas operações, vale contratar um contador que conheça cripto.</p>
-
-<h2>Próximos passos</h2>
 <p>Organize as compras e vendas do ano numa planilha, mês a mês, com data, quantidade, valor em reais e corretora. Para entender o pano de fundo, leia como funciona a <a href="/artigos/regulacao-das-criptomoedas-no-brasil-banco-central">regulação das criptomoedas no Brasil</a> e o guia de <a href="/artigos/stablecoins-o-que-sao-usdt-usdc">stablecoins</a>, que já respondem pela maior parte do volume informado à Receita.</p>
-<p>Na hora de converter uma quantidade em reais para conferir o saldo, o <a href="/ferramentas/conversor">conversor de Bitcoin para real</a> ajuda. E, para saber exatamente quanto de imposto cada situação gera, o próximo passo é o guia de <a href="/artigos/imposto-sobre-criptomoedas-no-brasil-quanto-se-paga">imposto sobre criptomoedas no Brasil</a>.</p>`,
+<p>Na hora de converter uma quantidade em reais para conferir o saldo, o <a href="/ferramentas/conversor">conversor de Bitcoin para real</a> ajuda. E, para continuar, todos os guias sobre Receita, Banco Central e lei estão reunidos em <a href="/categoria/brasil">Regulação e Impostos</a>.</p>`,
   faq: [
     {
       question: "Preciso declarar bitcoin que não vendi?",
@@ -98,7 +96,7 @@ export const article: Article = {
     {
       question: "Qual valor do bitcoin coloco na declaração?",
       answer:
-        "O custo de aquisição em reais, ou seja, quanto você pagou, somando as taxas da compra. A cotação de 31 de dezembro não entra no campo de valor. Se comprou em várias datas, some todas as compras. Quando vender uma parte, o critério mais usado para dar baixa é o custo médio ponderado, o mesmo que a Receita adota para moeda estrangeira e ações.",
+        "O custo de aquisição em reais, ou seja, quanto você pagou pelas moedas. A cotação de 31 de dezembro não entra no campo de valor, nem a valorização desde a compra. Se comprou em várias datas, some todas as compras. Quando vender uma parte, o critério mais usado para dar baixa é o custo médio ponderado, o mesmo que a Receita adota para moeda estrangeira e ações.",
     },
     {
       question: "Vendi menos de R$ 35 mil em cripto no mês. Preciso fazer algo?",

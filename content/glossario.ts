@@ -523,7 +523,7 @@ export const glossary: GlossaryTerm[] = [
     slug: "satoshi-nakamoto",
     term: "Satoshi Nakamoto",
     definition:
-      "Pseudônimo de quem criou o Bitcoin, publicou o whitepaper em 2008 e colocou a rede no ar em janeiro de 2009. A identidade real nunca foi confirmada, e Satoshi parou de se comunicar publicamente em 2011. Estimativas atribuem a Satoshi cerca de 1 milhão de bitcoins minerados no início da rede, que nunca foram movidos.",
+      "Pseudônimo de quem criou o Bitcoin, publicou o whitepaper em 2008 e colocou a rede no ar em janeiro de 2009. A identidade real nunca foi confirmada, e Satoshi deixou de se comunicar em 2011. Estimativas atribuem a Satoshi cerca de 1 milhão de bitcoins minerados no início da rede, que nunca foram movidos.",
     related: [
       { label: "Quem é Satoshi Nakamoto", href: "/artigos/quem-e-satoshi-nakamoto" },
       { label: "O whitepaper do Bitcoin", href: "/artigos/whitepaper-do-bitcoin-o-documento-que-criou-a-moeda" },

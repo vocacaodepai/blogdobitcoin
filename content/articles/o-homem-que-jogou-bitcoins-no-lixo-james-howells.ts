@@ -43,7 +43,7 @@ export const article: Article = {
 <h2>Na Justiça: o processo de 495 milhões de libras</h2>
 <p>Em 2024, Howells processou a prefeitura pedindo acesso ao aterro ou uma indenização de 495 milhões de libras. Na audiência de dezembro, em Cardiff, o advogado da cidade, James Goudie, argumentou que o disco virou propriedade da prefeitura ao entrar no aterro, que as licenças proíbem a escavação e que a oferta de 10% do valor à comunidade era uma tentativa de suborno.</p>
 <p>Em 9 de janeiro de 2025, o juiz Keyser KC encerrou o caso antes do julgamento. Segundo a <a href="https://www.bbc.co.uk/news/articles/cj0r0dvgpy0o" rel="noopener noreferrer">reportagem da BBC sobre a decisão</a>, ele escreveu que não havia "fundamentos razoáveis" para a ação e que ela não teria "perspectiva realista" de sucesso num julgamento completo. Howells disse estar muito chateado e que a decisão tinha tirado tudo dele.</p>
-<p>Ele recorreu sozinho, sem advogado, e o Tribunal de Apelação de Londres rejeitou o recurso em março de 2025. Em maio de 2025, a BBC informou que ele estudava levar o caso ao Tribunal Europeu de Direitos Humanos.</p>
+<p>Ele recorreu sozinho, sem advogado, e o Tribunal de Apelação de Londres rejeitou o recurso em março de 2025. Logo depois, ele disse que pretendia levar o caso ao Tribunal Europeu de Direitos Humanos.</p>
 
 <h2>O que veio depois: aterro fechando e uma moeda nova</h2>
 <p>Em fevereiro de 2025, documentos da prefeitura mostraram que o aterro de Docksway deve fechar no ano fiscal de 2025 e 2026, com cobertura definitiva da área e uma usina solar em parte do terreno. Howells reagiu dizendo que queria comprar o aterro e, em julho, fez uma oferta milionária à prefeitura.</p>

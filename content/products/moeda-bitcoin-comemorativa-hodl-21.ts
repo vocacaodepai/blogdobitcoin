@@ -26,7 +26,7 @@ export const product: Product = {
     "Ainda não há avaliações de compradores do Brasil no anúncio: todas as notas vêm de outros países",
     "Como é produto internacional, o prazo de entrega é maior e a devolução vale por até 7 dias após o recebimento",
     "O dourado é acabamento sobre liga de zinco, não ouro: em moedas parecidas, o banho pode gastar com manuseio frequente",
-    "A ficha técnica é vaga: não informa o diâmetro nem o peso exato da moeda, só as medidas da embalagem",
+    "A ficha técnica é confusa: não informa o diâmetro da moeda e traz medidas de produto e de embalagem que não batem entre si",
   ],
   featured: true,
   sortOrder: 1,

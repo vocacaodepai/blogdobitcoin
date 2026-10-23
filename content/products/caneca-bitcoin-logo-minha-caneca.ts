@@ -27,7 +27,7 @@ export const product: Product = {
     "O desenho é só o logo, sem frase nem arte elaborada: quem procura algo mais criativo vai achar básica",
     "Estampa sublimada pode perder cor com o tempo se for sempre para a lava-louças, segundo testes com canecas personalizadas",
   ],
-  featured: true,
+  featured: false,
   sortOrder: 2,
   date: "2026-10-22",
   relatedArticles: [
@@ -75,7 +75,7 @@ export const product: Product = {
         title: "Quem vende e quem entrega",
         paragraphs: [
           "O anúncio é da Minha Caneca, loja que a própria Amazon mostra com mais de 5 anos de casa e mais de mil pedidos enviados no último ano. O estoque fica nos centros da Amazon, que cuida da entrega e da garantia de A a Z. Para um item frágil como porcelana, isso conta: se a caneca chegar trincada, a troca passa pelo processo padrão da Amazon.",
-          "Um detalhe a observar é a ficha. Um trecho do anúncio fala em 350 ml e outro em 325 ml. A medida que aparece na ficha técnica e na descrição completa é 325 ml, que é o padrão das canecas de porcelana personalizadas vendidas no Brasil. Considere essa a capacidade real.",
+          "Um detalhe a observar é a ficha. Um trecho do anúncio fala em 350 ml e outro em 325 ml. A medida que aparece na ficha técnica e na descrição completa é 325 ml, que é a medida mais comum nas canecas de porcelana personalizadas vendidas no Brasil. Considere essa a capacidade real.",
         ],
       },
       {

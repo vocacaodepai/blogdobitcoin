@@ -51,7 +51,7 @@ export const article: Article = {
 <h3>Nick Szabo</h3>
 <p>Criador do bit gold, uma proposta de dinheiro digital anterior ao Bitcoin, Szabo aparece em análises de estilo de escrita desde 2013. Ele nega. Em 2014, escreveu ao jornalista Dominic Frisby: "I'm afraid you got it wrong doxing me as Satoshi, but I'm used to it", ou seja, receio que você errou ao me apontar como Satoshi, mas já estou acostumado.</p>
 <h3>Adam Back</h3>
-<p>O criptógrafo britânico criou o Hashcash, citado na seção 4 do whitepaper, e é o único pesquisador nomeado no corpo do texto. Hoje dirige a empresa Blockstream. O documentário da HBO de 2024 o tratou como suspeito, e em 8 de abril de 2026 uma reportagem de John Carreyrou no The New York Times afirmou que ele é Satoshi, com base em análise de linguagem e coincidências de datas. Back negou mais uma vez.</p>
+<p>O criptógrafo britânico criou o Hashcash, citado na seção 4 do whitepaper, e é o único pesquisador nomeado no corpo do texto. Hoje dirige a empresa Blockstream. O documentário da HBO de 2024 o tratou como suspeito, e em 8 de abril de 2026 uma reportagem de John Carreyrou no The New York Times o apontou como o candidato mais provável, com base em análise do estilo de escrita em listas de e-mail de criptografia, sem cravar que ele é Satoshi. Back negou mais uma vez.</p>
 
 <h2>Dorian, Craig Wright e Peter Todd: as apostas que viraram notícia</h2>
 <p>Em 6 de março de 2014, a revista Newsweek publicou que o criador do Bitcoin era Dorian Prentice Satoshi Nakamoto, um californiano de origem japonesa que teria dito à repórter Leah McGrath Goodman não estar "mais envolvido" com aquilo. Ele negou tudo logo depois e disse à agência AP que tinha ouvido falar de Bitcoin três semanas antes.</p>

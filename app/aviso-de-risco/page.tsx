@@ -106,7 +106,7 @@ export default function AvisoDeRiscoPage() {
         2014, a Mt. Gox, que já tinha sido a maior corretora de bitcoin do mundo, travou os saques e
         quebrou depois de perder centenas de milhares de bitcoins de clientes. Os credores esperaram
         cerca de dez anos para começar a receber parte de volta. Em novembro de 2022, a FTX, uma das
-        maiores corretoras do mundo, travou os saques e pediu falência em poucos dias. O fundador
+        maiores corretoras do mundo, travou os saques e pediu recuperação judicial em poucos dias. O fundador
         depois foi condenado por fraude nos Estados Unidos.
       </p>
       <p>

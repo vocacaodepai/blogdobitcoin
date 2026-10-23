@@ -205,8 +205,8 @@ export const timeline: TimelineEvent[] = [
   },
   {
     date: "2022-11-11",
-    title: "A falência da FTX",
-    text: "Uma reportagem do CoinDesk de 2 de novembro sobre o balanço da Alameda Research, empresa ligada à FTX, provocou uma corrida de saques. Em 11 de novembro, a FTX e mais de 100 empresas do grupo pediram falência nos Estados Unidos. O fundador Sam Bankman-Fried foi condenado em 2023 e sentenciado a 25 anos de prisão em março de 2024.",
+    title: "A quebra da FTX",
+    text: "Uma reportagem do CoinDesk de 2 de novembro sobre o balanço da Alameda Research, empresa ligada à FTX, provocou uma corrida de saques. Em 11 de novembro, a FTX e mais de 100 empresas do grupo pediram recuperação judicial (o Chapter 11) nos Estados Unidos. O fundador Sam Bankman-Fried foi condenado em 2023 e sentenciado a 25 anos de prisão em março de 2024.",
     priceNote: "cerca de US$ 17 mil",
     article: "exchange-de-criptomoedas-como-escolher-uma-corretora",
     source: { label: "Wikipédia: Bankruptcy of FTX", url: "https://en.wikipedia.org/wiki/Bankruptcy_of_FTX" },
@@ -398,7 +398,7 @@ export const curiosities: Curiosity[] = [
   },
   {
     title: "A fortuna parada de Satoshi",
-    text: "Estima-se que Satoshi Nakamoto tenha cerca de 1,1 milhão de bitcoins, minerados no começo da rede e nunca movimentados desde 2010. A conta é uma estimativa de pesquisadores feita a partir dos primeiros blocos, e nunca foi confirmada.",
+    text: "Estima-se que Satoshi Nakamoto tenha cerca de 1 milhão de bitcoins, minerados no começo da rede e nunca movimentados. A conta é uma estimativa de pesquisadores feita a partir dos primeiros blocos, e nunca foi confirmada.",
     article: "quem-e-satoshi-nakamoto",
     source: { label: "Wikipédia: Satoshi Nakamoto", url: "https://en.wikipedia.org/wiki/Satoshi_Nakamoto" },
   },

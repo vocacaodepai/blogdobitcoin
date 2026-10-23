@@ -11,7 +11,7 @@ import { CoinLogo } from "./CoinLogo";
 type SortKey = "rank" | "name" | "priceBrl" | "ch1h" | "ch24h" | "ch7d" | "ch30d" | "marketCapBrl" | "volumeBrl";
 
 const COLUMNS: { key: SortKey; label: string; className?: string; numeric?: boolean }[] = [
-  { key: "rank", label: "#", numeric: true },
+  { key: "rank", label: "#", numeric: true, className: "hidden sm:table-cell" },
   { key: "name", label: "Moeda" },
   { key: "priceBrl", label: "Preço", numeric: true },
   { key: "ch1h", label: "1h", numeric: true, className: "hidden md:table-cell" },
@@ -87,7 +87,7 @@ export function MarketTable({
               value={query}
               onChange={(e) => setQuery(e.target.value)}
               placeholder="Buscar moeda (ex.: Solana, XRP)"
-              className="h-10 w-full rounded-lg border border-border bg-surface px-3 text-sm outline-none transition focus:border-brand"
+              className="h-10 w-full rounded-lg border border-border bg-surface px-3 text-sm transition focus:border-brand"
             />
           </label>
           <label className="inline-flex cursor-pointer items-center gap-2 text-sm text-muted">
@@ -101,7 +101,7 @@ export function MarketTable({
       )}
 
       <div className="overflow-x-auto rounded-xl border border-border bg-surface">
-        <table className="w-full min-w-[560px] text-sm">
+        <table className="w-full text-sm sm:min-w-[560px]">
           <thead className="bg-surface-2">
             <tr>
               {COLUMNS.filter((c) => hasLong || c.key !== "ch30d").map((c) => (
@@ -109,7 +109,7 @@ export function MarketTable({
                   key={c.key}
                   scope="col"
                   aria-sort={sort.key === c.key ? (sort.dir === 1 ? "ascending" : "descending") : "none"}
-                  className={`whitespace-nowrap px-3 py-2.5 font-semibold ${c.numeric && c.key !== "rank" ? "text-right" : "text-left"} ${c.key === "name" ? "sticky left-0 z-10 bg-surface-2" : ""} ${c.className ?? ""}`}
+                  className={`whitespace-nowrap px-2 py-2.5 font-semibold sm:px-3 ${c.numeric && c.key !== "rank" ? "text-right" : "text-left"} ${c.key === "name" ? "sticky left-0 z-10 bg-surface-2" : ""} ${c.className ?? ""}`}
                 >
                   <button type="button" onClick={() => toggleSort(c.key)} className="inline-flex items-center gap-1 hover:text-accent">
                     {c.label}
@@ -130,15 +130,15 @@ export function MarketTable({
                 <span className="flex items-center gap-2.5">
                   <CoinLogo id={r.id} symbol={r.symbol} size={22} />
                   <span className="min-w-0">
-                    <span className="block max-w-[11rem] truncate font-medium">{r.name}</span>
+                    <span className="block max-w-[6.5rem] truncate font-medium sm:max-w-[11rem]">{r.name}</span>
                     <span className="block font-mono text-[11px] text-muted">{r.symbol}</span>
                   </span>
                 </span>
               );
               return (
                 <tr key={r.id} className="border-t border-border transition hover:bg-surface-2/60">
-                  <td className="tabular px-3 py-2.5 font-mono text-xs text-muted">{r.rank}</td>
-                  <td className="sticky left-0 z-10 bg-surface px-3 py-2.5">
+                  <td className="tabular hidden px-3 py-2.5 font-mono text-xs text-muted sm:table-cell">{r.rank}</td>
+                  <td className="sticky left-0 z-10 bg-surface px-2 py-2.5 sm:px-3">
                     {href ? (
                       <Link href={href} className="hover:text-accent">
                         {nameCell}
@@ -147,15 +147,15 @@ export function MarketTable({
                       nameCell
                     )}
                   </td>
-                  <td className="px-3 py-2.5 text-right">
-                    <span key={r.priceBrl} className={`tabular rounded px-1 font-mono ${dir > 0 ? "flash-up" : dir < 0 ? "flash-down" : ""}`}>
+                  <td className="px-2 py-2.5 text-right sm:px-3">
+                    <span key={r.priceBrl} className={`tabular rounded px-1 font-mono text-xs sm:text-sm ${dir > 0 ? "flash-up" : dir < 0 ? "flash-down" : ""}`}>
                       {formatBRL(r.priceBrl)}
                     </span>
                   </td>
                   <td className="hidden px-3 py-2.5 text-right md:table-cell">
                     <ChangeBadge value={r.ch1h} className="text-xs" />
                   </td>
-                  <td className="px-3 py-2.5 text-right">
+                  <td className="px-2 py-2.5 text-right sm:px-3">
                     <ChangeBadge value={r.ch24h} className="text-xs" />
                   </td>
                   <td className="hidden px-3 py-2.5 text-right sm:table-cell">

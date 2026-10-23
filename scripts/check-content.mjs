@@ -230,6 +230,42 @@ function checkProducts(products, articleSlugs) {
   }
 }
 
+// Rotas fixas do site (pastas de app/ com page.tsx, sem segmento dinâmico) e os slugs das
+// rotas dinâmicas que não são artigo, notícia nem produto. Link interno para fora disso é erro.
+function staticRoutes(dir = resolve(ROOT, "app"), prefix = "") {
+  const out = new Set();
+  for (const e of readdirSync(dir, { withFileTypes: true })) {
+    if (e.isFile() && /^(page|route)\.(tsx?|jsx?)$/.test(e.name)) out.add(prefix || "/");
+    if (!e.isDirectory() || e.name.startsWith("[") || e.name.startsWith("_") || e.name === "api") continue;
+    const seg = e.name.startsWith("(") ? "" : `/${e.name}`;
+    for (const r of staticRoutes(resolve(dir, e.name), prefix + seg)) out.add(r);
+  }
+  return out;
+}
+
+function slugsIn(file) {
+  return new Set([...readFileSync(resolve(ROOT, file), "utf8").matchAll(/^\s*slug:\s*"([^"]+)"/gm)].map((m) => m[1]));
+}
+
+const STATIC_ROUTES = staticRoutes();
+const COIN_SLUGS = slugsIn("content/coins.ts");
+const GLOSSARY_SLUGS = slugsIn("content/glossario.ts");
+
+/** null se o caminho interno existe; senão, o motivo. */
+function internalRouteProblem(href) {
+  const [pathPart, hash] = href.split("#");
+  const path = pathPart.split("?")[0].replace(/\/$/, "") || "/";
+  if (STATIC_ROUTES.has(path)) {
+    if (path === "/glossario" && hash && !GLOSSARY_SLUGS.has(hash) && !hash.startsWith("letra-")) return `verbete inexistente no glossário (#${hash})`;
+    return null;
+  }
+  let m;
+  if ((m = path.match(/^\/categoria\/([^/]+)(?:\/pagina\/\d+)?$/))) return CATEGORIES.has(m[1]) ? null : "categoria inexistente";
+  if ((m = path.match(/^\/moedas\/([^/]+)$/))) return COIN_SLUGS.has(m[1]) ? null : "moeda sem ficha em content/coins.ts";
+  if (/^\/(artigos|noticias)\/pagina\/\d+$/.test(path)) return null;
+  return "rota inexistente";
+}
+
 function check() {
   const articles = extractArticles();
   const news = extractNews();
@@ -339,6 +375,8 @@ function check() {
         if (target && !productSlugs.has(target)) errors.push(`${where}: link para produto inexistente -> ${href}`);
         internalTargets.add(href);
       } else if (href.startsWith("/")) {
+        const problem = internalRouteProblem(href);
+        if (problem) errors.push(`${where}: link interno quebrado (${problem}) -> ${href}`);
         internalTargets.add(href.split("#")[0].replace(/\/$/, "") || "/");
       } else if (/^https:\/\//i.test(href)) {
         external++;

@@ -4,6 +4,8 @@
  * Funciona no navegador e no servidor. Pares em real (BTCBRL, ETHBRL...) dão o
  * preço negociado no Brasil; BTCUSDT dá a referência em dólar.
  */
+import { fetchWithTimeout } from "./http";
+
 export const BINANCE_API = "https://data-api.binance.vision/api/v3";
 
 export type Ticker24h = {
@@ -49,7 +51,7 @@ function parseTicker(t: RawTicker): Ticker24h {
 /** Ticker de 24h de vários pares numa chamada só. */
 export async function fetchTickers24h(symbols: string[], init?: RequestInit): Promise<Record<string, Ticker24h>> {
   const url = `${BINANCE_API}/ticker/24hr?symbols=${encodeURIComponent(JSON.stringify(symbols))}`;
-  const res = await fetch(url, init);
+  const res = await fetchWithTimeout(url, init);
   if (!res.ok) throw new Error(`binance ${res.status}`);
   const data = (await res.json()) as RawTicker[];
   return Object.fromEntries(data.map((t) => [t.symbol, parseTicker(t)]));
@@ -65,7 +67,7 @@ export async function fetchKlines(
   init?: RequestInit
 ): Promise<Candle[]> {
   const url = `${BINANCE_API}/klines?symbol=${symbol}&interval=${interval}&limit=${limit}`;
-  const res = await fetch(url, init);
+  const res = await fetchWithTimeout(url, init);
   if (!res.ok) throw new Error(`binance klines ${res.status}`);
   const data = (await res.json()) as [number, string, string, string, string][];
   return data.map((k) => ({ t: k[0], o: Number(k[1]), h: Number(k[2]), l: Number(k[3]), c: Number(k[4]) }));

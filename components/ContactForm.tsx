@@ -83,7 +83,7 @@ export function ContactForm({ defaultSubject }: { defaultSubject?: string }) {
           type="text"
           required
           maxLength={120}
-          className="mt-1.5 w-full rounded-lg border border-border bg-background px-3.5 py-2.5 text-sm outline-none transition focus:border-accent"
+          className="mt-1.5 w-full rounded-lg border border-border bg-background px-3.5 py-2.5 text-sm transition focus:border-accent"
         />
       </div>
 
@@ -97,7 +97,7 @@ export function ContactForm({ defaultSubject }: { defaultSubject?: string }) {
           type="email"
           required
           maxLength={190}
-          className="mt-1.5 w-full rounded-lg border border-border bg-background px-3.5 py-2.5 text-sm outline-none transition focus:border-accent"
+          className="mt-1.5 w-full rounded-lg border border-border bg-background px-3.5 py-2.5 text-sm transition focus:border-accent"
         />
       </div>
 
@@ -110,7 +110,7 @@ export function ContactForm({ defaultSubject }: { defaultSubject?: string }) {
           name="subject"
           required
           defaultValue={defaultSubject ?? ""}
-          className="mt-1.5 w-full rounded-lg border border-border bg-background px-3.5 py-2.5 text-sm outline-none transition focus:border-accent"
+          className="mt-1.5 w-full rounded-lg border border-border bg-background px-3.5 py-2.5 text-sm transition focus:border-accent"
         >
           <option value="" disabled>
             Escolha um assunto
@@ -133,7 +133,7 @@ export function ContactForm({ defaultSubject }: { defaultSubject?: string }) {
           required
           maxLength={4000}
           rows={6}
-          className="mt-1.5 w-full rounded-lg border border-border bg-background px-3.5 py-2.5 text-sm outline-none transition focus:border-accent"
+          className="mt-1.5 w-full rounded-lg border border-border bg-background px-3.5 py-2.5 text-sm transition focus:border-accent"
         />
       </div>
 

@@ -11,19 +11,26 @@
   --border: #e3ded3;
   --foreground: #15120d;
   --muted: #696255;
-  --accent: #c2570c;
+  --accent: #a84a0a; /* 5,4:1 sobre o fundo (AA); o #c2570c antigo dava 4,2:1 */
   --accent-2: #f7931a;
   --brand: #f7931a;
   --brand-foreground: #15120d;
   --success: #15803d;
   --warn: #b45309;
   --danger: #dc2626;
-  --up: #15803d;
-  --down: #d92d20;
+  --up: #137333;
+  --down: #b42318;
   --ink: #0e0d0b;
   --ink-foreground: #f3efe6;
   --accent-foreground: #ffffff;
-  --ring: color-mix(in srgb, var(--brand) 60%, transparent);
+  /* Anel de foco sólido: o laranja translúcido dava 1,6:1 no tema claro. No escuro vira o --accent laranja. */
+  --ring: var(--accent);
+  /* Texto das faixas do medo e ganância (o arco usa as cores vivas). */
+  --fng-0: #b42318;
+  --fng-1: #c2410c;
+  --fng-2: #a16207;
+  --fng-3: #4d7c0f;
+  --fng-4: #15803d;
   color-scheme: light;
 }
 
@@ -44,6 +51,11 @@
     --up: #34d399;
     --down: #f87171;
     --accent-foreground: #15120d;
+    --fng-0: #f87171;
+    --fng-1: #fb923c;
+    --fng-2: #facc15;
+    --fng-3: #a3e635;
+    --fng-4: #4ade80;
     color-scheme: dark;
   }
 }
@@ -64,6 +76,11 @@
   --up: #34d399;
   --down: #f87171;
   --accent-foreground: #15120d;
+  --fng-0: #f87171;
+  --fng-1: #fb923c;
+  --fng-2: #facc15;
+  --fng-3: #a3e635;
+  --fng-4: #4ade80;
   color-scheme: dark;
 }
 
@@ -106,10 +123,13 @@ body {
   font-feature-settings: "cv11", "ss01", "calt";
 }
 
-:focus-visible {
-  outline: 2px solid var(--ring);
-  outline-offset: 2px;
-  border-radius: 0.25rem;
+/* Em @layer base para os utilitários (rounded-*, outline-none) continuarem valendo; o outline
+   já acompanha o raio de cada elemento. */
+@layer base {
+  :focus-visible {
+    outline: 2px solid var(--ring);
+    outline-offset: 2px;
+  }
 }
 
 ::selection {
@@ -618,8 +638,8 @@ body {
     radial-gradient(40% 50% at 5% 100%, color-mix(in srgb, var(--accent-2) 22%, transparent), transparent 70%);
 }
 
+/* Sem transition de transform: a física já anima, e a transição reiniciava a cada quadro. */
 .bubble-node {
-  transition: transform 0.2s ease;
   cursor: pointer;
 }
 .bubble-node:hover {

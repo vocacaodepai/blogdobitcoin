@@ -22,6 +22,9 @@ import { absoluteUrl, breadcrumbJsonLd, formatDate, formatTime, metaDescription,
 
 type Params = Promise<{ slug: string }>;
 
+// Só os endereços conhecidos no build: slug inventado vira 404, sem gravar página nem imagem no cache.
+export const dynamicParams = false;
+
 export function generateStaticParams() {
   return news.map((n) => ({ slug: n.slug }));
 }
@@ -45,8 +48,8 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
       description,
       siteName: site.name,
       locale: site.locale,
-      publishedTime: item.date,
-      modifiedTime: item.date,
+      publishedTime: item.publishedAt ?? item.date,
+      modifiedTime: item.publishedAt ?? item.date,
       authors: item.author === author.name ? [absoluteUrl(author.url)] : undefined,
       section: "Notícias",
       tags: ["Notícias", item.sourceName],
@@ -94,8 +97,9 @@ export default async function NewsPage({ params }: { params: Params }) {
     headline: item.title,
     description: metaDescription(item.summary),
     image: [absoluteUrl(`${path}/opengraph-image`)],
-    datePublished: item.date,
-    dateModified: item.date,
+    // Com hora e fuso (publishedAt), senão o Google usa o fuso dele e a notícia muda de dia.
+    datePublished: item.publishedAt ?? item.date,
+    dateModified: item.publishedAt ?? item.date,
     author: authorLd,
     publisher: { "@id": `${site.url}/#organization` },
     mainEntityOfPage: { "@type": "WebPage", "@id": url },

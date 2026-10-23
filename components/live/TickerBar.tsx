@@ -4,28 +4,36 @@ import Link from "next/link";
 import { useState } from "react";
 import { TICKER_BAR_PAIRS } from "@/lib/market/binance";
 import { formatBRL } from "@/lib/market/format";
-import { useTickerBar } from "@/lib/market/live";
+import { useBtcQuote, useTickerBar } from "@/lib/market/live";
 import { ChangeBadge } from "./ChangeBadge";
 
 /**
  * Barra de cotações do topo do site: Bitcoin e as principais moedas em real
- * (pares da Binance), atualizada a cada 10 segundos. Rola sozinha; pausa no
+ * (pares da Binance): o Bitcoin a cada 10 segundos, as outras a cada 30. Rola sozinha; pausa no
  * hover, no foco, no toque ou pelo botão.
  */
 export function TickerBar() {
   const { data, prev } = useTickerBar();
+  const { data: btc, prev: btcPrev } = useBtcQuote();
   const [paused, setPaused] = useState(false);
 
   const items = TICKER_BAR_PAIRS.map((p) => {
-    const t = data?.[p.symbol];
+    if (p.symbol === "BTCBRL") {
+      const t = btc ? { last: btc.brl, changePct: btc.change24h } : undefined;
+      const dir = btc && btcPrev ? Math.sign(btc.brl - btcPrev.brl) : 0;
+      return { ...p, t, dir };
+    }
+    const tk = data?.[p.symbol];
     const before = prev?.[p.symbol];
-    const dir = t && before ? Math.sign(t.last - before.last) : 0;
+    const t = tk ? { last: tk.last, changePct: tk.changePct as number | null } : undefined;
+    const dir = tk && before ? Math.sign(tk.last - before.last) : 0;
     return { ...p, t, dir };
   });
   const track = [...items, ...items];
 
   return (
-    <div className="border-b border-white/10 bg-ink text-ink-foreground">
+    // A barra é sempre escura: verde e vermelho próprios, com contraste sobre o fundo ink nos dois temas.
+    <div className="border-b border-white/10 bg-ink text-ink-foreground [--down:#f87171] [--up:#34d399]">
       <div className="mx-auto flex h-9 w-full max-w-7xl items-center px-4 sm:px-6 lg:px-8">
         <Link
           href="/mercado"
@@ -57,6 +65,8 @@ export function TickerBar() {
               <li key={`${it.symbol}-${i}`} aria-hidden={i >= items.length}>
                 <Link
                   href={it.href}
+                  // Sem pré-carga: são 24 links em toda página, para rotas pesadas de dados ao vivo.
+                  prefetch={false}
                   tabIndex={i >= items.length ? -1 : 0}
                   className="flex items-center gap-2 text-[13px] text-ink-foreground/90 hover:text-white"
                   title={`${it.name}: preço em reais e variação em 24 horas`}

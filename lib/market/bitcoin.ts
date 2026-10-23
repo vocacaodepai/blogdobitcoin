@@ -7,6 +7,7 @@
  * 3. Coinbase (spot BRL e USD), último recurso, sem variação de 24h.
  */
 import { fetchTickers24h } from "./binance";
+import { fetchWithTimeout } from "./http";
 
 export type BtcQuote = {
   brl: number;
@@ -46,8 +47,8 @@ async function fromBinance(init?: RequestInit): Promise<BtcQuote> {
 
 async function fromMercadoBitcoin(init?: RequestInit): Promise<BtcQuote> {
   const [mbRes, krRes] = await Promise.all([
-    fetch("https://api.mercadobitcoin.net/api/v4/tickers?symbols=BTC-BRL", init),
-    fetch("https://api.kraken.com/0/public/Ticker?pair=XBTUSD", init),
+    fetchWithTimeout("https://api.mercadobitcoin.net/api/v4/tickers?symbols=BTC-BRL", init),
+    fetchWithTimeout("https://api.kraken.com/0/public/Ticker?pair=XBTUSD", init),
   ]);
   if (!mbRes.ok || !krRes.ok) throw new Error("mb/kraken falhou");
   const mb = (await mbRes.json())[0] as { last: string; open: string; high: string; low: string; vol: string };
@@ -71,7 +72,7 @@ async function fromMercadoBitcoin(init?: RequestInit): Promise<BtcQuote> {
 }
 
 async function fromCoinbase(init?: RequestInit): Promise<BtcQuote> {
-  const res = await fetch("https://api.coinbase.com/v2/exchange-rates?currency=BTC", init);
+  const res = await fetchWithTimeout("https://api.coinbase.com/v2/exchange-rates?currency=BTC", init);
   if (!res.ok) throw new Error("coinbase falhou");
   const rates = (await res.json()).data.rates as Record<string, string>;
   const brl = Number(rates.BRL);

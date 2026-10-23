@@ -1,6 +1,6 @@
 "use client";
 
-import { fearGreedColor, fearGreedLabel, type FearGreedPoint } from "@/lib/market/feargreed";
+import { fearGreedLabel, fearGreedTextColor, type FearGreedPoint } from "@/lib/market/feargreed";
 import { useFearGreed } from "@/lib/market/live";
 import { Sparkline } from "./Sparkline";
 
@@ -64,7 +64,7 @@ export function FearGreedGauge({
               {current ? value : "--"}
             </text>
           </svg>
-          <p className="-mt-1 text-center font-display text-lg font-bold" style={{ color: current ? fearGreedColor(value) : undefined }}>
+          <p className="-mt-1 text-center font-display text-lg font-bold" style={{ color: current ? fearGreedTextColor(value) : undefined }}>
             {current ? current.label || fearGreedLabel(value) : "Carregando"}
           </p>
         </div>
@@ -78,7 +78,7 @@ export function FearGreedGauge({
               ].map(({ l, p }) => (
                 <div key={l} className="rounded-lg border border-border bg-background/60 px-3 py-2">
                   <dt className="label-mono text-muted">{l}</dt>
-                  <dd className="mt-1 font-mono text-sm font-semibold" style={{ color: p ? fearGreedColor(p.value) : undefined }}>
+                  <dd className="mt-1 font-mono text-sm font-semibold" style={{ color: p ? fearGreedTextColor(p.value) : undefined }}>
                     {p ? `${p.value} · ${p.label || fearGreedLabel(p.value)}` : "--"}
                   </dd>
                 </div>

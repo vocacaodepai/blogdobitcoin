@@ -39,7 +39,7 @@ export async function NewsRow({
       className="group flex gap-4 border-b border-border py-3.5 last:border-b-0"
     >
       {item.imageQuery && (
-        <Link href={`/noticias/${item.slug}`} className="block shrink-0 self-start">
+        <Link href={`/noticias/${item.slug}`} className="block shrink-0 self-start" tabIndex={-1} aria-hidden="true">
           <CoverImage
             query={item.imageQuery}
             seed={newsImageSeed(item.slug)}

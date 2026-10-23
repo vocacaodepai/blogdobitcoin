@@ -3,6 +3,9 @@ import { CategoriaPage, categoriaMetadata, categoriaParams } from "@/components/
 
 type Params = Promise<{ slug: string }>;
 
+// Só os endereços conhecidos no build: slug inventado vira 404, sem gravar página nem imagem no cache.
+export const dynamicParams = false;
+
 export function generateStaticParams() {
   return categoriaParams();
 }

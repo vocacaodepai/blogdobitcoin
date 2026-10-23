@@ -21,7 +21,7 @@ import { ReviewDisclosure, ReviewVerdict } from "@/components/article/ReviewVerd
 import { ShareBar } from "@/components/article/ShareBar";
 import { TableOfContents } from "@/components/article/TableOfContents";
 import { TocDetails } from "@/components/article/TocDetails";
-import { faqJsonLd, parseOffer } from "@/components/article/schema";
+import { faqJsonLd } from "@/components/article/schema";
 import { ProductCard } from "@/components/store/ProductCard";
 import { StorePromo } from "@/components/store/StorePromo";
 import { getProductBySlug, type Product } from "@/lib/products";
@@ -31,6 +31,9 @@ import { prepareArticleHtml, tocH2 } from "@/lib/html";
 import { absoluteUrl, breadcrumbJsonLd, formatDate, metaDescription, readingTime, alternatesFor } from "@/lib/seo";
 
 type Params = Promise<{ slug: string }>;
+
+// Só os endereços conhecidos no build: slug inventado vira 404, sem gravar página nem imagem no cache.
+export const dynamicParams = false;
 
 export function generateStaticParams() {
   return articles.map((a) => ({ slug: a.slug }));
@@ -127,13 +130,15 @@ export default async function ArticlePage({ params }: { params: Params }) {
   ]);
 
   const review = article.review;
-  const offer = review ? parseOffer(review.price) : null;
   const isProduct = article.category === "cripto-indica";
   const citedProducts = (article.products ?? []).map((s) => getProductBySlug(s)).filter((p): p is Product => Boolean(p));
+  const reviewed = citedProducts[0];
   const isHistory = article.category === "historia";
   const showRiskNote = ["mercado", "iniciantes", "altcoins", "bitcoin"].includes(article.category);
+  // Review só de produto da loja (Cripto Indica). Preço nunca exato: a oferta é a faixa de
+  // mercado pesquisada (AggregateOffer), e só quando ela existe.
   const reviewLd =
-    isReview && review
+    isReview && review && isProduct
       ? {
           "@context": "https://schema.org",
           "@type": "Review",
@@ -144,21 +149,20 @@ export default async function ArticlePage({ params }: { params: Params }) {
           datePublished: article.date,
           dateModified: article.updated ?? article.date,
           inLanguage: "pt-BR",
-          itemReviewed: isProduct
-            ? {
-                "@type": "Product",
-                name: review.tool,
-                url: review.url,
-                ...(offer ? { offers: offer } : {}),
-              }
-            : {
-                "@type": "SoftwareApplication",
-                name: review.tool,
-                applicationCategory: "BusinessApplication",
-                operatingSystem: "Web",
-                url: review.url,
-                ...(offer ? { offers: offer } : {}),
-              },
+          itemReviewed: {
+            "@type": "Product",
+            name: reviewed?.name ?? review.tool,
+            ...(reviewed
+              ? {
+                  url: absoluteUrl(`/loja/${reviewed.slug}`),
+                  image: absoluteUrl(reviewed.image.url),
+                  ...(reviewed.brand ? { brand: { "@type": "Brand", name: reviewed.brand } } : {}),
+                  ...(reviewed.priceMin && reviewed.priceMax
+                    ? { offers: { "@type": "AggregateOffer", lowPrice: reviewed.priceMin, highPrice: reviewed.priceMax, priceCurrency: "BRL" } }
+                    : {}),
+                }
+              : {}),
+          },
           reviewRating: {
             "@type": "Rating",
             ratingValue: review.score,

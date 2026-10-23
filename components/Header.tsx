@@ -91,7 +91,7 @@ export function Header() {
                 <div className="invisible absolute left-0 top-full z-50 w-[540px] translate-y-1 pt-2 opacity-0 transition group-focus-within:visible group-focus-within:translate-y-0 group-focus-within:opacity-100 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100">
                   <div className="grid grid-cols-2 gap-1 rounded-xl border border-border bg-surface p-2 shadow-xl">
                     {i.children.map((c) => (
-                      <Link key={c.href} href={c.href} className="rounded-lg px-3 py-2.5 transition hover:bg-surface-2">
+                      <Link key={c.href} href={c.href} prefetch={false} className="rounded-lg px-3 py-2.5 transition hover:bg-surface-2">
                         <span className="block text-sm font-semibold">{c.label}</span>
                         <span className="mt-0.5 line-clamp-2 block text-xs leading-snug text-muted">{c.description}</span>
                       </Link>

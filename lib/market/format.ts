@@ -3,6 +3,19 @@
 const brl = new Intl.NumberFormat("pt-BR", { style: "currency", currency: "BRL" });
 const usd = new Intl.NumberFormat("en-US", { style: "currency", currency: "USD" });
 
+// toLocaleString com opções cria um Intl.NumberFormat novo a cada chamada; o ranking chama
+// isso centenas de vezes por render. Aqui cada combinação é criada uma vez só.
+const formatters = new Map<string, Intl.NumberFormat>();
+function nf(locale: "pt-BR" | "en-US", min: number | undefined, max: number): Intl.NumberFormat {
+  const key = `${locale}|${min ?? ""}|${max}`;
+  let f = formatters.get(key);
+  if (!f) {
+    f = new Intl.NumberFormat(locale, min == null ? { maximumFractionDigits: max } : { minimumFractionDigits: min, maximumFractionDigits: max });
+    formatters.set(key, f);
+  }
+  return f;
+}
+
 /** Casas decimais adequadas ao tamanho do número (moedas de centavos precisam de mais). */
 function decimalsFor(value: number): number {
   const v = Math.abs(value);
@@ -17,27 +30,27 @@ export function formatBRL(value: number, opts: { decimals?: number } = {}): stri
   if (!Number.isFinite(value)) return "R$ --";
   const d = opts.decimals ?? decimalsFor(value);
   if (d === 2) return brl.format(value);
-  return `R$ ${value.toLocaleString("pt-BR", { minimumFractionDigits: d, maximumFractionDigits: d })}`;
+  return `R$ ${nf("pt-BR", d, d).format(value)}`;
 }
 
 export function formatUSD(value: number, opts: { decimals?: number } = {}): string {
   if (!Number.isFinite(value)) return "US$ --";
   const d = opts.decimals ?? decimalsFor(value);
-  const n = d === 2 ? usd.format(value).replace("$", "") : value.toLocaleString("en-US", { minimumFractionDigits: d, maximumFractionDigits: d });
+  const n = d === 2 ? usd.format(value).replace("$", "") : nf("en-US", d, d).format(value);
   return `US$ ${n.replace(/^-/, "")}`.replace("US$ ", value < 0 ? "-US$ " : "US$ ");
 }
 
 /** Número no padrão brasileiro sem moeda. */
 export function formatNumber(value: number, decimals = 2): string {
   if (!Number.isFinite(value)) return "--";
-  return value.toLocaleString("pt-BR", { minimumFractionDigits: decimals, maximumFractionDigits: decimals });
+  return nf("pt-BR", decimals, decimals).format(value);
 }
 
 /** "+3,21%" / "-0,85%". */
 export function formatPct(value: number | null | undefined, decimals = 2): string {
   if (value == null || !Number.isFinite(value)) return "--";
   const sign = value > 0 ? "+" : value < 0 ? "−" : "";
-  return `${sign}${Math.abs(value).toLocaleString("pt-BR", { minimumFractionDigits: decimals, maximumFractionDigits: decimals })}%`;
+  return `${sign}${nf("pt-BR", decimals, decimals).format(Math.abs(value))}%`;
 }
 
 /** Valores grandes por extenso curto: "R$ 8,22 tri", "R$ 132,5 bi", "R$ 45,3 mi". */
@@ -52,12 +65,12 @@ export function formatCompactUSD(value: number): string {
 export function formatCompact(value: number): string {
   if (!Number.isFinite(value)) return "--";
   const v = Math.abs(value);
-  const fmt = (n: number, suffix: string) => `${n.toLocaleString("pt-BR", { maximumFractionDigits: n >= 100 ? 0 : n >= 10 ? 1 : 2 })} ${suffix}`;
+  const fmt = (n: number, suffix: string) => `${nf("pt-BR", undefined, n >= 100 ? 0 : n >= 10 ? 1 : 2).format(n)} ${suffix}`;
   if (v >= 1e12) return fmt(value / 1e12, "tri");
   if (v >= 1e9) return fmt(value / 1e9, "bi");
   if (v >= 1e6) return fmt(value / 1e6, "mi");
   if (v >= 1e3) return fmt(value / 1e3, "mil");
-  return value.toLocaleString("pt-BR", { maximumFractionDigits: 2 });
+  return nf("pt-BR", undefined, 2).format(value);
 }
 
 /** Quantidade de BTC com até 8 casas, sem zeros sobrando. */

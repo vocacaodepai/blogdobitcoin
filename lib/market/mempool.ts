@@ -1,4 +1,6 @@
 /** Dados da rede Bitcoin pela API pública da mempool.space (sem chave, CORS liberado). */
+import { fetchWithTimeout } from "./http";
+
 export const MEMPOOL_API = "https://mempool.space/api";
 
 export type Fees = { fastestFee: number; halfHourFee: number; hourFee: number; economyFee: number; minimumFee: number };
@@ -14,19 +16,19 @@ export type DifficultyAdjustment = {
 };
 
 export async function fetchTipHeight(init?: RequestInit): Promise<number> {
-  const res = await fetch(`${MEMPOOL_API}/blocks/tip/height`, init);
+  const res = await fetchWithTimeout(`${MEMPOOL_API}/blocks/tip/height`, init);
   if (!res.ok) throw new Error(`mempool ${res.status}`);
   return Number(await res.text());
 }
 
 export async function fetchFees(init?: RequestInit): Promise<Fees> {
-  const res = await fetch(`${MEMPOOL_API}/v1/fees/recommended`, init);
+  const res = await fetchWithTimeout(`${MEMPOOL_API}/v1/fees/recommended`, init);
   if (!res.ok) throw new Error(`mempool fees ${res.status}`);
   return res.json();
 }
 
 export async function fetchDifficulty(init?: RequestInit): Promise<DifficultyAdjustment> {
-  const res = await fetch(`${MEMPOOL_API}/v1/difficulty-adjustment`, init);
+  const res = await fetchWithTimeout(`${MEMPOOL_API}/v1/difficulty-adjustment`, init);
   if (!res.ok) throw new Error(`mempool difficulty ${res.status}`);
   return res.json();
 }

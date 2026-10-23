@@ -55,18 +55,23 @@ export function QuizWidget({ questions }: { questions: QuizQuestion[] }) {
                     <button
                       key={oi}
                       type="button"
-                      disabled={answered}
+                      aria-disabled={answered}
+                      aria-pressed={isChosen}
                       onClick={() => choose(qi, oi)}
                       className={`block w-full rounded-lg border px-4 py-2.5 text-left text-sm transition ${stateClasses} ${answered ? "cursor-default" : "cursor-pointer"}`}
                     >
                       {opt}
+                      {/* Acerto e erro também em texto, não só pela cor (daltonismo e leitor de tela). */}
+                      {answered && isCorrect && <span className="ml-2 font-semibold text-success">✓ Resposta certa</span>}
+                      {answered && isChosen && !isCorrect && <span className="ml-2 font-semibold text-danger">✗ Sua resposta</span>}
                     </button>
                   );
                 })}
               </div>
-              {answered && (
-                <p className="mt-2 text-sm leading-relaxed text-muted">{q.explanation}</p>
-              )}
+              {/* Região viva desde o primeiro render, para o leitor de tela anunciar o resultado. */}
+              <p role="status" aria-live="polite" className="mt-2 text-sm leading-relaxed text-muted">
+                {answered ? `${chosen === q.answer ? "Você acertou." : "Resposta errada."} ${q.explanation}` : ""}
+              </p>
             </div>
           );
         })}

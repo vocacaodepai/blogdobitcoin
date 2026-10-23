@@ -63,7 +63,7 @@ export function LumpSumCalculator({ history, initialQuote }: { history: HistoryR
             inputMode="decimal"
             value={amount}
             onChange={(e) => setAmount(e.target.value)}
-            className="tabular mt-1 h-11 w-full rounded-lg border border-border bg-background px-3 font-mono outline-none focus:border-brand"
+            className="tabular mt-1 h-11 w-full rounded-lg border border-border bg-background px-3 font-mono focus:border-brand"
           />
         </label>
         <label className="block">
@@ -99,7 +99,7 @@ export function LumpSumCalculator({ history, initialQuote }: { history: HistoryR
             {formatBRL(value!)} em bitcoin em {monthLabel(row.month)} (preço de {formatBRL(row.brl)} por BTC) comprariam{" "}
             <strong className="text-foreground">{formatNumber(calc.btc, calc.btc < 0.01 ? 8 : 4)} BTC</strong>.
           </p>
-          <p className="tabular mt-2 font-display text-3xl font-bold sm:text-4xl" suppressHydrationWarning>
+          <p className="tabular mt-2 font-display text-2xl font-bold [overflow-wrap:anywhere] sm:text-4xl" suppressHydrationWarning>
             {formatBRL(calc.now)}
           </p>
           <p className="mt-1 text-sm">

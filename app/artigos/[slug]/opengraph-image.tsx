@@ -8,6 +8,9 @@ export const size = OG_SIZE;
 export const contentType = "image/png";
 export const dynamic = "force-static";
 
+// Só os endereços conhecidos no build: slug inventado vira 404, sem gravar página nem imagem no cache.
+export const dynamicParams = false;
+
 export function generateStaticParams() {
   return articles.map((a) => ({ slug: a.slug }));
 }

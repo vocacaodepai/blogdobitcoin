@@ -1,4 +1,5 @@
 import { BINANCE_API, fetchKlines, type Candle } from "./binance";
+import { fetchWithTimeout } from "./http";
 
 const DAY = 86_400_000;
 
@@ -31,7 +32,7 @@ function priceAt(daily: Candle[], at: number): number | null {
 /** Abertura da janela móvel exata (1h, 7d) da Binance: o preço de exatamente 1 hora ou 7 dias atrás. */
 async function rollingOpen(windowSize: "1h" | "7d", init?: RequestInit): Promise<number | null> {
   try {
-    const res = await fetch(`${BINANCE_API}/ticker?symbol=BTCBRL&windowSize=${windowSize}`, init);
+    const res = await fetchWithTimeout(`${BINANCE_API}/ticker?symbol=BTCBRL&windowSize=${windowSize}`, init);
     if (!res.ok) return null;
     const open = Number(((await res.json()) as { openPrice?: string }).openPrice);
     return Number.isFinite(open) && open > 0 ? open : null;

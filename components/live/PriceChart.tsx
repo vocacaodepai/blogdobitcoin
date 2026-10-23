@@ -7,7 +7,9 @@ export type ChartPoint = { t: number; v: number };
 
 const W = 720;
 const H = 280;
-const PAD = { top: 16, right: 12, bottom: 28, left: 12 };
+// Datas do eixo ficam em HTML abaixo do SVG (em texto de 11 px de verdade): dentro do viewBox de
+// 720 de largura elas encolhiam para menos de 5 px no celular.
+const PAD = { top: 16, right: 12, bottom: 8, left: 12 };
 
 function fmtTick(t: number, spanMs: number): string {
   const d = new Date(t);
@@ -148,19 +150,6 @@ export function PriceChart({
         ))}
         <path d={geo.area} fill="url(#chart-fill)" />
         <path d={geo.line} fill="none" stroke={color} strokeWidth="2" strokeLinejoin="round" />
-        {geo.ticks.map((t, i) => (
-          <text
-            key={t}
-            x={geo.x(t)}
-            y={H - 8}
-            fontSize="11"
-            fill="var(--muted)"
-            textAnchor={i === 0 ? "start" : i === geo.ticks.length - 1 ? "end" : "middle"}
-            fontFamily="var(--font-mono)"
-          >
-            {fmtTick(t, geo.span)}
-          </text>
-        ))}
         {h && (
           <g>
             <line x1={geo.x(h.t)} x2={geo.x(h.t)} y1={PAD.top} y2={H - PAD.bottom} stroke="var(--muted)" strokeDasharray="2 3" />
@@ -168,6 +157,24 @@ export function PriceChart({
           </g>
         )}
       </svg>
+      <div className="relative mt-1 h-4 font-mono text-[11px] text-muted" aria-hidden="true">
+        {geo.ticks.map((t, i) => {
+          const last = i === geo.ticks.length - 1;
+          return (
+            <span
+              key={t}
+              // No celular só a primeira, a do meio e a última, para os rótulos não se encostarem.
+              className={`absolute top-0 whitespace-nowrap ${i % 2 === 1 ? "hidden sm:block" : ""}`}
+              style={{
+                left: `${(geo.x(t) / W) * 100}%`,
+                transform: i === 0 ? undefined : last ? "translateX(-100%)" : "translateX(-50%)",
+              }}
+            >
+              {fmtTick(t, geo.span)}
+            </span>
+          );
+        })}
+      </div>
     </figure>
   );
 }

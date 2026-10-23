@@ -18,7 +18,9 @@ termine em silêncio.
   crie a ficha (mesmo padrão das existentes, fatos conferidos). Se uma moeda trocar de nome
   ou de id na CoinPaprika, corrija o `paprikaId`.
 - `content/historia.ts` e `content/glossario.ts`: inclua marcos e termos novos anotados
-  pelas rotinas de artigo e notícia na última semana, com fonte.
+  pelas rotinas de artigo e notícia na última semana, com fonte. Ao editar um deles,
+  atualize a data `historyUpdated` ou `glossaryUpdated` no topo do arquivo (é o lastmod de
+  `/historia` e `/glossario` no sitemap).
 
 ## 2. Erros
 

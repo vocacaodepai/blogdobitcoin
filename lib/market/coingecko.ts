@@ -5,6 +5,7 @@
  * misturar moedas diferentes com o mesmo símbolo.
  */
 import type { CoinRow } from "./paprika";
+import { fetchWithTimeout } from "./http";
 
 export type LongChange = { mcap: number; ch30d: number | null; ch1y: number | null };
 
@@ -18,7 +19,7 @@ type GeckoMarket = {
 export async function fetchLongChanges(init?: RequestInit): Promise<Record<string, LongChange>> {
   const url =
     "https://api.coingecko.com/api/v3/coins/markets?vs_currency=brl&order=market_cap_desc&per_page=250&page=1&sparkline=false&price_change_percentage=30d,1y";
-  const res = await fetch(url, init);
+  const res = await fetchWithTimeout(url, init);
   if (!res.ok) throw new Error(`coingecko ${res.status}`);
   const data = (await res.json()) as GeckoMarket[];
   const out: Record<string, LongChange> = {};

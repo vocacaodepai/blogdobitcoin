@@ -75,7 +75,6 @@ export function BtcLivePanel({
         <p
           key={data?.brl ?? "vazio"}
           className={`tabular rounded-lg px-1 font-display text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl ${dir > 0 ? "flash-up" : dir < 0 ? "flash-down" : ""}`}
-          aria-live="polite"
         >
           {data ? formatBRL(data.brl) : "R$ ..."}
         </p>
@@ -107,7 +106,11 @@ export function BtcLivePanel({
           </p>
         </div>
         <div className="mt-2.5 h-1 overflow-hidden rounded-full bg-surface-2" aria-hidden="true">
-          <div className="h-full rounded-full bg-brand transition-[width] duration-1000 ease-linear" style={{ width: `${progress * 100}%` }} />
+          {/* scaleX em vez de width: anima na GPU, sem refazer o layout a cada quadro. */}
+          <div
+            className="h-full origin-left rounded-full bg-brand transition-transform duration-1000 ease-linear will-change-transform"
+            style={{ transform: `scaleX(${progress})` }}
+          />
         </div>
       </div>
 

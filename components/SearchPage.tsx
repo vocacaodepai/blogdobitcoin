@@ -51,7 +51,7 @@ export function SearchPage() {
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           placeholder="Ex.: ganhar dinheiro com IA, ChatGPT, automação…"
-          className="h-12 w-full rounded-lg border border-border bg-surface px-4 text-base outline-none transition focus:border-accent"
+          className="h-12 w-full rounded-lg border border-border bg-surface px-4 text-base transition focus:border-accent"
           aria-label="Termo de busca"
           autoFocus
         />

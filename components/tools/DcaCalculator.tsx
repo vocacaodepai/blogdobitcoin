@@ -54,7 +54,7 @@ export function DcaCalculator({ history, initialQuote }: { history: HistoryRow[]
             inputMode="decimal"
             value={monthly}
             onChange={(e) => setMonthly(e.target.value)}
-            className="tabular mt-1 h-11 w-full rounded-lg border border-border bg-background px-3 font-mono outline-none focus:border-brand"
+            className="tabular mt-1 h-11 w-full rounded-lg border border-border bg-background px-3 font-mono focus:border-brand"
           />
         </label>
         <label className="block">
@@ -95,17 +95,17 @@ export function DcaCalculator({ history, initialQuote }: { history: HistoryRow[]
           <dl className="mt-5 grid grid-cols-2 gap-2.5 lg:grid-cols-4">
             <div className="rounded-xl border border-border bg-background/60 px-4 py-3">
               <dt className="label-mono text-muted">Total investido</dt>
-              <dd className="tabular mt-1 font-display text-lg font-bold">{formatBRL(result.invested)}</dd>
+              <dd className="tabular mt-1 min-w-0 font-display text-lg font-bold [overflow-wrap:anywhere]">{formatBRL(result.invested)}</dd>
               <dd className="text-xs text-muted">{result.buys} aportes</dd>
             </div>
             <div className="rounded-xl border border-border bg-background/60 px-4 py-3">
               <dt className="label-mono text-muted">Bitcoin acumulado</dt>
-              <dd className="tabular mt-1 font-display text-lg font-bold">{formatNumber(result.btc, 6)} BTC</dd>
+              <dd className="tabular mt-1 min-w-0 font-display text-lg font-bold [overflow-wrap:anywhere]">{formatNumber(result.btc, 6)} BTC</dd>
               <dd className="text-xs text-muted">{formatNumber(result.btc * 1e8, 0)} sats</dd>
             </div>
             <div className="rounded-xl border border-border bg-background/60 px-4 py-3">
               <dt className="label-mono text-muted">Valeria hoje</dt>
-              <dd className="tabular mt-1 font-display text-lg font-bold">{formatBRL(valueNow)}</dd>
+              <dd className="tabular mt-1 min-w-0 font-display text-lg font-bold [overflow-wrap:anywhere]">{formatBRL(valueNow)}</dd>
               <dd className={`tabular text-xs font-semibold ${profit >= 0 ? "text-up" : "text-down"}`}>
                 {profit >= 0 ? "+" : ""}
                 {formatBRL(profit)} ({formatPct((profit / result.invested) * 100)})
@@ -113,7 +113,7 @@ export function DcaCalculator({ history, initialQuote }: { history: HistoryRow[]
             </div>
             <div className="rounded-xl border border-border bg-background/60 px-4 py-3">
               <dt className="label-mono text-muted">Preço médio de compra</dt>
-              <dd className="tabular mt-1 font-display text-lg font-bold">{formatBRL(avgPrice, { decimals: 0 })}</dd>
+              <dd className="tabular mt-1 min-w-0 font-display text-lg font-bold [overflow-wrap:anywhere]">{formatBRL(avgPrice, { decimals: 0 })}</dd>
               <dd className="text-xs text-muted">por bitcoin</dd>
             </div>
           </dl>

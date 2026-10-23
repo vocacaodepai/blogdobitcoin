@@ -21,9 +21,11 @@ export function useBtcQuote(initial: BtcQuote | null = null) {
   return usePolling<BtcQuote>("btc-quote", () => fetchBtcQuote(), BTC_REFRESH_MS, initial, 12);
 }
 
-const BAR_SYMBOLS = TICKER_BAR_PAIRS.map((p) => p.symbol);
+// O BTC da barra vem da mesma busca do selo e do painel (btc-quote, 10 s); as outras moedas,
+// numa busca só a cada 30 s. Antes eram duas buscas na Binance a cada 10 s em toda página.
+const BAR_SYMBOLS = TICKER_BAR_PAIRS.filter((p) => p.symbol !== "BTCBRL").map((p) => p.symbol);
 export function useTickerBar() {
-  return usePolling<Record<string, Ticker24h>>("ticker-bar", () => fetchTickers24h(BAR_SYMBOLS), BTC_REFRESH_MS);
+  return usePolling<Record<string, Ticker24h>>("ticker-bar", () => fetchTickers24h(BAR_SYMBOLS), 30_000);
 }
 
 export function useMarket(initial: CoinRow[] | null = null) {

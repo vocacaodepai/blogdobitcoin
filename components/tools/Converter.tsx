@@ -64,7 +64,7 @@ export function Converter({ initialQuote, initialMarket }: { initialQuote: BtcQu
             inputMode="decimal"
             value={amount}
             onChange={(e) => setAmount(e.target.value)}
-            className="tabular mt-1 h-12 w-full rounded-lg border border-border bg-background px-3 font-mono text-lg outline-none focus:border-brand"
+            className="tabular mt-1 h-12 w-full rounded-lg border border-border bg-background px-3 font-mono text-lg focus:border-brand"
             aria-describedby="conversor-ajuda"
           />
         </label>

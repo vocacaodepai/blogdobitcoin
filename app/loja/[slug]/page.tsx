@@ -14,6 +14,9 @@ import { absoluteUrl, alternatesFor, breadcrumbJsonLd, metaDescription } from "@
 
 type Params = Promise<{ slug: string }>;
 
+// Só os endereços conhecidos no build: slug inventado vira 404, sem gravar página nem imagem no cache.
+export const dynamicParams = false;
+
 export function generateStaticParams() {
   return products.map((p) => ({ slug: p.slug }));
 }
@@ -61,6 +64,10 @@ export default async function ProductPage({ params }: { params: Params }) {
     description: product.shortDescription,
     category: cat?.label,
     url: absoluteUrl(path),
+    // Faixa de mercado pesquisada em várias lojas (nunca o preço exato da Amazon), só quando existe.
+    ...(product.priceMin && product.priceMax
+      ? { offers: { "@type": "AggregateOffer", lowPrice: product.priceMin, highPrice: product.priceMax, priceCurrency: "BRL" } }
+      : {}),
     ...(product.review
       ? {
           review: {

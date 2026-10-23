@@ -4,6 +4,8 @@
  * todas as páginas (/mercado, /moedas/*, home) com cache de 5 minutos, então
  * o Next faz uma chamada só a cada 5 minutos para o site inteiro.
  */
+import { fetchWithTimeout } from "./http";
+
 export const PAPRIKA_API = "https://api.coinpaprika.com/v1";
 /** URL única do ranking (não mude por página: o cache compartilhado depende dela). */
 export const PAPRIKA_TICKERS_URL = `${PAPRIKA_API}/tickers?quotes=BRL,USD&limit=200`;
@@ -119,7 +121,7 @@ export function coinLogo(id: string): string {
 }
 
 export async function fetchMarket(init?: RequestInit): Promise<CoinRow[]> {
-  const res = await fetch(PAPRIKA_TICKERS_URL, init);
+  const res = await fetchWithTimeout(PAPRIKA_TICKERS_URL, init);
   if (!res.ok) throw new Error(`coinpaprika ${res.status}`);
   const data = (await res.json()) as PaprikaTicker[];
   const rows = data
@@ -147,7 +149,7 @@ function markDerivatives(rows: CoinRow[]): CoinRow[] {
 }
 
 export async function fetchGlobal(init?: RequestInit): Promise<GlobalStats> {
-  const res = await fetch(`${PAPRIKA_API}/global`, init);
+  const res = await fetchWithTimeout(`${PAPRIKA_API}/global`, init);
   if (!res.ok) throw new Error(`coinpaprika global ${res.status}`);
   const g = await res.json();
   return {

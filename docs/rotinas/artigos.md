@@ -44,3 +44,6 @@ todos os dias. Leia antes `docs/rotinas/comum.md` e `docs/padrao-editorial.md` i
 
 `content/articles/` e o índice gerado. Termo novo útil para o glossário: anote no informe
 (a rotina de manutenção decide).
+
+Ao incluir marco em `content/historia.ts` ou termo em `content/glossario.ts`, atualize a data
+`historyUpdated` ou `glossaryUpdated` no topo do arquivo (lastmod do sitemap).

@@ -1,5 +1,8 @@
 import type { GlossaryTerm } from "@/lib/types";
 
+/** Data da última edição deste arquivo (lastmod de /glossario no sitemap). Atualize junto com a edição. */
+export const glossaryUpdated = "2026-10-23";
+
 export const glossary: GlossaryTerm[] = [
   {
     slug: "airdrop",

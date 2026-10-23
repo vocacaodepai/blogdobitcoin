@@ -5,6 +5,9 @@ import type { Curiosity, TimelineEvent } from "@/lib/types";
  * Preços (priceNote) aproximados: cotações citadas na fonte do marco ou média diária
  * de mercado da Blockchain.com (Market Price, USD) na data.
  */
+/** Data da última edição deste arquivo (lastmod de /historia no sitemap). Atualize junto com a edição. */
+export const historyUpdated = "2026-10-23";
+
 export const timeline: TimelineEvent[] = [
   {
     date: "2008-10-31",

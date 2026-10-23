@@ -1,4 +1,6 @@
 /** Índice de medo e ganância do mercado cripto (alternative.me, público, sem chave). */
+import { fetchWithTimeout } from "./http";
+
 export type FearGreedPoint = { value: number; label: string; timestamp: number };
 
 const LABELS: Record<string, string> = {
@@ -27,7 +29,7 @@ export function fearGreedColor(value: number): string {
 }
 
 export async function fetchFearGreed(limit = 31, init?: RequestInit): Promise<FearGreedPoint[]> {
-  const res = await fetch(`https://api.alternative.me/fng/?limit=${limit}`, init);
+  const res = await fetchWithTimeout(`https://api.alternative.me/fng/?limit=${limit}`, init);
   if (!res.ok) throw new Error(`fng ${res.status}`);
   const data = (await res.json()).data as { value: string; value_classification: string; timestamp: string }[];
   return data.map((d) => ({
@@ -43,4 +45,13 @@ export async function getFearGreedServer(limit = 31): Promise<FearGreedPoint[]> 
   } catch {
     return [];
   }
+}
+
+/** Cor de TEXTO da faixa (tokens --fng-0..4 com contraste AA em cada tema); a cor viva fica no arco. */
+export function fearGreedTextColor(value: number): string {
+  if (value <= 25) return "var(--fng-0)";
+  if (value <= 46) return "var(--fng-1)";
+  if (value <= 54) return "var(--fng-2)";
+  if (value <= 75) return "var(--fng-3)";
+  return "var(--fng-4)";
 }

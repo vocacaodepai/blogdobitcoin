@@ -1,8 +1,8 @@
 /** Linha do tempo e curiosidades de /historia (content/historia.ts) e glossário (content/glossario.ts). */
-import { curiosities, timeline } from "@/content/historia";
-import { glossary } from "@/content/glossario";
+import { curiosities, historyUpdated, timeline } from "@/content/historia";
+import { glossary, glossaryUpdated } from "@/content/glossario";
 
-export { curiosities, glossary, timeline };
+export { curiosities, glossary, glossaryUpdated, historyUpdated, timeline };
 
 /** "2010-05-22" -> "22 mai 2010"; "2010-05" -> "mai 2010". */
 export function timelineDate(date: string): string {

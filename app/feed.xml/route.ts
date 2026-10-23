@@ -13,8 +13,13 @@ function escapeXml(s: string) {
     .replace(/'/g, "&apos;");
 }
 
+/** Data só (AAAA-MM-DD) vira 09:00 de Brasília; data com hora (publishedAt das notícias) vale como está. */
+function toDate(iso: string) {
+  return new Date(iso.includes("T") ? iso : `${iso}T09:00:00-03:00`);
+}
+
 function rfc822(iso: string) {
-  return new Date(`${iso}T09:00:00-03:00`).toUTCString();
+  return toDate(iso).toUTCString();
 }
 
 export function GET() {
@@ -31,11 +36,11 @@ export function GET() {
       title: n.title,
       link: `${site.url}/noticias/${n.slug}`,
       description: n.summary,
-      date: n.date,
+      date: n.publishedAt ?? n.date,
       category: "Notícias",
     })),
   ]
-    .sort((a, b) => b.date.localeCompare(a.date))
+    .sort((a, b) => toDate(b.date).getTime() - toDate(a.date).getTime())
     .slice(0, 40);
 
   const items = entries

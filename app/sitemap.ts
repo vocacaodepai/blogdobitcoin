@@ -4,6 +4,7 @@ import { ARTICLES_PER_PAGE, NEWS_PER_PAGE, countPages, slicePage } from "@/compo
 import { categories, getArticlesByCategory, site, sortedArticles } from "@/lib/articles";
 import { author } from "@/lib/author";
 import { coins } from "@/lib/coins";
+import { glossaryUpdated, historyUpdated } from "@/lib/history-content";
 import { sortedProducts } from "@/lib/products";
 import { sortedNews } from "@/lib/news";
 import { absoluteUrl } from "@/lib/seo";
@@ -95,17 +96,25 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ].map((path) => ({ url: absoluteUrl(path), lastModified: today, changeFrequency: "daily" as const, priority: path === "/ferramentas" ? 0.7 : 0.8 }));
 
   const referencia: Entry[] = [
-    { url: absoluteUrl("/historia"), lastModified: newestArticle, changeFrequency: "weekly", priority: 0.8 },
-    { url: absoluteUrl("/glossario"), lastModified: newestArticle, changeFrequency: "monthly", priority: 0.7 },
+    {
+      url: absoluteUrl("/historia"),
+      // A página mostra a linha do tempo e as Memórias do Bitcoin: muda quando um dos dois muda.
+      lastModified: newest([historyUpdated, ...getArticlesByCategory("historia").map((a) => a.updated ?? a.date)]) ?? historyUpdated,
+      changeFrequency: "weekly",
+      priority: 0.8,
+    },
+    { url: absoluteUrl("/glossario"), lastModified: glossaryUpdated, changeFrequency: "monthly", priority: 0.7 },
   ];
 
   const products = sortedProducts();
-  const productDates = products.map((p) => p.date);
+  // A rotina atualiza a faixa de preço dos produtos antigos: a página muda junto com priceCheckedAt.
+  const productModified = (p: (typeof products)[number]) => newest([p.date, ...(p.priceCheckedAt ? [p.priceCheckedAt] : [])]) ?? p.date;
+  const productDates = products.map(productModified);
   const loja: Entry[] = [
     { url: absoluteUrl("/loja"), lastModified: newest(productDates) ?? newestArticle, changeFrequency: "daily", priority: 0.8 },
     ...products.map((p) => ({
       url: absoluteUrl(`/loja/${p.slug}`),
-      lastModified: p.date,
+      lastModified: productModified(p),
       changeFrequency: "weekly" as const,
       priority: 0.7,
       images: [absoluteUrl(p.image.url)],

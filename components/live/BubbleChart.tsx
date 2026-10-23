@@ -49,6 +49,8 @@ export function BubbleChart({ initial, profiles }: { initial: CoinRow[]; profile
   const nodes = useRef<Map<string, Node>>(new Map());
   const groups = useRef<Map<string, SVGGElement>>(new Map());
   const drag = useRef<{ id: string; dx: number; dy: number; moved: number } | null>(null);
+  // Acorda o laço de física (ele dorme quando as bolhas param, para não gastar CPU à toa).
+  const wake = useRef<() => void>(() => {});
 
   const items = useMemo(
     () =>
@@ -108,13 +110,17 @@ export function BubbleChart({ initial, profiles }: { initial: CoinRow[]; profile
         });
       }
     });
+    wake.current();
   }, [items, radii, size]);
 
   // Laço de física: atração ao centro, colisão entre bolhas e paredes.
   useEffect(() => {
     let raf = 0;
+    let running = false;
+    let still = 0;
     const step = () => {
       const list = [...nodes.current.values()];
+      const before = list.map((n) => [n.x, n.y]);
       const cx = size.w / 2;
       const cy = size.h / 2;
       for (const n of list) {
@@ -177,10 +183,30 @@ export function BubbleChart({ initial, profiles }: { initial: CoinRow[]; profile
         const g = groups.current.get(n.id);
         if (g) g.setAttribute("transform", `translate(${n.x.toFixed(1)} ${n.y.toFixed(1)})`);
       }
+      // Quase parado por ~1,5 s e sem arrasto: dorme até a próxima interação ou dado novo.
+      let moved = 0;
+      list.forEach((n, i) => {
+        moved = Math.max(moved, Math.abs(n.x - before[i][0]) + Math.abs(n.y - before[i][1]));
+      });
+      still = !drag.current && moved < 0.05 ? still + 1 : 0;
+      if (still > 90) {
+        running = false;
+        return;
+      }
       raf = requestAnimationFrame(step);
     };
-    raf = requestAnimationFrame(step);
-    return () => cancelAnimationFrame(raf);
+    wake.current = () => {
+      still = 0;
+      if (running) return;
+      running = true;
+      raf = requestAnimationFrame(step);
+    };
+    wake.current();
+    return () => {
+      cancelAnimationFrame(raf);
+      running = false;
+      wake.current = () => {};
+    };
   }, [size]);
 
   function toLocal(e: React.PointerEvent): { x: number; y: number } {
@@ -195,6 +221,7 @@ export function BubbleChart({ initial, profiles }: { initial: CoinRow[]; profile
     if (!n) return;
     const p = toLocal(e);
     drag.current = { id, dx: p.x - n.x, dy: p.y - n.y, moved: 0 };
+    wake.current();
     (e.currentTarget as Element).setPointerCapture?.(e.pointerId);
   }
 
@@ -283,12 +310,16 @@ export function BubbleChart({ initial, profiles }: { initial: CoinRow[]; profile
         <svg
           ref={svgRef}
           viewBox={`0 0 ${size.w} ${size.h}`}
-          className="block h-auto w-full touch-none select-none"
+          className="block h-auto w-full touch-pan-y select-none"
           role="img"
           aria-label={`Bolhas das ${items.length} maiores criptomoedas: ${ups} em alta e ${items.length - ups} em queda em ${PERIODS.find((p) => p.key === period)?.label}`}
           onPointerMove={onMove}
           onPointerUp={onUp}
           onPointerLeave={onUp}
+          onPointerCancel={() => {
+            // Rolagem da página que começou numa bolha: não seleciona nem prende a bolha.
+            drag.current = null;
+          }}
         >
           {items.map((it, i) => {
             const r = radii.get(it.row.id) ?? 10;
@@ -348,8 +379,30 @@ export function BubbleChart({ initial, profiles }: { initial: CoinRow[]; profile
         )}
       </div>
 
+      {/* Alternativa às bolhas para teclado e leitor de tela: a mesma lista, com o mesmo painel. */}
+      <details className="mt-3 rounded-xl border border-border bg-surface">
+        <summary className="cursor-pointer px-4 py-2.5 text-sm font-medium">Ver as moedas em lista</summary>
+        <ul className="grid gap-1 px-2 pb-3 sm:grid-cols-2 lg:grid-cols-3">
+          {items.map((it) => (
+            <li key={it.row.id}>
+              <button
+                type="button"
+                onClick={() => setSelected(it.row.id)}
+                aria-pressed={selected === it.row.id}
+                className="flex w-full items-center justify-between gap-3 rounded-lg px-2 py-1.5 text-left text-sm hover:bg-surface-2"
+              >
+                <span className="min-w-0 truncate">
+                  {it.row.name} <span className="font-mono text-xs text-muted">{it.row.symbol}</span>
+                </span>
+                <ChangeBadge value={it.change} className="text-xs" />
+              </button>
+            </li>
+          ))}
+        </ul>
+      </details>
+
       {sel && (
-        <div className="mt-3 flex flex-wrap items-center gap-x-6 gap-y-2 rounded-xl border border-border bg-surface p-4">
+        <div aria-live="polite" className="mt-3 flex flex-wrap items-center gap-x-6 gap-y-2 rounded-xl border border-border bg-surface p-4">
           <p className="font-display text-lg font-bold">
             {sel.name} <span className="font-mono text-sm text-muted">{sel.symbol} · #{sel.rank}</span>
           </p>

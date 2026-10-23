@@ -112,10 +112,10 @@ export const product: Product = {
       "Na caixa: aparelho, cabo, 2 cartões de backup, guia rápido e adesivos",
     ],
     othersSay: [
-      "Em comunidades de Bitcoin no Reddit e em reviews no YouTube, o elogio mais comum é a combinação de código aberto com chip seguro num aparelho de entrada.",
-      "Muitos usuários destacam que a passphrase digitada no próprio aparelho resolveu uma limitação antiga da linha Model One.",
-      "A reclamação mais repetida é a tela pequena, que torna cansativo conferir endereços longos e digitar senhas.",
-      "Quem usa iPhone costuma reclamar da falta de Bluetooth e das limitações do app no iOS, que obrigam a recorrer ao computador.",
+      "Nas avaliações publicadas no site da Trezor e em comunidades de Bitcoin, o elogio mais comum é o bom custo-benefício para uma carteira com chip seguro e código aberto.",
+      "Vários compradores contam que a configuração foi tranquila e que o Trezor Suite é simples de usar, mesmo para quem nunca teve carteira de hardware.",
+      "A reclamação mais repetida é a tela pequena e sem toque, que deixa a conferência de endereços e a digitação de senhas mais lentas.",
+      "Outra crítica frequente é a falta de Bluetooth, que limita o uso pelo celular, embora parte dos usuários veja a conexão só por cabo como vantagem de segurança.",
     ],
     howWeEvaluated:
       "Esta análise usou a ficha técnica e a página oficial da Trezor, o anúncio na Amazon Brasil, anúncios de revendas oficiais no Brasil e opiniões recorrentes de usuários em fóruns e vídeos. Não houve teste físico do aparelho. As notas comparam a Safe 3 com outras carteiras de hardware vendidas no país.",

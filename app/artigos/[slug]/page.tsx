@@ -280,6 +280,12 @@ export default async function ArticlePage({ params }: { params: Params }) {
               </div>
             )}
 
+            {isProduct && !(isReview && review) && (
+              <div className="mb-8 max-w-[68ch]">
+                <ReviewDisclosure affiliate kind="comparativo" />
+              </div>
+            )}
+
             {article.keyPoints && article.keyPoints.length > 0 && (
               <div className="mb-8 max-w-[68ch]">
                 <KeyTakeaways points={article.keyPoints} />

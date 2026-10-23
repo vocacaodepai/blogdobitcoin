@@ -27,7 +27,7 @@ export const product: Product = {
     "O firmware e o chip seguro não são totalmente de código aberto, ponto que pesa para quem quer auditar tudo",
     "A marca ainda carrega a sombra do vazamento da base de clientes de 2020, que alimenta golpes de phishing até hoje",
   ],
-  featured: true,
+  featured: false,
   sortOrder: 2,
   date: "2026-10-22",
   relatedArticles: [

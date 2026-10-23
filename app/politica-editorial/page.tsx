@@ -120,7 +120,8 @@ export default function PoliticaEditorialPage() {
       <p>
         Os preços e dados em <Link href="/bitcoin">/bitcoin</Link>, em <Link href="/mercado">/mercado</Link>{" "}
         e nas <Link href="/ferramentas">ferramentas</Link> vêm de APIs públicas: Binance, Mercado
-        Bitcoin, Kraken, Coinbase e CoinPaprika para cotações e ranking, mempool.space para os
+        Bitcoin, Kraken, Coinbase e CoinPaprika para cotações e ranking, CoinGecko para a variação de
+        30 dias e de 1 ano, mempool.space para os
         dados da rede e do halving, alternative.me para o índice de medo e ganância, e
         blockchain.com e a PTAX do Banco Central para o histórico. A cotação é informativa. Ela pode
         atrasar, divergir entre corretoras ou falhar por alguns minutos. Antes de qualquer operação,

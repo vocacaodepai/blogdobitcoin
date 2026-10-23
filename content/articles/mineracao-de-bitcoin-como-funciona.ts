@@ -32,12 +32,13 @@ export const article: Article = {
 <p>Funciona como uma loteria em que cada hash é um bilhete. Quem tem mais máquinas compra mais bilhetes por segundo e ganha mais vezes, mas ninguém ganha sempre. Encontrar a resposta é caro; conferir é instantâneo. Qualquer nó da rede checa em milésimos de segundo se o bloco cumpre a regra, e rejeita na hora se não cumprir.</p>
 <p>É esse custo que torna a fraude cara. Para reescrever blocos antigos, um atacante teria de refazer todo o trabalho deles e ainda superar o resto da rede somada. Outras redes seguiram caminho diferente: o Ethereum deixou a mineração em 2022 e passou a usar <a href="/glossario#prova-de-participacao">prova de participação</a>, como explica a página do <a href="/moedas/ethereum">Ethereum</a>.</p>
 
-<h2>ASICs: as máquinas que mineram hoje</h2>
+<h2>ASICs e pools: quem minera Bitcoin hoje</h2>
+<h3>As máquinas: ASICs</h3>
 <p>Nos primeiros anos, dava para minerar com o processador de um computador comum. Depois vieram as placas de vídeo e, por fim, os <a href="/glossario#asic">ASICs</a>, chips feitos para uma única tarefa: calcular hashes SHA-256 o mais rápido possível gastando o mínimo de energia. Hoje, minerar Bitcoin com computador ou celular não tem chance real de achar um bloco.</p>
 <p>Um exemplo de máquina atual é a Antminer S21, da Bitmain. Na ficha divulgada no lançamento, em setembro de 2023, ela faz 200 TH/s (200 trilhões de hashes por segundo) consumindo 3.500 W, uma eficiência de 17,5 joules por terahash, segundo a <a href="https://hashrateindex.com/blog/what-is-the-antminer-s21-everything-to-know-about-bitmains-latest-asic-miner" rel="noopener noreferrer">ficha técnica publicada pelo Hashrate Index</a>. Essa eficiência é o número que mais importa: quanto menos energia por hash, mais tempo a máquina continua dando lucro.</p>
 <p>Os ASICs também ficam velhos rápido. A cada geração nova, as máquinas antigas passam a gastar mais luz para produzir a mesma fração de bloco, e cada halving corta a receita pela metade de uma vez. É comum um modelo que dava lucro virar sucata em poucos anos.</p>
 
-<h2>Pools de mineração: juntar forças para receber todo mês</h2>
+<h3>Os pools de mineração</h3>
 <p>Uma máquina sozinha tem chance tão pequena de achar um bloco que poderia passar décadas sem ganhar nada. Por isso, quase todo mundo minera num <a href="/glossario#pool-de-mineracao">pool de mineração</a>: milhares de máquinas trabalham juntas, e quando qualquer uma acha um bloco, a recompensa é dividida conforme a contribuição de cada participante, descontada a comissão do pool.</p>
 <p>O efeito colateral é a concentração. No mês até 22 de outubro de 2026, Foundry USA (cerca de 26% dos blocos), AntPool (21%) e F2Pool (16%) responderam por mais de 60% dos blocos, segundo o <a href="https://mempool.space/mining" rel="noopener noreferrer">painel de mineração da mempool.space</a>. Pool não é dono das máquinas, e os mineradores podem trocar de pool quando quiserem, mas a fatia grande de poucos nomes é um ponto de atenção permanente para a rede.</p>
 

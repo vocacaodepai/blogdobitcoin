@@ -36,6 +36,13 @@ export function StorePromo({
           <ProductCard key={p.slug} product={p} />
         ))}
       </div>
+      <p className="mt-3 text-xs text-muted">
+        Links de afiliado da Amazon: se você comprar por eles, o Blog do Bitcoin pode receber uma comissão, sem custo extra.{" "}
+        <Link href="/publicidade-e-afiliados" className="font-medium text-accent hover:underline">
+          Saiba mais
+        </Link>
+        .
+      </p>
     </section>
   );
 }

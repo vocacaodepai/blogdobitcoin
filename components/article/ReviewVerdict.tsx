@@ -112,7 +112,7 @@ export function ReviewVerdict({ review }: { review: ReviewData }) {
 }
 
 /** Aviso curto de transparência exibido em todo review. */
-export function ReviewDisclosure({ affiliate = false }: { affiliate?: boolean }) {
+export function ReviewDisclosure({ affiliate = false, kind = "review" }: { affiliate?: boolean; kind?: "review" | "comparativo" }) {
   return (
     <aside
       aria-label="Transparência"
@@ -120,7 +120,7 @@ export function ReviewDisclosure({ affiliate = false }: { affiliate?: boolean })
     >
       <span className="label-mono block text-warn">Transparência</span>
       <p className="mt-1.5">
-        Este review é independente: nenhuma empresa leu, revisou ou aprovou o texto antes da publicação.{" "}
+        Este {kind} é independente: nenhuma empresa leu, revisou ou aprovou o texto antes da publicação.{" "}
         {affiliate
           ? "Alguns links desta página são de afiliado da Amazon. Se você comprar por eles, o Blog do Bitcoin pode receber uma comissão, sem custo extra para você, e isso não muda a nota nem a opinião. "
           : "Não há links de afiliado nesta página. "}

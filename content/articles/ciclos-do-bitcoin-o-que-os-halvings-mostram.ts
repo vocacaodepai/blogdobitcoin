@@ -5,7 +5,7 @@ export const article: Article = {
   title: "Ciclos do Bitcoin: o que os halvings mostram sobre o preço",
   seoTitle: "Ciclos do Bitcoin: o que cada halving mostrou no preço",
   excerpt:
-    "Veja os ciclos do Bitcoin halving a halving: topos, fundos, quanto subiu e caiu desde 2012 e por que esse padrão de quatro anos não garante nada daqui para frente.",
+    "Veja os ciclos do Bitcoin halving a halving: topos, fundos e quanto o preço subiu e caiu desde 2012, e por que o padrão de quatro anos não garante nada.",
   metaDescription:
     "Ciclos do Bitcoin explicados: preço em cada halving de 2012 a 2024, topos e fundos com data, quedas de 53% a 85% e os limites de usar o passado para decidir.",
   category: "mercado",
@@ -49,7 +49,7 @@ export const article: Article = {
 <h3>2020 a 2022: pandemia, recorde e quebra de corretora</h3>
 <p>Antes do terceiro halving, o pânico da pandemia derrubou a média diária para cerca de US$ 4.830 em 13 de março de 2020. Depois do corte de maio veio a alta até novembro de 2021, com média diária acima de US$ 67 mil. A descida terminou em novembro de 2022, logo após a quebra da FTX, lição que aparece no guia de <a href="/artigos/exchange-de-criptomoedas-como-escolher-uma-corretora">como escolher uma corretora</a>.</p>
 <h3>2024 até hoje: o ciclo dos ETFs</h3>
-<p>O ciclo atual começou diferente. Em 10 de janeiro de 2024, a SEC, regulador do mercado americano, <a href="https://www.sec.gov/news/statement/gensler-statement-spot-bitcoin-011023" rel="noopener noreferrer">aprovou os primeiros ETFs de bitcoin à vista</a>, e em 14 de março a média diária passou de US$ 73 mil, acima do recorde de 2021. Foi a primeira vez que o bitcoin bateu recorde antes do halving, e não depois. Como esses fundos funcionam e quais existem na B3 está no guia de <a href="/artigos/etf-de-bitcoin-o-que-e-e-como-funciona-no-brasil">ETF de bitcoin</a>.</p>
+<p>O ciclo atual começou diferente: em 10 de janeiro de 2024, a SEC, regulador do mercado americano, <a href="https://www.sec.gov/news/statement/gensler-statement-spot-bitcoin-011023" rel="noopener noreferrer">aprovou os primeiros ETFs de bitcoin à vista</a>. Em março, a média diária superou o recorde de 2021 e, no dia 14, passou de US$ 73 mil. Foi a primeira vez que o bitcoin bateu recorde antes do halving, e não depois. Como esses fundos funcionam e quais existem na B3 está no guia de <a href="/artigos/etf-de-bitcoin-o-que-e-e-como-funciona-no-brasil">ETF de bitcoin</a>.</p>
 <p>O pico veio em outubro de 2025 e, a partir daí, o preço caiu. Em 1º de julho de 2026 a média diária ficou perto de US$ 58,5 mil, 53% abaixo do topo, e em 22 de outubro de 2026 o bitcoin seguia mais de 35% abaixo do recorde, pelos números da Fortune. Ninguém sabe se o fundo deste ciclo já passou.</p>
 
 <h2>Os padrões que se repetem e os que estão mudando</h2>
@@ -117,7 +117,7 @@ export const article: Article = {
       ],
       answer: 0,
       explanation:
-        "Em março de 2024, depois da aprovação dos ETFs à vista nos EUA, a média diária passou do recorde de 2021, um mês antes do halving de abril. Foi a primeira vez que isso aconteceu.",
+        "Em março de 2024, depois da aprovação dos ETFs à vista nos EUA, a média diária passou do recorde de 2021, cerca de um mês e meio antes do halving de abril. Foi a primeira vez que isso aconteceu.",
     },
     {
       question: "Nos três ciclos fechados, quanto o preço caiu do pico ao fundo?",

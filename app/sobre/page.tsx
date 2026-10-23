@@ -101,7 +101,7 @@ export default function SobrePage() {
       <h2 id="de-onde-vem-os-dados">De onde vêm os dados</h2>
       <p>
         As cotações e os dados da rede vêm de APIs públicas: Binance, Mercado Bitcoin, Kraken,
-        Coinbase, CoinPaprika, mempool.space e alternative.me (medo e ganância). No histórico de
+        Coinbase, CoinPaprika, CoinGecko, mempool.space e alternative.me (medo e ganância). No histórico de
         preços entram também blockchain.com e a PTAX do Banco Central.
       </p>
       <p>

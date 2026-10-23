@@ -155,6 +155,8 @@ Tamanho: 1.100 a 1.700 palavras de texto real (mínimo 900, o script barra).
   competirem no Google), e o artigo linka `/loja/<slug>`.
 - Carteira de hardware: sempre lembrar de comprar de vendedor oficial/autorizado e nunca
   aceitar aparelho com seed já preenchida (golpe conhecido).
+- O aviso de transparência (afiliado e independência) aparece sozinho na página de todo
+  artigo de Cripto Indica, review ou comparativo. Não escreva esse aviso no `content`.
 
 ## 9. Imagens
 

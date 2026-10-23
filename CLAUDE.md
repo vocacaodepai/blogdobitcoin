@@ -31,6 +31,8 @@ Rotinas automáticas: `docs/rotinas/*.md`.
     velas para gráfico.
   - Mercado Bitcoin + Kraken e Coinbase: fontes reserva da cotação.
   - CoinPaprika: ranking das 200 maiores moedas em reais, dados globais.
+  - CoinGecko (só no navegador, a API bloqueia o servidor): variação de 30 dias e 1 ano
+    do ranking e das bolhas.
   - mempool.space: altura do bloco, halving, taxas, dificuldade.
   - alternative.me: índice de medo e ganância.
   - `public/data/btc-historico.json`: fechamento mensal BTC/USD (blockchain.com) e
@@ -78,6 +80,9 @@ Tópicos de notícia: `bitcoin`, `mercado`, `altcoins`, `regulacao`, `seguranca`
   aceitar aparelho com seed já preenchida.
 - Análise é feita a partir de ficha técnica, manual e opiniões reais de compradores; nunca
   alegar teste físico.
+- Aviso de transparência: a página do artigo mostra sozinha a caixa "Transparência"
+  (`ReviewDisclosure`) em todo artigo de Cripto Indica, review ou comparativo. Não repita
+  esse aviso no `content`.
 
 ## Imagens
 

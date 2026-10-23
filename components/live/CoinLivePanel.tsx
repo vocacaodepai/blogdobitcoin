@@ -28,7 +28,6 @@ export function CoinLivePanel({
         { l: "Posição no ranking", v: `#${c.rank}` },
         { l: "Valor de mercado", v: formatCompactBRL(c.marketCapBrl) },
         { l: "Volume em 24h", v: formatCompactBRL(c.volumeBrl) },
-        { l: "Oferta total", v: `${formatNumber(c.supply, 0)} ${symbol}` },
         { l: "Oferta máxima", v: c.maxSupply > 0 ? `${formatNumber(c.maxSupply, 0)} ${symbol}` : "sem limite fixo" },
         {
           l: "Máxima histórica (em dólar)",

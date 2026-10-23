@@ -29,7 +29,7 @@ e produto da loja (`content/products/<slug>.ts`), novo ou reformado. O script
   - Nenhuma estatística ou número sem fonte citada (link na mesma frase ou parágrafo).
   - **Cotação do dia nunca entra fixa no texto** (envelhece em horas). Escreva
     "veja a cotação ao vivo em <a href="/bitcoin">preço do Bitcoin hoje</a>". Preço
-    histórico pode, sempre com a data ("em dezembro de 2017, perto de US$ 19 mil").
+    histórico pode, sempre com a data ("em dezembro de 2017, acima de US$ 19 mil").
   - Nenhuma alegação de teste pessoal que não aconteceu. Análise se apresenta como análise.
   - Nenhuma URL inventada. Todo link externo é aberto e conferido antes de publicar.
 

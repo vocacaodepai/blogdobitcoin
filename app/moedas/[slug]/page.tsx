@@ -57,11 +57,11 @@ export default async function CoinPage({ params }: { params: Params }) {
         : `O valor aparece no painel acima, atualizado a cada minuto com a cotação global da CoinPaprika convertida para real. O preço da sua corretora pode ser um pouco diferente por causa de spread e taxas.`,
     },
     {
-      question: `Quem criou o ${coin.name} e quando?`,
-      answer: `O ${coin.name} (${coin.symbol}) foi lançado em ${coin.launched}. Criação: ${coin.creator}. O consenso da rede é ${coin.consensus.toLowerCase()}.`,
+      question: `Quem criou ${coin.name} e quando?`,
+      answer: `${coin.name} (${coin.symbol}): lançamento em ${coin.launched}. Criação: ${coin.creator}. Consenso: ${coin.consensus}.`,
     },
     {
-      question: `O ${coin.name} tem limite de oferta?`,
+      question: `${coin.name} tem limite de oferta?`,
       answer: `Oferta máxima: ${coin.maxSupply}. Compare com o Bitcoin, que tem limite fixo de 21 milhões de unidades e emissão que cai pela metade a cada halving.`,
     },
     {

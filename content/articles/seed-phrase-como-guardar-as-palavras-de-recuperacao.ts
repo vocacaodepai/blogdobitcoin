@@ -70,6 +70,7 @@ export const article: Article = {
 <p>Para valores altos, há arranjos mais robustos, como a carteira <a href="/glossario#multisig">multisig</a>, que exige, por exemplo, 2 de 3 chaves para gastar e permite deixar uma delas com um familiar ou um profissional de confiança. Um advogado de sucessões ajuda a encaixar tudo isso no planejamento da família.</p>
 
 <h2>Erros comuns que fazem pessoas perderem bitcoins</h2>
+<p>Quase toda perda de bitcoin por backup ruim segue um dos roteiros abaixo. Todos são evitáveis com alguns minutos de cuidado na hora de configurar a carteira.</p>
 <ul>
 <li><strong>Não testar a restauração.</strong> Antes de depositar um valor alto, restaure a carteira em outro aparelho ou depois de zerar o primeiro, usando só as palavras anotadas. Se não funcionar, você descobre a tempo.</li>
 <li><strong>Anotar fora de ordem ou com erro de grafia.</strong> A ordem importa, e uma palavra trocada pode deixar a carteira irrecuperável.</li>

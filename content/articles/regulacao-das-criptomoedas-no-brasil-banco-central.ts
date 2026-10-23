@@ -5,7 +5,7 @@ export const article: Article = {
   title: "Regulação das criptomoedas no Brasil: o que o Banco Central exige",
   seoTitle: "Regulação das criptomoedas no Brasil e o Banco Central",
   excerpt:
-    "Entenda a regulação das criptomoedas no Brasil: Lei 14.478, o papel do Banco Central e da CVM, as regras de 2025 e o prazo de 30 de outubro de 2026 para exchanges.",
+    "Entenda a regulação das criptomoedas no Brasil: Lei 14.478, Banco Central, CVM, as regras de 2025 e o prazo de 30 de outubro de 2026 para as exchanges.",
   metaDescription:
     "Marco legal, Resoluções BCB 519, 520 e 521, prazo de autorização das exchanges, stablecoins no câmbio, papel da CVM e o que muda para quem compra cripto.",
   category: "brasil",
@@ -30,11 +30,11 @@ export const article: Article = {
 
 <h2>Banco Central, CVM e Receita: quem cuida de quê</h2>
 <p>O Decreto 11.563, de 13 de junho de 2023, deu ao Banco Central a competência para regular a prestação de serviços com ativos virtuais e para autorizar e supervisionar as prestadoras. O mesmo decreto preservou as atribuições da Comissão de Valores Mobiliários e do sistema de defesa do consumidor.</p>
-<p>A CVM continua responsável quando o token é, na essência, um valor mobiliário, como um título que promete participação em lucros de um negócio. O entendimento dela está no <a href="https://conteudo.cvm.gov.br/legislacao/pareceres-orientacao/pare040.html" rel="noopener noreferrer">Parecer de Orientação CVM 40</a>, de 11 de outubro de 2022. É também a CVM que regula os fundos e os <a href="/artigos/etf-de-bitcoin-o-que-e-e-como-funciona-no-brasil">ETFs de Bitcoin negociados na B3</a>.</p>
+<p>A CVM continua responsável quando o token é, na essência, um valor mobiliário, como um título que promete participação em lucros de um negócio. O entendimento dela está no Parecer de Orientação CVM 40, de 11 de outubro de 2022, que trata dos criptoativos e do mercado de valores mobiliários. É também a CVM que regula os fundos e os <a href="/artigos/etf-de-bitcoin-o-que-e-e-como-funciona-no-brasil">ETFs de Bitcoin negociados na B3</a>.</p>
 <p>A Receita Federal cuida de outra ponta: impostos e informação. Desde julho de 2026, as corretoras que atendem brasileiros, inclusive as estrangeiras, entregam a DeCripto, a declaração mensal de operações. O efeito disso para o investidor está no guia de <a href="/artigos/como-declarar-bitcoin-no-imposto-de-renda">como declarar Bitcoin no Imposto de Renda</a>.</p>
 
 <h2>As regras de novembro de 2025: Resoluções 519, 520 e 521</h2>
-<p>Em 10 de novembro de 2025, o Banco Central aprovou três resoluções, publicadas no Diário Oficial no dia seguinte e em vigor desde 2 de fevereiro de 2026. Elas criam um novo tipo de instituição, a sociedade prestadora de serviços de ativos virtuais (SPSAV), em três modalidades: intermediária, custodiante e corretora, que faz as duas coisas.</p>
+<p>Em 10 de novembro de 2025, o Banco Central editou três resoluções, publicadas no Diário Oficial no dia seguinte e, na maior parte, em vigor desde 2 de fevereiro de 2026. Elas criam um novo tipo de instituição, a sociedade prestadora de serviços de ativos virtuais (SPSAV), em três modalidades: intermediária, custodiante e corretora, que faz as duas coisas.</p>
 <table>
 <thead><tr><th>Norma</th><th>O que trata</th></tr></thead>
 <tbody>
@@ -60,8 +60,8 @@ export const article: Article = {
 <p>A retenção de 24 horas veio da Resolução BCB 584, de agosto de 2026, e vale para envios a prestadoras sediadas no exterior ou a carteiras autocustodiadas. Segundo o <a href="https://www.bcb.gov.br/detalhenoticia/21224/noticia" rel="noopener noreferrer">comunicado do Banco Central sobre a Resolução 584</a>, a medida é cautelar, não um bloqueio definitivo, e a transferência pode ser liberada antes se a análise não achar sinal de fraude.</p>
 
 <h2>Stablecoins e câmbio: o que mudou</h2>
-<p>A Resolução BCB 521 colocou no mercado de câmbio algumas operações feitas por prestadoras: pagamentos e transferências internacionais com cripto, a compra, venda e troca de ativos referenciados em moeda estrangeira, as stablecoins, e transferências de ou para carteiras autocustodiadas. Nesses casos, a prestadora precisa identificar o dono da carteira e verificar a origem e o destino das moedas.</p>
-<p>A norma também proíbe comprar ou vender cripto com pagamento em moeda estrangeira por meio dessas empresas e limita a US$ 100 mil o pagamento ou transferência internacional feito por uma SPSAV quando o outro lado não é instituição autorizada a operar câmbio. O motivo é o tamanho do segmento: segundo a Receita, stablecoins como o USDT e o <a href="/moedas/usd-coin">USDC</a> responderam por cerca de 80% do volume de cripto declarado em 2025. O funcionamento dessas moedas está no guia de <a href="/artigos/stablecoins-o-que-sao-usdt-usdc">stablecoins</a>.</p>
+<p>A Resolução BCB 521 colocou no mercado de câmbio algumas operações feitas por prestadoras: pagamentos e transferências internacionais com cripto, a compra, venda e troca de ativos virtuais referenciados em moeda fiduciária, as stablecoins, e transferências de ou para carteiras autocustodiadas. Nesses casos, a prestadora precisa identificar o dono da carteira e verificar a origem e o destino das moedas.</p>
+<p>A norma também proíbe comprar ou vender cripto com pagamento em moeda estrangeira por meio dessas empresas e limita a US$ 100 mil o pagamento ou transferência internacional feito por uma SPSAV quando o outro lado não é instituição autorizada a operar câmbio. O motivo é o tamanho do segmento: segundo <a href="https://www.gov.br/receitafederal/pt-br/assuntos/noticias/2026/julho/stablecoins-ja-respondem-por-cerca-de-80-do-volume-declarado-de-criptoativos-no-brasil" rel="noopener noreferrer">dados divulgados pela Receita Federal</a> em julho de 2026, stablecoins como o USDT e o <a href="/moedas/usd-coin">USDC</a> responderam por cerca de 80% do volume de cripto declarado em 2025. O funcionamento dessas moedas está no guia de <a href="/artigos/stablecoins-o-que-sao-usdt-usdc">stablecoins</a>.</p>
 
 <h2>O que muda para quem compra cripto</h2>
 <p>Para o investidor comum, a regulação traz mais exigência de identificação e mais proteção. A corretora autorizada passa a seguir regras parecidas com as de um banco em <a href="/glossario#kyc">verificação de identidade</a>, prevenção à lavagem de dinheiro, segurança cibernética e informação ao cliente.</p>
@@ -69,7 +69,7 @@ export const article: Article = {
 <li>Confirme se a sua corretora pediu ou já recebeu autorização do Banco Central.</li>
 <li>Desconfie de quem oferece cripto sem CNPJ brasileiro e sem informação sobre o pedido.</li>
 <li>Espere perguntas sobre a carteira de destino ao sacar para autocustódia.</li>
-<li>Planeje saques grandes: a partir de 2027, valores acima de US$ 10 mil podem ficar retidos por até 24 horas.</li>
+<li>Planeje envios grandes para carteira própria ou corretora estrangeira: a partir de 2027, valores acima de US$ 10 mil podem ficar retidos por até 24 horas.</li>
 <li>Guarde comprovantes: o BC e a Receita recebem cada vez mais dados das operações.</li>
 </ul>
 <p>Os critérios para avaliar uma plataforma, como prova de reservas, tarifas e saque, estão no guia de <a href="/artigos/exchange-de-criptomoedas-como-escolher-uma-corretora">como escolher uma exchange</a>.</p>
@@ -80,7 +80,8 @@ export const article: Article = {
 <div class="callout-box callout-warn"><span class="callout-label">Atenção</span><p>Nenhuma regra do Banco Central obriga você a pagar taxa, entregar a seed phrase ou transferir moedas para "regularizar" a conta. Quem pede isso é golpista.</p></div>
 
 <h2>Para continuar</h2>
-<p>A regulação define quem pode atender você. O imposto define quanto fica para a Receita quando você vende. Se a próxima dúvida é essa, o guia de <a href="/artigos/imposto-sobre-criptomoedas-no-brasil-quanto-se-paga">imposto sobre criptomoedas no Brasil</a> mostra a isenção de R$ 35 mil, as alíquotas e a regra para corretoras no exterior.</p>`,
+<p>A regulação define quem pode atender você. O imposto define quanto fica para a Receita quando você vende. Se a próxima dúvida é essa, o guia de <a href="/artigos/imposto-sobre-criptomoedas-no-brasil-quanto-se-paga">imposto sobre criptomoedas no Brasil</a> mostra a isenção de R$ 35 mil, as alíquotas e a regra para corretoras no exterior.</p>
+<p>As decisões do Banco Central sobre os pedidos de autorização e as próximas resoluções vão sair aos poucos. Para acompanhar cada mudança com explicação em português claro, siga a nossa seção de <a href="/noticias">notícias</a>.</p>`,
   faq: [
     {
       question: "Criptomoeda é regulamentada no Brasil?",

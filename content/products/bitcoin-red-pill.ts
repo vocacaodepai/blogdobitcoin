@@ -76,7 +76,7 @@ export const product: Product = {
       {
         title: "Pontos fortes para o leitor brasileiro",
         paragraphs: [
-          "Por ser escrito por brasileiros, o livro discute a política do país, como apontam resenhas de leitores, e parte de uma preocupação que muita família brasileira tem: o que fazer com o próprio dinheiro diante de governo e inflação. Resenhas de leitores destacam a leitura acessível e o fato de passar por temas práticos, como autocustódia e sidechains, que livros mais teóricos deixam de lado.",
+          "Por ser escrito por brasileiros, o livro discute a política do país, como apontam resenhas de leitores, e parte de uma preocupação que muita família brasileira tem: o que fazer com o próprio dinheiro diante do controle do governo. Resenhas de leitores destacam a leitura acessível e o fato de passar por temas práticos, como autocustódia e sidechains, que livros mais teóricos deixam de lado.",
           "A edição de 2024 também é mais recente do que a maioria dos títulos nacionais sobre o tema, o que ajuda no retrato do ecossistema. Mesmo assim, regras de impostos e de regulação mudam rápido, então informações desse tipo devem ser conferidas em fontes oficiais.",
         ],
       },

@@ -13,7 +13,7 @@ export const article: Article = {
   products: ["trezor-safe-3", "ledger-nano-s-plus", "trezor-safe-7", "keystone-tablet"],
   date: "2026-10-22",
   readTime: 7,
-  imageQuery: "crypto hardware wallet device",
+  imageQuery: "File:Trezor Safe 7.jpg",
   seed: 61,
   kind: "guia",
   author: "Bruno Danello",

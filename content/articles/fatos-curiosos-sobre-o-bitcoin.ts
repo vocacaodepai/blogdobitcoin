@@ -12,7 +12,7 @@ export const article: Article = {
   historyYear: 2009,
   date: "2026-10-22",
   readTime: 8,
-  imageQuery: "bitcoin coins pile closeup",
+  imageQuery: "File:Casascius coin.jpg",
   seed: 54,
   kind: "guia",
   author: "Bruno Danello",
@@ -40,7 +40,7 @@ export const article: Article = {
 <h3>6. Mais de cinco dias separaram o bloco 0 do bloco 1</h3>
 <p>Hoje sai um bloco a cada 10 minutos, em média. No começo foi diferente: o bloco gênese tem data de 3 de janeiro de 2009, e o bloco 1 só apareceu em 9 de janeiro, mais de cinco dias depois, segundo os horários gravados na própria blockchain. Satoshi nunca explicou publicamente essa pausa, e sobre ela só existem teorias.</p>
 <h3>7. A primeira transferência entre duas pessoas foi no bloco 170</h3>
-<p>Em 12 de janeiro de 2009, pelo horário universal, o bloco 170 registrou a primeira transação que não era recompensa de mineração: 10 BTC enviados por Satoshi ao programador Hal Finney, com os outros 40 voltando como troco. Finney tinha anunciado dias antes que estava rodando o programa. A trajetória dele está em <a href="/artigos/hal-finney-o-primeiro-a-receber-bitcoin">Hal Finney, o primeiro a receber bitcoin</a>.</p>
+<p>Em 12 de janeiro de 2009, pelo horário universal, o bloco 170 registrou a primeira transação que não era recompensa de mineração: 10 BTC enviados por Satoshi ao programador Hal Finney, com os outros 40 voltando como troco. Finney tinha avisado no Twitter, um dia antes, que estava rodando o programa. A trajetória dele está em <a href="/artigos/hal-finney-o-primeiro-a-receber-bitcoin">Hal Finney, o primeiro a receber bitcoin</a>.</p>
 
 <h2>Quando o bitcoin virou dinheiro de verdade</h2>
 <h3>8. Duas pizzas por 10 mil bitcoins</h3>

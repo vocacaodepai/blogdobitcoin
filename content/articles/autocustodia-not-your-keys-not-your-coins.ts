@@ -11,7 +11,7 @@ export const article: Article = {
   category: "seguranca",
   date: "2026-10-22",
   readTime: 7,
-  imageQuery: "hardware wallet usb device",
+  imageQuery: "File:Ledger Nano S - Hard Wallet - Cold Storage for Cryptocurrency 01.jpg",
   seed: 17,
   kind: "guia",
   author: "Bruno Danello",

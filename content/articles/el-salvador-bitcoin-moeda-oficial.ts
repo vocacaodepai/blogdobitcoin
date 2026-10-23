@@ -12,7 +12,7 @@ export const article: Article = {
   historyYear: 2021,
   date: "2026-10-22",
   readTime: 8,
-  imageQuery: "Nayib Bukele portrait",
+  imageQuery: "File:Presidente Nayib Bukele (cropped).jpg",
   seed: 34,
   kind: "guia",
   author: "Bruno Danello",

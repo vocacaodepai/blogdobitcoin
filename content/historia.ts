@@ -26,7 +26,7 @@ export const timeline: TimelineEvent[] = [
   {
     date: "2009-01-12",
     title: "Hal Finney recebe a primeira transação",
-    text: "O programador Hal Finney, um dos primeiros a rodar o software lançado em 9 de janeiro, recebeu 10 BTC enviados por Satoshi como teste. A transação, gravada no bloco 170, é considerada a primeira transferência de bitcoin entre duas pessoas.",
+    text: "O programador Hal Finney, um dos primeiros a rodar o software anunciado em 8 de janeiro, recebeu 10 BTC enviados por Satoshi como teste. A transação, gravada no bloco 170, é considerada a primeira transferência de bitcoin entre duas pessoas.",
     article: "hal-finney-o-primeiro-a-receber-bitcoin",
     source: { label: "Bitcoin Wiki: History", url: "https://en.bitcoin.it/wiki/History" },
   },
@@ -89,12 +89,15 @@ export const timeline: TimelineEvent[] = [
     source: { label: "Wikipédia: Silk Road", url: "https://en.wikipedia.org/wiki/Silk_Road_(marketplace)" },
   },
   {
-    date: "2013-11-28",
+    date: "2013-11-27",
     title: "Bitcoin passa de US$ 1.000",
-    text: "O bitcoin passou de mil dólares pela primeira vez na Mt. Gox, então a maior bolsa da moeda. Menos de três anos antes, ele valia US$ 1.",
+    text: "O bitcoin passou de mil dólares pela primeira vez na tarde de 27 de novembro de 2013, uma quarta-feira, segundo o jornal britânico The Guardian. Menos de três anos antes, ele valia US$ 1.",
     priceNote: "acima de US$ 1.000",
     article: "ciclos-do-bitcoin-o-que-os-halvings-mostram",
-    source: { label: "Wikipédia: History of bitcoin", url: "https://en.wikipedia.org/wiki/History_of_bitcoin" },
+    source: {
+      label: "The Guardian (27/11/2013)",
+      url: "https://www.theguardian.com/technology/2013/nov/27/hard-drive-bitcoin-landfill-site",
+    },
   },
   {
     date: "2014-02-28",
@@ -115,7 +118,7 @@ export const timeline: TimelineEvent[] = [
     date: "2016-07-09",
     title: "Segundo halving",
     text: "No bloco 420.000, a recompensa caiu de 25 para 12,5 BTC por bloco. Àquela altura, três quartos de todos os bitcoins que vão existir já tinham sido emitidos.",
-    priceNote: "cerca de US$ 650",
+    priceNote: "cerca de US$ 660",
     article: "halving-do-bitcoin-o-que-e-e-quando-e-o-proximo",
     source: { label: "Bitcoin Wiki: Controlled supply", url: "https://en.bitcoin.it/wiki/Controlled_supply" },
   },
@@ -141,7 +144,7 @@ export const timeline: TimelineEvent[] = [
   {
     date: "2017-12-17",
     title: "O topo de 2017",
-    text: "No auge da euforia de 2017, o bitcoin bateu a máxima de US$ 19.783,06. Um ano depois, em dezembro de 2018, a média diária do preço estava perto de US$ 3.200, mais de 80% abaixo do topo.",
+    text: "No auge da euforia de 2017, o bitcoin bateu a máxima de US$ 19.783,06 dentro do dia, segundo a Fortune. Um ano depois, em dezembro de 2018, a média diária do preço estava perto de US$ 3.200, mais de 80% abaixo do topo.",
     priceNote: "cerca de US$ 19,8 mil",
     article: "ciclos-do-bitcoin-o-que-os-halvings-mostram",
     source: { label: "Wikipédia: Cryptocurrency bubble", url: "https://en.wikipedia.org/wiki/Cryptocurrency_bubble" },
@@ -150,7 +153,7 @@ export const timeline: TimelineEvent[] = [
     date: "2020-05-11",
     title: "Terceiro halving",
     text: "No bloco 630.000, a recompensa caiu de 12,5 para 6,25 BTC por bloco. Com isso, a emissão de novos bitcoins caiu para cerca de 900 moedas por dia.",
-    priceNote: "cerca de US$ 8.700",
+    priceNote: "cerca de US$ 8.750",
     article: "halving-do-bitcoin-o-que-e-e-quando-e-o-proximo",
     source: { label: "Bitcoin Wiki: Controlled supply", url: "https://en.bitcoin.it/wiki/Controlled_supply" },
   },
@@ -182,7 +185,7 @@ export const timeline: TimelineEvent[] = [
   {
     date: "2021-11",
     title: "O topo de 2021",
-    text: "O bitcoin renovou a máxima histórica no começo de novembro de 2021, perto de US$ 67,5 mil pelas cotações diárias. Em 2022, com a venda generalizada de ações de tecnologia e as quebras do próprio mercado cripto, o preço caiu abaixo de US$ 20 mil em junho.",
+    text: "O bitcoin renovou a máxima histórica no começo de novembro de 2021, perto de US$ 67,5 mil pelas cotações diárias. Dentro do dia, chegou a US$ 69 mil em 10 de novembro, na Binance e na Coinbase. Em 2022, com a venda generalizada de ações de tecnologia e as quebras do próprio mercado cripto, o preço caiu abaixo de US$ 20 mil em junho.",
     priceNote: "cerca de US$ 67,5 mil (cotação diária)",
     article: "ciclos-do-bitcoin-o-que-os-halvings-mostram",
     source: { label: "Wikipédia: Cryptocurrency bubble", url: "https://en.wikipedia.org/wiki/Cryptocurrency_bubble" },
@@ -190,7 +193,7 @@ export const timeline: TimelineEvent[] = [
   {
     date: "2021-11-14",
     title: "Taproot é ativado",
-    text: "A atualização Taproot foi ativada no bloco 709.632. Ela trouxe as assinaturas Schnorr e permite guardar várias condições de gasto numa só saída, reveladas apenas quando a moeda é usada, o que ajuda a privacidade e a eficiência.",
+    text: "A atualização Taproot foi ativada no bloco 709.632. Ela trouxe as assinaturas Schnorr e permite guardar várias condições de gasto numa só saída, das quais só a usada no gasto precisa ser revelada, o que ajuda a privacidade e a eficiência.",
     source: { label: "Bitcoin Optech: Taproot", url: "https://bitcoinops.org/en/topics/taproot/" },
   },
   {
@@ -232,7 +235,7 @@ export const timeline: TimelineEvent[] = [
   {
     date: "2024-04-20",
     title: "Quarto halving",
-    text: "No bloco 840.000, a recompensa caiu de 6,25 para 3,125 BTC por bloco, o valor em vigor hoje. O próximo corte, para 1,5625 BTC, acontece no bloco 1.050.000, que pelo ritmo atual de blocos deve chegar em 2028.",
+    text: "No bloco 840.000, minerado à 0h09 de 20 de abril em UTC (21h09 do dia 19 no horário de Brasília), a recompensa caiu de 6,25 para 3,125 BTC por bloco, o valor em vigor hoje. O próximo corte, para 1,5625 BTC, acontece no bloco 1.050.000, que pelo ritmo atual de blocos deve chegar em 2028.",
     priceNote: "cerca de US$ 64 mil",
     article: "halving-do-bitcoin-o-que-e-e-quando-e-o-proximo",
     source: { label: "Bitcoin Wiki: Controlled supply", url: "https://en.bitcoin.it/wiki/Controlled_supply" },
@@ -258,8 +261,8 @@ export const timeline: TimelineEvent[] = [
   {
     date: "2025-10-06",
     title: "Máxima histórica acima de US$ 126 mil",
-    text: "O bitcoin bateu a máxima histórica de pouco mais de US$ 126 mil, quase o dobro do topo de 2021. Nos meses seguintes, o preço recuou com força: em fevereiro de 2026, a média diária chegou a cerca de US$ 63 mil, metade da máxima.",
-    priceNote: "pouco mais de US$ 126 mil",
+    text: "O bitcoin bateu a máxima histórica de pouco mais de US$ 126 mil dentro do dia, segundo a CoinGecko, quase o dobro do topo de 2021. Pela média diária da Blockchain.com, o pico foi de cerca de US$ 124,8 mil, no dia 7. Nos meses seguintes, o preço recuou com força: em fevereiro de 2026, a média diária chegou a cerca de US$ 63 mil, metade da máxima, e em 1º de julho desceu a perto de US$ 58,5 mil.",
+    priceNote: "pouco mais de US$ 126 mil (máxima do dia)",
     article: "ciclos-do-bitcoin-o-que-os-halvings-mostram",
     source: { label: "CoinGecko: Bitcoin", url: "https://www.coingecko.com/en/coins/bitcoin" },
   },

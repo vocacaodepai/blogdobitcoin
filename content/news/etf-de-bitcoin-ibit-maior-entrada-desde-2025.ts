@@ -11,7 +11,7 @@ export const item: NewsItem = {
   date: "2026-10-22",
   publishedAt: "2026-10-22T18:37:00-03:00",
   topic: "mercado",
-  imageQuery: "BlackRock headquarters New York",
+  imageQuery: "File:BlackRock hq51 jeh.JPG",
   content: `<p>O IBIT, ETF de bitcoin à vista da BlackRock, teve entrada líquida de US$ 665,16 milhões na segunda-feira (19), a maior em um único dia desde 7 de outubro de 2025, segundo dados da SoSoValue publicados pelo <a href="https://www.theblock.co/news/markets/2026-10-20-blackrock-ibit-bitcoin-etf-665-million-421102" rel="noopener noreferrer nofollow">The Block</a>. No mesmo dia, o conjunto dos ETFs de bitcoin à vista dos Estados Unidos somou entrada líquida de US$ 526,6 milhões. O total ficou abaixo do número do IBIT sozinho porque fundos concorrentes tiveram resgates.</p>
 <p>Pelo levantamento do <a href="https://news.bitcoin.com/bitcoin-etf/blackrock-posts-biggest-2026-inflow-as-bitcoin-etfs-add-527m/" rel="noopener noreferrer nofollow">Bitcoin.com News</a>, o FBTC, da Fidelity, perdeu US$ 83,63 milhões no dia e o GBTC, da Grayscale, US$ 54,93 milhões. O IBIT é o maior ETF de bitcoin à vista do mercado, com US$ 66,37 bilhões em patrimônio líquido, e a entrada de segunda foi a maior do fundo em 2026.</p>
 

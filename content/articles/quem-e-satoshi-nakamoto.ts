@@ -12,7 +12,7 @@ export const article: Article = {
   historyYear: 2008,
   date: "2026-10-22",
   readTime: 8,
-  imageQuery: "Satoshi Nakamoto statue Budapest",
+  imageQuery: "File:Bust of Satoshi Nakamoto in Budapest.jpg",
   seed: 42,
   kind: "guia",
   author: "Bruno Danello",

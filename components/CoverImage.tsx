@@ -1,6 +1,6 @@
 import { getPexelsImage } from "@/lib/pexels";
 import { getPixabayImage } from "@/lib/pixabay";
-import { getWikimediaImage } from "@/lib/wikimedia";
+import { getWikimediaFileInfo, getWikimediaImage, isPinnedFile } from "@/lib/wikimedia";
 import { getGoogleCseWikimediaImage } from "@/lib/google-cse";
 
 export type CoverOverride = { url: string; width: number; height: number; credit: string; creditUrl: string };
@@ -30,6 +30,7 @@ function isNamedEntityQuery(query: string): boolean {
 
 async function resolveCoverPhoto(query: string, seed: number, override?: CoverOverride) {
   if (override) return override;
+  if (isPinnedFile(query)) return getWikimediaFileInfo(query.trim(), query);
 
   const wikimedia = (await getWikimediaImage(query, seed)) ?? (await getGoogleCseWikimediaImage(query, seed));
   if (wikimedia) return wikimedia;

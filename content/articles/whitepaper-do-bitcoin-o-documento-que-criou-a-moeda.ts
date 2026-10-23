@@ -12,7 +12,7 @@ export const article: Article = {
   historyYear: 2008,
   date: "2026-10-22",
   readTime: 8,
-  imageQuery: "bitcoin white paper document",
+  imageQuery: "File:Satoshi Nakamoto's Bitcoin Timestamp Diagram.png",
   seed: 41,
   kind: "guia",
   author: "Bruno Danello",

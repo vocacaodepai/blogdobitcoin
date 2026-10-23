@@ -39,7 +39,7 @@ export async function getGoogleCseWikimediaImage(query: string, seed = 0): Promi
       const match = item.link.match(/\/wiki\/(File:[^?#]+)/);
       if (!match) continue;
       const title = decodeURIComponent(match[1]);
-      const photo = await getWikimediaFileInfo(title, query);
+      const photo = await getWikimediaFileInfo(title, query, true);
       if (photo) candidates.push(photo);
     }
 

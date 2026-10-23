@@ -11,7 +11,7 @@ export const article: Article = {
   category: "brasil",
   date: "2026-10-22",
   readTime: 7,
-  imageQuery: "Banco Central do Brasil building",
+  imageQuery: "File:Edifício \"Sede\" do Banco Central do Brasil em Brasília.jpg",
   seed: 33,
   kind: "guia",
   author: "Bruno Danello",
@@ -46,11 +46,12 @@ export const article: Article = {
 <p>Pela <a href="https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Resolu%C3%A7%C3%A3o%20BCB&amp;numero=520" rel="noopener noreferrer">Resolução BCB 520</a>, a prestadora precisa manter os reais dos clientes em contas individualizadas, separadas do caixa da empresa, e guardar as criptomoedas dos clientes em carteiras distintas das usadas nas operações próprias. Também precisa documentar o método das provas de reservas e passar por auditoria independente a cada dois anos. Quando o cliente escolhe a <a href="/artigos/autocustodia-not-your-keys-not-your-coins">autocustódia</a>, a corretora tem de explicar os riscos e as medidas de segurança.</p>
 
 <h2>Prazos: 30 de outubro de 2026 e o que vem depois</h2>
-<p>As empresas que já operavam em 2 de fevereiro de 2026 ganharam 270 dias para protocolar o pedido de autorização, prazo que termina em 30 de outubro de 2026. Quem pedir a tempo pode continuar atendendo até a decisão do BC. Quem não pedir precisa parar de prestar os serviços em até 30 dias depois do fim do prazo, e a empresa estrangeira que quiser continuar no país tem o mesmo prazo para transferir clientes e operações a uma instituição brasileira.</p>
+<p>As empresas que já operavam em 2 de fevereiro de 2026 ganharam 270 dias para protocolar o pedido de autorização, prazo que termina em 30 de outubro de 2026. Quem pedir a tempo pode continuar atendendo até a decisão do BC. Quem não pedir precisa parar de prestar os serviços em até 30 dias depois do fim do prazo. A empresa estrangeira que quiser continuar no país tem até o mesmo 30 de outubro para transferir clientes e operações a uma instituição brasileira.</p>
 <table>
 <thead><tr><th>Data</th><th>O que acontece</th></tr></thead>
 <tbody>
 <tr><td>2/2/2026</td><td>Resoluções 519, 520 e 521 entram em vigor</td></tr>
+<tr><td>4/5/2026</td><td>Passa a valer a parte da Resolução 521 que exige informar a finalidade das transferências internacionais e enviar ao BC, todo mês, os dados das operações com cripto incluídas no câmbio</td></tr>
 <tr><td>30/10/2026</td><td>Fim do prazo de 270 dias para quem já operava pedir autorização</td></tr>
 <tr><td>6/11/2026</td><td>Bancos e instituições de pagamento ficam proibidos de viabilizar operações com prestadoras não autorizadas, nos termos da Resolução BCB 589/2026</td></tr>
 <tr><td>1/1/2027</td><td>Começa a retenção preventiva de até 24 horas em transferências acima de US$ 10 mil para fora ou para carteira própria</td></tr>

@@ -376,7 +376,7 @@ export const coins: CoinProfile[] = [
     consensus: "Prova de trabalho, com o mesmo algoritmo do Bitcoin",
     maxSupply: "21 milhões",
     description: [
-      "O Bitcoin Cash (BCH) nasceu de uma divisão do Bitcoin. Em 1º de agosto de 2017, a partir do bloco 478.558, parte da comunidade passou a rodar uma nova versão da rede com blocos maiores, para caber mais transações e baixar as taxas. Quem tinha bitcoin naquele momento passou a ter a mesma quantidade de BCH.",
+      "O Bitcoin Cash (BCH) nasceu de uma divisão do Bitcoin. Em 1º de agosto de 2017, depois do bloco 478.558, parte da comunidade passou a rodar uma nova versão da rede com blocos maiores, para caber mais transações e baixar as taxas. Quem tinha bitcoin naquele momento passou a ter a mesma quantidade de BCH.",
       "A divisão foi o ponto final da chamada guerra dos blocos. De um lado, quem queria aumentar o tamanho dos blocos e usar a própria rede para pagamentos do dia a dia; do outro, quem preferia blocos menores e soluções como o SegWit e a Lightning Network. Não houve um criador único: o projeto foi apoiado por mineradores, empresas e desenvolvedores, com figuras conhecidas como Roger Ver.",
       "O BCH mantém a oferta máxima de 21 milhões e a mineração com o mesmo algoritmo do Bitcoin, mas com taxas típicas abaixo de um centavo de dólar. Desde 2024, o limite de tamanho do bloco se ajusta sozinho conforme a demanda, por um algoritmo chamado ABLA.",
       "A comunidade se dividiu de novo: em 2018 surgiu o Bitcoin SV e, em 2020, outra separação deu origem ao que hoje se chama eCash. O Bitcoin Cash tem uso bem menor que o do Bitcoin e disputa espaço com stablecoins e outras redes de pagamento barato.",

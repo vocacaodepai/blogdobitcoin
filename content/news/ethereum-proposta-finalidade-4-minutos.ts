@@ -12,7 +12,7 @@ export const item: NewsItem = {
   date: "2026-10-22",
   publishedAt: "2026-10-22T18:40:00-03:00",
   topic: "altcoins",
-  imageQuery: "Ethereum logo",
+  imageQuery: "File:Ethereum Logo.png",
   content: `<p>Pesquisadores do Ethereum protocolaram na quarta-feira (21) um rascunho de proposta que pode cortar o tempo de finalidade da rede de cerca de 16 minutos para perto de 4 minutos. O texto foi enviado ao repositório oficial de EIPs (Ethereum Improvement Proposals, as propostas de melhoria da rede) no GitHub, no <a href="https://github.com/ethereum/EIPs/pull/12566" rel="noopener noreferrer nofollow">pull request 12566</a>, por Ben Edgington, que coordena a pesquisa de finalidade rápida, com Francesco D'Amato, Roberto Saltini, Yann Vonlanthen e Mikhail Kalinin, segundo a <a href="https://coindesk.com/tech/2026/10/22/ethereum-s-four-minute-settlement-plan-could-lower-the-cost-of-moving-crypto" rel="noopener noreferrer nofollow">CoinDesk</a>.</p>
 <p>Chamado Decoupled Consensus (consenso desacoplado), o rascunho diz que "a meta inicial é uma redução de pelo menos quatro vezes no tempo até a finalidade, sujeita à escolha de parâmetros e à análise". Não há data de ativação. O próprio Edgington escreveu que "muitos aspectos ainda estão a definir" e que, por ora, o objetivo é só obter um número oficial, o passo que coloca a ideia no processo formal de atualizações do Ethereum; no pull request, um revisor já pediu que o texto receba o número EIP-8453.</p>
 

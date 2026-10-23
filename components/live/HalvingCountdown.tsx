@@ -47,7 +47,7 @@ export function HalvingCountdown({
   });
 
   return (
-    <section aria-labelledby="halving-titulo" className="rounded-2xl border border-border bg-surface p-5 sm:p-6">
+    <section aria-labelledby="halving-titulo" className="min-w-0 rounded-2xl border border-border bg-surface p-5 sm:p-6">
       <div className="flex flex-wrap items-baseline justify-between gap-2">
         <h2 id="halving-titulo" className="font-display text-xl font-bold tracking-tight">
           Próximo halving do Bitcoin

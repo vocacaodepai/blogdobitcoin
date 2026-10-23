@@ -39,7 +39,7 @@ export const article: Article = {
 <tr><td>1º</td><td>28/11/2012</td><td>210.000</td><td>50 BTC</td><td>25 BTC</td></tr>
 <tr><td>2º</td><td>09/07/2016</td><td>420.000</td><td>25 BTC</td><td>12,5 BTC</td></tr>
 <tr><td>3º</td><td>11/05/2020</td><td>630.000</td><td>12,5 BTC</td><td>6,25 BTC</td></tr>
-<tr><td>4º</td><td>19/04/2024</td><td>840.000</td><td>6,25 BTC</td><td>3,125 BTC</td></tr>
+<tr><td>4º</td><td>19/04/2024 (20/04 em UTC)</td><td>840.000</td><td>6,25 BTC</td><td>3,125 BTC</td></tr>
 <tr><td>5º (previsto)</td><td>2028</td><td>1.050.000</td><td>3,125 BTC</td><td>1,5625 BTC</td></tr>
 </tbody>
 </table>

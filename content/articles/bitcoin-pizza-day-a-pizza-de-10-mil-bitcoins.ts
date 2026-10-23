@@ -12,7 +12,7 @@ export const article: Article = {
   historyYear: 2010,
   date: "2026-10-22",
   readTime: 7,
-  imageQuery: "Bitcoin Pizza Day plaque",
+  imageQuery: "File:Bitcoin Pizza Day Papa John’s Atlantic Ave Jacksonville FL.jpg",
   seed: 51,
   kind: "guia",
   author: "Bruno Danello",

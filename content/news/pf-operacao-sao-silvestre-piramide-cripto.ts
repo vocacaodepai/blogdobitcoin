@@ -12,7 +12,7 @@ export const item: NewsItem = {
   date: "2026-10-22",
   publishedAt: "2026-10-22T23:08:00-03:00",
   topic: "seguranca",
-  imageQuery: "Polícia Federal do Brasil",
+  imageQuery: "File:Polícia Federal do Brasil.jpg",
   content: `<p>A Polícia Federal deflagrou na quinta-feira (22) a Operação São Silvestre, contra grupos suspeitos de montar esquemas de investimento com características de pirâmide financeira, baseados em supostas aplicações em criptomoedas e em operações automatizadas feitas por robôs. Segundo o <a href="https://www.correiobraziliense.com.br/brasil/2026/10/7525477-pf-mira-esquema-com-criptomoedas-e-bloqueia-rs-100-milhoes.html" rel="noopener noreferrer nofollow">Correio Braziliense</a>, os policiais cumpriram 12 mandados de busca e apreensão expedidos pelo 3º Juízo da Vara Estadual de Organizações Criminosas de Santa Catarina. A Justiça também determinou o bloqueio de bens e valores de 15 pessoas físicas e 13 empresas investigadas, até o limite de R$ 100 milhões.</p>
 <p>As buscas aconteceram em dez municípios de cinco estados: Blumenau (2 mandados), Florianópolis, Pomerode, Indaial e Rio do Sul, em Santa Catarina; Curitiba (2 mandados), no Paraná; Álvares Machado, em São Paulo; Belo Horizonte, em Minas Gerais; e Recife e Jaboatão dos Guararapes, em Pernambuco. Pela estimativa das autoridades, mais de 10 mil pessoas, no Brasil e no exterior, tiveram prejuízo. A captação aconteceu entre 2018 e 2020, também segundo o <a href="https://livecoins.com.br/pfdeflagra-operacao-contra-piramide-de-criptomoedas-e-bloqueia-r-100-milhoes-apos-promessas-de-rendimentos-mensais/" rel="noopener noreferrer nofollow">Livecoins</a>, que cita o comunicado da PF em Itajaí (SC).</p>
 

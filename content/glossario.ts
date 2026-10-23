@@ -247,7 +247,7 @@ export const glossary: GlossaryTerm[] = [
     slug: "drex",
     term: "Drex",
     definition:
-      "Projeto do Banco Central do Brasil antes chamado de real digital, testado desde 2023 com bancos e fintechs numa blockchain privada. Em 2025, o BC mudou o rumo: anunciou uma primeira entrega sem blockchain, restrita a instituições financeiras e focada em conferir garantias de crédito (gravames), e em novembro desligou a plataforma de testes, por não conseguir garantir a privacidade e o sigilo bancário exigidos. O Drex não é uma criptomoeda e, até aqui, não tem versão para uso direto do público.",
+      "Projeto do Banco Central do Brasil antes chamado de real digital, testado desde 2023 com bancos e fintechs numa blockchain privada. Em 2025, o BC mudou o rumo: anunciou uma próxima fase sem blockchain, focada em conferir garantias de crédito (gravames), e em novembro desligou a plataforma de testes. Segundo o presidente do BC, Gabriel Galípolo, a tecnologia testada não se revelou viável; conciliar a blockchain com a privacidade dos dados era a principal dificuldade do piloto. O Drex não é uma criptomoeda e, até aqui, não tem versão para uso direto do público.",
     related: [{ label: "Regulação no Brasil", href: "/artigos/regulacao-das-criptomoedas-no-brasil-banco-central" }],
   },
   {
@@ -577,7 +577,7 @@ export const glossary: GlossaryTerm[] = [
     slug: "stablecoin",
     term: "Stablecoin",
     definition:
-      "Criptomoeda feita para manter valor estável, em geral atrelada ao dólar, como USDT, USDC e DAI, com reservas em dinheiro e títulos ou com garantia em outras criptos. A paridade pode falhar, como no colapso da TerraUSD (UST) em maio de 2022, e no Brasil as normas do Banco Central em vigor desde fevereiro de 2026 passaram a tratar a compra e a venda de stablecoins atreladas a moeda estrangeira como operação de câmbio.",
+      "Criptomoeda feita para manter valor estável, em geral atrelada ao dólar, como USDT, USDC e DAI, com reservas em dinheiro e títulos ou com garantia em outras criptos. A paridade pode falhar, como no colapso da TerraUSD (UST) em maio de 2022, e no Brasil as normas do Banco Central em vigor desde fevereiro de 2026 incluíram no mercado de câmbio a compra, a venda e a troca de stablecoins (ativos virtuais referenciados em moeda fiduciária) feitas com prestadoras de serviços de ativos virtuais.",
     related: [
       { label: "Stablecoins: USDT e USDC", href: "/artigos/stablecoins-o-que-sao-usdt-usdc" },
       { label: "Tether (USDT)", href: "/moedas/tether" },

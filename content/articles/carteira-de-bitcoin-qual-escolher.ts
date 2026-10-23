@@ -11,7 +11,7 @@ export const article: Article = {
   category: "iniciantes",
   date: "2026-10-22",
   readTime: 6,
-  imageQuery: "hardware wallet bitcoin device",
+  imageQuery: "File:Trezor Model T.jpg",
   seed: 12,
   kind: "guia",
   author: "Bruno Danello",
@@ -29,7 +29,7 @@ export const article: Article = {
 
 <h2>Custodial ou autocustódia: quem fica com a chave</h2>
 <p>Quando o bitcoin fica no saldo da corretora, quem guarda a chave é ela. Você tem um crédito contra a empresa, como num banco. É prático, mas depende da saúde e da honestidade de quem guarda: em 2014, a Mt. Gox, então a maior exchange do mundo, anunciou o sumiço de cerca de 850 mil bitcoins de clientes e da própria empresa, história contada em <a href="/artigos/mt-gox-o-colapso-da-maior-exchange-de-bitcoin">o colapso da Mt. Gox</a>.</p>
-<p>Na autocustódia, a chave fica com você, num aplicativo, num programa ou num aparelho próprio. Ela continua permitida no Brasil: a <a href="https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Resolu%C3%A7%C3%A3o%20BCB&amp;numero=520" rel="noopener noreferrer">Resolução BCB 520</a> (artigo 57) obriga a corretora a explicar os riscos e as medidas de segurança quando o cliente escolhe esse caminho. Desde 1º de outubro de 2026, a <a href="https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Resolu%C3%A7%C3%A3o%20BCB&amp;numero=588" rel="noopener noreferrer">Resolução BCB 588</a> manda as instituições comunicarem ao Coaf transferências de ou para carteiras autocustodiadas a partir do equivalente a US$ 10 mil. É uma comunicação, não uma proibição.</p>
+<p>Na autocustódia, a chave fica com você, num aplicativo, num programa ou num aparelho próprio. Ela continua permitida no Brasil: a <a href="https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Resolu%C3%A7%C3%A3o%20BCB&amp;numero=520" rel="noopener noreferrer">Resolução BCB 520</a> (artigo 57) obriga a corretora a explicar os riscos e as medidas de segurança quando o cliente escolhe esse caminho. Desde 1º de outubro de 2026, a <a href="https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Resolu%C3%A7%C3%A3o%20BCB&amp;numero=591" rel="noopener noreferrer">Resolução BCB 591</a>, que revogou a Resolução BCB 588 e manteve o mesmo valor, manda as instituições comunicarem ao Coaf transferências de ou para carteiras autocustodiadas a partir do equivalente a US$ 10 mil. As operações feitas até 31 de dezembro de 2026 serão comunicadas no primeiro dia útil de janeiro de 2027. É uma comunicação, não uma proibição.</p>
 <p>Os prós e contras de cada lado, e como fazer a transição sem susto, estão no guia de <a href="/artigos/autocustodia-not-your-keys-not-your-coins">autocustódia</a>.</p>
 
 <h2>Carteira quente ou fria: conectada ou longe da internet</h2>

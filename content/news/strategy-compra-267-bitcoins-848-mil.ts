@@ -12,7 +12,7 @@ export const item: NewsItem = {
   date: "2026-10-22",
   publishedAt: "2026-10-22T18:38:00-03:00",
   topic: "adocao",
-  imageQuery: "Michael Saylor portrait",
+  imageQuery: "File:Michael Saylor by Gage Skidmore.jpg",
   content: `<p>A Strategy, empresa americana de Michael Saylor que transformou o bitcoin no centro do seu negócio, comprou mais 267 bitcoins entre 12 e 18 de outubro, por cerca de US$ 22,1 milhões, a um preço médio de US$ 82.900 por moeda. A informação está no <a href="https://www.sec.gov/Archives/edgar/data/1050446/000119312526424688/mstr-20261019.htm" rel="noopener noreferrer nofollow">formulário 8-K entregue à SEC</a>, a comissão de valores mobiliários dos Estados Unidos, na segunda-feira (19). Com a compra, a empresa soma 848.517 BTC, adquiridos por US$ 64,02 bilhões no total, a um custo médio de US$ 75.446 por bitcoin.</p>
 <p>Saylor antecipou a compra no domingo (18), ao publicar o gráfico das aquisições com a frase "We found room for more orange" (algo como "achamos espaço para mais laranja", a cor do bitcoin), segundo o <a href="https://www.theblock.co/news/business/2026-10-19-we-found-room-for-more-orange-michael-saylors-strategy-buys-more-bitcoin-418895" rel="noopener noreferrer nofollow">The Block</a>. O lote é modesto para o tamanho da empresa: 267 BTC equivalem a cerca de 0,03% do que ela já tinha. Já o total acumulado passa de 4% dos 21 milhões de bitcoins que vão existir.</p>
 

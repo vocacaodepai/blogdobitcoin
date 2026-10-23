@@ -33,9 +33,14 @@ mesmo tipo como modelo e `lib/types.ts` para os campos.
 
 ```bash
 npm run check:content   # zero ERRO
+npm run check:covers -- <slugs novos>   # a capa é mesmo do assunto?
 npx eslint .            # zero erro
 npm run build           # zero erro
 ```
+
+Capa errada (outra pessoa, outra empresa, outra moeda): fixe um arquivo do Commons
+conferido com `imageQuery: "File:Nome exato do arquivo.jpg"` ou troque por uma busca
+descritiva. Sem foto certa, deixe a capa ilustrada (busca "<nome> portrait" sem achado).
 
 `git diff --stat` só pode mostrar os arquivos que a rotina pode tocar. Conflito em
 `content/*/index.ts`: faça merge da base, aceite a versão da base e rode

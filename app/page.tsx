@@ -217,7 +217,7 @@ export default async function Home() {
 
       {/* Bitcoin em números */}
       <Container as="section" className="mt-12" aria-label="Bitcoin em números">
-        <div className="grid gap-6 lg:grid-cols-2">
+        <div className="grid gap-6 lg:grid-cols-2 [&>*]:min-w-0">
           <HalvingCountdown initialHeight={height} compact />
           <FearGreedGauge initial={fng} compact />
         </div>

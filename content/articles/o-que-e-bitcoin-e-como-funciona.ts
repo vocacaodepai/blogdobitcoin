@@ -11,7 +11,7 @@ export const article: Article = {
   category: "bitcoin",
   date: "2026-10-22",
   readTime: 9,
-  imageQuery: "bitcoin coin wooden table",
+  imageQuery: "File:Physical Bitcoin by Mike Cauldwell (Casascius).jpg",
   seed: 1,
   kind: "guia",
   author: "Bruno Danello",
@@ -75,7 +75,7 @@ export const article: Article = {
 <p>Ao criar uma carteira, ela mostra 12 ou 24 palavras, a seed phrase. Quem tiver essas palavras tem os seus bitcoins. Anote no papel, nunca em foto ou na nuvem, e leia <a href="/artigos/seed-phrase-como-guardar-as-palavras-de-recuperacao">como guardar a seed phrase</a> antes de mandar valores altos.</p>
 
 <h2>Riscos do Bitcoin: o que pode dar errado</h2>
-<p>O primeiro risco é o preço. Em dezembro de 2017, o bitcoin chegou perto de US$ 19 mil e, um ano depois, era negociado abaixo de US$ 4 mil. Quem compra precisa estar preparado para ver o saldo em reais encolher pela metade sem entrar em pânico. Nenhum texto deste blog é recomendação de investimento, e o <a href="/aviso-de-risco">aviso de risco</a> deveria ser lido antes de colocar qualquer dinheiro.</p>
+<p>O primeiro risco é o preço. Em dezembro de 2017, o bitcoin passou de US$ 19 mil e, um ano depois, era negociado abaixo de US$ 4 mil. Quem compra precisa estar preparado para ver o saldo em reais encolher pela metade sem entrar em pânico. Nenhum texto deste blog é recomendação de investimento, e o <a href="/aviso-de-risco">aviso de risco</a> deveria ser lido antes de colocar qualquer dinheiro.</p>
 <p>O segundo risco é operacional: errar o endereço, perder a seed phrase ou cair em golpe. Transação de bitcoin não tem estorno. Os golpes mais comuns no Brasil, como falso suporte, pirâmide com rendimento garantido e site clonado, estão no guia sobre <a href="/artigos/golpes-com-criptomoedas-como-se-proteger">golpes com criptomoedas</a>.</p>
 <ul class="checklist">
 <li>Nunca compartilhe a seed phrase, nem com quem diz ser do suporte.</li>

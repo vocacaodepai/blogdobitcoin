@@ -11,7 +11,7 @@ export const article: Article = {
   category: "bitcoin",
   date: "2026-10-22",
   readTime: 8,
-  imageQuery: "bitcoin mining rig servers",
+  imageQuery: "File:Antminer ASIC Miner.jpeg",
   seed: 3,
   kind: "guia",
   author: "Bruno Danello",

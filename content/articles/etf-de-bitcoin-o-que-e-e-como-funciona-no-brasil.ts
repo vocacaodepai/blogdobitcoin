@@ -11,7 +11,7 @@ export const article: Article = {
   category: "mercado",
   date: "2026-10-22",
   readTime: 7,
-  imageQuery: "stock exchange trading screens",
+  imageQuery: "File:Sao Paulo Stock Exchange.jpg",
   seed: 23,
   kind: "guia",
   author: "Bruno Danello",
@@ -73,7 +73,7 @@ export const article: Article = {
 <p>Dá para comprar uma cota por vez, o que torna o ETF acessível para valores pequenos. Se a ideia é aplicar todo mês, a lógica do aporte regular está no guia de <a href="/artigos/dca-em-bitcoin-como-investir-todo-mes">DCA em bitcoin</a>.</p>
 
 <h2>Tributação do ETF de bitcoin em linhas gerais</h2>
-<p>Cotas de ETF seguem a tributação de renda variável. Segundo a Hashdex, em geral incide imposto de 15% sobre o ganho de capital, recolhido pelo próprio investidor por DARF até o último dia útil do mês seguinte à venda, sem come-cotas e sem IOF. A isenção para vendas de até R$ 35 mil por mês, que vale para quem vende cripto diretamente, não se aplica às cotas do fundo.</p>
+<p>Cotas de ETF seguem a tributação de renda variável. Segundo a Hashdex, na página do HASH11 citada acima, em geral incide imposto de 15% sobre o ganho de capital na venda das cotas, recolhido pelo próprio investidor por DARF até o último dia útil do mês seguinte à venda, sem come-cotas e sem IOF. A isenção para vendas de até R$ 35 mil por mês, que vale para quem vende cripto diretamente, não se aplica às cotas do fundo, que são negociadas na bolsa.</p>
 <p>Quem compra ETFs nos Estados Unidos por uma corretora estrangeira entra na regra das aplicações no exterior da Lei 14.754/2023, com 15% sobre os ganhos na declaração anual. Os detalhes de cada caso estão em <a href="/artigos/imposto-sobre-criptomoedas-no-brasil-quanto-se-paga">imposto sobre criptomoedas no Brasil</a> e em <a href="/artigos/como-declarar-bitcoin-no-imposto-de-renda">como declarar bitcoin no Imposto de Renda</a>. Este texto é informativo, e um contador ajuda a evitar erro.</p>
 
 <h2>Riscos e cuidados antes de comprar um ETF de bitcoin</h2>

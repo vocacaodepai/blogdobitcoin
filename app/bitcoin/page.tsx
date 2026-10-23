@@ -127,7 +127,7 @@ export default async function BitcoinPage() {
         <BtcLivePanel initial={quote} />
         <PeriodChanges initial={quote} />
         <BtcChart />
-        <div className="grid gap-6 lg:grid-cols-2">
+        <div className="grid gap-6 lg:grid-cols-2 [&>*]:min-w-0">
           <HalvingCountdown initialHeight={height} />
           <FearGreedGauge initial={fng} />
         </div>

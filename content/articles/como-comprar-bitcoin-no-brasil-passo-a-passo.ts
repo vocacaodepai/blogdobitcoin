@@ -75,7 +75,7 @@ export const article: Article = {
 <p>A maior parte do prejuízo de iniciante não vem do preço, vem de pressa e de confiança no lugar errado. Os tropeços mais frequentes:</p>
 <ul>
 <li><strong>Comprar por indicação de grupo ou influenciador</strong> que promete rendimento garantido. Ninguém garante retorno em bitcoin.</li>
-<li><strong>Usar uma corretora sem saber se ela pediu autorização</strong> ao Banco Central. Depois de 30 de outubro de 2026, quem não pediu está em situação irregular.</li>
+<li><strong>Usar uma corretora sem saber se ela pediu autorização</strong> ao Banco Central. Quem não pedir até 30 de outubro de 2026 terá de encerrar os serviços em até 30 dias.</li>
 <li><strong>Errar a rede no saque</strong>, mandando bitcoin por uma rede que a carteira de destino não reconhece. Transação na blockchain não tem estorno.</li>
 <li><strong>Colocar dinheiro que vai fazer falta</strong> no mês seguinte e vender no susto na primeira queda forte.</li>
 <li><strong>Jogar fora os comprovantes</strong>. Data, quantidade e valor pago em reais são a base da declaração no Imposto de Renda.</li>

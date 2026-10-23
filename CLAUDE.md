@@ -89,6 +89,12 @@ Tópicos de notícia: `bitcoin`, `mercado`, `altcoins`, `regulacao`, `seguranca`
 - Capa por `imageQuery` (`components/CoverImage.tsx`): Wikimedia Commons primeiro (licença
   conferida, crédito visível), depois Pexels/Pixabay (se houver chave), depois capa
   ilustrada. Pessoa ou empresa real: `"<nome> portrait"` / `"<empresa> logo"`.
+- A busca do Commons é solta (já trouxe o político Javier Solana para "Solana logo").
+  `lib/wikimedia.ts` filtra pelo nome, mas toda capa nova é conferida com
+  `npm run check:covers -- <slug>`. Foto que não é do assunto: fixe um arquivo conferido
+  com `imageQuery: "File:Nome exato do arquivo.jpg"` (página do arquivo aberta, licença
+  CC ou domínio público, nunca imagem gerada por IA) ou use uma busca descritiva. Sem foto
+  certa, a capa ilustrada é melhor que uma foto errada.
 - Imagem no corpo: só `upload.wikimedia.org` (URL retornada pela API, licença conferida),
   Pexels, Pixabay ou arquivo próprio em `/images/...`.
 

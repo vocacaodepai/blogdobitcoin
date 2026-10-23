@@ -35,7 +35,7 @@ const FAQ = [
   {
     question: "Preciso declarar o bitcoin comprado aos poucos?",
     answer:
-      "Sim, quem tem cripto precisa seguir as regras da Receita Federal, com custo de aquisição somado compra a compra. O guia de declaração no Imposto de Renda do Blog do Bitcoin explica a ficha de bens e direitos e o ganho de capital.",
+      "Sim, se você é obrigado a entregar a declaração e o custo de aquisição do bitcoin, somado compra a compra, chegou a R$ 5 mil ou mais, como pede a Receita Federal. O guia de declaração no Imposto de Renda do Blog do Bitcoin explica a ficha de bens e direitos e o ganho de capital.",
   },
 ];
 

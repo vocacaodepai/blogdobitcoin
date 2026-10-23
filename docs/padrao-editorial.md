@@ -163,6 +163,11 @@ Tamanho: 1.100 a 1.700 palavras de texto real (mínimo 900, o script barra).
 - Capa por `imageQuery` (cascata: Wikimedia Commons, depois Pexels/Pixabay, depois capa
   ilustrada). Pessoa ou empresa real: foto real licenciada do Wikimedia, nunca banco de
   imagem genérico.
+- Confira toda capa nova com `npm run check:covers -- <slug>`. A busca do Commons é solta
+  (já trouxe Javier Solana para "Solana logo" e o banco central da Argentina para "Banco
+  Central do Brasil building"). Foto errada: fixe um arquivo conferido com
+  `imageQuery: "File:Nome exato do arquivo.jpg"` (página do arquivo aberta, licença CC ou
+  domínio público, nunca imagem gerada por IA). Sem foto certa, a capa ilustrada.
 - Imagem no corpo só de `upload.wikimedia.org` (URL retornada pela API, licença
   conferida, `<figcaption>Foto: autor / Wikimedia Commons (licença)</figcaption>`),
   Pexels, Pixabay ou arquivo próprio em `/images/...`.

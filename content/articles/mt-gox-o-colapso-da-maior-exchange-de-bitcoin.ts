@@ -12,7 +12,7 @@ export const article: Article = {
   historyYear: 2014,
   date: "2026-10-22",
   readTime: 8,
-  imageQuery: "Mark Karpeles portrait",
+  imageQuery: "File:Bitcoin exchange mtgox - Feb2012-Feb2014 - log scale.png",
   seed: 52,
   kind: "guia",
   author: "Bruno Danello",

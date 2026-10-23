@@ -7,7 +7,7 @@ export const product: Product = {
   category: "livros",
   asin: "6598439779",
   shortDescription:
-    "Edição brasileira de 21 Lessons, do programador e escritor Gigi: 21 textos curtos sobre filosofia, economia e tecnologia do Bitcoin, em formato de bolso.",
+    "Edição brasileira de 21 Lessons, do escritor e ex-engenheiro de software Gigi: 21 textos curtos sobre filosofia, economia e tecnologia do Bitcoin, em formato de bolso.",
   image: {
     url: "/images/products/21-licoes-gigi.jpg",
     width: 996,
@@ -62,7 +62,7 @@ export const product: Product = {
       {
         title: "De onde vem o livro",
         paragraphs: [
-          "21 Lições nasceu como uma série de artigos em inglês chamada What I've Learned From Bitcoin, escrita por Gigi, programador e divulgador conhecido na comunidade. O texto virou o livro 21 Lessons: What I've Learned from Falling Down the Bitcoin Rabbit Hole, que pode ser lido de graça no site oficial do projeto, em inglês, sob licença Creative Commons BY-SA 4.0.",
+          "21 Lições nasceu como uma série de artigos em inglês chamada What I've Learned From Bitcoin, escrita por Gigi, ex-engenheiro de software e escritor conhecido na comunidade. O texto virou o livro 21 Lessons: What I've Learned from Falling Down the Bitcoin Rabbit Hole, que pode ser lido de graça no site oficial do projeto, em inglês, sob licença Creative Commons BY-SA 4.0.",
           "A edição brasileira é da Editora Axia, saiu em fevereiro de 2025 e tem 228 páginas em formato de bolso. O site do autor lista a tradução para o português do Brasil entre as edições oficiais em outras línguas.",
         ],
       },
@@ -128,7 +128,7 @@ export const product: Product = {
       {
         question: "Quem é Gigi, o autor de 21 Lições?",
         answer:
-          "Gigi é o pseudônimo de um programador e escritor da comunidade Bitcoin. Ele publicou as lições primeiro como uma série de artigos, depois reuniu tudo em livro e mantém o site oficial do projeto, com versões em vários idiomas.",
+          "Gigi é o nome com que assina um escritor da comunidade Bitcoin que trabalhou como engenheiro de software. Ele publicou as lições primeiro como uma série de artigos, depois reuniu tudo em livro e mantém o site oficial do projeto, com versões em vários idiomas.",
       },
       {
         question: "Preciso ler as lições na ordem?",

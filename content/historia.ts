@@ -28,7 +28,7 @@ export const timeline: TimelineEvent[] = [
     title: "Hal Finney recebe a primeira transação",
     text: "O programador Hal Finney, um dos primeiros a rodar o software anunciado em 8 de janeiro, recebeu 10 BTC enviados por Satoshi como teste. A transação, gravada no bloco 170, é considerada a primeira transferência de bitcoin entre duas pessoas.",
     article: "hal-finney-o-primeiro-a-receber-bitcoin",
-    source: { label: "Bitcoin Wiki: History", url: "https://en.bitcoin.it/wiki/History" },
+    source: { label: "Hal Finney no BitcoinTalk: Bitcoin and me", url: "https://bitcointalk.org/index.php?topic=155054.0" },
   },
   {
     date: "2009-10-05",

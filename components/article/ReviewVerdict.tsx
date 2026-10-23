@@ -18,7 +18,7 @@ function scoreClass(score: number): string {
  * contras, para quem é, preço e o botão para o site da ferramenta.
  */
 export function ReviewVerdict({ review }: { review: ReviewData }) {
-  const rel = review.affiliate ? "sponsored nofollow noopener" : "nofollow noopener";
+  const rel = review.affiliate ? "sponsored noopener noreferrer nofollow" : "nofollow noopener noreferrer";
   const scoreText = review.score.toFixed(1);
   return (
     <section aria-labelledby="veredito" className="overflow-hidden rounded-xl border border-border bg-surface">

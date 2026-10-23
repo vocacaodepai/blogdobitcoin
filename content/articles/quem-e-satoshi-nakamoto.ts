@@ -43,7 +43,7 @@ export const article: Article = {
 <h2>A saída de cena, entre 2010 e 2011</h2>
 <p>Em dezembro de 2010, com o WikiLeaks bloqueado por empresas de pagamento, usuários do fórum sugeriram que o site recebesse doações em bitcoin. Satoshi pediu o contrário, em 5 de dezembro: "No, don't 'bring it on'. The project needs to grow gradually so the software can be strengthened along the way." Ou seja, o projeto precisava crescer aos poucos, e a atenção que o WikiLeaks traria "provavelmente nos destruiria nesta fase".</p>
 <p>Uma semana depois, em 12 de dezembro, ele publicou a versão 0.3.19, com limites contra ataques de negação de serviço. Foi o último post público conhecido no fórum, como mostra o <a href="https://satoshi.nakamotoinstitute.org/posts/bitcointalk/" rel="noopener noreferrer">arquivo completo dos posts de Satoshi no BitcoinTalk</a>, mantido pelo Satoshi Nakamoto Institute. A essa altura, o controle do repositório do código já estava com o desenvolvedor Gavin Andresen.</p>
-<p>O último contato confirmado foi privado. Em 23 de abril de 2011, respondendo ao programador Mike Hearn, Satoshi escreveu: "I've moved on to other things. It's in good hands with Gavin and everyone", algo como "passei para outras coisas; está em boas mãos com Gavin e todos os outros". O próprio Hearn publicou a <a href="https://plan99.net/~mike/satoshi-emails/thread5.html" rel="noopener noreferrer">troca de e-mails com Satoshi</a> no site pessoal dele, e depois disso veio o silêncio.</p>
+<p>Os últimos contatos conhecidos foram privados. Em 23 de abril de 2011, respondendo ao programador Mike Hearn, Satoshi escreveu: "I've moved on to other things. It's in good hands with Gavin and everyone", algo como "passei para outras coisas; está em boas mãos com Gavin e todos os outros". O próprio Hearn publicou a <a href="https://plan99.net/~mike/satoshi-emails/thread5.html" rel="noopener noreferrer">troca de e-mails com Satoshi</a> no site pessoal dele. Ainda naquele mês de abril, veio o silêncio.</p>
 
 <h2>Os primeiros suspeitos: Finney, Szabo e Back</h2>
 <h3>Hal Finney</h3>
@@ -101,7 +101,7 @@ export const article: Article = {
     {
       question: "Qual foi a última mensagem de Satoshi Nakamoto?",
       answer:
-        "O último post público conhecido no fórum BitcoinTalk é de 12 de dezembro de 2010, sobre a versão 0.3.19 do programa. O último contato confirmado é um e-mail de 23 de abril de 2011 ao programador Mike Hearn, em que Satoshi diz que passou para outras coisas e que o projeto estava em boas mãos com Gavin Andresen e os demais.",
+        "O último post público conhecido no fórum BitcoinTalk é de 12 de dezembro de 2010, sobre a versão 0.3.19 do programa. Um dos últimos contatos conhecidos é um e-mail de 23 de abril de 2011 ao programador Mike Hearn, em que Satoshi diz que passou para outras coisas e que o projeto estava em boas mãos com Gavin Andresen e os demais.",
     },
   ],
   quiz: [
@@ -128,7 +128,7 @@ export const article: Article = {
       options: ["Janeiro de 2009", "Abril de 2011", "Março de 2014"],
       answer: 1,
       explanation:
-        "Foi um e-mail de 23 de abril de 2011 a Mike Hearn. O post de 2014 no P2P Foundation existe, mas sua autenticidade é discutida.",
+        "Foi em abril de 2011, em e-mails privados como o de 23 de abril a Mike Hearn. O post de 2014 no P2P Foundation existe, mas sua autenticidade é discutida.",
     },
   ],
 };

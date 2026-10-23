@@ -69,7 +69,7 @@ export const article: Article = {
 <tr><td>2024</td><td>US$ 63.800</td><td>US$ 85.100</td></tr>
 </tbody>
 </table>
-<p>Repare que a alta ficou menor a cada ciclo: de quase 80 vezes no primeiro para cerca de um terço no último. E quatro episódios são uma amostra pequena demais para virar regra. O preço também reage a juros, a fluxo de fundos, a regulação e a crises que não têm nada a ver com o halving.</p>
+<p>Repare como a alta encolheu do primeiro para o último ciclo: de quase 80 vezes para cerca de um terço. E quatro episódios são uma amostra pequena demais para virar regra. O preço também reage a juros, a fluxo de fundos, a regulação e a crises que não têm nada a ver com o halving.</p>
 <p>Passado não garante futuro, e nada aqui é recomendação de compra: a <a href="/glossario#volatilidade">volatilidade</a> do bitcoin é alta, e vale ler o <a href="/aviso-de-risco">aviso de risco</a> antes de qualquer decisão. A análise ciclo a ciclo, com topos e fundos, está em <a href="/artigos/ciclos-do-bitcoin-o-que-os-halvings-mostram">o que os halvings mostram sobre os ciclos do Bitcoin</a>.</p>
 
 <h2>Mitos e erros comuns sobre o halving</h2>
@@ -105,7 +105,7 @@ export const article: Article = {
     {
       question: "O preço do Bitcoin sobe depois do halving?",
       answer:
-        "Nos quatro halvings anteriores, o preço estava mais alto um ano depois, mas a alta foi menor a cada ciclo. Quatro casos não bastam para garantir que isso se repita, e o preço também depende de juros, regulação e demanda. O halving reduz a oferta nova, mas não é promessa de valorização nem recomendação de compra.",
+        "Nos quatro halvings anteriores, o preço estava mais alto um ano depois, mas a alta encolheu muito do primeiro para o último. Quatro casos não bastam para garantir que isso se repita, e o preço também depende de juros, regulação e demanda. O halving reduz a oferta nova, mas não é promessa de valorização nem recomendação de compra.",
     },
     {
       question: "O que acontece quando todos os bitcoins forem minerados?",

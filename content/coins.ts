@@ -91,7 +91,7 @@ export const coins: CoinProfile[] = [
     risks: [
       "Centralização: a rede depende de um grupo pequeno de validadores e o ecossistema gira em torno de uma única empresa",
       "Risco regulatório da Binance, que já pagou multa bilionária nos Estados Unidos e enfrenta processos em vários países",
-      "Em outubro de 2022, um ataque à ponte entre redes do ecossistema criou cerca de 2 milhões de BNB indevidos e obrigou a rede a parar por algumas horas",
+      "Em outubro de 2022, um ataque à ponte nativa entre as redes do ecossistema retirou indevidamente 2 milhões de BNB e obrigou a BNB Smart Chain a ser suspensa temporariamente",
       "Golpes e tokens falsos são comuns em redes de taxa baixa como a BNB Smart Chain",
       "Se a corretora perder relevância, o principal motivo de uso do token enfraquece",
     ],
@@ -140,7 +140,7 @@ export const coins: CoinProfile[] = [
     description: [
       "O USD Coin (USDC) é uma stablecoin atrelada ao dólar e emitida pela Circle, empresa americana. Cada USDC pode ser resgatado por 1 dólar, e as reservas ficam em dinheiro e em ativos de curtíssimo prazo, a maior parte num fundo de mercado monetário registrado na SEC, administrado pela BlackRock e custodiado no banco BNY Mellon.",
       "O USDC foi lançado em setembro de 2018 pelo Centre, consórcio da Circle com a corretora Coinbase. Em agosto de 2023, o consórcio foi desfeito e a Circle assumiu o controle total. Hoje o token é emitido de forma nativa em dezenas de blockchains, como Ethereum, Solana, Base e Stellar, e a empresa publica atestados mensais das reservas feitos por uma das quatro grandes firmas de auditoria.",
-      "O principal teste veio em março de 2023: cerca de US$ 3,3 bilhões das reservas estavam no Silicon Valley Bank, que quebrou, e o USDC perdeu a paridade com o dólar por quatro dias. Em junho de 2025, a Circle abriu capital na Bolsa de Nova York.",
+      "O principal teste veio em março de 2023: cerca de US$ 3,3 bilhões das reservas estavam no Silicon Valley Bank, que quebrou, e o USDC perdeu a paridade com o dólar por alguns dias. Em junho de 2025, a Circle abriu capital na Bolsa de Nova York.",
       "O USDC costuma ser a segunda maior stablecoin, atrás do USDT, com perfil mais voltado a empresas e instituições reguladas. O resgate direto na Circle é feito por instituições; pessoas físicas compram e vendem em corretoras e carteiras.",
     ],
     useCases: [
@@ -201,7 +201,7 @@ export const coins: CoinProfile[] = [
       "A TRON é uma blockchain de contratos inteligentes com taxas baixas, e o TRX é a moeda que paga o uso da rede. Na prática, ela virou uma das principais vias de circulação do USDT: uma parte grande de todo o Tether transferido no mundo passa por essa rede.",
       "O projeto foi fundado em 2017 por Justin Sun, que criou a Fundação TRON em Singapura e levantou cerca de US$ 70 milhões numa oferta inicial de moedas. O TRX começou como token na rede Ethereum e migrou para a rede própria em 2018. No mesmo ano, a fundação comprou o BitTorrent, o conhecido programa de compartilhamento de arquivos.",
       "O consenso é a prova de participação delegada: quem tem TRX trava as moedas e vota em candidatos, e os 27 mais votados, chamados super representantes, produzem os blocos. As taxas podem ser cobertas com recursos de rede obtidos ao travar TRX, o que deixa transferências de stablecoins baratas.",
-      "Justin Sun é uma figura polêmica. Em 2023, a SEC processou ele e a TRON por venda irregular de tokens e por negociação artificial de volume; o caso foi suspenso em 2025 para negociação, e um acordo foi anunciado em 2026. A rede também aparece em reportagens e investigações como canal frequente para movimentar dinheiro de golpes e lavagem.",
+      "Justin Sun é uma figura polêmica. Em 2023, a SEC processou ele e a TRON por venda irregular de tokens e por negociação artificial de volume; o caso foi suspenso em 2025 para negociação e encerrado em março de 2026 por um acordo: a Rainberry, empresa dona do BitTorrent, aceitou pagar US$ 10 milhões, sem admitir culpa, e a SEC retirou as acusações contra Sun e as fundações. A rede também aparece em reportagens e investigações como canal frequente para movimentar dinheiro de golpes e lavagem.",
     ],
     useCases: [
       "Transferir USDT e outras stablecoins com taxa baixa",
@@ -290,7 +290,7 @@ export const coins: CoinProfile[] = [
       "A Chainlink é uma rede de oráculos, serviços que levam dados do mundo de fora para dentro das blockchains. Um contrato inteligente não consegue, sozinho, saber a cotação do dólar ou o resultado de um evento. A Chainlink reúne vários operadores independentes que buscam essa informação, comparam os resultados e entregam um valor único à rede.",
       "O projeto foi criado em 2017 por Sergey Nazarov e Steve Ellis, com artigo técnico escrito em parceria com o professor Ari Juels, da Universidade Cornell, e a rede começou a operar em 2019. O LINK é um token da rede Ethereum, com oferta total de 1 bilhão de unidades, usado para pagar os operadores e como garantia em staking.",
       "Além dos preços usados por aplicativos de DeFi, a Chainlink oferece o CCIP, protocolo para transferir tokens e mensagens entre blockchains diferentes, e a prova de reservas, que confere se um ativo digital tem mesmo o lastro que promete. O CCIP foi testado em 2023 pela Swift, a rede de mensagens dos bancos.",
-      "A rede também aparece em projetos de bancos e governos. Em 2025, o Banco Central do Brasil e a Autoridade Monetária de Hong Kong participaram de um piloto de comércio exterior que ligou sistemas dos dois países por meio da Chainlink.",
+      "A rede também aparece em projetos de bancos e governos. Em 2025, um experimento de comércio exterior liderado pelo Banco Inter, com participação do Banco Central do Brasil e da Autoridade Monetária de Hong Kong, usou a Chainlink para ligar, numa simulação, a rede do Drex à plataforma Ensemble, de Hong Kong.",
     ],
     useCases: [
       "Fornecer preços e outros dados a contratos inteligentes",
@@ -320,7 +320,7 @@ export const coins: CoinProfile[] = [
       "A Stellar é uma rede de pagamentos feita para mover dinheiro entre pessoas, empresas e moedas diferentes, com confirmação em cerca de 5 segundos e taxa média abaixo de um milésimo de dólar. O lumen (XLM) é a moeda nativa, usada para pagar taxas e para manter um saldo mínimo em cada conta, o que dificulta ataques de spam.",
       "A rede foi lançada em julho de 2014 por Jed McCaleb, também cofundador da Ripple e criador da Mt. Gox, e por Joyce Kim. Ela é mantida pela Stellar Development Foundation, entidade sem fins lucrativos. Em 2015, adotou o Stellar Consensus Protocol, criado pelo professor David Mazières: cada validador escolhe um grupo de validadores em que confia, e as transações são aprovadas quando esses grupos concordam.",
       "A oferta total é de cerca de 50 bilhões de lumens. Até 2019 havia uma inflação de cerca de 1% ao ano, encerrada por votação da comunidade, e em novembro daquele ano a oferta total foi reduzida. A própria fundação detém cerca de 30 bilhões de XLM para desenvolver e divulgar a rede.",
-      "A Stellar é usada para emitir stablecoins, como o USDC, e ativos tokenizados, como cotas de fundos de investimento. A MoneyGram usa a rede para depósito e saque de USDC em dinheiro vivo em mais de 170 países. A rede também aceita contratos inteligentes, pela plataforma Soroban.",
+      "A Stellar é usada para emitir stablecoins, como o USDC, e ativos tokenizados, como cotas de fundos de investimento. A MoneyGram usa a rede para depósito e saque de USDC em dinheiro vivo, com saque disponível em mais de 170 países. A rede também aceita contratos inteligentes, pela plataforma Soroban.",
     ],
     useCases: [
       "Remessas e pagamentos internacionais de baixo custo",
@@ -526,7 +526,7 @@ export const coins: CoinProfile[] = [
       "A Hyperliquid é uma blockchain própria criada para negociar derivativos, principalmente contratos futuros perpétuos, que permitem apostar na alta ou na queda de um ativo com alavancagem e sem data de vencimento. Toda a negociação, com livro de ofertas, acontece dentro da própria rede, sem uma empresa guardando o dinheiro dos clientes.",
       "A Hyperliquid Labs, empresa que desenvolve o projeto, é liderada por Jeff Yan e um colega de faculdade em Harvard e diz se financiar sozinha, sem capital de fundos de investimento. A plataforma já operava em 2023, e o token HYPE foi distribuído em novembro de 2024, com uma grande parte entregue de graça a usuários.",
       "A rede tem duas partes: o HyperCore, onde ficam os livros de ofertas de futuros e do mercado à vista, e o HyperEVM, compatível com o Ethereum, para outros aplicativos. O consenso, chamado HyperBFT, é uma prova de participação em que os 27 validadores com mais HYPE em staking formam o grupo ativo. A oferta máxima é de 1 bilhão de HYPE, e parte das taxas da plataforma é usada para recomprar o token.",
-      "Em pouco tempo, a Hyperliquid virou uma das maiores plataformas de derivativos cripto e passou a listar também mercados ligados a ações, índices e commodities. O crescimento teve episódios tensos, como em março de 2025, quando os validadores retiraram o token JELLY de negociação durante uma tentativa de manipulação, decisão criticada como sinal de controle centralizado.",
+      "Em pouco tempo, a Hyperliquid virou uma das maiores plataformas de derivativos cripto e passou a listar também mercados ligados a ações, índices e commodities. O crescimento teve episódios tensos, como em março de 2025, quando os validadores tiraram de negociação os contratos futuros do token JELLY durante uma tentativa de manipulação, decisão criticada como sinal de controle centralizado.",
     ],
     useCases: [
       "Negociar contratos futuros perpétuos de cripto com alavancagem",
@@ -586,7 +586,7 @@ export const coins: CoinProfile[] = [
       "O Dai (DAI) é uma stablecoin atrelada ao dólar que não depende de uma empresa guardando dólares no banco. Ele é criado por contratos inteligentes na rede Ethereum: o usuário deposita uma garantia em cripto, como ether, de valor maior que o empréstimo, e recebe DAI. Quando devolve o DAI, as moedas são destruídas e a garantia é liberada.",
       "O DAI foi lançado em 18 de dezembro de 2017 pela MakerDAO, organização criada em 2014 por Rune Christensen. As garantias costumam exigir entre 110% e 200% do valor emprestado. Se o valor da garantia cai abaixo do mínimo, ela é vendida para quitar a dívida. Os detentores do token de governança votam nas taxas de juros e nos tipos de garantia aceitos.",
       "O sistema já passou por testes duros. Em março de 2020, no tombo dos mercados no início da pandemia, o DAI chegou a ser negociado a US$ 1,11 antes de voltar a 1 dólar. Com o tempo, parte relevante do lastro passou a vir de outras stablecoins, como o USDC, e de títulos do Tesouro americano, o que trouxe estabilidade, mas aumentou a dependência de ativos centralizados.",
-      "Em agosto de 2024, a MakerDAO mudou o nome para Sky e lançou uma nova stablecoin, o USDS, que pode ser trocado por DAI na proporção de 1 para 1. O DAI continua circulando, mas o foco do projeto passou para o USDS.",
+      "Em agosto de 2024, a MakerDAO anunciou a mudança de nome para Sky e uma nova stablecoin, o USDS, lançado em setembro daquele ano, que pode ser trocado por DAI na proporção de 1 para 1. O DAI continua circulando, mas o foco do projeto passou para o USDS.",
     ],
     useCases: [
       "Guardar valor em dólar sem depender de um banco ou de uma empresa emissora",

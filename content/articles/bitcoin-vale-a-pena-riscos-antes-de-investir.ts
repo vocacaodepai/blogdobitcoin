@@ -67,7 +67,7 @@ export const article: Article = {
 <p>Tirar as moedas da corretora para uma carteira própria troca esse risco por outro: o de você mesmo perder o acesso. Quem perde as palavras de recuperação perde os bitcoins, sem suporte para chamar. Antes de fazer essa mudança, leia <a href="/artigos/seed-phrase-como-guardar-as-palavras-de-recuperacao">como guardar a seed phrase</a>.</p>
 
 <h2>Impostos: o lucro também tem regra</h2>
-<p>Lucro na venda de cripto pode gerar Imposto de Renda, e o que você tem precisa aparecer na declaração anual. As regras mudaram de direção nos últimos anos: a <a href="https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/mpv/mpv1303.htm" rel="noopener noreferrer">Medida Provisória 1.303/2025</a> propôs alíquota de 17,5% sobre os ganhos de pessoas físicas com ativos virtuais, mas teve a vigência encerrada sem virar lei.</p>
+<p>Lucro na venda de cripto pode gerar Imposto de Renda, e quem entrega a declaração anual precisa informar cada tipo de criptoativo cujo custo de aquisição chegou a R$ 5 mil ou mais. As regras quase mudaram nos últimos anos: a <a href="https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/mpv/mpv1303.htm" rel="noopener noreferrer">Medida Provisória 1.303/2025</a> propôs alíquota de 17,5% sobre os ganhos de pessoas físicas com ativos virtuais, mas teve a vigência encerrada sem virar lei.</p>
 <p>Antes de vender, confira a regra em vigor no guia de <a href="/artigos/imposto-sobre-criptomoedas-no-brasil-quanto-se-paga">imposto sobre criptomoedas no Brasil</a>. O hábito que vale para qualquer regra é guardar data, quantidade e valor pago em cada compra. Sem isso, calcular o lucro vira adivinhação, e o erro na declaração sai caro.</p>
 
 <h2>Alternativas e jeitos de reduzir o risco</h2>
@@ -106,7 +106,7 @@ export const article: Article = {
     {
       question: "Preciso pagar imposto sobre lucro com bitcoin?",
       answer:
-        "Lucro na venda de criptomoedas pode gerar Imposto de Renda no Brasil, e quem tem cripto precisa informar o que possui na declaração anual, conforme as regras da Receita Federal. As regras mudaram nos últimos anos: a MP 1.303/2025, que propunha alíquota de 17,5%, teve a vigência encerrada. Confira a regra atual no guia de impostos do blog e, se precisar, procure um contador.",
+        "Lucro na venda de criptomoedas pode gerar Imposto de Renda no Brasil, e quem entrega a declaração anual precisa informar cada tipo de criptoativo cujo custo de aquisição chegou a R$ 5 mil ou mais, conforme as regras da Receita Federal. As regras quase mudaram: a MP 1.303/2025, que propunha alíquota de 17,5%, teve a vigência encerrada sem virar lei. Confira a regra atual no guia de impostos do blog e, se precisar, procure um contador.",
     },
   ],
   quiz: [

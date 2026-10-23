@@ -30,7 +30,7 @@ const FAQ = [
   {
     question: "DCA garante lucro?",
     answer:
-      "Não. O DCA reduz o risco de comprar tudo no pior momento, mas se o preço ficar abaixo do seu preço médio, você terá prejuízo. Em períodos curtos, principalmente perto de topos como 2017 e 2021, simulações mostram perdas por anos. Resultado passado não garante resultado futuro.",
+      "Não. O DCA reduz o risco de comprar tudo no pior momento, mas se o preço ficar abaixo do seu preço médio, você terá prejuízo. Em períodos curtos, principalmente perto de topos como 2017 e 2021, simulações mostram perdas por mais de um ano. Resultado passado não garante resultado futuro.",
   },
   {
     question: "Preciso declarar o bitcoin comprado aos poucos?",

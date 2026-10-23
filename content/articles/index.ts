@@ -13,9 +13,10 @@ import { article as i7 } from "./carteira-de-bitcoin-qual-escolher";
 import { article as i8 } from "./como-comprar-bitcoin-no-brasil-passo-a-passo";
 import { article as i9 } from "./bitcoin-ou-ethereum-diferencas";
 import { article as i10 } from "./satoshis-o-que-sao-sats-e-como-converter";
-import { article as i11 } from "./mineracao-de-bitcoin-como-funciona";
-import { article as i12 } from "./halving-do-bitcoin-o-que-e-e-quando-e-o-proximo";
-import { article as i13 } from "./o-que-e-bitcoin-e-como-funciona";
+import { article as i11 } from "./lightning-network-o-que-e-e-como-usar";
+import { article as i12 } from "./mineracao-de-bitcoin-como-funciona";
+import { article as i13 } from "./halving-do-bitcoin-o-que-e-e-quando-e-o-proximo";
+import { article as i14 } from "./o-que-e-bitcoin-e-como-funciona";
 
 export const articles: Article[] = [
   i0,
@@ -32,4 +33,5 @@ export const articles: Article[] = [
   i11,
   i12,
   i13,
+  i14,
 ];

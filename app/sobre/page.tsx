@@ -91,7 +91,7 @@ export default function SobrePage() {
           frases.
         </li>
         <li>
-          <Link href="/loja">Loja do Bitcoin</Link>: vitrine de produtos vendidos na Amazon, como
+          <Link href="/loja">Loja do Bitcoin</Link>: vitrine de produtos vendidos na Amazon e na Shopee, como
           carteiras de hardware, placas de backup da seed, livros e camisetas, cada um com review
           longa e nota de 0 a 10. Em <Link href="/categoria/cripto-indica">Cripto Indica</Link>{" "}
           ficam os reviews e os comparativos desses produtos.
@@ -136,8 +136,8 @@ export default function SobrePage() {
         acordo comercial.
       </p>
       <p>
-        O acesso é gratuito. A receita vem de anúncios do Google AdSense e do Programa de
-        Associados da Amazon: quando você compra um produto por um link da loja ou de um review, o
+        O acesso é gratuito. A receita vem de anúncios do Google AdSense e dos programas de
+        afiliados da Amazon e da Shopee: quando você compra um produto por um link da loja ou de um review, o
         site pode receber uma comissão, sem custo a mais para você. Anúncio e comissão não mudam
         pauta, nota ou opinião. Eu explico tudo em{" "}
         <Link href="/publicidade-e-afiliados">publicidade e afiliados</Link>.

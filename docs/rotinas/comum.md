@@ -1,7 +1,7 @@
 # Rotinas automáticas: regras comuns
 
 Vale para toda rotina agendada do Blog do Bitcoin (notícias, artigos, Cripto Indica e
-loja, manutenção). Cada rotina tem o seu arquivo nesta pasta com o roteiro específico.
+loja da Amazon, Cripto Indica e loja da Shopee, manutenção). Cada rotina tem o seu arquivo nesta pasta com o roteiro específico.
 
 ## Ambiente
 
@@ -22,7 +22,9 @@ mesmo tipo como modelo e `lib/types.ts` para os campos.
 
 ## Nunca
 
-- Inventar fato, número, citação, URL, produto, ASIN, preço ou especificação.
+- Inventar fato, número, citação, URL, produto, ASIN, itemId da Shopee, preço ou especificação.
+- Gravar credencial (Shopee App ID/Secret, chave de API, token) em arquivo do repositório, diff,
+  commit, PR, comentário ou log. Segredo só por variável de ambiente ou ~/.config (fora do repo).
 - Recomendação de investimento, previsão de preço como fato, cotação do dia fixa em artigo.
 - Travessão (—), "Em resumo", "É importante ressaltar", mencionar IA/Claude como autor.
 - Alterar `lib/` (exceto quando a rotina diz), `app/`, `components/`, `scripts/`, `docs/`,

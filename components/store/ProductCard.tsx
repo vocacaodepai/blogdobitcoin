@@ -1,6 +1,6 @@
 import Link from "next/link";
 import type { Product } from "@/lib/types";
-import { getProductCategory, priceRangeText } from "@/lib/products";
+import { getProductCategory, priceCardNote, priceMissingText, priceRangeText, productStoreInfo } from "@/lib/products";
 import { ProductBuyButton } from "./ProductBuyButton";
 
 function ScoreBadge({ score }: { score: number }) {
@@ -17,6 +17,7 @@ export function ProductCard({ product, priority = false }: { product: Product; p
   const href = `/loja/${product.slug}`;
   const range = priceRangeText(product);
   const cat = getProductCategory(product.category);
+  const store = productStoreInfo(product);
   return (
     <article className="group flex flex-col overflow-hidden rounded-xl border border-border bg-surface card-hover">
       <Link href={href} className="relative block aspect-square overflow-hidden bg-white" tabIndex={-1} aria-hidden="true">
@@ -42,7 +43,11 @@ export function ProductCard({ product, priority = false }: { product: Product; p
         )}
       </Link>
       <div className="flex flex-1 flex-col p-4">
-        {cat && <p className="label-mono text-accent">{cat.label}</p>}
+        {cat && (
+          <p className="label-mono text-accent">
+            {cat.label} <span className="text-muted">· {store.label}</span>
+          </p>
+        )}
         <h3 className="mt-1 line-clamp-2 font-display text-base font-bold leading-snug">
           <Link href={href} className="transition hover:text-accent">
             {product.name}
@@ -53,10 +58,10 @@ export function ProductCard({ product, priority = false }: { product: Product; p
           {range ? (
             <>
               <span className="tabular font-display font-bold">{range}</span>
-              <span className="block text-[11px] text-muted">faixa de mercado em lojas online</span>
+              <span className="block text-[11px] text-muted">{priceCardNote(product)}</span>
             </>
           ) : (
-            <span className="text-xs font-semibold text-muted">Veja o preço do dia na Amazon</span>
+            <span className="text-xs font-semibold text-muted">{priceMissingText(product)}</span>
           )}
         </p>
         <div className="mt-4 flex flex-col gap-2">

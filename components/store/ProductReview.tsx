@@ -1,6 +1,6 @@
 import Link from "next/link";
 import type { Product } from "@/lib/types";
-import { priceCheckedLabel, priceRangeText } from "@/lib/products";
+import { priceCheckedLabel, priceRangeText, priceReviewText, productStore, productStoreInfo } from "@/lib/products";
 import { ProductBuyButton } from "./ProductBuyButton";
 
 function score(n: number) {
@@ -19,6 +19,8 @@ export function ProductReview({ product }: { product: Product }) {
   if (!review) return null;
   const range = priceRangeText(product);
   const checked = priceCheckedLabel(product);
+  const storeInfo = productStoreInfo(product);
+  const isShopee = productStore(product) === "shopee";
 
   return (
     <section id="review" aria-labelledby="review-titulo" className="scroll-mt-24">
@@ -124,9 +126,7 @@ export function ProductReview({ product }: { product: Product }) {
           <h3 className="font-display text-xl font-bold sm:text-2xl">Variação de preço</h3>
           <p className="mt-3 text-base leading-relaxed text-foreground/90">
             {review.priceText ? `${review.priceText} ` : ""}
-            {range
-              ? `A faixa de mercado de ${range} foi consultada na internet como um todo, em várias lojas online, e não é o preço da Amazon${checked ? ` (pesquisa de ${checked})` : ""}.`
-              : "O preço varia entre vendedores e épocas do ano."}{" "}
+            {priceReviewText(product, range, checked)}{" "}
             O valor do dia aparece ao clicar no botão de compra.
           </p>
           <div className="mt-5">
@@ -189,9 +189,14 @@ export function ProductReview({ product }: { product: Product }) {
       )}
 
       <p className="mt-6 text-xs leading-relaxed text-muted">
-        Transparência: esta análise é independente e se baseia na ficha técnica oficial, no manual do fabricante e em opiniões
-        reais de compradores, sem teste físico nosso. Os links são de afiliado da Amazon: se você comprar por eles, o Blog do
-        Bitcoin pode receber uma comissão, sem custo extra para você, e isso não muda a nota. Veja{" "}
+        Transparência: esta análise é independente e se baseia na{" "}
+        {isShopee
+          ? "descrição do anúncio, em informações do fabricante ou da editora"
+          : "ficha técnica oficial, no manual do fabricante"}{" "}
+        e em opiniões reais de compradores, sem teste físico nosso.
+        {isShopee && " A Shopee reúne vendedores independentes: confira a reputação de quem vende antes de comprar."} Os links são de
+        afiliado da {storeInfo.label}: se você comprar por eles, o Blog do Bitcoin pode receber uma comissão, sem custo extra para
+        você, e isso não muda a nota. Veja{" "}
         <Link href="/publicidade-e-afiliados" className="text-accent hover:underline">
           publicidade e afiliados
         </Link>

@@ -7,7 +7,7 @@ import { author } from "@/lib/author";
 const PATH = "/publicidade-e-afiliados";
 const TITLE = "Publicidade e afiliados";
 const DESCRIPTION =
-  "Como o Blog do Bitcoin se sustenta: anúncios do Google AdSense e links de afiliado da Amazon, sempre sinalizados. Nenhuma exchange paga para aparecer.";
+  "Como o Blog do Bitcoin se sustenta: anúncios do Google AdSense e links de afiliado da Amazon e da Shopee, sempre sinalizados. Nenhuma exchange paga para aparecer.";
 
 function ExternalLink({ href, children }: { href: string; children: React.ReactNode }) {
   return (
@@ -34,7 +34,7 @@ export default function PublicidadeEAfiliadosPage() {
       <h2 id="como-o-site-se-sustenta">1. Como o site se sustenta</h2>
       <p>
         O {site.name} não cobra assinatura, não vende curso, não tem grupo pago de sinais e não
-        gerencia dinheiro de ninguém. A receita vem de duas fontes:
+        gerencia dinheiro de ninguém. A receita vem de três fontes:
       </p>
       <ul>
         <li>
@@ -48,6 +48,14 @@ export default function PublicidadeEAfiliadosPage() {
           <Link href="/categoria/cripto-indica">Cripto Indica</Link>, o link para comprar o produto
           na Amazon é um link de afiliado (tag <code>{site.amazonTag}</code>). Como Associado da
           Amazon, o {site.name} ganha com compras qualificadas.
+        </li>
+        <li>
+          <strong>Programa de Afiliados da Shopee</strong>: alguns produtos da{" "}
+          <Link href="/loja">Loja do Bitcoin</Link> e dos reviews da seção{" "}
+          <Link href="/categoria/cripto-indica">Cripto Indica</Link> são vendidos na Shopee Brasil.
+          Nesses casos, o link de compra é um link curto de afiliado da Shopee (começa com{" "}
+          <code>s.shopee.com.br</code>) e o {site.name} pode receber uma comissão por compras
+          qualificadas.
         </li>
       </ul>
       <p>
@@ -79,7 +87,18 @@ export default function PublicidadeEAfiliadosPage() {
         </li>
       </ul>
 
-      <h2 id="faixa-de-preco">3. A faixa de preço não é o preço da Amazon</h2>
+      <h2 id="afiliados-shopee">Como funciona o link de afiliado da Shopee</h2>
+      <p>
+        Nos produtos vendidos na Shopee, o botão diz &quot;Comprar agora na Shopee&quot; e leva
+        para o anúncio do produto na Shopee Brasil. A Shopee é um marketplace: quem vende é um
+        vendedor independente (o nome dele aparece na página do produto), e a compra, o pagamento, a
+        entrega, a troca, a devolução e a garantia seguem as regras da Shopee e do vendedor. Se
+        você comprar depois de clicar, a Shopee pode pagar uma comissão ao site, sem custo extra
+        para você. Carteira de hardware nunca é indicada em anúncio de marketplace: só entra na loja
+        pela Amazon, de vendedor oficial ou autorizado.
+      </p>
+
+      <h2 id="faixa-de-preco">3. A faixa de preço não é o preço do dia</h2>
       <p>
         Na loja e nos reviews aparece uma faixa de preço, por exemplo &quot;costuma variar de R$ X
         a R$ Y&quot;. Essa faixa é uma pesquisa de mercado feita na internet como um todo, em
@@ -89,7 +108,8 @@ export default function PublicidadeEAfiliadosPage() {
       <p>
         Ela não é o preço da Amazon e pode estar desatualizada. Preço muda todo dia, por vendedor
         e por promoção. O valor que vale é o que aparece na Amazon depois de clicar no botão de
-        compra.
+        compra. Nos produtos da Shopee, a faixa é a do próprio anúncio na data indicada na
+        página, e preço, cupom e frete mudam de um dia para o outro.
       </p>
 
       <h2 id="afiliado-nao-muda-a-nota">4. Afiliado não muda nota nem opinião</h2>
@@ -114,8 +134,8 @@ export default function PublicidadeEAfiliadosPage() {
           transparência dizendo que os links são de afiliado e podem gerar comissão.
         </li>
         <li>
-          O botão de compra tem sempre o mesmo texto, &quot;Comprar agora na Amazon&quot;, para
-          ficar claro para onde ele leva.
+          O botão de compra tem sempre o mesmo texto, &quot;Comprar agora na Amazon&quot; ou
+          &quot;Comprar agora na Shopee&quot;, para ficar claro para onde ele leva.
         </li>
         <li>
           Os links levam o atributo <code>rel=&quot;sponsored&quot;</code>, que informa aos
@@ -193,6 +213,10 @@ export default function PublicidadeEAfiliadosPage() {
             Contrato operacional do Programa de Associados da Amazon
           </ExternalLink>
           , que exige a identificação do site como Associado.
+        </li>
+        <li>
+          Termos do Programa de Afiliados da Shopee, que exigem a identificação das parcerias
+          comerciais.
         </li>
         <li>
           <ExternalLink href="https://developers.google.com/search/docs/essentials/spam-policies">

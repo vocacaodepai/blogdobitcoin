@@ -1,7 +1,7 @@
 # Rotina de Cripto Indica e Loja do Bitcoin (1 vez por dia)
 
 Objetivo: a Loja do Bitcoin crescendo todo dia com produtos reais do mundo cripto
-vendidos na Amazon Brasil, cada um com review longa, e artigos de Cripto Indica que
+vendidos na Amazon Brasil (os da Shopee têm rotina própria: `docs/rotinas/shopee.md`), cada um com review longa, e artigos de Cripto Indica que
 levam o leitor até eles. Mesmo conceito da loja "A mãe quer desconto!" do Vocação de Mãe e
 da AI Indica do Portal da AI. Leia antes `docs/rotinas/comum.md`, `CLAUDE.md` (seção Loja
 do Bitcoin e Cripto Indica) e `docs/padrao-editorial.md` (seções 8 e 9).

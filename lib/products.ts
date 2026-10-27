@@ -4,11 +4,11 @@
  */
 import { products as allProducts } from "@/content/products";
 import { amazonUrl } from "@/lib/articles";
-import type { Product, ProductCategory } from "@/lib/types";
-import { productCategories } from "@/lib/types";
+import type { Product, ProductCategory, ProductStore } from "@/lib/types";
+import { productCategories, productStores } from "@/lib/types";
 
-export type { Product, ProductCategory } from "@/lib/types";
-export { productCategories } from "@/lib/types";
+export type { Product, ProductCategory, ProductStore } from "@/lib/types";
+export { productCategories, productStores } from "@/lib/types";
 
 export const products: Product[] = allProducts;
 
@@ -57,8 +57,27 @@ export function getRelatedProducts(current: Product, limit = 4): Product[] {
   return [...others.filter((p) => p.category === current.category), ...others.filter((p) => p.category !== current.category)].slice(0, limit);
 }
 
-export function productAmazonUrl(p: Product): string {
-  return amazonUrl(p.asin);
+/** Loja do produto (Amazon quando o campo store não existe). */
+export function productStore(p: Product): ProductStore {
+  return p.store ?? "amazon";
+}
+
+export function productStoreInfo(p: Product) {
+  const slug = productStore(p);
+  return productStores.find((s) => s.slug === slug) ?? productStores[0];
+}
+
+/** Link de compra com a tag ou o link curto de afiliado da loja do produto. */
+export function productBuyUrl(p: Product): string {
+  if (productStore(p) === "shopee" && p.shopee) return p.shopee.affiliateUrl;
+  return amazonUrl(p.asin ?? "");
+}
+
+/** Lojas de um conjunto de produtos para usar depois de "da": "Amazon", "Shopee" ou "Amazon e da Shopee". */
+export function storesLabel(stores: Iterable<ProductStore>): string {
+  const set = new Set(stores);
+  const labels = productStores.filter((s) => set.has(s.slug)).map((s) => s.label);
+  return labels.length === 0 ? productStores[0].label : labels.join(" e da ");
 }
 
 const brl0 = (n: number) => `R$ ${Math.round(n).toLocaleString("pt-BR")}`;
@@ -68,6 +87,32 @@ export function priceRangeText(p: Product): string | null {
   if (p.priceMin == null || p.priceMax == null) return null;
   if (p.priceMin === p.priceMax) return `cerca de ${brl0(p.priceMin)}`;
   return `${brl0(p.priceMin)} a ${brl0(p.priceMax)}`;
+}
+
+/** Nota curta sob a faixa de preço nos cards. */
+export function priceCardNote(p: Product): string {
+  return productStore(p) === "shopee" ? "faixa do anúncio na Shopee" : "faixa de mercado em lojas online";
+}
+
+/** Texto quando não há faixa de preço. */
+export function priceMissingText(p: Product): string {
+  return `Veja o preço do dia na ${productStoreInfo(p).label}`;
+}
+
+/** Explicação da faixa de preço na página do produto (checked = "out/2026"). */
+export function priceExplanation(p: Product, checked: string | null): string {
+  const when = checked ? ` (${checked})` : "";
+  return productStore(p) === "shopee"
+    ? `Faixa do anúncio na Shopee${when}. Preço, cupom e frete mudam; o valor do dia aparece no botão.`
+    : `Preço consultado em várias lojas online${when}, não é o preço da Amazon. O valor do dia aparece no botão.`;
+}
+
+/** Parágrafo "Variação de preço" da review (range = "R$ 30 a R$ 45", ou null sem faixa). */
+export function priceReviewText(p: Product, range: string | null, checked: string | null): string {
+  if (!range) return "O preço varia entre vendedores e épocas do ano.";
+  return productStore(p) === "shopee"
+    ? `A faixa de ${range} é a do anúncio na Shopee${checked ? ` em ${checked}` : ""}. Preço, cupom e frete mudam de um dia para o outro e entre vendedores do mesmo produto.`
+    : `A faixa de mercado de ${range} foi consultada na internet como um todo, em várias lojas online, e não é o preço da Amazon${checked ? ` (pesquisa de ${checked})` : ""}.`;
 }
 
 /** Data da pesquisa de preço em "out/2026". */

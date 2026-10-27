@@ -197,7 +197,7 @@ export default function AutorPage() {
                     Cripto Indica
                   </Link>
                   , a análise parte da ficha técnica, do manual e das opiniões reais de compradores. Não há
-                  teste físico, e o texto deixa isso claro. Os links para a Amazon são de afiliado, como
+                  teste físico, e o texto deixa isso claro. Os links para a Amazon e para a Shopee são de afiliado, como
                   explicado em{" "}
                   <Link href="/publicidade-e-afiliados" className="text-accent hover:underline">
                     publicidade e afiliados

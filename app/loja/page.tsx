@@ -12,7 +12,7 @@ import { absoluteUrl, alternatesFor, breadcrumbJsonLd, OG_IMAGE } from "@/lib/se
 
 const TITLE = "Loja do Bitcoin: carteiras, livros e camisetas";
 const DESCRIPTION =
-  "Loja do Bitcoin: carteiras de hardware, backup da seed, livros sobre Bitcoin, camisetas e presentes cripto, com review honesta e link para comprar na Amazon.";
+  "Loja do Bitcoin: carteiras de hardware, backup da seed, livros sobre Bitcoin, camisetas e presentes cripto, com review honesta e link para comprar na Amazon ou na Shopee.";
 
 export const metadata: Metadata = {
   title: { absolute: `${TITLE} | ${site.name}` },
@@ -46,7 +46,7 @@ export default function LojaPage() {
           <PageHeader
             label="Loja do Bitcoin"
             title="O hodler quer desconto!"
-            description="Produtos do mundo cripto que valem o seu dinheiro: carteiras de hardware para guardar seus bitcoins com segurança, livros, camisetas e presentes. Cada um tem review honesta com nota de 0 a 10 e o link direto para comprar na Amazon."
+            description="Produtos do mundo cripto que valem o seu dinheiro: carteiras de hardware para guardar seus bitcoins com segurança, livros, camisetas e presentes. Cada um tem review honesta com nota de 0 a 10 e o link direto para comprar na Amazon ou na Shopee."
             crumbs={[{ name: "Início", href: "/" }, { name: "Loja do Bitcoin" }]}
           >
             <nav aria-label="Seções da loja" className="mt-6">
@@ -71,11 +71,12 @@ export default function LojaPage() {
         <div className="rounded-xl border border-border border-l-4 border-l-warn bg-surface p-4 text-sm leading-relaxed text-muted sm:p-5">
           <span className="label-mono block text-warn">Como funciona a loja</span>
           <p className="mt-1.5">
-            Não vendemos nada diretamente: os botões levam à Amazon Brasil, e a compra, a entrega e a garantia são com a Amazon e o
-            vendedor. Os links são de afiliado, então podemos receber uma comissão sem custo extra para você. A faixa de preço de cada
-            produto é pesquisada em várias lojas online (não é o preço da Amazon), e o valor do dia aparece no botão. Carteira de
-            hardware: compre só de vendedor oficial ou autorizado e nunca use um aparelho que já venha com as palavras de recuperação
-            anotadas.
+            Não vendemos nada diretamente: os botões levam à Amazon Brasil ou à Shopee Brasil (o card mostra a loja), e a compra, a
+            entrega e a garantia são com a loja e o vendedor. Os links são de afiliado, então podemos receber uma comissão sem custo
+            extra para você. Nos produtos da Amazon, a faixa de preço é pesquisada em várias lojas online (não é o preço da Amazon);
+            nos da Shopee, é a faixa do anúncio na data indicada, e preço, cupom e frete mudam. Em ambos, o valor do dia aparece no
+            botão. Carteira de hardware: compre só de vendedor oficial ou autorizado e nunca use um aparelho que já venha com as
+            palavras de recuperação anotadas.
           </p>
         </div>
       </Container>

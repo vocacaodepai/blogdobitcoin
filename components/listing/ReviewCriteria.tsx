@@ -5,7 +5,7 @@ const CRITERIA = [
   { label: "Facilidade", text: "Dá para usar sem ser técnico? O app e o manual estão em português?" },
   { label: "Recursos", text: "O que o produto faz de verdade, comparado ao que promete na página de vendas." },
   { label: "Custo-benefício", text: "Faixa de preço em reais pesquisada em várias lojas, comparada ao que entrega." },
-  { label: "Reputação", text: "O que compradores reais dizem fora da Amazon e como o fabricante responde a problemas." },
+  { label: "Reputação", text: "O que compradores reais dizem fora da loja que vende o produto e como o fabricante responde a problemas." },
 ];
 
 /** Bloco "Como avaliamos": critérios públicos das notas de review. */

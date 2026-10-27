@@ -29,11 +29,15 @@ termine em silêncio.
   (troque por arquivo do Wayback Machine, nunca apague a notícia).
 - Produtos: ASIN que saiu de linha na Amazon (amz.py mostra indisponível há mais de 30 dias):
   tire `featured` e anote no informe; não apague a página.
+- Produtos da Shopee: `node scripts/shopee.mjs check` (credencial e API ok; se falhar, anote no
+  informe como "Shopee fora do ar ou credencial ausente") e, para cada produto com
+  `store: "shopee"`, `node scripts/shopee.mjs item <itemId>`: anúncio que saiu da API (código 3)
+  há mais de 30 dias, tire `featured` e anote no informe; não apague a página.
 
 ## 3. Segurança
 
 - `npm audit --omit=dev` (só correções sem versão maior), nenhum segredo no repositório
-  (`git grep -nE "(sk-|AKIA|ghp_|AIza)"`), cabeçalhos de segurança do `next.config.ts`
+  (`git grep -nE "(sk-|AKIA|ghp_|AIza|SHOPEE_(SECRET|APP_ID)\s*[=:]\s*[A-Za-z0-9]{8,})"`), cabeçalhos de segurança do `next.config.ts`
   intactos, CSP com as APIs de mercado em `connect-src`.
 - Nunca force atualização de versão maior de dependência nem silencie regra para passar.
 

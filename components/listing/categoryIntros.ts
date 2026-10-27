@@ -17,5 +17,5 @@ export const categoryIntros: Record<Category, string> = {
   historia:
     "Memórias do Bitcoin conta a história do Bitcoin como ela aconteceu: o whitepaper de Satoshi Nakamoto, o bloco gênese, a pizza comprada por 10 mil bitcoins, o colapso da Mt. Gox, o HD jogado no lixo e outros episódios que explicam por que o Bitcoin é o que é hoje.",
   "cripto-indica":
-    "Cripto Indica reúne reviews e comparativos de produtos do mundo cripto: carteiras de hardware, placas de aço para a seed, livros sobre Bitcoin, camisetas e acessórios. Cada indicação tem nota de 0 a 10 por critério, prós e contras reais e link direto para comprar na Amazon. Nenhum produto paga para aparecer aqui.",
+    "Cripto Indica reúne reviews e comparativos de produtos do mundo cripto: carteiras de hardware, placas de aço para a seed, livros sobre Bitcoin, camisetas e acessórios. Cada indicação tem nota de 0 a 10 por critério, prós e contras reais e link direto para comprar na Amazon ou na Shopee. Nenhum produto paga para aparecer aqui.",
 };

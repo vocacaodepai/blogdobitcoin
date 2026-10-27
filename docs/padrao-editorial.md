@@ -158,6 +158,26 @@ Tamanho: 1.100 a 1.700 palavras de texto real (mínimo 900, o script barra).
 - O aviso de transparência (afiliado e independência) aparece sozinho na página de todo
   artigo de Cripto Indica, review ou comparativo. Não escreva esse aviso no `content`.
 
+### Produtos da Shopee (afiliado Shopee)
+
+Valem as regras acima (nunca inventar, nunca "testamos", preço nunca no título, excerpt ou
+botão, review própria na loja, aviso automático de transparência), com estas trocas:
+
+- Produto real vendido na Shopee Brasil, achado e conferido com `scripts/shopee.mjs`
+  (`itemId`, `shopId`, vendedor, nota, vendas). Link de afiliado: o link curto
+  `https://s.shopee.com.br/...` do produto, com `rel="sponsored noopener noreferrer"`.
+- Botão: `<div class="buy-btn"><a href="..." rel="sponsored noopener noreferrer" target="_blank">Comprar agora na Shopee ↗</a></div>`,
+  mínimo 5 por artigo, uma loja por artigo.
+- Marketplace: diga de quem se compra (vendedor independente), peça para conferir reputação,
+  avaliações com foto e política de devolução, e para pagar só dentro da plataforma. Carteira de
+  hardware nunca pela Shopee. Nada que prometa lucro. Nada de produto genérico sem informação
+  aberta fora do anúncio.
+- Preço: faixa do anúncio na data da pesquisa (a página explica que preço, cupom e frete
+  mudam), nunca valor escrito no texto. Nota e vendas do anúncio só com a data da consulta e
+  nunca como prova de qualidade.
+- A comissão nunca entra na escolha do produto, na nota ou no texto. Detalhes e filtro de
+  produto em `docs/rotinas/shopee.md`.
+
 ## 9. Imagens
 
 - Capa por `imageQuery` (cascata: Wikimedia Commons, depois Pexels/Pixabay, depois capa
@@ -172,4 +192,5 @@ Tamanho: 1.100 a 1.700 palavras de texto real (mínimo 900, o script barra).
   conferida, `<figcaption>Foto: autor / Wikimedia Commons (licença)</figcaption>`),
   Pexels, Pixabay ou arquivo próprio em `/images/...`.
 - Produto: foto oficial (galeria oficial do anúncio ou site do fabricante), salva em
-  `public/images/products/`. Nunca imagem gerada por IA para produto.
+  `public/images/products/`. Nunca imagem gerada por IA para produto. Na Shopee, a foto do
+  anúncio baixada por `scripts/shopee.mjs image`, aberta e conferida (sem banner, colagem ou selo).

@@ -26,6 +26,9 @@ const NEWS_TOPICS = new Set(["bitcoin", "mercado", "altcoins", "regulacao", "seg
 const PRODUCT_CATEGORIES = new Set(["hardware-wallets", "backup-seed", "livros", "vestuario", "colecionaveis"]);
 const PRODUCTS_DIR = resolve(ROOT, "content/products");
 const AMAZON_TAG = "blogdobitcoin-20";
+const PRODUCT_STORES = new Set(["amazon", "shopee"]);
+// Link curto de afiliado da Shopee (gerado por scripts/shopee.mjs link). Link comum shopee.com.br não paga comissão.
+const SHOPEE_SHORT_LINK_RE = /^https:\/\/s\.shopee\.com\.br\/[A-Za-z0-9_-]+$/;
 const MIN_WORDS_STRICT = 900;
 const MIN_WORDS_WARN = 600;
 
@@ -196,7 +199,17 @@ function extractProducts() {
       fieldSlug: readField(src, "slug"),
       name: readField(src, "name"),
       category: readField(src, "category"),
+      store: readField(src, "store"),
       asin: readField(src, "asin"),
+      shopee: (() => {
+        const m = /\n\s*shopee:\s*\{([^}]*)\}/.exec(src);
+        if (!m) return null;
+        const num = (k) => Number((new RegExp(`${k}:\\s*(\\d+)`).exec(m[1]) ?? [])[1] ?? 0);
+        const str = (k) => (new RegExp(`${k}:\\s*"([^"]*)"`).exec(m[1]) ?? [])[1] ?? "";
+        return { itemId: num("itemId"), shopId: num("shopId"), affiliateUrl: str("affiliateUrl"), sellerName: str("sellerName") };
+      })(),
+      priceMin: Number((/\n\s*priceMin:\s*(\d+)/.exec(src) ?? [])[1] ?? 0),
+      priceMax: Number((/\n\s*priceMax:\s*(\d+)/.exec(src) ?? [])[1] ?? 0),
       date: readField(src, "date"),
       imageUrl: (/\n\s*image:\s*\{[^}]*?url:\s*"([^"]+)"/.exec(src) ?? [])[1] ?? "",
       relatedArticles: (() => {
@@ -216,7 +229,25 @@ function checkProducts(products, articleSlugs) {
     if (p.fieldSlug !== p.slug) errors.push(`${where}: nome do arquivo difere do slug "${p.fieldSlug}"`);
     if (!p.name) errors.push(`${where}: sem name`);
     if (!PRODUCT_CATEGORIES.has(p.category)) errors.push(`${where}: category inválida "${p.category}"`);
-    if (!/^[A-Z0-9]{10}$/.test(p.asin)) errors.push(`${where}: asin inválido "${p.asin}" (10 caracteres, A-Z e 0-9)`);
+    const store = p.store || "amazon";
+    if (!PRODUCT_STORES.has(store)) errors.push(`${where}: store inválida "${p.store}" (amazon ou shopee)`);
+    else if (store === "amazon") {
+      if (!/^[A-Z0-9]{10}$/.test(p.asin)) errors.push(`${where}: asin inválido "${p.asin}" (10 caracteres, A-Z e 0-9)`);
+      if (p.shopee) errors.push(`${where}: produto da Amazon não pode ter o bloco shopee`);
+    } else {
+      if (p.asin) errors.push(`${where}: produto da Shopee não tem asin`);
+      const sh = p.shopee;
+      if (!sh) errors.push(`${where}: produto da Shopee precisa do bloco shopee { itemId, shopId, affiliateUrl, sellerName }`);
+      else {
+        if (!(sh.itemId > 0)) errors.push(`${where}: shopee.itemId inválido`);
+        if (!(sh.shopId > 0)) errors.push(`${where}: shopee.shopId inválido`);
+        if (!SHOPEE_SHORT_LINK_RE.test(sh.affiliateUrl)) errors.push(`${where}: shopee.affiliateUrl precisa ser o link curto https://s.shopee.com.br/... (use scripts/shopee.mjs link)`);
+        if (!sh.sellerName) errors.push(`${where}: shopee.sellerName vazio`);
+      }
+      // Carteira de hardware vinda de vendedor de marketplace é o golpe clássico (aparelho violado ou com seed anotada).
+      if (p.category === "hardware-wallets") errors.push(`${where}: carteira de hardware não entra na loja pela Shopee (só Amazon, de vendedor oficial)`);
+      if (p.priceMin && p.priceMax && p.priceMax > 3 * p.priceMin) errors.push(`${where}: faixa de preço com max > 3 x min (provável anúncio com variações de outro produto)`);
+    }
     if (!dateRe.test(p.date)) errors.push(`${where}: date inválida "${p.date}"`);
     else if (p.date > TODAY) errors.push(`${where}: data no futuro`);
     if (!/^(\/images\/|https:\/\/)/.test(p.imageUrl)) errors.push(`${where}: image.url precisa ser /images/... ou https`);
@@ -266,7 +297,26 @@ function internalRouteProblem(href) {
   return "rota inexistente";
 }
 
+/** Credencial da Shopee nunca vai para o repositório: só variável de ambiente ou ~/.config (fora do repo). */
+function checkSecrets() {
+  const secretRe = /SHOPEE_(?:SECRET|APP_ID)\s*[=:]\s*["']?[A-Za-z0-9]{8,}/;
+  const skip = new Set(["node_modules", ".next", ".git", "out"]);
+  const exts = /\.(ts|tsx|mjs|js|json|md|py|example|yml|yaml)$/;
+  const walk = (dir) => {
+    for (const e of readdirSync(dir, { withFileTypes: true })) {
+      if (skip.has(e.name)) continue;
+      const full = resolve(dir, e.name);
+      if (e.isDirectory()) walk(full);
+      else if (exts.test(e.name) || e.name === ".env.example") {
+        if (secretRe.test(readFileSync(full, "utf8"))) errors.push(`segredo: credencial da Shopee escrita em ${full.slice(ROOT.length + 1)} (use só variável de ambiente)`);
+      }
+    }
+  };
+  walk(ROOT);
+}
+
 function check() {
+  checkSecrets();
   const articles = extractArticles();
   const news = extractNews();
   const products = extractProducts();
@@ -395,6 +445,34 @@ function check() {
     while ((am = amazonRe.exec(it.content))) {
       if (!am[1].includes(`tag=${AMAZON_TAG}`)) errors.push(`${where}: link da Amazon sem tag=${AMAZON_TAG} -> ${am[1]}`);
       if (!/\brel\s*=\s*["'][^"']*sponsored/i.test(am[0])) errors.push(`${where}: link da Amazon sem rel="sponsored ..."`);
+    }
+
+    // Shopee: só o link curto de afiliado de um produto da Shopee listado em `products` do próprio artigo
+    // (link comum não paga comissão; link de outro produto confunde o leitor), sempre com rel sponsored.
+    const citedShopee = new Set(
+      products.filter((p) => it.kind === "artigos" && (p.store || "amazon") === "shopee" && p.shopee && it.products.includes(p.slug)).map((p) => p.shopee.affiliateUrl)
+    );
+    for (const m of (it.raw ?? "").matchAll(/https:\/\/(?:[a-z0-9-]+\.)?shopee\.com\.br[^\s"'`<>)]*/gi)) {
+      if (!SHOPEE_SHORT_LINK_RE.test(m[0])) errors.push(`${where}: link da Shopee que não é o link curto de afiliado -> ${m[0]}`);
+      else if (!citedShopee.has(m[0])) errors.push(`${where}: link da Shopee que não é de um produto da Shopee listado em products -> ${m[0]}`);
+    }
+    const shopeeAnchorRe = /<a\b[^>]*href\s*=\s*["']https:\/\/s\.shopee\.com\.br[^"']*["'][^>]*>/gi;
+    let sa;
+    while ((sa = shopeeAnchorRe.exec(it.content))) {
+      if (!/\brel\s*=\s*["'][^"']*sponsored/i.test(sa[0])) errors.push(`${where}: link da Shopee sem rel="sponsored ..."`);
+    }
+    // Botão de compra: texto sempre igual por loja.
+    const buyRe = /<div class="buy-btn">\s*<a\b([^>]*)>([\s\S]*?)<\/a>/gi;
+    let bb;
+    while ((bb = buyRe.exec(it.content))) {
+      const href = (/href\s*=\s*["']([^"']*)["']/.exec(bb[1]) ?? [])[1] ?? "";
+      const text = bb[2].replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim();
+      const expected = /shopee\.com\.br/.test(href) ? "Comprar agora na Shopee ↗" : /amazon\.com\.br/.test(href) ? "Comprar agora na Amazon ↗" : null;
+      if (expected && text !== expected) errors.push(`${where}: botão de compra com texto "${text}" (use exatamente "${expected}")`);
+    }
+    if (it.kind === "artigos") {
+      const stores = new Set(it.products.map((s) => products.find((p) => p.slug === s)).filter(Boolean).map((p) => p.store || "amazon"));
+      if (stores.size > 1) warnings.push(`${where}: artigo mistura produtos da Amazon e da Shopee (prefira uma loja por artigo)`);
     }
 
     // Links externos precisam de rel seguro (o renderizador também força, mas o conteúdo deve vir certo).

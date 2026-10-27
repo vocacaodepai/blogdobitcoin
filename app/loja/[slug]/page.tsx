@@ -9,7 +9,17 @@ import { ProductBuyButton } from "@/components/store/ProductBuyButton";
 import { ProductReview } from "@/components/store/ProductReview";
 import { StorePromo } from "@/components/store/StorePromo";
 import { getArticleBySlug, site, type Article } from "@/lib/articles";
-import { getProductBySlug, getProductCategory, getRelatedProducts, priceCheckedLabel, priceRangeText, products } from "@/lib/products";
+import {
+  getProductBySlug,
+  getProductCategory,
+  getRelatedProducts,
+  priceCheckedLabel,
+  priceExplanation,
+  priceMissingText,
+  priceRangeText,
+  productStore,
+  products,
+} from "@/lib/products";
 import { absoluteUrl, alternatesFor, breadcrumbJsonLd, metaDescription } from "@/lib/seo";
 
 type Params = Promise<{ slug: string }>;
@@ -64,7 +74,7 @@ export default async function ProductPage({ params }: { params: Params }) {
     description: product.shortDescription,
     category: cat?.label,
     url: absoluteUrl(path),
-    // Faixa de mercado pesquisada em várias lojas (nunca o preço exato da Amazon), só quando existe.
+    // Faixa de preço arredondada (nunca o preço exato do dia), só quando existe.
     ...(product.priceMin && product.priceMax
       ? { offers: { "@type": "AggregateOffer", lowPrice: product.priceMin, highPrice: product.priceMax, priceCurrency: "BRL" } }
       : {}),
@@ -129,7 +139,10 @@ export default async function ProductPage({ params }: { params: Params }) {
               </Link>
             )}
             <h1 className="mt-2 font-display text-3xl font-bold leading-tight tracking-tight sm:text-4xl">{product.name}</h1>
-            <p className="mt-1 text-sm text-muted">Marca: {product.brand}</p>
+            <p className="mt-1 text-sm text-muted">
+              Marca: {product.brand}
+              {product.shopee ? ` · Vendido por ${product.shopee.sellerName} na Shopee` : ""}
+            </p>
             {product.badge && (
               <span className="mt-3 inline-block rounded-full bg-brand px-3 py-1 text-xs font-bold text-brand-foreground">{product.badge}</span>
             )}
@@ -144,11 +157,9 @@ export default async function ProductPage({ params }: { params: Params }) {
             )}
             <div className="mt-5 rounded-xl border border-border bg-surface p-4">
               <p className="label-mono text-muted">Faixa de mercado</p>
-              <p className="tabular mt-1 font-display text-2xl font-bold">{range ?? "Veja o preço do dia na Amazon"}</p>
+              <p className="tabular mt-1 font-display text-2xl font-bold">{range ?? priceMissingText(product)}</p>
               <p className="mt-1 text-xs leading-relaxed text-muted">
-                {range
-                  ? `Preço consultado em várias lojas online${checked ? ` (${checked})` : ""}, não é o preço da Amazon. O valor do dia aparece no botão.`
-                  : "O preço muda entre vendedores e épocas; o valor do dia aparece no botão."}
+                {range ? priceExplanation(product, checked) : "O preço muda entre vendedores e épocas; o valor do dia aparece no botão."}
               </p>
             </div>
             <div className="mt-5">
@@ -164,6 +175,12 @@ export default async function ProductPage({ params }: { params: Params }) {
                 </li>
               ))}
             </ul>
+            {productStore(product) === "shopee" && (
+              <p className="mt-5 rounded-lg border border-border border-l-4 border-l-warn bg-surface px-4 py-3 text-xs leading-relaxed text-muted">
+                Marketplace: a Shopee reúne vendedores independentes. Antes de comprar, confira a reputação do vendedor, as avaliações
+                com foto e a política de devolução do anúncio, e desconfie de preço muito abaixo do normal.
+              </p>
+            )}
             {product.category === "hardware-wallets" && (
               <p className="mt-5 rounded-lg border border-border border-l-4 border-l-warn bg-surface px-4 py-3 text-xs leading-relaxed text-muted">
                 Segurança: compre só de vendedor oficial ou autorizado. Se a carteira chegar com as palavras de recuperação já
@@ -190,7 +207,7 @@ export default async function ProductPage({ params }: { params: Params }) {
       )}
 
       <Container className="mt-14 pb-16">
-        <StorePromo products={related} title="Outros produtos da Loja do Bitcoin" subtitle="Mais itens com review honesta e link direto para a Amazon." />
+        <StorePromo products={related} title="Outros produtos da Loja do Bitcoin" subtitle="Mais itens com review honesta e link direto para a loja parceira." />
       </Container>
     </>
   );

@@ -141,13 +141,13 @@ export default function TermosDeUsoPage() {
       <p>
         A <Link href="/loja">Loja do Bitcoin</Link> e os reviews da{" "}
         <Link href="/categoria/cripto-indica">Cripto Indica</Link> mostram produtos vendidos na
-        Amazon. O {site.name} não vende, não estoca e não entrega nada. A compra é feita direto com a
-        Amazon ou com o vendedor que anuncia na plataforma dela, e preço, disponibilidade, frete, prazo de entrega,
+        Amazon e na Shopee. O {site.name} não vende, não estoca e não entrega nada. A compra é feita
+        direto com a Amazon ou com a Shopee ou com o vendedor que anuncia na plataforma delas, e preço, disponibilidade, frete, prazo de entrega,
         garantia, troca e devolução seguem as regras de quem vende. A nota de 0 a 10 e a review são
         opinião editorial baseada em ficha técnica, manual e avaliações de compradores.
       </p>
       <p>
-        Como participante do Programa de Associados da Amazon, o site pode receber uma comissão
+        Como participante do Programa de Associados da Amazon e do Programa de Afiliados da Shopee, o site pode receber uma comissão
         quando você compra por um desses links, sem custo adicional para você. O site também pode
         exibir anúncios do Google AdSense, identificados como publicidade, e os anunciantes respondem
         pelos próprios produtos, ofertas e páginas de destino. As regras completas estão em{" "}
@@ -176,7 +176,7 @@ export default function TermosDeUsoPage() {
         <li>atraso, erro ou indisponibilidade de cotações e de dados de fontes externas;</li>
         <li>resultados de simulações e calculadoras;</li>
         <li>indisponibilidade temporária do site;</li>
-        <li>conteúdo, produtos e serviços de sites de terceiros, inclusive corretoras e a Amazon.</li>
+        <li>conteúdo, produtos e serviços de sites de terceiros, inclusive corretoras, a Amazon e a Shopee.</li>
       </ul>
       <p>
         Nada nestes termos afasta direitos que o Código de Defesa do Consumidor ou outra lei garantam

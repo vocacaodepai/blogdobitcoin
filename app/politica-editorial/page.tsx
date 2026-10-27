@@ -183,8 +183,9 @@ export default function PoliticaEditorialPage() {
 
       <h2 id="afiliados">10. Link de afiliado não muda a nota</h2>
       <p>
-        O site participa do Programa de Associados da Amazon. Quando alguém compra pelo link, o site
-        pode receber uma comissão, sem custo extra para quem compra. Essa comissão não entra no
+        O site participa do Programa de Associados da Amazon e do Programa de Afiliados da Shopee.
+        Quando alguém compra pelo link, o site pode receber uma comissão, sem custo extra para quem
+        compra. Essa comissão não entra no
         cálculo da nota, não decide qual produto vence um comparativo e não impede o texto de
         apontar defeitos. Um produto ruim continua com nota ruim, mesmo com link de afiliado. As
         regras completas estão em{" "}
@@ -196,8 +197,9 @@ export default function PoliticaEditorialPage() {
         Os reviews não mostram preço exato, porque o preço muda todo dia. Mostram uma faixa
         aproximada, pesquisada na internet como um todo: várias lojas, comparadores de preço e site
         do fabricante, não só a Amazon. Só entra na faixa o mesmo produto, da mesma marca e do mesmo
-        modelo. Sem confirmação, o texto diz que o preço varia e não arrisca número. O valor do dia
-        aparece ao clicar no botão de compra.
+        modelo. Sem confirmação, o texto diz que o preço varia e não arrisca número. Nos produtos
+        da Shopee, a faixa é a do anúncio na data indicada na página. O valor do dia aparece ao
+        clicar no botão de compra.
       </p>
 
       <h2 id="memorias">12. Memórias do Bitcoin e conteúdo histórico</h2>

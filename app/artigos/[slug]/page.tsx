@@ -24,7 +24,7 @@ import { TocDetails } from "@/components/article/TocDetails";
 import { faqJsonLd } from "@/components/article/schema";
 import { ProductCard } from "@/components/store/ProductCard";
 import { StorePromo } from "@/components/store/StorePromo";
-import { getProductBySlug, type Product } from "@/lib/products";
+import { getProductBySlug, productStore, productStoreInfo, storesLabel, type Product } from "@/lib/products";
 import { articles, getArticleBySlug, getCategory, getNextArticle, getRelatedArticles, site } from "@/lib/articles";
 import { author } from "@/lib/author";
 import { prepareArticleHtml, tocH2 } from "@/lib/html";
@@ -133,6 +133,7 @@ export default async function ArticlePage({ params }: { params: Params }) {
   const isProduct = article.category === "cripto-indica";
   const citedProducts = (article.products ?? []).map((s) => getProductBySlug(s)).filter((p): p is Product => Boolean(p));
   const reviewed = citedProducts[0];
+  const storeText = storesLabel(citedProducts.map((p) => productStore(p)));
   const isHistory = article.category === "historia";
   const showRiskNote = ["mercado", "iniciantes", "altcoins", "bitcoin"].includes(article.category);
   // Review só de produto da loja (Cripto Indica). Preço nunca exato: a oferta é a faixa de
@@ -279,14 +280,14 @@ export default async function ArticlePage({ params }: { params: Params }) {
           <div className="min-w-0">
             {isReview && review && (
               <div className="mb-8">
-                <ReviewVerdict review={review} />
-                <ReviewDisclosure affiliate={review.affiliate} />
+                <ReviewVerdict review={review} defaultCta={reviewed ? productStoreInfo(reviewed).ctaLabel : undefined} />
+                <ReviewDisclosure affiliate={review.affiliate} store={storeText} />
               </div>
             )}
 
             {isProduct && !(isReview && review) && (
               <div className="mb-8 max-w-[68ch]">
-                <ReviewDisclosure affiliate kind="comparativo" />
+                <ReviewDisclosure affiliate kind="comparativo" store={storeText} />
               </div>
             )}
 

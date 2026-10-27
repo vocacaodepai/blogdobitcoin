@@ -17,7 +17,7 @@ function scoreClass(score: number): string {
  * Veredito do review no topo do corpo: nota, barras por critério, prós e
  * contras, para quem é, preço e o botão para o site da ferramenta.
  */
-export function ReviewVerdict({ review }: { review: ReviewData }) {
+export function ReviewVerdict({ review, defaultCta }: { review: ReviewData; defaultCta?: string }) {
   const rel = review.affiliate ? "sponsored noopener noreferrer nofollow" : "nofollow noopener noreferrer";
   const scoreText = review.score.toFixed(1);
   return (
@@ -97,7 +97,7 @@ export function ReviewVerdict({ review }: { review: ReviewData }) {
             rel={rel}
             className="inline-flex items-center justify-center gap-2 rounded-lg bg-accent px-5 py-3 font-display text-sm font-semibold text-accent-foreground transition hover:opacity-90"
           >
-            {review.ctaLabel ?? "Comprar agora na Amazon"} <span aria-hidden="true">↗</span>
+            {review.ctaLabel ?? defaultCta ?? "Comprar agora na Amazon"} <span aria-hidden="true">↗</span>
           </a>
         </div>
       </div>
@@ -111,8 +111,16 @@ export function ReviewVerdict({ review }: { review: ReviewData }) {
   );
 }
 
-/** Aviso curto de transparência exibido em todo review. */
-export function ReviewDisclosure({ affiliate = false, kind = "review" }: { affiliate?: boolean; kind?: "review" | "comparativo" }) {
+/** Aviso curto de transparência exibido em todo review. `store` = "Amazon", "Shopee" ou "Amazon e Shopee". */
+export function ReviewDisclosure({
+  affiliate = false,
+  kind = "review",
+  store = "Amazon",
+}: {
+  affiliate?: boolean;
+  kind?: "review" | "comparativo";
+  store?: string;
+}) {
   return (
     <aside
       aria-label="Transparência"
@@ -122,7 +130,7 @@ export function ReviewDisclosure({ affiliate = false, kind = "review" }: { affil
       <p className="mt-1.5">
         Este {kind} é independente: nenhuma empresa leu, revisou ou aprovou o texto antes da publicação.{" "}
         {affiliate
-          ? "Alguns links desta página são de afiliado da Amazon. Se você comprar por eles, o Blog do Bitcoin pode receber uma comissão, sem custo extra para você, e isso não muda a nota nem a opinião. "
+          ? `Alguns links desta página são de afiliado da ${store}. Se você comprar por eles, o Blog do Bitcoin pode receber uma comissão, sem custo extra para você, e isso não muda a nota nem a opinião. `
           : "Não há links de afiliado nesta página. "}
         Saiba mais em{" "}
         <Link href="/publicidade-e-afiliados" className="font-medium text-accent hover:underline">

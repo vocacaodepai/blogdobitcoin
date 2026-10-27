@@ -255,6 +255,13 @@ export default function PoliticaPrivacidadePage() {
           Bitcoin recebe da Amazon apenas relatórios de vendas e cliques, sem identificar quem
           comprou.
         </li>
+        <li>
+          <strong>Shopee</strong> (Programa de Afiliados): também só entra em cena se você clicar num
+          link de produto da Shopee (links que começam com s.shopee.com.br). A partir daí você está
+          no site ou no app da Shopee, que segue a política de privacidade dela. O Blog do Bitcoin
+          recebe da Shopee apenas relatórios do desempenho dos links, como cliques e vendas, sem
+          identificar quem comprou.
+        </li>
       </ul>
       <p>
         O site não vende dados pessoais e não os compartilha com mais ninguém, salvo obrigação legal
@@ -263,7 +270,7 @@ export default function PoliticaPrivacidadePage() {
 
       <h2 id="transferencia-internacional">6. Transferência internacional</h2>
       <p>
-        Vercel, Google, Resend, Amazon, Wikimedia e boa parte das APIs de cotação operam servidores
+        Vercel, Google, Resend, Amazon, Shopee, Wikimedia e boa parte das APIs de cotação operam servidores
         fora do Brasil. Por isso os dados descritos acima podem ser processados fora do país. Com
         os fornecedores que prestam serviço ao site (hospedagem, envio de e-mail e Google), a
         transferência segue os termos e compromissos de proteção de dados que eles oferecem,
@@ -332,7 +339,7 @@ export default function PoliticaPrivacidadePage() {
       <h2 id="links-externos">11. Links para outros sites</h2>
       <p>
         Artigos e notícias linkam para sites de terceiros, como fontes de notícias, documentação de
-        projetos e a Amazon. Cada um tem a própria política de privacidade, e esta política não se
+        projetos, a Amazon e a Shopee. Cada um tem a própria política de privacidade, e esta política não se
         aplica a eles.
       </p>
 

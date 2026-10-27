@@ -198,7 +198,7 @@ export type ProductCategory = (typeof productCategories)[number]["slug"];
 export type ProductReviewSection = {
   title: string;
   paragraphs: string[];
-  /** Mostra o botão "Comprar agora na Amazon" depois desta seção. */
+  /** Mostra o botão de compra da loja do produto ("Comprar agora na Amazon" ou na Shopee) depois desta seção. */
   cta?: boolean;
 };
 
@@ -217,11 +217,31 @@ export type ProductReview = {
   priceText?: string;
   /** Ficha técnica resumida, uma linha por item ("Conexão: USB-C e Bluetooth"). */
   specs: string[];
-  /** Padrões que se repetem em opiniões fora da Amazon (sem números inventados). */
+  /** Padrões que se repetem em opiniões fora da loja de venda (sem números inventados). */
   othersSay?: string[];
   howWeEvaluated: string;
   opinion: string;
   faq: FaqItem[];
+};
+
+/** Lojas parceiras (afiliado) onde os produtos da Loja do Bitcoin são vendidos. */
+export const productStores = [
+  { slug: "amazon", label: "Amazon", ctaLabel: "Comprar agora na Amazon" },
+  { slug: "shopee", label: "Shopee", ctaLabel: "Comprar agora na Shopee" },
+] as const;
+
+export type ProductStore = (typeof productStores)[number]["slug"];
+
+/** Anúncio do produto na Shopee Brasil (programa de Afiliados da Shopee). */
+export type ShopeeListing = {
+  /** itemId do anúncio (API de afiliados). */
+  itemId: number;
+  /** shopId do vendedor (API de afiliados). */
+  shopId: number;
+  /** Link curto de afiliado (https://s.shopee.com.br/...), gerado por scripts/shopee.mjs link. */
+  affiliateUrl: string;
+  /** Nome do vendedor no anúncio, para a página citar de quem se compra. */
+  sellerName: string;
 };
 
 export type Product = {
@@ -229,15 +249,22 @@ export type Product = {
   name: string;
   brand: string;
   category: ProductCategory;
-  /** ASIN real da Amazon Brasil (10 caracteres). */
-  asin: string;
+  /** Loja onde o produto é vendido e de onde vem o link de afiliado. Padrão: "amazon". */
+  store?: ProductStore;
+  /** ASIN real da Amazon Brasil (10 caracteres). Obrigatório quando a loja é a Amazon. */
+  asin?: string;
+  /** Anúncio na Shopee. Obrigatório quando a loja é a Shopee. */
+  shopee?: ShopeeListing;
   /** Selo curto no card ("Mais vendido", "Escolha do editor"). */
   badge?: string;
   /** Uma ou duas frases para o card. */
   shortDescription: string;
   /** Foto oficial do produto (self-hosted em /public/images/products ou https). */
   image: { url: string; width: number; height: number; alt: string };
-  /** Faixa de mercado pesquisada na internet (não é o preço da Amazon). */
+  /**
+   * Faixa de preço arredondada. Amazon: pesquisada na internet, em pelo menos 2 lojas (não é o
+   * preço da Amazon). Shopee: a faixa do anúncio na data de priceCheckedAt (preço, cupom e frete mudam).
+   */
   priceMin?: number;
   priceMax?: number;
   /** AAAA-MM-DD da pesquisa de faixa de preço. */

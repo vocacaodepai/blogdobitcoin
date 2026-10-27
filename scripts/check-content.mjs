@@ -7,8 +7,9 @@
  * automáticas de escrita. Roda em `npm run lint`, `npm run check:content` e
  * antes de todo `npm run build` (prebuild). Sai com código 1 se houver erro.
  */
-import { readFileSync, readdirSync } from "node:fs";
-import { resolve } from "node:path";
+import { existsSync, readFileSync, readdirSync, statSync } from "node:fs";
+import { homedir } from "node:os";
+import { join, resolve } from "node:path";
 
 const ROOT = resolve(new URL("..", import.meta.url).pathname);
 const ARTICLES_DIR = resolve(ROOT, "content/articles");
@@ -29,6 +30,16 @@ const AMAZON_TAG = "blogdobitcoin-20";
 const PRODUCT_STORES = new Set(["amazon", "shopee"]);
 // Link curto de afiliado da Shopee (gerado por scripts/shopee.mjs link). Link comum shopee.com.br não paga comissão.
 const SHOPEE_SHORT_LINK_RE = /^https:\/\/s\.shopee\.com\.br\/[A-Za-z0-9_-]+$/;
+// Hosts conferidos com new URL (nunca por pedaço de texto): qualquer domínio da Shopee e das lojas da Amazon.
+const SHOPEE_HOST_RE = /(^|\.)(shopee\.[a-z.]+|shp\.ee|shope\.ee)$/i;
+const AMAZON_HOST_RE = /(^|\.)(amazon\.[a-z.]+|amzn\.[a-z]+|a\.co)$/i;
+const AMAZON_BR_HOST_RE = /^(www\.)?amazon\.com\.br$/i;
+const MIN_BUY_BUTTONS = 5;
+const MIN_PRODUCT_IMAGE_BYTES = 15 * 1024;
+const CTA = { amazon: "Comprar agora na Amazon ↗", shopee: "Comprar agora na Shopee ↗" };
+// Carteira de hardware vinda de vendedor de marketplace é o golpe clássico (aparelho violado ou com seed anotada).
+const HARDWARE_WALLET_RE =
+  /\b(ledger|trezor|coldcard|bitbox|keepkey|tangem|safepal|keystone|foundation passport|carteira (?:fria|de hardware|f[ií]sica)|hardware wallet|cold ?wallet)\b/i;
 const MIN_WORDS_STRICT = 900;
 const MIN_WORDS_WARN = 600;
 
@@ -96,6 +107,16 @@ function decodeEntities(text) {
     .replace(/&colon;/gi, ":")
     .replace(/&tab;|&newline;/gi, "")
     .replace(/&amp;/gi, "&");
+}
+
+/** Host (minúsculo) de uma URL http(s); "" se não for URL válida. */
+function hostOf(href) {
+  try {
+    const u = new URL(href);
+    return u.protocol === "https:" || u.protocol === "http:" ? u.hostname.toLowerCase() : "";
+  } catch {
+    return "";
+  }
 }
 
 function extractArticles() {
@@ -199,6 +220,8 @@ function extractProducts() {
       fieldSlug: readField(src, "slug"),
       name: readField(src, "name"),
       category: readField(src, "category"),
+      brand: readField(src, "brand"),
+      shortDescription: readField(src, "shortDescription"),
       store: readField(src, "store"),
       asin: readField(src, "asin"),
       shopee: (() => {
@@ -211,6 +234,7 @@ function extractProducts() {
       priceMin: Number((/\n\s*priceMin:\s*(\d+)/.exec(src) ?? [])[1] ?? 0),
       priceMax: Number((/\n\s*priceMax:\s*(\d+)/.exec(src) ?? [])[1] ?? 0),
       date: readField(src, "date"),
+      priceCheckedAt: readField(src, "priceCheckedAt"),
       imageUrl: (/\n\s*image:\s*\{[^}]*?url:\s*"([^"]+)"/.exec(src) ?? [])[1] ?? "",
       relatedArticles: (() => {
         const m = /\n\s*relatedArticles:\s*\[([^\]]*)\]/.exec(src);
@@ -224,6 +248,8 @@ function extractProducts() {
 
 function checkProducts(products, articleSlugs) {
   const dateRe = /^\d{4}-\d{2}-\d{2}$/;
+  const seenAsin = new Map();
+  const seenItem = new Map();
   for (const p of products) {
     const where = `produtos/${p.slug}`;
     if (p.fieldSlug !== p.slug) errors.push(`${where}: nome do arquivo difere do slug "${p.fieldSlug}"`);
@@ -233,6 +259,8 @@ function checkProducts(products, articleSlugs) {
     if (!PRODUCT_STORES.has(store)) errors.push(`${where}: store inválida "${p.store}" (amazon ou shopee)`);
     else if (store === "amazon") {
       if (!/^[A-Z0-9]{10}$/.test(p.asin)) errors.push(`${where}: asin inválido "${p.asin}" (10 caracteres, A-Z e 0-9)`);
+      else if (seenAsin.has(p.asin)) errors.push(`${where}: asin repetido (já em produtos/${seenAsin.get(p.asin)})`);
+      else seenAsin.set(p.asin, p.slug);
       if (p.shopee) errors.push(`${where}: produto da Amazon não pode ter o bloco shopee`);
     } else {
       if (p.asin) errors.push(`${where}: produto da Shopee não tem asin`);
@@ -240,17 +268,35 @@ function checkProducts(products, articleSlugs) {
       if (!sh) errors.push(`${where}: produto da Shopee precisa do bloco shopee { itemId, shopId, affiliateUrl, sellerName }`);
       else {
         if (!(sh.itemId > 0)) errors.push(`${where}: shopee.itemId inválido`);
+        else if (seenItem.has(sh.itemId)) errors.push(`${where}: shopee.itemId repetido (já em produtos/${seenItem.get(sh.itemId)})`);
+        else seenItem.set(sh.itemId, p.slug);
         if (!(sh.shopId > 0)) errors.push(`${where}: shopee.shopId inválido`);
         if (!SHOPEE_SHORT_LINK_RE.test(sh.affiliateUrl)) errors.push(`${where}: shopee.affiliateUrl precisa ser o link curto https://s.shopee.com.br/... (use scripts/shopee.mjs link)`);
         if (!sh.sellerName) errors.push(`${where}: shopee.sellerName vazio`);
       }
-      // Carteira de hardware vinda de vendedor de marketplace é o golpe clássico (aparelho violado ou com seed anotada).
+      // Marketplace de vendedores independentes: nunca carteira de hardware (nem pelo nome, marca ou descrição).
       if (p.category === "hardware-wallets") errors.push(`${where}: carteira de hardware não entra na loja pela Shopee (só Amazon, de vendedor oficial)`);
-      if (p.priceMin && p.priceMax && p.priceMax > 3 * p.priceMin) errors.push(`${where}: faixa de preço com max > 3 x min (provável anúncio com variações de outro produto)`);
+      for (const [label, text] of [["name", p.name], ["brand", p.brand], ["shortDescription", p.shortDescription]]) {
+        if (HARDWARE_WALLET_RE.test(text)) errors.push(`${where}: ${label} cita carteira de hardware (produto da Shopee não pode ser carteira de hardware)`);
+      }
+      // Foto do anúncio baixada por shopee.mjs image: arquivo próprio, nunca link remoto.
+      if (!/^\/images\/products\/[a-z0-9-]+\.(jpg|png|webp)$/.test(p.imageUrl)) {
+        errors.push(`${where}: produto da Shopee precisa da foto própria em /images/products/<slug>.jpg|png|webp (use scripts/shopee.mjs image)`);
+      }
+      if (!(p.priceMin > 0) || !(p.priceMax > 0) || p.priceMin > p.priceMax) errors.push(`${where}: produto da Shopee precisa de priceMin e priceMax (min <= max, em reais)`);
+      if (!dateRe.test(p.priceCheckedAt)) errors.push(`${where}: produto da Shopee precisa de priceCheckedAt (AAAA-MM-DD)`);
+      else if (p.priceCheckedAt > TODAY) errors.push(`${where}: priceCheckedAt no futuro`);
     }
+    // Faixa de preço: descartar se max > 3 x min (provável anúncio misturando variações ou outro item). Vale para as duas lojas.
+    if (p.priceMin && p.priceMax && p.priceMax > 3 * p.priceMin) errors.push(`${where}: faixa de preço com max > 3 x min`);
     if (!dateRe.test(p.date)) errors.push(`${where}: date inválida "${p.date}"`);
     else if (p.date > TODAY) errors.push(`${where}: data no futuro`);
     if (!/^(\/images\/|https:\/\/)/.test(p.imageUrl)) errors.push(`${where}: image.url precisa ser /images/... ou https`);
+    else if (p.imageUrl.startsWith("/images/")) {
+      const file = resolve(ROOT, "public", p.imageUrl.slice(1));
+      if (!existsSync(file)) errors.push(`${where}: foto ${p.imageUrl} não existe em public/`);
+      else if (statSync(file).size < MIN_PRODUCT_IMAGE_BYTES) errors.push(`${where}: foto ${p.imageUrl} com menos de 15 KB`);
+    }
     if (/—/.test(p.raw)) errors.push(`${where}: travessão (—) no texto`);
     if (/R\$\s?\d/.test(p.raw.replace(/priceMin|priceMax/g, ""))) {
       warnings.push(`${where}: valor em R$ escrito no texto do produto (use priceMin/priceMax, a página monta a faixa)`);
@@ -297,19 +343,48 @@ function internalRouteProblem(href) {
   return "rota inexistente";
 }
 
-/** Credencial da Shopee nunca vai para o repositório: só variável de ambiente ou ~/.config (fora do repo). */
+/** Valores da credencial da Shopee que existem neste computador (ambiente e ~/.config), só para procurar vazamento. */
+function localSecretValues() {
+  const values = new Set();
+  const add = (v) => {
+    if (v && v.length >= 8) values.add(v);
+  };
+  add(process.env.SHOPEE_APP_ID?.trim());
+  add(process.env.SHOPEE_SECRET?.trim());
+  const file = join(homedir(), ".config", "blogdobitcoin", "shopee.env");
+  if (existsSync(file)) {
+    for (const line of readFileSync(file, "utf8").split(/\r?\n/)) {
+      const m = /^\s*(?:export\s+)?SHOPEE_(?:APP_ID|SECRET)\s*=\s*(.*?)\s*$/.exec(line);
+      if (m) add(m[1].replace(/^(["'])(.*)\1$/, "$2").replace(/\s+#.*$/, ""));
+    }
+  }
+  return [...values];
+}
+
+/**
+ * Credencial da Shopee nunca vai para o repositório: só variável de ambiente ou ~/.config (fora do repo).
+ * Dois jeitos de pegar: o padrão `SHOPEE_SECRET=valor` e o valor real da credencial (quando ela existe aqui)
+ * em qualquer arquivo de texto, seja qual for a extensão. A mensagem nunca imprime o valor.
+ */
 function checkSecrets() {
   const secretRe = /SHOPEE_(?:SECRET|APP_ID)\s*[=:]\s*["']?[A-Za-z0-9]{8,}/;
-  const skip = new Set(["node_modules", ".next", ".git", "out"]);
-  const exts = /\.(ts|tsx|mjs|js|json|md|py|example|yml|yaml)$/;
+  const values = localSecretValues().map((v) => Buffer.from(v));
+  const skipDirs = new Set(["node_modules", ".next", ".git", "out"]);
+  const binary = /\.(jpe?g|png|webp|gif|avif|ico|woff2?|ttf|otf|pdf|mp4|webm|zip|gz)$/i;
   const walk = (dir) => {
     for (const e of readdirSync(dir, { withFileTypes: true })) {
-      if (skip.has(e.name)) continue;
+      if (skipDirs.has(e.name)) continue;
       const full = resolve(dir, e.name);
-      if (e.isDirectory()) walk(full);
-      else if (exts.test(e.name) || e.name === ".env.example") {
-        if (secretRe.test(readFileSync(full, "utf8"))) errors.push(`segredo: credencial da Shopee escrita em ${full.slice(ROOT.length + 1)} (use só variável de ambiente)`);
+      if (e.isDirectory()) {
+        walk(full);
+        continue;
       }
+      if (!e.isFile() || binary.test(e.name) || e.name === "tsconfig.tsbuildinfo") continue;
+      if (statSync(full).size > 5 * 1024 * 1024) continue;
+      const buf = readFileSync(full);
+      const rel = full.slice(ROOT.length + 1);
+      if (values.some((v) => buf.includes(v))) errors.push(`segredo: o valor da credencial da Shopee está escrito em ${rel} (apague e use só variável de ambiente)`);
+      else if (secretRe.test(buf.toString("utf8"))) errors.push(`segredo: credencial da Shopee escrita em ${rel} (use só variável de ambiente)`);
     }
   };
   walk(ROOT);
@@ -439,40 +514,61 @@ function check() {
       }
     }
 
-    // Link da Amazon sempre com a tag de afiliado do site e rel sponsored.
-    const amazonRe = /<a\b[^>]*href\s*=\s*["'](https:\/\/(?:www\.)?amazon\.com\.br[^"']*)["'][^>]*>/gi;
-    let am;
-    while ((am = amazonRe.exec(it.content))) {
-      if (!am[1].includes(`tag=${AMAZON_TAG}`)) errors.push(`${where}: link da Amazon sem tag=${AMAZON_TAG} -> ${am[1]}`);
-      if (!/\brel\s*=\s*["'][^"']*sponsored/i.test(am[0])) errors.push(`${where}: link da Amazon sem rel="sponsored ..."`);
-    }
-
-    // Shopee: só o link curto de afiliado de um produto da Shopee listado em `products` do próprio artigo
-    // (link comum não paga comissão; link de outro produto confunde o leitor), sempre com rel sponsored.
-    const citedShopee = new Set(
-      products.filter((p) => it.kind === "artigos" && (p.store || "amazon") === "shopee" && p.shopee && it.products.includes(p.slug)).map((p) => p.shopee.affiliateUrl)
-    );
-    for (const m of (it.raw ?? "").matchAll(/https:\/\/(?:[a-z0-9-]+\.)?shopee\.com\.br[^\s"'`<>)]*/gi)) {
+    // Links de afiliado: sempre conferidos pelo host (new URL) no conteúdo decodificado, nunca por pedaço de texto.
+    // Uma loja por artigo; Shopee só com o link curto de um produto da Shopee listado em `products` do próprio artigo.
+    const cited = it.kind === "artigos" ? it.products.map((s) => products.find((p) => p.slug === s)).filter(Boolean) : [];
+    const citedStores = new Set(cited.map((p) => p.store || "amazon"));
+    if (citedStores.size > 1) errors.push(`${where}: artigo mistura produtos da Amazon e da Shopee (uma loja por artigo)`);
+    const articleStore = citedStores.has("shopee") ? "shopee" : "amazon";
+    const citedShopee = new Set(cited.filter((p) => (p.store || "amazon") === "shopee" && p.shopee).map((p) => p.shopee.affiliateUrl));
+    const rawDecoded = it.raw ? decodeEntities(it.raw) : "";
+    for (const m of rawDecoded.matchAll(/https?:\/\/[^\s"'`<>)\\]+/gi)) {
+      if (!SHOPEE_HOST_RE.test(hostOf(m[0]))) continue;
       if (!SHOPEE_SHORT_LINK_RE.test(m[0])) errors.push(`${where}: link da Shopee que não é o link curto de afiliado -> ${m[0]}`);
       else if (!citedShopee.has(m[0])) errors.push(`${where}: link da Shopee que não é de um produto da Shopee listado em products -> ${m[0]}`);
     }
-    const shopeeAnchorRe = /<a\b[^>]*href\s*=\s*["']https:\/\/s\.shopee\.com\.br[^"']*["'][^>]*>/gi;
-    let sa;
-    while ((sa = shopeeAnchorRe.exec(it.content))) {
-      if (!/\brel\s*=\s*["'][^"']*sponsored/i.test(sa[0])) errors.push(`${where}: link da Shopee sem rel="sponsored ..."`);
+    const anchorRe = /<a\b([^>]*)>/gi;
+    let an;
+    while ((an = anchorRe.exec(decoded))) {
+      const href = (/href\s*=\s*["']([^"']*)["']/i.exec(an[1]) ?? [])[1] ?? "";
+      const host = hostOf(href);
+      const sponsored = /\brel\s*=\s*["'][^"']*sponsored/i.test(an[1]);
+      if (SHOPEE_HOST_RE.test(host)) {
+        if (!sponsored) errors.push(`${where}: link da Shopee sem rel="sponsored ..."`);
+      } else if (AMAZON_HOST_RE.test(host)) {
+        if (!AMAZON_BR_HOST_RE.test(host)) errors.push(`${where}: link da Amazon que não é amazon.com.br (a tag de afiliado não dá para conferir) -> ${href}`);
+        else if (!href.includes(`tag=${AMAZON_TAG}`)) errors.push(`${where}: link da Amazon sem tag=${AMAZON_TAG} -> ${href}`);
+        if (!sponsored) errors.push(`${where}: link da Amazon sem rel="sponsored ..."`);
+        if (articleStore === "shopee") errors.push(`${where}: link da Amazon em artigo de produtos da Shopee -> ${href}`);
+      }
     }
-    // Botão de compra: texto sempre igual por loja.
+    // Botão de compra: texto, rel e target sempre iguais, e a loja do link é a loja dos produtos do artigo.
     const buyRe = /<div class="buy-btn">\s*<a\b([^>]*)>([\s\S]*?)<\/a>/gi;
     let bb;
-    while ((bb = buyRe.exec(it.content))) {
-      const href = (/href\s*=\s*["']([^"']*)["']/.exec(bb[1]) ?? [])[1] ?? "";
+    let buyCount = 0;
+    while ((bb = buyRe.exec(decoded))) {
+      buyCount++;
+      const href = (/href\s*=\s*["']([^"']*)["']/i.exec(bb[1]) ?? [])[1] ?? "";
+      const host = hostOf(href);
       const text = bb[2].replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim();
-      const expected = /shopee\.com\.br/.test(href) ? "Comprar agora na Shopee ↗" : /amazon\.com\.br/.test(href) ? "Comprar agora na Amazon ↗" : null;
-      if (expected && text !== expected) errors.push(`${where}: botão de compra com texto "${text}" (use exatamente "${expected}")`);
+      const store = SHOPEE_HOST_RE.test(host) ? "shopee" : AMAZON_BR_HOST_RE.test(host) ? "amazon" : null;
+      if (!store) {
+        errors.push(`${where}: botão de compra com link que não é da Amazon (amazon.com.br) nem da Shopee -> ${href}`);
+        continue;
+      }
+      if (store !== articleStore) errors.push(`${where}: botão de compra da ${store === "shopee" ? "Shopee" : "Amazon"} em artigo de produtos da ${articleStore === "shopee" ? "Shopee" : "Amazon"}`);
+      if (text !== CTA[store]) errors.push(`${where}: botão de compra com texto "${text}" (use exatamente "${CTA[store]}")`);
+      if (!/\btarget\s*=\s*["']_blank["']/i.test(bb[1])) errors.push(`${where}: botão de compra sem target="_blank"`);
+      const rel = (/\brel\s*=\s*["']([^"']*)["']/i.exec(bb[1]) ?? [])[1] ?? "";
+      for (const need of ["sponsored", "noopener", "noreferrer"]) {
+        if (!rel.split(/\s+/).includes(need)) errors.push(`${where}: botão de compra sem rel="${need}"`);
+      }
     }
-    if (it.kind === "artigos") {
-      const stores = new Set(it.products.map((s) => products.find((p) => p.slug === s)).filter(Boolean).map((p) => p.store || "amazon"));
-      if (stores.size > 1) warnings.push(`${where}: artigo mistura produtos da Amazon e da Shopee (prefira uma loja por artigo)`);
+    if (it.kind === "artigos" && it.category === "cripto-indica") {
+      if (cited.length === 0) errors.push(`${where}: artigo de Cripto Indica sem produtos em products (todo produto citado existe em content/products/)`);
+      if (buyCount < MIN_BUY_BUTTONS) errors.push(`${where}: só ${buyCount} botão(ões) de compra (mínimo ${MIN_BUY_BUTTONS} por artigo de Cripto Indica)`);
+      const cta = (/\n\s*ctaLabel:\s*"([^"]*)"/.exec(it.raw) ?? [])[1];
+      if (cta && `${cta} ↗` !== CTA[articleStore]) errors.push(`${where}: review.ctaLabel "${cta}" (use "${CTA[articleStore].replace(" ↗", "")}")`);
     }
 
     // Links externos precisam de rel seguro (o renderizador também força, mas o conteúdo deve vir certo).

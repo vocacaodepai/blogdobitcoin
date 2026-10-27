@@ -87,9 +87,9 @@ export default function PublicidadeEAfiliadosPage() {
         </li>
       </ul>
 
-      <h2 id="afiliados-shopee">Como funciona o link de afiliado da Shopee</h2>
+      <h3 id="afiliados-shopee">Nos produtos vendidos na Shopee</h3>
       <p>
-        Nos produtos vendidos na Shopee, o botão diz &quot;Comprar agora na Shopee&quot; e leva
+        Quando o produto é vendido na Shopee, o botão diz &quot;Comprar agora na Shopee&quot; e leva
         para o anúncio do produto na Shopee Brasil. A Shopee é um marketplace: quem vende é um
         vendedor independente (o nome dele aparece na página do produto), e a compra, o pagamento, a
         entrega, a troca, a devolução e a garantia seguem as regras da Shopee e do vendedor. Se
@@ -213,10 +213,6 @@ export default function PublicidadeEAfiliadosPage() {
             Contrato operacional do Programa de Associados da Amazon
           </ExternalLink>
           , que exige a identificação do site como Associado.
-        </li>
-        <li>
-          Termos do Programa de Afiliados da Shopee, que exigem a identificação das parcerias
-          comerciais.
         </li>
         <li>
           <ExternalLink href="https://developers.google.com/search/docs/essentials/spam-policies">

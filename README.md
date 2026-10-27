@@ -3,7 +3,7 @@
 Hub brasileiro sobre Bitcoin e criptomoedas (www.blogdobitcoin.com.br), editado por
 Bruno Danello: preço do Bitcoin ao vivo, ranking das moedas em reais, bolhas cripto,
 ferramentas, notícias diárias, guias, a história do Bitcoin (Memórias do Bitcoin) e a
-Loja do Bitcoin com reviews de produtos vendidos na Amazon.
+Loja do Bitcoin com reviews de produtos vendidos na Amazon e na Shopee.
 
 ## O que tem no site
 
@@ -18,7 +18,7 @@ Loja do Bitcoin com reviews de produtos vendidos na Amazon.
 | Artigos | `/artigos`, `/categoria/<slug>` | `content/articles/` (rotina 2x por dia) |
 | História | `/historia` | `content/historia.ts` + Memórias do Bitcoin |
 | Glossário | `/glossario` | `content/glossario.ts` |
-| Loja do Bitcoin | `/loja`, `/loja/<slug>` | `content/products/` (afiliado Amazon `blogdobitcoin-20`) |
+| Loja do Bitcoin | `/loja`, `/loja/<slug>` | `content/products/` (afiliado Amazon `blogdobitcoin-20` e afiliado Shopee) |
 
 A barra de cotações do topo e o selo de preço do cabeçalho aparecem em todas as páginas.
 
@@ -56,7 +56,7 @@ npm run dev
 
 - `docs/padrao-editorial.md`: voz, estrutura, links, SEO, notícias, Cripto Indica e loja.
 - `docs/rotinas/`: roteiros das rotinas automáticas (notícias, artigos, Cripto Indica e
-  loja, manutenção) e regras comuns.
+  loja da Amazon, Cripto Indica e loja da Shopee, manutenção) e regras comuns.
 - `docs/referencias-e-sugestoes.md`: o que os maiores sites de cripto do mundo fazem e as
   próximas ideias para o Blog do Bitcoin.
 
@@ -64,6 +64,11 @@ npm run dev
 
 Veja `.env.example`. Nenhuma é obrigatória: sem chaves, o site funciona com capas
 ilustradas, sem anúncios e sem Google Analytics.
+
+`SHOPEE_APP_ID` e `SHOPEE_SECRET` (API de Afiliados da Shopee) servem só à rotina da Shopee
+(`scripts/shopee.mjs`) e nunca entram no repositório: configure no ambiente de execução da
+rotina ou em `~/.config/blogdobitcoin/shopee.env`. O `npm run check:content` barra o valor da
+credencial se ele aparecer em qualquer arquivo.
 
 ## Validação antes de commitar
 

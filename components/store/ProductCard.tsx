@@ -45,7 +45,8 @@ export function ProductCard({ product, priority = false }: { product: Product; p
       <div className="flex flex-1 flex-col p-4">
         {cat && (
           <p className="label-mono text-accent">
-            {cat.label} <span className="text-muted">· {store.label}</span>
+            {cat.label}
+            {store.slug !== "amazon" && <span className="text-muted"> · {store.label}</span>}
           </p>
         )}
         <h3 className="mt-1 line-clamp-2 font-display text-base font-bold leading-snug">

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { isAffiliateUrl } from "@/lib/articles";
 import type { ReviewData } from "@/lib/types";
 
 function barClass(score: number): string {
@@ -18,7 +19,9 @@ function scoreClass(score: number): string {
  * contras, para quem é, preço e o botão para o site da ferramenta.
  */
 export function ReviewVerdict({ review, defaultCta }: { review: ReviewData; defaultCta?: string }) {
-  const rel = review.affiliate ? "sponsored noopener noreferrer nofollow" : "nofollow noopener noreferrer";
+  // Afiliado pelo host do link (Amazon ou link curto da Shopee), mesmo que o campo `affiliate` falte.
+  const affiliate = review.affiliate || isAffiliateUrl(review.url);
+  const rel = affiliate ? "sponsored noopener noreferrer nofollow" : "nofollow noopener noreferrer";
   const scoreText = review.score.toFixed(1);
   return (
     <section aria-labelledby="veredito" className="overflow-hidden rounded-xl border border-border bg-surface">
@@ -105,7 +108,7 @@ export function ReviewVerdict({ review, defaultCta }: { review: ReviewData; defa
         <span>
           Análise baseada na ficha técnica oficial, no manual e em opiniões reais de compradores
         </span>
-        {review.affiliate && <span>Pode conter links de afiliado</span>}
+        {affiliate && <span>Pode conter links de afiliado</span>}
       </p>
     </section>
   );

@@ -142,7 +142,7 @@ export default function TermosDeUsoPage() {
         A <Link href="/loja">Loja do Bitcoin</Link> e os reviews da{" "}
         <Link href="/categoria/cripto-indica">Cripto Indica</Link> mostram produtos vendidos na
         Amazon e na Shopee. O {site.name} não vende, não estoca e não entrega nada. A compra é feita
-        direto com a Amazon ou com a Shopee ou com o vendedor que anuncia na plataforma delas, e preço, disponibilidade, frete, prazo de entrega,
+        direto com a Amazon, com a Shopee ou com o vendedor que anuncia na plataforma delas, e preço, disponibilidade, frete, prazo de entrega,
         garantia, troca e devolução seguem as regras de quem vende. A nota de 0 a 10 e a review são
         opinião editorial baseada em ficha técnica, manual e avaliações de compradores.
       </p>

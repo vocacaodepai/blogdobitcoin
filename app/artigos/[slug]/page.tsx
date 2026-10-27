@@ -25,7 +25,7 @@ import { faqJsonLd } from "@/components/article/schema";
 import { ProductCard } from "@/components/store/ProductCard";
 import { StorePromo } from "@/components/store/StorePromo";
 import { getProductBySlug, productStore, productStoreInfo, storesLabel, type Product } from "@/lib/products";
-import { articles, getArticleBySlug, getCategory, getNextArticle, getRelatedArticles, site } from "@/lib/articles";
+import { articles, getArticleBySlug, getCategory, getNextArticle, getRelatedArticles, isAffiliateUrl, site } from "@/lib/articles";
 import { author } from "@/lib/author";
 import { prepareArticleHtml, tocH2 } from "@/lib/html";
 import { absoluteUrl, breadcrumbJsonLd, formatDate, metaDescription, readingTime, alternatesFor } from "@/lib/seo";
@@ -281,7 +281,7 @@ export default async function ArticlePage({ params }: { params: Params }) {
             {isReview && review && (
               <div className="mb-8">
                 <ReviewVerdict review={review} defaultCta={reviewed ? productStoreInfo(reviewed).ctaLabel : undefined} />
-                <ReviewDisclosure affiliate={review.affiliate} store={storeText} />
+                <ReviewDisclosure affiliate={review.affiliate || isAffiliateUrl(review.url)} store={storeText} />
               </div>
             )}
 

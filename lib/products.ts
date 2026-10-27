@@ -69,7 +69,10 @@ export function productStoreInfo(p: Product) {
 
 /** Link de compra com a tag ou o link curto de afiliado da loja do produto. */
 export function productBuyUrl(p: Product): string {
-  if (productStore(p) === "shopee" && p.shopee) return p.shopee.affiliateUrl;
+  if (productStore(p) === "shopee") {
+    if (!p.shopee?.affiliateUrl) throw new Error(`Produto da Shopee sem shopee.affiliateUrl: ${p.slug}`);
+    return p.shopee.affiliateUrl;
+  }
   return amazonUrl(p.asin ?? "");
 }
 

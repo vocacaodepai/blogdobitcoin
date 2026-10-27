@@ -27,7 +27,7 @@ termine em silêncio.
 - `npm run check:content`, `npx eslint .`, `npx tsc --noEmit`, `npm run build`.
 - Links internos quebrados, imagens de produto ausentes, `sourceUrl` que deixou de abrir
   (troque por arquivo do Wayback Machine, nunca apague a notícia).
-- Produtos: ASIN que saiu de linha na Amazon (amz.py mostra indisponível há mais de 30 dias):
+- Produtos da Amazon: ASIN que saiu de linha na Amazon (amz.py mostra indisponível há mais de 30 dias):
   tire `featured` e anote no informe; não apague a página.
 - Produtos da Shopee: `node scripts/shopee.mjs check` (credencial e API ok; se falhar, anote no
   informe como "Shopee fora do ar ou credencial ausente") e, para cada produto com

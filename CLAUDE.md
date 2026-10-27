@@ -91,18 +91,20 @@ Tópicos de notícia: `bitcoin`, `mercado`, `altcoins`, `regulacao`, `seguranca`
 
 Além da Amazon, a loja vende (por afiliado) produtos da Shopee Brasil. Rotina própria:
 `docs/rotinas/shopee.md`, com a mesma cota diária da Amazon (2 produtos novos com review longa,
-1 artigo de Cripto Indica, faixa de preço de até 5 produtos antigos).
+1 artigo de Cripto Indica, faixa de preço de até 5 produtos antigos), cada rotina só mexe nos
+produtos da própria loja.
 
 - Produto da Shopee: `store: "shopee"` e `shopee: { itemId, shopId, affiliateUrl, sellerName }`,
   sem `asin`. Link de compra = link curto de afiliado `https://s.shopee.com.br/...` gerado por
-  `node scripts/shopee.mjs link <productLink> --sub loja`. Link comum `shopee.com.br` não vale.
+  `node scripts/shopee.mjs link <productLink> --sub loja,<slug>`. Link comum `shopee.com.br` não vale.
 - `scripts/shopee.mjs` fala com a API Open de Afiliados da Shopee (busca, item, link curto, foto
   do anúncio). Todo dado de produto da Shopee vem dele; nunca invente produto, preço ou link.
 - Botão sempre "Comprar agora na Shopee ↗" (mínimo 5 por artigo), `rel="sponsored noopener
   noreferrer"`, `target="_blank"`. Uma loja por artigo (não misture Amazon e Shopee).
-- Marketplace de vendedores independentes: nunca carteira de hardware pela Shopee (só Amazon,
-  de vendedor oficial), nada que prometa lucro, nada de produto genérico sem informação fora
-  do anúncio. Nunca escolher produto por comissão.
+- Marketplace de vendedores independentes: só anúncio com nota 4,5 ou mais e pelo menos 20 vendas,
+  nunca carteira de hardware pela Shopee (só Amazon, de vendedor oficial), nada que prometa lucro,
+  nada de produto genérico sem informação fora do anúncio. Nunca escolher produto por comissão.
+  A cota é um teto: rodada parcial ou "nada novo hoje" é normal, nunca afrouxar o filtro para fechá-la.
 - Preço: `priceMin`/`priceMax` do anúncio na data de `priceCheckedAt`, arredondados para fora;
   a página diz que é a faixa do anúncio e que preço, cupom e frete mudam. Descarte se max > 3 x min.
 - Foto: a do anúncio, baixada por `shopee.mjs image`, aberta e conferida (sem banner, colagem ou

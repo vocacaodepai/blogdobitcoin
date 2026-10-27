@@ -36,6 +36,20 @@ export function amazonUrl(asin: string): string {
   return `https://www.amazon.com.br/dp/${asin}?tag=${site.amazonTag}`;
 }
 
+/**
+ * Link de compra de afiliado: Amazon Brasil ou link curto da Shopee. Decidido pelo host (new URL),
+ * nunca por pedaço do texto, para o rel e o aviso de transparência não dependerem de um campo à mão.
+ */
+export function isAffiliateUrl(url: string): boolean {
+  try {
+    const u = new URL(url);
+    if (u.protocol !== "https:") return false;
+    return u.hostname === "s.shopee.com.br" || u.hostname === "amazon.com.br" || u.hostname.endsWith(".amazon.com.br");
+  } catch {
+    return false;
+  }
+}
+
 /** Todos os artigos, mais recentes primeiro (ordem definida pelo índice gerado). */
 export const articles: Article[] = allArticles;
 

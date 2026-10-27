@@ -1,6 +1,6 @@
 import Link from "next/link";
 import type { Product } from "@/lib/types";
-import { getFeaturedProducts } from "@/lib/products";
+import { getFeaturedProducts, productStore, storesLabel } from "@/lib/products";
 import { ProductCard } from "./ProductCard";
 
 /** Vitrine curta da Loja do Bitcoin para a home e o fim das páginas. */
@@ -37,7 +37,7 @@ export function StorePromo({
         ))}
       </div>
       <p className="mt-3 text-xs text-muted">
-        Links de afiliado da Amazon e da Shopee: se você comprar por eles, o Blog do Bitcoin pode receber uma comissão, sem custo extra.{" "}
+        Links de afiliado da {storesLabel(list.map(productStore))}: se você comprar por eles, o Blog do Bitcoin pode receber uma comissão, sem custo extra.{" "}
         <Link href="/publicidade-e-afiliados" className="font-medium text-accent hover:underline">
           Saiba mais
         </Link>

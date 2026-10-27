@@ -16,7 +16,9 @@ do Bitcoin e Cripto Indica) e `docs/padrao-editorial.md` (seções 8 e 9).
   único (`kind: "review"`, campo `review` completo). Todos os produtos citados entram na loja
   e o artigo linka `/loja/<slug>`. A review da loja usa a mesma premissa e o mesmo veredito,
   com texto diferente (outras palavras e outra ordem) para as páginas não competirem.
-- **Faixa de preço de até 5 produtos antigos** (`priceCheckedAt` mais antigo primeiro).
+- **Faixa de preço de até 5 produtos antigos da Amazon** (`priceCheckedAt` mais antigo primeiro).
+  Esta rotina só cria e atualiza produtos da Amazon (sem `store` ou `store: "amazon"`); os da
+  Shopee são da rotina `shopee.md`. O artigo usa só produtos da Amazon (uma loja por artigo).
 
 ## 2. Escolher produtos
 
@@ -27,7 +29,8 @@ do Bitcoin e Cripto Indica) e `docs/padrao-editorial.md` (seções 8 e 9).
 - Produto real à venda na amazon.com.br, de vendedor com boa reputação. ASIN conferido com
   `python3 scripts/amz.py <ASIN> --tries 3` (bloqueia às vezes: repita com pausa) ou, se a
   Amazon bloquear de vez, em 2 resultados de busca independentes com o mesmo título.
-- Nunca repita produto da loja. Não repita a categoria da rodada anterior no artigo.
+- Nunca repita produto da loja, nem o mesmo livro ou modelo que já está pela Shopee (mesmo título,
+  ISBN ou modelo). Não repita a categoria da rodada anterior no artigo.
 
 ## 3. Foto, preço e texto
 

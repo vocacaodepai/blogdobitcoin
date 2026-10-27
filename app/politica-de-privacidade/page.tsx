@@ -258,9 +258,10 @@ export default function PoliticaPrivacidadePage() {
         <li>
           <strong>Shopee</strong> (Programa de Afiliados): também só entra em cena se você clicar num
           link de produto da Shopee (links que começam com s.shopee.com.br). A partir daí você está
-          no site ou no app da Shopee, que segue a política de privacidade dela. O Blog do Bitcoin
-          recebe da Shopee apenas relatórios do desempenho dos links, como cliques e vendas, sem
-          identificar quem comprou.
+          no site ou no app da Shopee, que segue a política de privacidade dela, inclusive a dos
+          cookies que ela usa para ligar a compra ao link. O que a Shopee informa ao site sobre as
+          compras feitas pelo link é definido pelo programa dela; o Blog do Bitcoin não pede nem
+          guarda dados pessoais de quem compra.
         </li>
       </ul>
       <p>

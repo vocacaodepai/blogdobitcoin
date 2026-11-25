@@ -1,0 +1,103 @@
+import Link from "next/link";
+import { ArticleCard } from "@/components/ArticleCard";
+import { ArticleCategoryChips } from "@/components/ArticleCategoryChips";
+import { Container } from "@/components/Container";
+import { Pagination } from "@/components/Pagination";
+import { Sidebar } from "@/components/Sidebar";
+import type { Article } from "@/lib/articles";
+import { ListingHeader } from "./ListingHeader";
+import { countLabel } from "./paginate";
+
+const ARTICLES_GRID_ID = "artigos-grid";
+
+/**
+ * Listagem paginada de artigos (todos, por categoria, reviews): cabeçalho,
+ * chips de categoria, grade de cards à esquerda e sidebar à direita.
+ */
+export function ArticleListing({
+  label = "Artigos",
+  title,
+  description,
+  intro,
+  items,
+  total,
+  page,
+  totalPages,
+  basePath,
+  active,
+  footerText,
+  emptyTitle = "Nenhum artigo por aqui ainda",
+  emptyText = "Publicamos conteúdo novo todos os dias. Enquanto isso, explore as outras categorias.",
+  children,
+}: {
+  label?: string;
+  title: string;
+  description: string;
+  intro?: string;
+  /** Artigos desta página. */
+  items: Article[];
+  /** Total de artigos da listagem (todas as páginas). Padrão: items.length. */
+  total?: number;
+  page: number;
+  totalPages: number;
+  basePath: string;
+  /** Chip ativo: "todos" ou slug de categoria. */
+  active: string;
+  /** Texto longo mostrado só depois da lista (o cabeçalho fica curto). */
+  footerText?: string;
+  emptyTitle?: string;
+  emptyText?: string;
+  /** Conteúdo extra entre o cabeçalho e a grade (ex.: "Como avaliamos"). */
+  children?: React.ReactNode;
+}) {
+  const count = total ?? items.length;
+  return (
+    <Container className="py-10 sm:py-14">
+      <ListingHeader
+        label={label}
+        title={title}
+        description={description}
+        intro={intro}
+        count={countLabel(count, "artigo", "artigos")}
+        page={page}
+        totalPages={totalPages}
+      />
+      <ArticleCategoryChips active={active} className="mt-8 border-y border-border py-3" />
+      {children}
+      <div id={ARTICLES_GRID_ID} className="mt-8 grid gap-10 lg:grid-cols-[minmax(0,1fr)_320px]">
+        <div className="min-w-0">
+          {items.length > 0 ? (
+            <div className="grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
+              {items.map((article, i) => (
+                <ArticleCard
+                  key={article.slug}
+                  article={article}
+                  headingLevel="h2"
+                  priority={page === 1 && i < 3}
+                />
+              ))}
+            </div>
+          ) : (
+            <div className="rounded-xl border border-dashed border-border bg-surface p-8 text-center">
+              <p className="font-display text-lg font-semibold">{emptyTitle}</p>
+              <p className="mt-2 text-sm leading-relaxed text-muted">{emptyText}</p>
+              <Link
+                href="/artigos"
+                className="mt-4 inline-flex h-9 items-center rounded-lg border border-border bg-background px-4 font-mono text-xs font-medium transition hover:border-accent/50 hover:text-accent"
+              >
+                Ver todos os artigos →
+              </Link>
+            </div>
+          )}
+          <Pagination current={page} total={totalPages} basePath={basePath} />
+        </div>
+        <Sidebar />
+      </div>
+      {footerText && (
+        <section aria-label="Sobre esta seção" className="mt-12 max-w-3xl border-t border-border pt-6">
+          <p className="text-sm leading-relaxed text-muted sm:text-base">{footerText}</p>
+        </section>
+      )}
+    </Container>
+  );
+}

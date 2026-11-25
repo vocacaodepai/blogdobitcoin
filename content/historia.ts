@@ -1,0 +1,438 @@
+import type { Curiosity, TimelineEvent } from "@/lib/types";
+
+/**
+ * Linha do tempo de /historia, em ordem cronológica.
+ * Preços (priceNote) aproximados: cotações citadas na fonte do marco ou média diária
+ * de mercado da Blockchain.com (Market Price, USD) na data.
+ */
+/** Data da última edição deste arquivo (lastmod de /historia no sitemap). Atualize junto com a edição. */
+export const historyUpdated = "2026-10-23";
+
+export const timeline: TimelineEvent[] = [
+  {
+    date: "2008-10-31",
+    title: "Satoshi Nakamoto publica o whitepaper",
+    text: "Alguém sob o pseudônimo Satoshi Nakamoto enviou a uma lista de e-mails de criptografia o artigo “Bitcoin: A Peer-to-Peer Electronic Cash System”. A mensagem começava dizendo que o autor vinha trabalhando num novo sistema de dinheiro eletrônico totalmente ponto a ponto, sem terceiro de confiança. O documento de 9 páginas descreve a rede que entraria no ar dois meses depois.",
+    article: "whitepaper-do-bitcoin-o-documento-que-criou-a-moeda",
+    source: {
+      label: "E-mail original na lista de criptografia (metzdowd.com)",
+      url: "https://www.metzdowd.com/pipermail/cryptography/2008-October/014810.html",
+    },
+  },
+  {
+    date: "2009-01-03",
+    title: "Nasce o bloco gênese",
+    text: "Satoshi minerou o bloco 0 da rede, o bloco gênese, com recompensa de 50 BTC. Dentro dele ficou gravada a manchete do jornal britânico The Times daquele dia: “Chancellor on brink of second bailout for banks”. Por uma peculiaridade do código, esses 50 BTC nunca puderam ser gastos.",
+    article: "bloco-genese-a-mensagem-escondida-no-primeiro-bloco",
+    source: { label: "Bitcoin Wiki: Genesis block", url: "https://en.bitcoin.it/wiki/Genesis_block" },
+  },
+  {
+    date: "2009-01-12",
+    title: "Hal Finney recebe a primeira transação",
+    text: "O programador Hal Finney, um dos primeiros a rodar o software anunciado em 8 de janeiro, recebeu 10 BTC enviados por Satoshi como teste. A transação, gravada no bloco 170, é considerada a primeira transferência de bitcoin entre duas pessoas.",
+    article: "hal-finney-o-primeiro-a-receber-bitcoin",
+    source: { label: "Hal Finney no BitcoinTalk: Bitcoin and me", url: "https://bitcointalk.org/index.php?topic=155054.0" },
+  },
+  {
+    date: "2009-10-05",
+    title: "A primeira taxa de câmbio",
+    text: "O site New Liberty Standard publicou uma taxa de câmbio para o bitcoin: US$ 1 comprava 1.309,03 BTC. Foi uma das primeiras referências de preço da moeda, que até então só circulava entre um punhado de entusiastas.",
+    priceNote: "cerca de US$ 0,00076",
+    source: { label: "Bitcoin Wiki: History", url: "https://en.bitcoin.it/wiki/History" },
+  },
+  {
+    date: "2010-05-22",
+    title: "Bitcoin Pizza Day",
+    text: "O programador Laszlo Hanyecz, da Flórida, pagou 10.000 BTC por duas pizzas da Papa John's, encomendadas por outro usuário do fórum BitcoinTalk. Ele tinha feito a oferta no fórum quatro dias antes e, em 22 de maio, confirmou a troca. A data virou o Bitcoin Pizza Day, lembrado todo ano.",
+    priceNote: "10.000 BTC valiam cerca de US$ 41",
+    article: "bitcoin-pizza-day-a-pizza-de-10-mil-bitcoins",
+    source: { label: "Post original de Laszlo no BitcoinTalk", url: "https://bitcointalk.org/index.php?topic=137.0" },
+  },
+  {
+    date: "2010-07",
+    title: "Mt. Gox começa a negociar bitcoin",
+    text: "Jed McCaleb lançou em julho de 2010 uma bolsa de bitcoin no domínio mtgox.com, cujo nome vinha de Magic: The Gathering Online eXchange. Em março de 2011, vendeu o site para Mark Karpelès. A Mt. Gox chegou a responder por mais de 70% das negociações de bitcoin do mundo.",
+    article: "mt-gox-o-colapso-da-maior-exchange-de-bitcoin",
+    source: { label: "Wikipédia: Mt. Gox", url: "https://en.wikipedia.org/wiki/Mt._Gox" },
+  },
+  {
+    date: "2010-08-15",
+    title: "O bug que criou 184 bilhões de bitcoins",
+    text: "Uma falha de estouro numérico (overflow) permitiu que uma transação no bloco 74.638 criasse mais de 184 bilhões de BTC do nada. Uma versão corrigida do software saiu menos de cinco horas depois da descoberta, e a cadeia correta voltou a ser a mais longa em 16 de agosto. O episódio é lembrado como uma das falhas mais graves da história da rede.",
+    priceNote: "cerca de US$ 0,07",
+    article: "fatos-curiosos-sobre-o-bitcoin",
+    source: { label: "Bitcoin Wiki: Value overflow incident", url: "https://en.bitcoin.it/wiki/Value_overflow_incident" },
+  },
+  {
+    date: "2011-02-09",
+    title: "Bitcoin chega a US$ 1",
+    text: "Um bitcoin passou a valer um dólar na Mt. Gox, a paridade com a moeda americana. Quatro meses depois, em 8 de junho de 2011, chegaria a US$ 31,91 na mesma bolsa, antes de uma queda forte no segundo semestre.",
+    priceNote: "US$ 1",
+    source: { label: "Bitcoin Wiki: History", url: "https://en.bitcoin.it/wiki/History" },
+  },
+  {
+    date: "2011-04",
+    title: "Satoshi Nakamoto sai de cena",
+    text: "Satoshi participou do desenvolvimento até dezembro de 2010 e, antes de sumir, passou o comando do projeto ao programador Gavin Andresen. Em abril de 2011, num e-mail ao desenvolvedor Mike Hearn, escreveu que tinha passado para outras coisas. Nunca mais se ouviu falar dele, e sua identidade segue desconhecida.",
+    article: "quem-e-satoshi-nakamoto",
+    source: { label: "Wikipédia: Satoshi Nakamoto", url: "https://en.wikipedia.org/wiki/Satoshi_Nakamoto" },
+  },
+  {
+    date: "2012-11-28",
+    title: "Primeiro halving",
+    text: "No bloco 210.000, a recompensa dos mineradores caiu de 50 para 25 BTC por bloco. Foi o primeiro corte pela metade previsto no código, que se repete a cada 210 mil blocos, cerca de quatro anos.",
+    priceNote: "cerca de US$ 12",
+    article: "halving-do-bitcoin-o-que-e-e-quando-e-o-proximo",
+    source: { label: "Bitcoin Wiki: Controlled supply", url: "https://en.bitcoin.it/wiki/Controlled_supply" },
+  },
+  {
+    date: "2013-10",
+    title: "O FBI fecha o Silk Road",
+    text: "O Silk Road, mercado ilegal na internet que funcionava desde fevereiro de 2011 e só aceitava bitcoin, foi derrubado pelo FBI. Seu criador, Ross Ulbricht, foi preso em 1º de outubro de 2013, em San Francisco, e condenado à prisão perpétua em 2015. Em janeiro de 2025, recebeu perdão presidencial de Donald Trump.",
+    source: { label: "Wikipédia: Silk Road", url: "https://en.wikipedia.org/wiki/Silk_Road_(marketplace)" },
+  },
+  {
+    date: "2013-11-27",
+    title: "Bitcoin passa de US$ 1.000",
+    text: "O bitcoin passou de mil dólares pela primeira vez na tarde de 27 de novembro de 2013, uma quarta-feira, segundo o jornal britânico The Guardian. Menos de três anos antes, ele valia US$ 1.",
+    priceNote: "acima de US$ 1.000",
+    article: "ciclos-do-bitcoin-o-que-os-halvings-mostram",
+    source: {
+      label: "The Guardian (27/11/2013)",
+      url: "https://www.theguardian.com/technology/2013/nov/27/hard-drive-bitcoin-landfill-site",
+    },
+  },
+  {
+    date: "2014-02-28",
+    title: "A quebra da Mt. Gox",
+    text: "Depois de suspender os saques em 7 de fevereiro e sair do ar no dia 24, a Mt. Gox pediu recuperação judicial em Tóquio. A bolsa disse ter perdido cerca de 850 mil bitcoins, dos quais quase 200 mil foram encontrados depois numa carteira antiga. O caso virou o exemplo clássico do risco de deixar moedas guardadas em corretora.",
+    priceNote: "cerca de US$ 580",
+    article: "mt-gox-o-colapso-da-maior-exchange-de-bitcoin",
+    source: { label: "Wikipédia: Mt. Gox", url: "https://en.wikipedia.org/wiki/Mt._Gox" },
+  },
+  {
+    date: "2015-07-30",
+    title: "Ethereum entra no ar",
+    text: "A rede Ethereum, proposta por Vitalik Buterin, foi lançada com a versão Frontier. Ela popularizou os contratos inteligentes, programas que rodam na própria blockchain. Em setembro de 2022, com o The Merge, trocou a mineração pela prova de participação.",
+    article: "o-que-e-ethereum-e-como-funciona",
+    source: { label: "ethereum.org: história do Ethereum", url: "https://ethereum.org/en/history/" },
+  },
+  {
+    date: "2016-07-09",
+    title: "Segundo halving",
+    text: "No bloco 420.000, a recompensa caiu de 25 para 12,5 BTC por bloco. Àquela altura, três quartos de todos os bitcoins que vão existir já tinham sido emitidos.",
+    priceNote: "cerca de US$ 660",
+    article: "halving-do-bitcoin-o-que-e-e-quando-e-o-proximo",
+    source: { label: "Bitcoin Wiki: Controlled supply", url: "https://en.bitcoin.it/wiki/Controlled_supply" },
+  },
+  {
+    date: "2017-08-01",
+    title: "Bitcoin Cash se separa do Bitcoin",
+    text: "Depois de anos de briga sobre como a rede deveria crescer, o grupo que defendia blocos maiores fez um hard fork no bloco 478.559 e criou o Bitcoin Cash, com limite de 8 MB por bloco. Quem tinha bitcoin antes da divisão passou a ter a mesma quantidade nas duas moedas.",
+    source: { label: "Wikipédia: Bitcoin Cash", url: "https://en.wikipedia.org/wiki/Bitcoin_Cash" },
+  },
+  {
+    date: "2017-08-24",
+    title: "SegWit é ativado",
+    text: "O SegWit (Segregated Witness, BIP 141), um soft fork que separa as assinaturas do resto da transação, foi ativado no bloco 481.824. A mudança ampliou a capacidade dos blocos e abriu caminho para soluções de segunda camada, como a Lightning Network.",
+    article: "lightning-network-o-que-e-e-como-usar",
+    source: { label: "Wikipédia: SegWit", url: "https://en.wikipedia.org/wiki/SegWit" },
+  },
+  {
+    date: "2017-12",
+    title: "Futuros de bitcoin chegam a Chicago",
+    text: "Em 1º de dezembro de 2017, a CFTC, reguladora de derivativos dos Estados Unidos, informou que a CME e a CFE (bolsa de futuros da Cboe) tinham autocertificado contratos futuros de bitcoin, negociados a partir daquele mês. Era a entrada do bitcoin nas grandes bolsas de derivativos americanas.",
+    source: { label: "CFTC, comunicado de 1º/12/2017", url: "https://www.cftc.gov/PressRoom/PressReleases/7654-17" },
+  },
+  {
+    date: "2017-12-17",
+    title: "O topo de 2017",
+    text: "No auge da euforia de 2017, o bitcoin bateu a máxima de US$ 19.783,06 dentro do dia, segundo a Fortune. Um ano depois, em dezembro de 2018, a média diária do preço estava perto de US$ 3.200, mais de 80% abaixo do topo.",
+    priceNote: "cerca de US$ 19,8 mil",
+    article: "ciclos-do-bitcoin-o-que-os-halvings-mostram",
+    source: { label: "Wikipédia: Cryptocurrency bubble", url: "https://en.wikipedia.org/wiki/Cryptocurrency_bubble" },
+  },
+  {
+    date: "2020-05-11",
+    title: "Terceiro halving",
+    text: "No bloco 630.000, a recompensa caiu de 12,5 para 6,25 BTC por bloco. Com isso, a emissão de novos bitcoins caiu para cerca de 900 moedas por dia.",
+    priceNote: "cerca de US$ 8.750",
+    article: "halving-do-bitcoin-o-que-e-e-quando-e-o-proximo",
+    source: { label: "Bitcoin Wiki: Controlled supply", url: "https://en.bitcoin.it/wiki/Controlled_supply" },
+  },
+  {
+    date: "2021-02-08",
+    title: "Tesla e MicroStrategy põem bitcoin no caixa",
+    text: "A Tesla informou no relatório anual entregue à SEC que tinha investido US$ 1,5 bilhão em bitcoin e que pretendia aceitar a moeda como pagamento. A MicroStrategy (hoje Strategy), de Michael Saylor, tinha aberto esse caminho em agosto de 2020, com US$ 250 milhões em bitcoin como reserva de caixa. Em maio de 2021, a Tesla desistiu dos pagamentos em bitcoin, citando o impacto ambiental da mineração.",
+    source: {
+      label: "Relatório anual da Tesla (10-K) na SEC",
+      url: "https://www.sec.gov/Archives/edgar/data/1318605/000156459021004599/tsla-10k_20201231.htm",
+    },
+  },
+  {
+    date: "2021-09-07",
+    title: "El Salvador adota o bitcoin como moeda oficial",
+    text: "A Lei Bitcoin entrou em vigor e fez de El Salvador o primeiro país a dar ao bitcoin curso legal, ao lado do dólar. O governo de Nayib Bukele lançou a carteira Chivo, com bônus de US$ 30 por usuário, e passou a comprar bitcoin. Em 2025, depois de um acordo de US$ 1,4 bilhão com o FMI, uma reforma da lei acabou com a obrigatoriedade de aceitar a moeda.",
+    article: "el-salvador-bitcoin-moeda-oficial",
+    source: { label: "Wikipédia: Bitcoin in El Salvador", url: "https://en.wikipedia.org/wiki/Bitcoin_in_El_Salvador" },
+  },
+  {
+    date: "2021-09-24",
+    title: "China proíbe mineração e negociação",
+    text: "Entrou em vigor na China a proibição completa da negociação e da mineração de criptomoedas. A medida fechou um ano de cerco: em maio de 2021, novas regras do governo chinês contra o setor já tinham ajudado a derrubar o preço do bitcoin para perto de US$ 30 mil.",
+    source: {
+      label: "Wikipédia: Legality of cryptocurrency by country",
+      url: "https://en.wikipedia.org/wiki/Legality_of_cryptocurrency_by_country_or_territory",
+    },
+  },
+  {
+    date: "2021-11",
+    title: "O topo de 2021",
+    text: "O bitcoin renovou a máxima histórica no começo de novembro de 2021, perto de US$ 67,5 mil pelas cotações diárias. Dentro do dia, chegou a US$ 69 mil em 10 de novembro, na Binance e na Coinbase. Em 2022, com a venda generalizada de ações de tecnologia e as quebras do próprio mercado cripto, o preço caiu abaixo de US$ 20 mil em junho.",
+    priceNote: "cerca de US$ 67,5 mil (cotação diária)",
+    article: "ciclos-do-bitcoin-o-que-os-halvings-mostram",
+    source: { label: "Wikipédia: Cryptocurrency bubble", url: "https://en.wikipedia.org/wiki/Cryptocurrency_bubble" },
+  },
+  {
+    date: "2021-11-14",
+    title: "Taproot é ativado",
+    text: "A atualização Taproot foi ativada no bloco 709.632. Ela trouxe as assinaturas Schnorr e permite guardar várias condições de gasto numa só saída, das quais só a usada no gasto precisa ser revelada, o que ajuda a privacidade e a eficiência.",
+    source: { label: "Bitcoin Optech: Taproot", url: "https://bitcoinops.org/en/topics/taproot/" },
+  },
+  {
+    date: "2022-05-09",
+    title: "O colapso da Terra (UST e Luna)",
+    text: "A stablecoin algorítmica UST, que deveria valer sempre US$ 1, perdeu a paridade e chegou a 10 centavos em uma semana, arrastando a moeda Luna para perto de zero. Quase US$ 45 bilhões em valor de mercado sumiram naquela semana. O fundador Do Kwon se declarou culpado de fraude nos Estados Unidos em 2025 e foi condenado a 15 anos de prisão.",
+    article: "stablecoins-o-que-sao-usdt-usdc",
+    source: { label: "Wikipédia: Terra (blockchain)", url: "https://en.wikipedia.org/wiki/Terra_(blockchain)" },
+  },
+  {
+    date: "2022-11-11",
+    title: "A quebra da FTX",
+    text: "Uma reportagem do CoinDesk de 2 de novembro sobre o balanço da Alameda Research, empresa ligada à FTX, provocou uma corrida de saques. Em 11 de novembro, a FTX e mais de 100 empresas do grupo pediram recuperação judicial (o Chapter 11) nos Estados Unidos. O fundador Sam Bankman-Fried foi condenado em 2023 e sentenciado a 25 anos de prisão em março de 2024.",
+    priceNote: "cerca de US$ 17 mil",
+    article: "exchange-de-criptomoedas-como-escolher-uma-corretora",
+    source: { label: "Wikipédia: Bankruptcy of FTX", url: "https://en.wikipedia.org/wiki/Bankruptcy_of_FTX" },
+  },
+  {
+    date: "2022-12-21",
+    title: "Brasil ganha o marco legal das criptomoedas",
+    text: "Foi sancionada a Lei 14.478/2022, que estabelece as diretrizes para as prestadoras de serviços de ativos virtuais e tipifica a fraude com esses ativos como crime. A lei entrou em vigor 180 dias depois de publicada, e o Decreto 11.563, de junho de 2023, deu ao Banco Central a tarefa de regular o setor.",
+    article: "regulacao-das-criptomoedas-no-brasil-banco-central",
+    source: {
+      label: "Lei 14.478/2022 (Câmara dos Deputados)",
+      url: "https://www2.camara.leg.br/legin/fed/lei/2022/lei-14478-21-dezembro-2022-793516-publicacaooriginal-166582-pl.html",
+    },
+  },
+  {
+    date: "2024-01-10",
+    title: "SEC aprova ETFs de bitcoin à vista",
+    text: "A SEC, órgão que regula o mercado de capitais nos Estados Unidos, aprovou os primeiros ETFs de bitcoin à vista, fundos negociados em bolsa que guardam bitcoin de verdade. Onze fundos começaram a ser negociados naquele mês. No comunicado, o presidente da SEC, Gary Gensler, frisou que a decisão não significava aprovar nem endossar o bitcoin.",
+    priceNote: "cerca de US$ 46 mil",
+    article: "etf-de-bitcoin-o-que-e-e-como-funciona-no-brasil",
+    source: {
+      label: "SEC, declaração de Gary Gensler (10/01/2024)",
+      url: "https://www.sec.gov/newsroom/speeches-statements/gensler-statement-spot-bitcoin-011023",
+    },
+  },
+  {
+    date: "2024-04-20",
+    title: "Quarto halving",
+    text: "No bloco 840.000, minerado à 0h09 de 20 de abril em UTC (21h09 do dia 19 no horário de Brasília), a recompensa caiu de 6,25 para 3,125 BTC por bloco, o valor em vigor hoje. O próximo corte, para 1,5625 BTC, acontece no bloco 1.050.000, que pelo ritmo atual de blocos deve chegar em 2028.",
+    priceNote: "cerca de US$ 64 mil",
+    article: "halving-do-bitcoin-o-que-e-e-quando-e-o-proximo",
+    source: { label: "Bitcoin Wiki: Controlled supply", url: "https://en.bitcoin.it/wiki/Controlled_supply" },
+  },
+  {
+    date: "2024-12-05",
+    title: "Bitcoin passa de US$ 100 mil",
+    text: "Um mês depois da eleição de Donald Trump, que fez campanha com promessas favoráveis às criptomoedas, o bitcoin passou de US$ 100 mil pela primeira vez. Nessa cotação, os 10 mil bitcoins da pizza de 2010 valeriam mais de US$ 1 bilhão.",
+    priceNote: "acima de US$ 100 mil",
+    article: "ciclos-do-bitcoin-o-que-os-halvings-mostram",
+    source: { label: "Wikipédia: History of bitcoin", url: "https://en.wikipedia.org/wiki/History_of_bitcoin" },
+  },
+  {
+    date: "2025-03-06",
+    title: "EUA criam uma reserva estratégica de bitcoin",
+    text: "Donald Trump assinou uma ordem executiva que criou a Reserva Estratégica de Bitcoin dos Estados Unidos, formada por moedas que o governo confiscou em processos criminais e civis. Pela regra, o bitcoin depositado na reserva não deve ser vendido.",
+    priceNote: "cerca de US$ 90 mil",
+    source: {
+      label: "Casa Branca, fact sheet de 06/03/2025",
+      url: "https://www.whitehouse.gov/fact-sheets/2025/03/fact-sheet-president-donald-j-trump-establishes-the-strategic-bitcoin-reserve-and-u-s-digital-asset-stockpile/",
+    },
+  },
+  {
+    date: "2025-10-06",
+    title: "Máxima histórica acima de US$ 126 mil",
+    text: "O bitcoin bateu a máxima histórica de pouco mais de US$ 126 mil dentro do dia, segundo a CoinGecko, quase o dobro do topo de 2021. Pela média diária da Blockchain.com, o pico foi de cerca de US$ 124,8 mil, no dia 7. Nos meses seguintes, o preço recuou com força: em fevereiro de 2026, a média diária chegou a cerca de US$ 63 mil, metade da máxima, e em 1º de julho desceu a perto de US$ 58,5 mil.",
+    priceNote: "pouco mais de US$ 126 mil (máxima do dia)",
+    article: "ciclos-do-bitcoin-o-que-os-halvings-mostram",
+    source: { label: "CoinGecko: Bitcoin", url: "https://www.coingecko.com/en/coins/bitcoin" },
+  },
+  {
+    date: "2025-11-10",
+    title: "Banco Central publica as regras das corretoras",
+    text: "O Banco Central editou as Resoluções BCB 519, 520 e 521, que tratam da autorização, do funcionamento e das operações de câmbio das prestadoras de serviços de ativos virtuais, as corretoras de cripto. As normas saíram no Diário Oficial no dia seguinte, e a maior parte das regras entrou em vigor em 2 de fevereiro de 2026.",
+    article: "regulacao-das-criptomoedas-no-brasil-banco-central",
+    source: {
+      label: "Banco Central: Resolução BCB nº 520",
+      url: "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Resolu%C3%A7%C3%A3o%20BCB&numero=520",
+    },
+  },
+  {
+    date: "2026-03-09",
+    title: "20 milhões de bitcoins emitidos",
+    text: "Por volta do bloco 940.000, minerado em 9 de março de 2026, a emissão prevista pelo protocolo chegou a 20 milhões de bitcoins, cerca de 95% do limite de 21 milhões. O último milhão vai levar mais de um século para sair, porque a recompensa continua caindo pela metade a cada halving, até por volta de 2140.",
+    article: "halving-do-bitcoin-o-que-e-e-quando-e-o-proximo",
+    source: { label: "mempool.space: bloco 940.000", url: "https://mempool.space/block/940000" },
+  },
+  {
+    date: "2026-07-01",
+    title: "Começa a valer a DeCripto",
+    text: "Entrou em vigor a Declaração de Criptoativos (DeCripto), criada pela Instrução Normativa RFB 2.291/2025 no lugar da sistemática da IN 1.888/2019. É o novo formato em que a Receita Federal recebe as informações sobre operações com criptoativos.",
+    article: "como-declarar-bitcoin-no-imposto-de-renda",
+    source: {
+      label: "Receita Federal: manual da DeCripto",
+      url: "https://www.gov.br/receitafederal/pt-br/centrais-de-conteudo/publicacoes/manuais/manual-orientacao-leiaute-criptoativos/manual-de-orientacao-do-leiaute-da-decripto-v1.pdf",
+    },
+  },
+  {
+    date: "2026-10-16",
+    title: "Mt. Gox adia de novo o prazo de reembolso",
+    text: "O administrador judicial da Mt. Gox, Nobuaki Kobayashi, informou que a maior parte dos reembolsos aos credores já foi feita, mas que muitos ainda não receberam por não terem concluído os procedimentos. Com autorização da Justiça japonesa, o prazo final passou de 31 de outubro de 2026 para 31 de outubro de 2027. O prazo já tinha sido adiado em 2023, 2024 e 2025.",
+    article: "mt-gox-o-colapso-da-maior-exchange-de-bitcoin",
+    source: {
+      label: "Mt. Gox, aviso de 16/10/2026",
+      url: "https://www.mtgox.com/img/pdf/20261016_b3a13e0f-55f6-4653-913b-be80762390e8_announcement_en.pdf",
+    },
+  },
+  {
+    date: "2026-10-30",
+    title: "Prazo para as corretoras pedirem autorização",
+    text: "Vence o prazo de 270 dias, contados da entrada em vigor da Resolução BCB 520, para as empresas que já prestavam serviços de ativos virtuais no Brasil pedirem autorização ao Banco Central. A partir de 6 de novembro de 2026, data fixada pela Resolução BCB 589, bancos e instituições de pagamento ficam proibidos de operar com prestadoras sem autorização, salvo as exceções previstas na norma.",
+    article: "regulacao-das-criptomoedas-no-brasil-banco-central",
+    source: {
+      label: "Banco Central: Resolução BCB nº 520",
+      url: "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Resolu%C3%A7%C3%A3o%20BCB&numero=520",
+    },
+  },
+];
+
+/** Fatos curiosos de /historia. */
+export const curiosities: Curiosity[] = [
+  {
+    title: "O satoshi ganhou nome num fórum",
+    text: "A menor fração do bitcoin, o satoshi, vale 0,00000001 BTC: um bitcoin tem 100 milhões deles. O nome, uma homenagem ao criador da moeda, foi proposto no fórum BitcoinTalk por um usuário chamado ribuck, primeiro em 2010 para 0,01 BTC e meses depois para a menor fração, e acabou adotado por todo mundo.",
+    article: "satoshis-o-que-sao-sats-e-como-converter",
+    source: { label: "Bitcoin Wiki: Satoshi (unit)", url: "https://en.bitcoin.it/wiki/Satoshi_(unit)" },
+  },
+  {
+    title: "Os 21 milhões não são exatos",
+    text: "Como a recompensa é contada em satoshis inteiros e cada halving descarta as frações, o total máximo teórico é de 20.999.999,9769 bitcoins, um pouco menos que 21 milhões. E o último satoshi só deve ser minerado por volta de 2140.",
+    article: "halving-do-bitcoin-o-que-e-e-quando-e-o-proximo",
+    source: { label: "Bitcoin Wiki: Controlled supply", url: "https://en.bitcoin.it/wiki/Controlled_supply" },
+  },
+  {
+    title: "Uma manchete de jornal no primeiro bloco",
+    text: "Satoshi gravou no bloco gênese a frase “The Times 03/Jan/2009 Chancellor on brink of second bailout for banks”, manchete do jornal britânico sobre um possível segundo socorro do governo aos bancos. A citação mostra que o bloco não foi criado antes daquela data, e muita gente a lê também como uma crítica ao sistema financeiro.",
+    article: "bloco-genese-a-mensagem-escondida-no-primeiro-bloco",
+    source: { label: "Bitcoin Wiki: Genesis block", url: "https://en.bitcoin.it/wiki/Genesis_block" },
+  },
+  {
+    title: "Os 50 bitcoins que ninguém pode gastar",
+    text: "A recompensa de 50 BTC do bloco gênese foi para o endereço 1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa, mas não pode ser gasta por causa de uma peculiaridade na forma como esse bloco foi programado. Até hoje não se sabe se isso foi intencional.",
+    article: "bloco-genese-a-mensagem-escondida-no-primeiro-bloco",
+    source: { label: "Bitcoin Wiki: Genesis block", url: "https://en.bitcoin.it/wiki/Genesis_block" },
+  },
+  {
+    title: "Hal Finney desligou a mineração por causa do barulho",
+    text: "Hal Finney baixou o software assim que Satoshi anunciou a primeira versão e minerou vários blocos nos primeiros dias de 2009. Depois desligou o programa porque o computador esquentava e o barulho do ventilador o incomodava, como ele mesmo contou no BitcoinTalk em 2013.",
+    article: "hal-finney-o-primeiro-a-receber-bitcoin",
+    source: { label: "Hal Finney no BitcoinTalk: Bitcoin and me", url: "https://bitcointalk.org/index.php?topic=155054.0" },
+  },
+  {
+    title: "Programando com os olhos",
+    text: "Diagnosticado com ELA em 2009, Hal Finney continuou escrevendo código com um sistema que acompanhava o movimento dos olhos. Ele morreu em 28 de agosto de 2014 e foi criopreservado pela Alcor Life Extension Foundation, como tinha combinado em vida.",
+    article: "hal-finney-o-primeiro-a-receber-bitcoin",
+    source: { label: "Wikipédia: Hal Finney", url: "https://en.wikipedia.org/wiki/Hal_Finney_(computer_scientist)" },
+  },
+  {
+    title: "O vendedor das pizzas tinha 19 anos",
+    text: "Quem aceitou os 10 mil bitcoins de Laszlo Hanyecz foi Jeremy Sturdivant, um jovem de 19 anos da Califórnia, que encomendou duas pizzas da Papa John's para a casa de Laszlo, na Flórida. Na época, as moedas valiam cerca de US$ 41.",
+    article: "bitcoin-pizza-day-a-pizza-de-10-mil-bitcoins",
+    source: { label: "Wikipédia: Bitcoin Pizza Day", url: "https://en.wikipedia.org/wiki/Bitcoin_Pizza_Day" },
+  },
+  {
+    title: "A Mt. Gox nasceu de um jogo de cartas",
+    text: "O nome Mt. Gox vem de Magic: The Gathering Online eXchange, referência ao jogo de cartas Magic. Jed McCaleb comprou o domínio em 2007 e, em 2010, o transformou numa bolsa de bitcoin que chegou a concentrar mais de 70% das negociações do mundo.",
+    article: "mt-gox-o-colapso-da-maior-exchange-de-bitcoin",
+    source: { label: "Wikipédia: Mt. Gox", url: "https://en.wikipedia.org/wiki/Mt._Gox" },
+  },
+  {
+    title: "200 mil bitcoins achados numa carteira antiga",
+    text: "Em 20 de março de 2014, menos de um mês depois de quebrar, a Mt. Gox anunciou ter encontrado 199.999,99 BTC numa carteira antiga. Com isso, a perda declarada caiu de cerca de 850 mil para 650 mil bitcoins.",
+    article: "mt-gox-o-colapso-da-maior-exchange-de-bitcoin",
+    source: { label: "Wikipédia: Mt. Gox", url: "https://en.wikipedia.org/wiki/Mt._Gox" },
+  },
+  {
+    title: "O HD de 8 mil bitcoins no lixão",
+    text: "Em 2013, James Howells jogou fora por engano um HD com a chave de cerca de 8 mil bitcoins, que foi parar no aterro de Docksway, em Newport, no País de Gales. Depois de anos pedindo autorização para escavar, ele perdeu na Justiça em janeiro de 2025 e de novo no recurso, em março do mesmo ano.",
+    article: "o-homem-que-jogou-bitcoins-no-lixo-james-howells",
+    source: { label: "Wikipédia: James Howells", url: "https://en.wikipedia.org/wiki/James_Howells" },
+  },
+  {
+    title: "HODL nasceu de um erro de digitação",
+    text: "Em 18 de dezembro de 2013, com o preço em queda forte, um usuário do BitcoinTalk chamado GameKyuubi abriu o tópico “I AM HODLING”, com a palavra holding escrita errado. No texto, ele admitia ser um mau trader, e o erro virou gíria para quem segura as moedas sem vender.",
+    source: { label: "Tópico original no BitcoinTalk", url: "https://bitcointalk.org/index.php?topic=375643.0" },
+  },
+  {
+    title: "O whitepaper escondido no Mac",
+    text: "Em 2023, o blogueiro Andy Baio mostrou que o PDF do whitepaper do Bitcoin vinha escondido em toda cópia do macOS desde a versão Mojave, como documento de exemplo de um scanner virtual do sistema. O arquivo aparecia até o macOS Ventura 13.3 e sumiu numa versão de testes do 13.4.",
+    article: "whitepaper-do-bitcoin-o-documento-que-criou-a-moeda",
+    source: {
+      label: "Waxy.org, Andy Baio (05/04/2023)",
+      url: "https://waxy.org/2023/04/the-bitcoin-whitepaper-is-hidden-in-every-modern-copy-of-macos/",
+    },
+  },
+  {
+    title: "Quando a rede se partiu em duas",
+    text: "Em março de 2013, um bloco que exigia mais recursos de banco de dados do que as versões antigas do software suportavam dividiu a rede: a versão 0.8 aceitava o bloco e parte das anteriores o rejeitava. Para reunificar a cadeia, os pools Slush e BTCGuild voltaram para a versão antiga, abrindo mão de muito dinheiro em recompensas.",
+    source: { label: "BIP 50: March 2013 Chain Fork Post-Mortem", url: "https://github.com/bitcoin/bips/blob/master/bip-0050.mediawiki" },
+  },
+  {
+    title: "A fortuna parada de Satoshi",
+    text: "Estima-se que Satoshi Nakamoto tenha cerca de 1 milhão de bitcoins, minerados no começo da rede e nunca movimentados. A conta é uma estimativa de pesquisadores feita a partir dos primeiros blocos, e nunca foi confirmada.",
+    article: "quem-e-satoshi-nakamoto",
+    source: { label: "Wikipédia: Satoshi Nakamoto", url: "https://en.wikipedia.org/wiki/Satoshi_Nakamoto" },
+  },
+  {
+    title: "Um juiz decidiu que Craig Wright não é Satoshi",
+    text: "Craig Wright passou anos dizendo ser o criador do Bitcoin. Em 14 de março de 2024, a Alta Corte do Reino Unido decidiu que ele não é Satoshi Nakamoto, e a sentença escrita, de maio de 2024, afirmou que ele mentiu ao tribunal de forma extensa e repetida.",
+    article: "quem-e-satoshi-nakamoto",
+    source: { label: "Wikipédia: Satoshi Nakamoto", url: "https://en.wikipedia.org/wiki/Satoshi_Nakamoto" },
+  },
+  {
+    title: "Bitcoin com B maiúsculo ou minúsculo",
+    text: "Uma convenção comum usa Bitcoin, com maiúscula, para a rede e a tecnologia, e bitcoin, com minúscula, para a moeda. Nem todo mundo segue a regra: dicionários de inglês para estudantes, como os de Cambridge e Oxford, usam as duas formas sem distinção.",
+    article: "fatos-curiosos-sobre-o-bitcoin",
+    source: { label: "Wikipédia: Bitcoin", url: "https://en.wikipedia.org/wiki/Bitcoin" },
+  },
+  {
+    title: "O primeiro ETF de cripto da B3 é de 2021",
+    text: "O HASH11, lançado em abril de 2021, foi o primeiro ETF de criptoativos negociado na bolsa brasileira, quase três anos antes de os Estados Unidos aprovarem ETFs de bitcoin à vista. Num guia atualizado em outubro de 2025, a B3 contava 19 ativos ligados a cripto, entre ETFs e BDRs de ETFs.",
+    article: "etf-de-bitcoin-o-que-e-e-como-funciona-no-brasil",
+    source: {
+      label: "B3 Bora Investir: criptoativos na B3",
+      url: "https://borainvestir.b3.com.br/tipos-de-investimentos/renda-variavel/etfs/criptoativos-conheca-as-diferentes-formas-de-investir-em-bitcoin-ether-solana-na-b3/",
+    },
+  },
+  {
+    title: "Na lei brasileira, bitcoin é ativo virtual",
+    text: "Para a Lei 14.478/2022, criptomoedas como o bitcoin são ativos virtuais: a representação digital de valor que pode ser negociada ou transferida por meios eletrônicos e usada para pagamentos ou investimento. A mesma lei tipificou como crime a fraude com ativos virtuais.",
+    article: "regulacao-das-criptomoedas-no-brasil-banco-central",
+    source: {
+      label: "Lei 14.478/2022 (Câmara dos Deputados)",
+      url: "https://www2.camara.leg.br/legin/fed/lei/2022/lei-14478-21-dezembro-2022-793516-publicacaooriginal-166582-pl.html",
+    },
+  },
+];
